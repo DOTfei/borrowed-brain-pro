@@ -73,7 +73,7 @@ authority" — in opposite directions. This tension is useful information,
 not something to resolve for you.
 ```
 
-Three full profiles built from real research — one well-documented figure, one with genuinely thin public material, one with real public controversy — are in [`profiles/`](profiles/) if you want to see what the output actually looks like before running it yourself.
+The [`profiles/`](profiles/) folder ships with eight real profiles built by actually running Distill mode — three test cases chosen to stress different conditions (a well-documented figure, one with genuinely thin public material, one with real public controversy), plus five domain "starter" profiles you can use right away: **Warren Buffett** (investing), **Steve Jobs** (product), **Chris Voss** (negotiation), **Richard Feynman** (research/reasoning), and **Cal Newport** (productivity). Open any of them to see what the output actually looks like before running it yourself.
 
 ## Install
 
