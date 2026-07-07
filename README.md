@@ -16,7 +16,7 @@ Not a chatbot impersonation. Not a quote generator. A structured "thinking profi
 
 ## Demo
 
-<video src=".github/assets/demo.mp4" controls width="100%"></video>
+https://github.com/user-attachments/assets/8a81e7cb-f938-40b1-ab87-a4512b96e322
 
 > *Describe a real decision → skill reads the profile index → suggests the right lens → surfaces where two frameworks conflict*
 

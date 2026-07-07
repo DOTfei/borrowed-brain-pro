@@ -16,7 +16,7 @@
 
 ## Demo 演示
 
-<video src=".github/assets/demo.mp4" controls width="100%"></video>
+https://github.com/user-attachments/assets/8a81e7cb-f938-40b1-ab87-a4512b96e322
 
 > *描述一个真实决策 → skill 读取档案索引 → 推荐最相关的视角 → 展示两个框架的冲突点*
 
