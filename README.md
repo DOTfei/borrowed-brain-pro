@@ -12,6 +12,8 @@ Works with Claude (native Skill), ChatGPT, Open WebUI, local models like Hermes,
 
 Not a chatbot impersonation. Not a quote generator. A structured "thinking profile" built from real public material — interviews, decisions, failures, criticism — that you can point at your own problem and ask: *what would this framework surface that I'm missing?*
 
+**You can distill anyone with a substantial public record** — living or historical. The 9 profiles below ship ready to use, but the real power is that you can build a new one for any public figure in one command: Naval Ravikant, Charlie Munger, Jensen Huang, Paul Graham, anyone.
+
 ---
 
 ## Demo
@@ -95,8 +97,16 @@ Using the Warren Buffett profile, should I take this investment opportunity — 
 Build a thinking profile for Naval Ravikant
 ```
 ```
+Build a thinking profile for Charlie Munger
+```
+```
+Build a thinking profile for [anyone with a public record]
+```
+```
 What does borrowed-brain-pro do?
 ```
+
+The skill can distill **any public figure** — just name them. If they have interviews, documented decisions, or published writing, the skill can build a profile. The 9 included profiles are a starting point, not a limit.
 
 That last one works too — if you're unsure what to ask, just ask the skill and it'll explain itself and give you a working first command.
 
