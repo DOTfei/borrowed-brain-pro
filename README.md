@@ -101,7 +101,7 @@ Executive Verdict & Blind Spot Warning:
 
 ---
 
-## 📉 Feature Spotlight: Verified Failure Audits (惨痛败局审计)
+## 📉 Feature Spotlight: Verified Failure Audits
 
 Standard AI regurgitates success quotes. **Borrowed Brain Pro audits blood-and-tears failures.** We study documented crises so you don't repeat them:
 
@@ -116,7 +116,7 @@ Standard AI regurgitates success quotes. **Borrowed Brain Pro audits blood-and-t
 
 ---
 
-## 🎒 Feature Spotlight: Pre-Configured Domain Brain Packs (领域主题智囊包)
+## 🎒 Feature Spotlight: Pre-Configured Domain Brain Packs
 
 Don't know which individual profiles to pick? Load a pre-configured **Specialist Advisory Board**:
 
@@ -129,7 +129,7 @@ Don't know which individual profiles to pick? Load a pre-configured **Specialist
 
 ---
 
-## 📊 Feature Spotlight: Visual Decision Trees (一秒看懂流程图)
+## 📊 Feature Spotlight: Visual Decision Trees
 
 No walls of text. Every core profile includes a native **Mermaid Decision Flowchart** rendering instantly on GitHub:
 
@@ -146,7 +146,7 @@ flowchart TD
 
 ---
 
-## 🏆 Feature Spotlight: Historical Crisis Evals (历史危机盲测竞技场)
+## 🏆 Feature Spotlight: Historical Crisis Evals
 
 How do we prove our profiles accurately model real decision-making? **We run reverse blind-tests on historical crises before the outcome was known:**
 
