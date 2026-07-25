@@ -9,9 +9,15 @@ Turn a real person's public track record into a structured "thinking profile" �
 
 This skill has three modes. Figure out which one the user needs before starting:
 
-- **Distill mode**: no profile exists yet (or the user wants to refresh one) → research the person and produce `profiles/<name>.md`
+- **Distill mode**: no profile exists yet (or the user wants to refresh/build a new one for ANY figure) → research the person and produce `profiles/<name>.md`
 - **Apply mode**: a single profile already exists in `profiles/` → read it and use it to give the user another angle on their actual question
 - **Compare mode**: 2 or more profiles are named or loaded → contrast where their principles agree, where they conflict, and what neither lens covers
+
+### 💡 Interactive Profile Generator (Distill Any Person)
+Whenever the user asks to *"create a profile"*, *"distill someone"*, or *"build a new thinking framework"*, instantly trigger Distill Mode. Prompt the user with 3 quick options (or infer them automatically if provided):
+1. **Target Person**: (e.g., Elon Musk, Jensen Huang, Linus Torvalds, Marcus Aurelius)
+2. **Focus Domain** *(Optional)*: (e.g., "product decisions", "crisis management", or "general")
+3. **Anchor Materials** *(Optional)*: (e.g., a specific book, podcast link, or leave empty for auto web-research)
 
 If unsure which mode, check whether `profiles/<name>.md` already exists first.
 
