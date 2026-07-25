@@ -101,6 +101,20 @@ Executive Verdict & Blind Spot Warning:
 
 ---
 
+## 📉 Feature Spotlight: Verified Failure Audits (惨痛败局审计)
+
+Standard AI regurgitates success quotes. **Borrowed Brain Pro audits blood-and-tears failures.** We study documented crises so you don't repeat them:
+
+| Case File | Figure | The Disaster | Key Principle Extracted |
+| :--- | :--- | :--- | :--- |
+| **[Munger's Alibaba Trap](audits/munger-alibaba.md)** | Charlie Munger | 70% stock crash on $100M+ BABA bet | Low valuation cannot save an eroding tech moat; retail loyalty in tech decays fast. |
+| **[Hastings' Qwikster Split](audits/hastings-qwikster.md)** | Reed Hastings | 800k lost subscribers & 77% stock drop | Never let internal org chart convenience force customer UX friction. Farm for dissent. |
+| **[Jobs' NeXT Workstation Flop](audits/jobs-next.md)** | Steve Jobs | $12,000 price tag, 50k sales in 8 years | Aesthetic perfection cannot compensate for price ceiling blindness. |
+
+> **Run a Failure Audit**: Simply ask `"Run a Failure Audit on Munger's Alibaba investment"` to inspect the full post-mortem.
+
+---
+
 ## Profile Anatomy
 
 Every principle in every profile is structured with rigorous epistemic boundaries:

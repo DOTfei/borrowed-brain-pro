@@ -7,12 +7,13 @@ description: Distills any public figure's thinking into a structured, sourced "t
 
 Turn a real person's public track record into a structured "thinking profile" — then use that profile to add a perspective to a decision, without pretending to speak for them.
 
-This skill has four modes. Figure out which one the user needs before starting:
+This skill has five modes. Figure out which one the user needs before starting:
 
 - **Distill mode**: no profile exists yet (or the user wants to refresh/build a new one for ANY figure) → research the person and produce `profiles/<name>.md`
 - **Apply mode**: a single profile already exists in `profiles/` → read it and use it to give the user another angle on their actual question
 - **Compare mode**: 2 or more profiles are named or loaded → contrast where their principles agree, where they conflict, and what neither lens covers
 - **Boardroom mode**: user requests a "board meeting", "virtual boardroom", "convene the board", "召集董事会", or names 3+ figures for a multi-party debate → simulate an interactive board meeting where profiles cross-examine each other and output consensus vs. friction!
+- **Audit mode**: user asks to "audit a failure", "failure audit", "惨痛败局审计", or references an entry in `audits/` → dissect a documented historical crisis, extract the root cause, and derive protective rules for the user's situation.
 
 ### 💡 Interactive Profile Generator (Distill Any Person)
 Whenever the user asks to *"create a profile"*, *"distill someone"*, or *"build a new thinking framework"*, instantly trigger Distill Mode. Prompt the user with 3 quick options (or infer them automatically if provided):
@@ -928,6 +929,86 @@ The 1993 Dexter Shoe acquisition is Buffett's own choice of "worst deal" (2007 l
 
 ## Confidence note
 The circle-of-competence and margin-of-safety principles rely primarily on Buffett's own shareholder letters (self-published, company-controlled material) — these are well-corroborated across independent secondary sources, but the underlying primary quotes themselves come from Berkshire's own communications, which he controls and has every incentive to present favorably. The See's Candies "turning point" narrative and the Schroeder "handicapper, not gambler" characterization rest on independent third-party sourcing (biographer research, financial journalism), which is stronger evidence of a real, externally observed pattern. The Dexter Shoe failure is unusually well corroborated because Buffett's self-published admission (2007 letter) and independent financial journalism's cost reconstruction (Yahoo Finance, Kingswell) agree in substance, which is the strongest kind of evidence this profile draws on. Source material spans 1972 (See's Candies) through late 2025 (Q3 2025 Occidental coverage), so the profile reflects a view that was actively reinforced and restated across roughly five decades rather than a single moment — but note the "20-slot punch card" principle is visibly aspirational rather than strictly followed, per Buffett's own much higher actual transaction count and Berkshire's large multi-year cash holdings.
+
+
+------------------------------------------------------------
+
+# BUNDLED FAILURE AUDIT CASE FILES
+
+<!-- FAILURE AUDIT: hastings-qwikster.md -->
+
+# Failure Audit: Reed Hastings — The Qwikster Split Disaster (2011)
+
+*Audited case file on Reed Hastings' 60% stock crash and 800,000 lost subscribers after attempting to split Netflix DVD and streaming.*
+
+## 1. The Incident
+In July 2011, Reed Hastings announced that Netflix would split its DVD-by-mail business and streaming business into two separate services. DVD was renamed "Qwikster" and required a separate website, login, and billing subscription. The result was immediate consumer uproar, 800,000 lost subscribers in one quarter, and a 77% drop in Netflix's stock price within months. Hastings was forced to reverse the move and issue a public apology.
+
+## 2. What Triggered the Failure
+- **Executive Arrogance Born of Long Win Streak**: Hastings admitted that because Netflix had successfully beaten Blockbuster, he became overconfident that customers would follow whatever structural change he pushed.
+- **Speed Over Customer Friction**: He prioritized internal operational speed (preparing for streaming's future) while ignoring extreme customer friction (two credit card charges, two websites).
+- **Suppression of Internal Dissent**: Multiple Netflix VPs privately thought Qwikster was a bad idea, but the company culture at the time had not yet institutionalized "farming for dissent."
+
+## 3. Principles Extracted From the Disaster
+- **Rule 1: Don't let operational convenience dictate customer UX.** Forcing users to manage two accounts to serve your internal org chart is self-sabotage.
+- **Rule 2: Long win streaks breed blind spots.** Past victories create an illusion that your intuition overrides user feedback.
+- **Rule 3: Farm for dissent before major pivots.** Instituted the formal "Keeper Test" and "Farming for Dissent" mechanisms as direct post-mortems of Qwikster.
+
+## 4. Decision Lens Application
+When planning a major pricing or product architecture shift:
+> *"Ask: Is this pivot making our product simpler for the user, or am I forcing friction onto customers to solve an internal strategic problem?"*
+
+
+------------------------------------------------------------
+
+<!-- FAILURE AUDIT: jobs-next.md -->
+
+# Failure Audit: Steve Jobs — The NeXT Computer Hardware Flop (1985–1993)
+
+*Audited case file on Steve Jobs' $12,000 NeXT Workstation hardware failure after getting ousted from Apple.*
+
+## 1. The Incident
+After being ousted from Apple in 1985, Steve Jobs founded NeXT Computer. He spent $7M+ of his own money and millions from investors (including Ross Perot and Canon) to build the ultimate workstation. The NeXT Cube featured a magnesium chassis, custom optical disk drive, and a $12,000 price tag. NeXT sold only ~50,000 hardware units over 8 years, lost tens of millions of dollars, and was forced to exit the hardware business entirely in 1993 to survive as a software-only company.
+
+## 2. What Triggered the Failure
+- **Aesthetic Perfection Without Price Elasticity**: Jobs insisted on a perfect 1-foot cube made of die-cast magnesium with custom black paint, adding massive manufacturing cost for zero functional benefit to buyers.
+- **Ignoring Customer Needs in Higher Ed**: Designed for universities, but priced 3x higher than what university budgets could support ($12,000 vs. $3,000 target).
+- **Technology Choice Arrogance**: Shipped with a slow, expensive magneto-optical drive instead of a standard floppy drive, making software distribution painful.
+
+## 3. Principles Extracted From the Disaster
+- **Rule 1: Aesthetic perfection cannot compensate for severe mispricing.** Hardware beauty doesn't create budget out of thin air.
+- **Rule 2: Don't let your ideal vision block basic market feedback.** Jobs ignored early warnings from university deans about price ceilings.
+- **Rule 3: Great software can survive hardware failure.** The NeXTSTEP OS survived and eventually became macOS/iOS when Apple acquired NeXT in 1996.
+
+## 4. Decision Lens Application
+When designing an uncompromising premium product:
+> *"Ask: Am I over-indexing on luxury aesthetics that only I care about, while pricing myself completely out of my target user's willingness to pay?"*
+
+
+------------------------------------------------------------
+
+<!-- FAILURE AUDIT: munger-alibaba.md -->
+
+# Failure Audit: Charlie Munger — The Alibaba Investment (2021–2023)
+
+*Audited case file on Charlie Munger's public admission of a major investing mistake in Alibaba (BABA).*
+
+## 1. The Incident
+Between 2021 and 2022, Daily Journal (chaired by Charlie Munger) acquired over 600,000 shares of Alibaba, spending roughly $100M+. Throughout 2022 and 2023, as China's tech regulation tightened and Jack Ma's Ant Group IPO was halted, Alibaba stock dropped over 70%. In 2023, Munger cut the position in half, publicly declaring: *"I regard Alibaba as one of the worst mistakes I ever made."*
+
+## 2. What Triggered the Failure
+- **Overestimating Monopoly Moat in E-Commerce**: Munger viewed Alibaba purely through the lens of a traditional retailer (like Costco) with a dominant moat, underestimating the speed of competition from Pinduoduo and ByteDance/TikTok.
+- **Ignoring Regulatory & Geopolitical Tail Risk**: He admitted he focused on Alibaba's cheap valuation numbers while under-weighting geopolitical and regulatory shifts in China.
+- **Anchor Bias on "Cheap Price"**: Munger anchored on price-to-earnings metrics rather than auditing structural shifts in consumer behavior.
+
+## 3. Principles Extracted From the Disaster
+- **Rule 1: Low valuation cannot fix an eroding competitive moat.** A cheap stock with increasing competition is a value trap.
+- **Rule 2: Retail moats in tech decay faster than physical retail moats.** E-commerce user loyalty is far lower than physical membership warehouses (Costco).
+- **Rule 3: Cut losses when the core thesis is proven wrong, even if it hurts pride.** Munger didn't hold out for breakeven; he halved the position and publicly audited his own bias.
+
+## 4. Decision Lens Application
+When evaluating a cheap, high-yield or beaten-down deal:
+> *"Ask: Am I buying a durable moat, or am I anchoring on a low price tag while the competitive ground shifts under my feet?"*
 
 
 ------------------------------------------------------------

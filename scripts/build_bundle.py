@@ -6,6 +6,7 @@ Concatenates:
 1. SKILL.md
 2. profiles/INDEX.md
 3. All profiles/*.md files (excluding INDEX.md)
+4. All audits/*.md files (Failure Audits)
 
 Outputs BOTH:
 - borrowed-brain-bundle.md (Universal Multi-Platform Bundle for ChatGPT, Local LLMs, Cursor, etc.)
@@ -25,6 +26,7 @@ def main():
     skill_path = os.path.join(root_dir, "SKILL.md")
     index_path = os.path.join(root_dir, "profiles", "INDEX.md")
     profiles_dir = os.path.join(root_dir, "profiles")
+    audits_dir = os.path.join(root_dir, "audits")
     bundle_path = os.path.join(root_dir, "borrowed-brain-bundle.md")
     alias_path = os.path.join(root_dir, "claude-ai-bundle.md")
 
@@ -60,6 +62,16 @@ def main():
             p_content = f.read()
         parts.append(f"<!-- PROFILE: {p_name} -->\n\n" + p_content + "\n\n" + "-" * 60 + "\n\n")
 
+    # 4. All Audits (Failure Cases)
+    if os.path.exists(audits_dir):
+        parts.append("# BUNDLED FAILURE AUDIT CASE FILES\n\n")
+        audit_files = sorted(glob.glob(os.path.join(audits_dir, "*.md")))
+        for a_path in audit_files:
+            a_name = os.path.basename(a_path)
+            with open(a_path, "r", encoding="utf-8") as f:
+                a_content = f.read()
+            parts.append(f"<!-- FAILURE AUDIT: {a_name} -->\n\n" + a_content + "\n\n" + "-" * 60 + "\n\n")
+
     full_bundle = "".join(parts)
 
     # Write borrowed-brain-bundle.md
@@ -72,7 +84,8 @@ def main():
 
     line_count = len(full_bundle.splitlines())
     profile_count = len(profile_files)
-    print(f"[SUCCESS] Generated borrowed-brain-bundle.md & claude-ai-bundle.md with {profile_count} profiles ({line_count} lines).")
+    audit_count = len(glob.glob(os.path.join(audits_dir, "*.md"))) if os.path.exists(audits_dir) else 0
+    print(f"[SUCCESS] Generated borrowed-brain-bundle.md with {profile_count} profiles and {audit_count} failure audits ({line_count} lines).")
 
 if __name__ == "__main__":
     main()

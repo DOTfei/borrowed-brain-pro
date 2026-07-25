@@ -7,12 +7,13 @@ description: Distills any public figure's thinking into a structured, sourced "t
 
 Turn a real person's public track record into a structured "thinking profile" — then use that profile to add a perspective to a decision, without pretending to speak for them.
 
-This skill has four modes. Figure out which one the user needs before starting:
+This skill has five modes. Figure out which one the user needs before starting:
 
 - **Distill mode**: no profile exists yet (or the user wants to refresh/build a new one for ANY figure) → research the person and produce `profiles/<name>.md`
 - **Apply mode**: a single profile already exists in `profiles/` → read it and use it to give the user another angle on their actual question
 - **Compare mode**: 2 or more profiles are named or loaded → contrast where their principles agree, where they conflict, and what neither lens covers
 - **Boardroom mode**: user requests a "board meeting", "virtual boardroom", "convene the board", "召集董事会", or names 3+ figures for a multi-party debate → simulate an interactive board meeting where profiles cross-examine each other and output consensus vs. friction!
+- **Audit mode**: user asks to "audit a failure", "failure audit", "惨痛败局审计", or references an entry in `audits/` → dissect a documented historical crisis, extract the root cause, and derive protective rules for the user's situation.
 
 ### 💡 Interactive Profile Generator (Distill Any Person)
 Whenever the user asks to *"create a profile"*, *"distill someone"*, or *"build a new thinking framework"*, instantly trigger Distill Mode. Prompt the user with 3 quick options (or infer them automatically if provided):
