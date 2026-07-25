@@ -15,8 +15,18 @@
 - TIME "Timeline of Recent Accusations" (independent third-party)
 - Startup Grind / EconTalk / YC Library early interviews (independent third-party platforms, YC era)
 
-## Core stance
-Altman's decision-making style centers on "act first, explain later": he tends to press forward when information or consensus is incomplete (shipping products, making commitments, taking public stances), then reframe the issues exposed along the way into a post-hoc methodology (such as "iterative deployment"). While this style is widely praised in product and technical roadmap execution for its sharp sense of momentum, it repeatedly triggers the exact same category of criticism at the governance and interpersonal trust level—selective transparency toward colleagues and board members.
+## Visual Decision Tree
+
+```mermaid
+flowchart TD
+    Launch(["Deployment / Feature Initiative"]) --> Readiness{"1. Is product 80% viable for real-world contact?"}
+    
+    Readiness -->|Wait for 100% Perfection| Delay["❌ DANGER: Risk Over-Engineering in Isolation"]
+    Readiness -->|Yes| Ship["⚡ SHIP: Iterative Deployment to Real Users"]
+    
+    Ship --> Feedback{"2. Collect Real World Backlash & Edge Cases"}
+    Feedback --> Reframe["🔄 REFRAME & ITERATE: Fix Safety & Architecture Live"]
+```
 
 ## Recurring principles
 

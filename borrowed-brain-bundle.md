@@ -346,8 +346,20 @@ The bulk of the source material for the Core stance, Default reasoning order, an
 - *Snowball: Warren Buffett and the Business of Life* by Alice Schroeder (independent third-party biography)
 - SEC filings / Daily Journal Alibaba investment coverage (independent financial reporting) — bloomberg.com, reuters.com
 
-## Core stance
-Munger's thinking rests on "invert, always invert" and multidisciplinary mental models: before trying to be smart, systematically avoid stupidity and psychological biases. He approaches decisions by mapping problems across multiple fundamental disciplines (physics, psychology, economics, biology) and seeking a "lollapalooza effect" where multiple forces act in the same direction, while ruthlessly killing bad ideas early.
+## Visual Decision Tree
+
+```mermaid
+flowchart TD
+    Problem(["Complex Decision / Problem"]) --> Invert{"1. Invert: What guarantees failure or disaster here?"}
+    
+    Invert --> Eliminate["Eliminate Stupid & Biased Options"]
+    Eliminate --> CheckModels{"2. Apply Multidisciplinary Mental Models\n(Psychology, Economics, Physics)"}
+    
+    CheckModels --> CheckLollapalooza{"Are multiple forces aligning into a Lollapalooza effect?"}
+    
+    CheckLollapalooza -->|Negative Lollapalooza| Kill["❌ KILL: Catastrophic Bias / Trap"]
+    CheckLollapalooza -->|Positive Lollapalooza| HighConviction["✅ EXECUTE: High-Probability Bet"]
+```
 
 ## Recurring principles
 
@@ -705,8 +717,18 @@ Source material spans 1952 (private teaching note) through 2019 (Gell-Mann retro
 - TIME "Timeline of Recent Accusations" (independent third-party)
 - Startup Grind / EconTalk / YC Library early interviews (independent third-party platforms, YC era)
 
-## Core stance
-Altman's decision-making style centers on "act first, explain later": he tends to press forward when information or consensus is incomplete (shipping products, making commitments, taking public stances), then reframe the issues exposed along the way into a post-hoc methodology (such as "iterative deployment"). While this style is widely praised in product and technical roadmap execution for its sharp sense of momentum, it repeatedly triggers the exact same category of criticism at the governance and interpersonal trust level—selective transparency toward colleagues and board members.
+## Visual Decision Tree
+
+```mermaid
+flowchart TD
+    Launch(["Deployment / Feature Initiative"]) --> Readiness{"1. Is product 80% viable for real-world contact?"}
+    
+    Readiness -->|Wait for 100% Perfection| Delay["❌ DANGER: Risk Over-Engineering in Isolation"]
+    Readiness -->|Yes| Ship["⚡ SHIP: Iterative Deployment to Real Users"]
+    
+    Ship --> Feedback{"2. Collect Real World Backlash & Edge Cases"}
+    Feedback --> Reframe["🔄 REFRAME & ITERATE: Fix Safety & Architecture Live"]
+```
 
 ## Recurring principles
 
@@ -775,8 +797,18 @@ In November 2023, the OpenAI board fired him citing that he was "not consistentl
 - [How Steve Jobs' "Think Different" Speech Saved Apple — Media Shower](https://www.mediashower.com/blog/steve-jobs-1997-speech/) — (independent third-party account of the 1997 WWDC talk and product-line simplification, drawing on Isaacson's biography for the "This is crazy" / four-quadrant chart anecdote, events from 1997-1998)
 - [Steve Jobs' Reality Distortion Field: Leadership or Bullying? — ChangingWinds](https://changingwinds.wordpress.com/2018/11/18/steve-jobs-reality-distortion-field-leadership-or-bullying/) — (independent third-party critical analysis of management-style criticism, published 2018, referencing accounts spanning the 1980s-2000s)
 
-## Core stance
-Based on public material, Jobs's approach to product decisions centers on aggressive subtraction rather than addition: reducing Apple's product line by roughly 70% in 1997, and reducing the iPhone's input model to a single surface (the finger) by refusing a stylus. He treated his own authority as a filter for saying no — at WWDC 1997 he described innovation as "saying no to 1,000 things" — more than as a source of new ideas to add. Per Isaacson's account of his biography research, this wasn't a stylistic preference but something Jobs traced to his Zen training: simplifying by finding the essence of a product and cutting everything else, which required first understanding the complexity deeply rather than skipping past it.
+## Visual Decision Tree
+
+```mermaid
+flowchart TD
+    Idea(["Feature / Product Proposal"]) --> Essential{"1. Is this feature absolute essence or bloat?"}
+    
+    Essential -->|Bloat / Nice-to-have| Cut["❌ CUT: Say NO to 1,000 Good Ideas"]
+    Essential -->|Core Essence| Quality{"2. Is the UX quality uncompromisingly Apple-grade?"}
+    
+    Quality -->|No| Delay["⏳ DELAY: Refine & Simplify Until Perfect"]
+    Quality -->|Yes| Ship["✅ SHIP: Full-Court Release"]
+```
 
 ## Recurring principles
 
@@ -887,8 +919,21 @@ Material on this figure is abundant but concentrated heavily around the 2017 col
 - [Warren Buffett explains boost in cash for Berkshire Hathaway — UPI](https://www.upi.com/Top_News/US/2025/02/22/Warren-Buffett-Berkshire-Hathaway-cash-increases-annual-letter/2581740241466/) — independent third-party news coverage of the 2025 letter (self-published letter content relayed via wire service)
 - [Berkshire Hathaway Q3 2025: Buffett's Cash Fortress and an Occidental bet — The Acquirer's Multiple](https://acquirersmultiple.com/2025/11/berkshire-hathaway-q3-2025-buffetts-cash-fortress-and-an-9-7-billion-bet-on-occidental-chemicals/) — independent third-party, 2025
 
-## Core stance
-Based on public material, Buffett's approach centers on treating a stock purchase as buying a fraction of a real business, not a trading ticket — a framing he attributes directly to his teacher Ben Graham and the "Mr. Market" metaphor (1992 letter). Rather than covering many industries, his stated method is to restrict himself to a small number of businesses he can evaluate with real confidence ("circle of competence," 1996 letter) and wait, sometimes for years, until one of those becomes available at a price with a cushion for being wrong (the "margin of safety," 1992/1997 letters). Biographer Alice Schroeder, after roughly 2,000 hours observing him, distilled this as: he's not a gambler, he's a handicapper — someone calculating odds, not taking flyers.
+## Visual Decision Tree
+
+```mermaid
+flowchart TD
+    Deal(["Deal / Opportunity Proposal"]) --> CheckCompetence{"Within Circle of Competence?"}
+    
+    CheckCompetence -->|No| Reject1["❌ REJECT: Outside Circle of Competence"]
+    CheckCompetence -->|Yes| CheckMoat{"Durable Competitive Moat & Pricing Power?"}
+    
+    CheckMoat -->|No| Reject2["❌ REJECT: Erodible Moat / Commodity Business"]
+    CheckMoat -->|Yes| CheckMargin{"Margin of Safety (Price vs. Value)?"}
+    
+    CheckMargin -->|No| Wait["⏳ WAIT: Fair Business, Unfavorable Price"]
+    CheckMargin -->|Yes| Execute["✅ EXECUTE: High-Conviction Investment"]
+```
 
 ## Recurring principles
 

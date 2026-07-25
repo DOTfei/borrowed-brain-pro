@@ -16,8 +16,21 @@
 - [Warren Buffett explains boost in cash for Berkshire Hathaway — UPI](https://www.upi.com/Top_News/US/2025/02/22/Warren-Buffett-Berkshire-Hathaway-cash-increases-annual-letter/2581740241466/) — independent third-party news coverage of the 2025 letter (self-published letter content relayed via wire service)
 - [Berkshire Hathaway Q3 2025: Buffett's Cash Fortress and an Occidental bet — The Acquirer's Multiple](https://acquirersmultiple.com/2025/11/berkshire-hathaway-q3-2025-buffetts-cash-fortress-and-an-9-7-billion-bet-on-occidental-chemicals/) — independent third-party, 2025
 
-## Core stance
-Based on public material, Buffett's approach centers on treating a stock purchase as buying a fraction of a real business, not a trading ticket — a framing he attributes directly to his teacher Ben Graham and the "Mr. Market" metaphor (1992 letter). Rather than covering many industries, his stated method is to restrict himself to a small number of businesses he can evaluate with real confidence ("circle of competence," 1996 letter) and wait, sometimes for years, until one of those becomes available at a price with a cushion for being wrong (the "margin of safety," 1992/1997 letters). Biographer Alice Schroeder, after roughly 2,000 hours observing him, distilled this as: he's not a gambler, he's a handicapper — someone calculating odds, not taking flyers.
+## Visual Decision Tree
+
+```mermaid
+flowchart TD
+    Deal(["Deal / Opportunity Proposal"]) --> CheckCompetence{"Within Circle of Competence?"}
+    
+    CheckCompetence -->|No| Reject1["❌ REJECT: Outside Circle of Competence"]
+    CheckCompetence -->|Yes| CheckMoat{"Durable Competitive Moat & Pricing Power?"}
+    
+    CheckMoat -->|No| Reject2["❌ REJECT: Erodible Moat / Commodity Business"]
+    CheckMoat -->|Yes| CheckMargin{"Margin of Safety (Price vs. Value)?"}
+    
+    CheckMargin -->|No| Wait["⏳ WAIT: Fair Business, Unfavorable Price"]
+    CheckMargin -->|Yes| Execute["✅ EXECUTE: High-Conviction Investment"]
+```
 
 ## Recurring principles
 

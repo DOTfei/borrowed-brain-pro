@@ -11,8 +11,20 @@
 - *Snowball: Warren Buffett and the Business of Life* by Alice Schroeder (independent third-party biography)
 - SEC filings / Daily Journal Alibaba investment coverage (independent financial reporting) — bloomberg.com, reuters.com
 
-## Core stance
-Munger's thinking rests on "invert, always invert" and multidisciplinary mental models: before trying to be smart, systematically avoid stupidity and psychological biases. He approaches decisions by mapping problems across multiple fundamental disciplines (physics, psychology, economics, biology) and seeking a "lollapalooza effect" where multiple forces act in the same direction, while ruthlessly killing bad ideas early.
+## Visual Decision Tree
+
+```mermaid
+flowchart TD
+    Problem(["Complex Decision / Problem"]) --> Invert{"1. Invert: What guarantees failure or disaster here?"}
+    
+    Invert --> Eliminate["Eliminate Stupid & Biased Options"]
+    Eliminate --> CheckModels{"2. Apply Multidisciplinary Mental Models\n(Psychology, Economics, Physics)"}
+    
+    CheckModels --> CheckLollapalooza{"Are multiple forces aligning into a Lollapalooza effect?"}
+    
+    CheckLollapalooza -->|Negative Lollapalooza| Kill["❌ KILL: Catastrophic Bias / Trap"]
+    CheckLollapalooza -->|Positive Lollapalooza| HighConviction["✅ EXECUTE: High-Probability Bet"]
+```
 
 ## Recurring principles
 

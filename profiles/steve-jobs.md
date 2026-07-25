@@ -14,8 +14,18 @@
 - [How Steve Jobs' "Think Different" Speech Saved Apple — Media Shower](https://www.mediashower.com/blog/steve-jobs-1997-speech/) — (independent third-party account of the 1997 WWDC talk and product-line simplification, drawing on Isaacson's biography for the "This is crazy" / four-quadrant chart anecdote, events from 1997-1998)
 - [Steve Jobs' Reality Distortion Field: Leadership or Bullying? — ChangingWinds](https://changingwinds.wordpress.com/2018/11/18/steve-jobs-reality-distortion-field-leadership-or-bullying/) — (independent third-party critical analysis of management-style criticism, published 2018, referencing accounts spanning the 1980s-2000s)
 
-## Core stance
-Based on public material, Jobs's approach to product decisions centers on aggressive subtraction rather than addition: reducing Apple's product line by roughly 70% in 1997, and reducing the iPhone's input model to a single surface (the finger) by refusing a stylus. He treated his own authority as a filter for saying no — at WWDC 1997 he described innovation as "saying no to 1,000 things" — more than as a source of new ideas to add. Per Isaacson's account of his biography research, this wasn't a stylistic preference but something Jobs traced to his Zen training: simplifying by finding the essence of a product and cutting everything else, which required first understanding the complexity deeply rather than skipping past it.
+## Visual Decision Tree
+
+```mermaid
+flowchart TD
+    Idea(["Feature / Product Proposal"]) --> Essential{"1. Is this feature absolute essence or bloat?"}
+    
+    Essential -->|Bloat / Nice-to-have| Cut["❌ CUT: Say NO to 1,000 Good Ideas"]
+    Essential -->|Core Essence| Quality{"2. Is the UX quality uncompromisingly Apple-grade?"}
+    
+    Quality -->|No| Delay["⏳ DELAY: Refine & Simplify Until Perfect"]
+    Quality -->|Yes| Ship["✅ SHIP: Full-Court Release"]
+```
 
 ## Recurring principles
 

@@ -127,6 +127,23 @@ Don't know which individual profiles to pick? Load a pre-configured **Specialist
 
 ---
 
+## 📊 Feature Spotlight: Visual Decision Trees (一秒看懂流程图)
+
+No walls of text. Every core profile includes a native **Mermaid Decision Flowchart** rendering instantly on GitHub:
+
+```mermaid
+flowchart TD
+    Deal(["Warren Buffett Deal Filter"]) --> CheckCompetence{"Within Circle of Competence?"}
+    CheckCompetence -->|No| Reject1["❌ REJECT: Outside Circle of Competence"]
+    CheckCompetence -->|Yes| CheckMoat{"Durable Competitive Moat & Pricing Power?"}
+    CheckMoat -->|No| Reject2["❌ REJECT: Erodible Moat / Commodity Business"]
+    CheckMoat -->|Yes| CheckMargin{"Margin of Safety (Price vs. Value)?"}
+    CheckMargin -->|No| Wait["⏳ WAIT: Fair Business, Unfavorable Price"]
+    CheckMargin -->|Yes| Execute["✅ EXECUTE: High-Conviction Investment"]
+```
+
+---
+
 ## Profile Anatomy
 
 Every principle in every profile is structured with rigorous epistemic boundaries:

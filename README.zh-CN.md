@@ -127,6 +127,23 @@ flowchart TD
 
 ---
 
+## 📊 功能亮点：一秒看懂的 Mermaid 决策流程图 (Visual Decision Trees)
+
+摒弃冗长文字。核心 Profile 文件均内置原生 **Mermaid 决策流程图**，在 GitHub 页面上直接渲染呈现：
+
+```mermaid
+flowchart TD
+    Deal(["巴菲特交易决策筛选器"]) --> CheckCompetence{"1. 是否在能力圈范围之内？"}
+    CheckCompetence -->|否| Reject1["❌ 拒绝：超出能力圈，坚决不碰"]
+    CheckCompetence -->|是| CheckMoat{"2. 是否具备持久的竞争护城河与定价权？"}
+    CheckMoat -->|否| Reject2["❌ 拒绝：护城河易受侵蚀 / 同质化竞争"]
+    CheckMoat -->|是| CheckMargin{"3. 是否具备价格安全边际 (Price vs. Value)？"}
+    CheckMargin -->|否| Wait["⏳ 等待：好公司，但当前价格不具吸引力"]
+    CheckMargin -->|是| Execute["✅ 重仓下注：极高确信度的投资"]
+```
+
+---
+
 ## 档案结构拆解 (Profile Anatomy)
 
 每一份 Profile 中的每一条原则，都具备严格的认知边界与事实锚定：
