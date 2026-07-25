@@ -273,7 +273,191 @@ body {
   box-shadow: 0 24px 64px rgba(0,0,0,0.6);
 }
 
-/* ── Native UI Panel Component (100% Vector/HTML, 0 Broken Images) ───── */
+/* ── Hero Concept Card (Honest Visual Concept Diagram) ──────────────────── */
+.hero-concept-card {
+  background: var(--bg-1);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-lg);
+  padding: var(--s6);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+  width: 100%;
+  max-width: 100%;
+}
+
+.concept-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--s5);
+  padding-bottom: var(--s3);
+  border-bottom: 1px solid var(--border);
+}
+
+.concept-tag {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
+
+.concept-sub {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+}
+
+/* Connected Avatar Nodes */
+.concept-nodes-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--s5);
+  padding: var(--s3) var(--s4);
+  background: var(--bg-2);
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
+}
+
+.node-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.node-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #fff;
+  border: 2px solid var(--border-strong);
+}
+
+.jobs-avatar { background: #1c2128; border-color: var(--accent); color: var(--accent); }
+.munger-avatar { background: #1c2128; border-color: var(--green); color: var(--green); }
+.socrates-avatar { background: #1c2128; border-color: var(--purple); color: var(--purple); }
+.laozi-avatar { background: #1c2128; border-color: var(--orange); color: var(--orange); }
+
+.node-name {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.node-role {
+  font-size: 0.65rem;
+  color: var(--text-tertiary);
+  font-family: 'Geist Mono', monospace;
+}
+
+.node-connector {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--border-strong), var(--accent-border), var(--border-strong));
+  margin: 0 var(--s2);
+}
+
+/* Dialogue Box */
+.concept-dialogue-box {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+}
+
+.dialogue-prompt {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--r-sm);
+  padding: var(--s3) var(--s4);
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+}
+
+.prompt-icon { font-size: 0.7rem; }
+.prompt-text { font-weight: 500; }
+
+.dialogue-bubbles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+}
+
+.bubble-item {
+  background: var(--bg-2);
+  border-left: 3px solid var(--border);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  padding: var(--s3) var(--s4);
+}
+
+.jobs-bubble { border-left-color: var(--accent); }
+.munger-bubble { border-left-color: var(--green); }
+.socrates-bubble { border-left-color: var(--purple); }
+
+.bubble-speaker {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.jobs-bubble .bubble-speaker { color: var(--accent); }
+.munger-bubble .bubble-speaker { color: var(--green); }
+.socrates-bubble .bubble-speaker { color: var(--purple); }
+
+.bubble-quote {
+  font-size: 0.86rem;
+  color: var(--text-primary);
+  line-height: 1.45;
+}
+
+/* Synthesis Card */
+.concept-synthesis {
+  background: rgba(63, 185, 80, 0.06);
+  border: 1px solid rgba(63, 185, 80, 0.25);
+  border-radius: var(--r-md);
+  padding: var(--s4);
+  margin-top: var(--s2);
+}
+
+.synthesis-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--s2);
+}
+
+.synthesis-badge {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--green);
+  letter-spacing: 0.06em;
+}
+
+.synthesis-blindspot {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--orange);
+}
+
+.synthesis-text {
+  font-size: 0.84rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+/* ── Native UI Panel Component ───── */
 .product-ui-panel {
   background: var(--bg-1);
   border: 1px solid var(--border-strong);

@@ -1,8 +1,5 @@
 import base64
 
-with open('assets/hero_mockup.png', 'rb') as f:
-    hero_b64 = base64.b64encode(f.read()).decode('utf-8')
-
 with open('assets/audits_visual.png', 'rb') as f:
     audit_b64 = base64.b64encode(f.read()).decode('utf-8')
 
@@ -53,12 +50,76 @@ html_content = f'''<!DOCTYPE html>
           <a href="https://github.com/DOTfei/borrowed-brain-pro" target="_blank" class="btn-ghost">View on GitHub</a>
         </div>
       </div>
+
+      <!-- HERO RIGHT: Clear, Readable Concept Diagram with Connected Avatar Nodes & Dialogue -->
       <div class="hero-right">
-        <div class="hero-img-card">
-          <div class="hero-img-wrapper">
-            <img src="data:image/jpeg;base64,{hero_b64}" alt="Borrowed Brain Pro Interface Preview" class="hero-img">
+        <div class="hero-concept-card">
+          <!-- Card Header -->
+          <div class="concept-header">
+            <span class="concept-tag">BOARDROOM THINKING ENGINE</span>
+            <span class="concept-sub">4 Frameworks · 1 Dilemma</span>
           </div>
-          <div class="hero-img-caption" style="margin-top: 10px;">Boardroom Mode — 4 minds debating your dilemma in real time</div>
+
+          <!-- Connected Avatar Nodes -->
+          <div class="concept-nodes-row">
+            <div class="node-item">
+              <div class="node-avatar jobs-avatar">SJ</div>
+              <span class="node-name">Jobs</span>
+              <span class="node-role">Product</span>
+            </div>
+            <div class="node-connector"></div>
+            <div class="node-item">
+              <div class="node-avatar munger-avatar">CM</div>
+              <span class="node-name">Munger</span>
+              <span class="node-role">Models</span>
+            </div>
+            <div class="node-connector"></div>
+            <div class="node-item">
+              <div class="node-avatar socrates-avatar">SO</div>
+              <span class="node-name">Socrates</span>
+              <span class="node-role">Dialectic</span>
+            </div>
+            <div class="node-connector"></div>
+            <div class="node-item">
+              <div class="node-avatar laozi-avatar">LZ</div>
+              <span class="node-name">Laozi</span>
+              <span class="node-role">Tao Risk</span>
+            </div>
+          </div>
+
+          <!-- Dialogue / Cross-Talk Stream -->
+          <div class="concept-dialogue-box">
+            <div class="dialogue-prompt">
+              <span class="prompt-icon">▶</span>
+              <span class="prompt-text">Dilemma: "Should we lower prices to capture market share?"</span>
+            </div>
+
+            <div class="dialogue-bubbles">
+              <div class="bubble-item jobs-bubble">
+                <div class="bubble-speaker">Steve Jobs</div>
+                <div class="bubble-quote">"Never compete on price. Price-cutting is a quiet admission that your product lacks soul and value."</div>
+              </div>
+
+              <div class="bubble-item munger-bubble">
+                <div class="bubble-speaker">Charlie Munger</div>
+                <div class="bubble-quote">"Invert the problem first. Why is your product not valuable enough at full price? Fix the moat."</div>
+              </div>
+
+              <div class="bubble-item socrates-bubble">
+                <div class="bubble-speaker">Socrates</div>
+                <div class="bubble-quote">"What definition of 'market share' are you using? Does temporary volume equal true survival?"</div>
+              </div>
+            </div>
+
+            <!-- Synthesis Output Card -->
+            <div class="concept-synthesis">
+              <div class="synthesis-header">
+                <span class="synthesis-badge">SYNTHESIZED CONSENSUS</span>
+                <span class="synthesis-blindspot">! Blind Spot Flagged</span>
+              </div>
+              <div class="synthesis-text">Hold core pricing. Package an unbundled entry tier. Focus engineering on retention moat over customer acquisition discounts.</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -331,4 +392,4 @@ html_content = f'''<!DOCTYPE html>
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(html_content)
 
-print("Clean index.html updated! Overflow eliminated!")
+print("SUCCESS! Clean index.html written with Concept Node Card!")

@@ -48,7 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
           .from('.hero-headline', { opacity: 0, y: 35 }, '-=0.5')
           .from('.hero-sub', { opacity: 0, y: 25 }, '-=0.5')
           .from('.hero-actions', { opacity: 0, y: 20 }, '-=0.5')
-          .from('.hero-img-card', { opacity: 0, y: 45, scale: 0.96 }, '-=0.6');
+          .from('.hero-concept-card', { opacity: 0, y: 35, scale: 0.97 }, '-=0.6')
+          .from('.node-item', { opacity: 0, scale: 0.8, stagger: 0.08, ease: 'back.out(1.5)' }, '-=0.3')
+          .from('.bubble-item', { opacity: 0, x: -15, stagger: 0.1 }, '-=0.2');
 
     // 2. SECTION TAGS & HEADLINES
     gsap.utils.toArray('.section-tag, .section-headline, .section-sub, .problem-headline').forEach(el => {
