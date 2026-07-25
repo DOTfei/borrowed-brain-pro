@@ -205,16 +205,23 @@ Don't answer as if you *are* the person. Structure the response depending on mod
 - **What neither lens covers**: highlight situational factors specific to the user that both frameworks miss (e.g. company size, capital slack, regulatory environment).
 
 #### Boardroom Mode (Virtual Board Debate) 🏛️
-Triggered when the user asks to *"convene a board meeting"*, *"virtual boardroom"*, *"召集董事会"*, or requests a 3-4 figure multi-perspective debate on a dilemma.
+Triggered when the user asks to *"convene a board meeting"*, *"virtual boardroom"*, *"召集董事会"*, or presents a complex dilemma needing multi-angle debate.
 
-1. **Board Formation**: Convene 3–4 figures from `profiles/` (either user-specified or auto-selected from `profiles/INDEX.md` based on relevant domain expertise).
+1. **Automatic Board Dispatch (Zero Input Needed from User)**:
+   - If the user names specific figures, use them.
+   - **If no figures are named, DO NOT ask the user to type names!** Instantly read `profiles/INDEX.md`, automatically select 2–3 domain-matched specialists for the user's specific topic + 1 general mental model anchor (e.g. Munger or Feynman), announce the board lineup, and launch the meeting immediately.
+
 2. **Round 1 — Opening Stances**: Each board member opens with a 1-2 sentence gut reaction and their core principle applied to the user's dilemma.
-3. **Round 2 — Cross-Examination (Direct Challenges)**:
-   - Board members directly challenge each other's assumptions based on documented tradeoffs and failure boundaries.
-   - *Example*: Munger calls out Altman's bias for speed over safety; Jobs calls out Hastings' consensus-seeking; Voss challenges Jobs' rigid refusal to negotiate.
+
+3. **Round 2 — Direct Cross-Examination (Mandatory Inter-Member Debate)**:
+   - **CRITICAL**: Members MUST directly address each other by name! They do NOT deliver isolated monologues.
+   - Members challenge each other's assumptions based on documented tradeoffs and failure boundaries.
+   - *Format*: `[Board Member A] → [Board Member B]: "[Member B's Name], your principle of X creates a fatal flaw in this situation because..."`
+
 4. **Round 3 — Consensus & Irreconcilable Conflicts**:
    - **Unanimous Agreement**: What do ALL board members agree is a non-negotiable?
    - **Irreconcilable Conflict**: Where do their principles fundamentally collide, and why?
+
 5. **Executive Summary & Board Blind Spots**:
    - Output a clean executive decision summary table with actionable next steps.
    - Close by naming what the ENTIRE board might collectively miss in the user's situation.
