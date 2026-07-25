@@ -7,6 +7,7 @@ Concatenates:
 2. profiles/INDEX.md
 3. All profiles/*.md files (excluding INDEX.md)
 4. All audits/*.md files (Failure Audits)
+5. All packs/*.md files (Domain Brain Packs)
 
 Outputs BOTH:
 - borrowed-brain-bundle.md (Universal Multi-Platform Bundle for ChatGPT, Local LLMs, Cursor, etc.)
@@ -27,6 +28,7 @@ def main():
     index_path = os.path.join(root_dir, "profiles", "INDEX.md")
     profiles_dir = os.path.join(root_dir, "profiles")
     audits_dir = os.path.join(root_dir, "audits")
+    packs_dir = os.path.join(root_dir, "packs")
     bundle_path = os.path.join(root_dir, "borrowed-brain-bundle.md")
     alias_path = os.path.join(root_dir, "claude-ai-bundle.md")
 
@@ -62,7 +64,7 @@ def main():
             p_content = f.read()
         parts.append(f"<!-- PROFILE: {p_name} -->\n\n" + p_content + "\n\n" + "-" * 60 + "\n\n")
 
-    # 4. All Audits (Failure Cases)
+    # 4. All Failure Audits
     if os.path.exists(audits_dir):
         parts.append("# BUNDLED FAILURE AUDIT CASE FILES\n\n")
         audit_files = sorted(glob.glob(os.path.join(audits_dir, "*.md")))
@@ -71,6 +73,16 @@ def main():
             with open(a_path, "r", encoding="utf-8") as f:
                 a_content = f.read()
             parts.append(f"<!-- FAILURE AUDIT: {a_name} -->\n\n" + a_content + "\n\n" + "-" * 60 + "\n\n")
+
+    # 5. All Domain Brain Packs
+    if os.path.exists(packs_dir):
+        parts.append("# BUNDLED DOMAIN BRAIN PACKS\n\n")
+        pack_files = sorted(glob.glob(os.path.join(packs_dir, "*.md")))
+        for pk_path in pack_files:
+            pk_name = os.path.basename(pk_path)
+            with open(pk_path, "r", encoding="utf-8") as f:
+                pk_content = f.read()
+            parts.append(f"<!-- DOMAIN PACK: {pk_name} -->\n\n" + pk_content + "\n\n" + "-" * 60 + "\n\n")
 
     full_bundle = "".join(parts)
 
@@ -85,7 +97,8 @@ def main():
     line_count = len(full_bundle.splitlines())
     profile_count = len(profile_files)
     audit_count = len(glob.glob(os.path.join(audits_dir, "*.md"))) if os.path.exists(audits_dir) else 0
-    print(f"[SUCCESS] Generated borrowed-brain-bundle.md with {profile_count} profiles and {audit_count} failure audits ({line_count} lines).")
+    pack_count = len(glob.glob(os.path.join(packs_dir, "*.md"))) if os.path.exists(packs_dir) else 0
+    print(f"[SUCCESS] Generated borrowed-brain-bundle.md with {profile_count} profiles, {audit_count} failure audits, and {pack_count} domain packs ({line_count} lines).")
 
 if __name__ == "__main__":
     main()

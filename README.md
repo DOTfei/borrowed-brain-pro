@@ -115,6 +115,18 @@ Standard AI regurgitates success quotes. **Borrowed Brain Pro audits blood-and-t
 
 ---
 
+## 🎒 Feature Spotlight: Pre-Configured Domain Brain Packs (领域主题智囊包)
+
+Don't know which individual profiles to pick? Load a pre-configured **Specialist Advisory Board**:
+
+| Pack | Focus Domain | Board Members Included | Quick Command |
+| :--- | :--- | :--- | :--- |
+| **[Startup Founders Pack](packs/startup-founders.md)** | Product, Speed & Scaling | Jobs, Altman, Graham, Kalanick, Hastings | `"Convene the Startup Founders Pack on [dilemma]"` |
+| **[Investors Pack](packs/investors-capital.md)** | Capital & Valuation | Buffett, Munger, Voss | `"Convene the Investors Pack on [deal dilemma]"` |
+| **[Engineering Pack](packs/engineering-science.md)** | System Design & Focus | Feynman, Evans, Newport | `"Convene the Engineering Pack on [architecture dilemma]"` |
+
+---
+
 ## Profile Anatomy
 
 Every principle in every profile is structured with rigorous epistemic boundaries:

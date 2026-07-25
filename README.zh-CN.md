@@ -115,6 +115,18 @@ flowchart TD
 
 ---
 
+## 🎒 功能亮点：预配置领域主题智囊包 (Domain Brain Packs)
+
+不知道该选哪位大佬？一键载入专为特定岗位/场景定制的**专项专家智囊团**：
+
+| 智囊包名称 | 适用领域 | 包含的智囊团成员 | 快捷命令 |
+| :--- | :--- | :--- | :--- |
+| **[创业者与 CEO 智囊包](packs/startup-founders.md)** | 产品剪裁、快速部署、规模化 | 乔布斯, 奥特曼, PG, Kalanick, Hastings | `"载入创业者智囊包，研判 [你的创业难题]"` |
+| **[资本与投资者智囊包](packs/investors-capital.md)** | 资本配置、估值安全边际、谈判 | 巴菲特, 芒格, Chris Voss | `"载入投资者智囊包，研判 [你的投资交易]"` |
+| **[硬核工程与思维智囊包](packs/engineering-science.md)** | 架构审查、系统简化、深度工作 | 费曼, Julia Evans, Cal Newport | `"载入工程智囊包，研判 [你的技术架构难题]"` |
+
+---
+
 ## 档案结构拆解 (Profile Anatomy)
 
 每一份 Profile 中的每一条原则，都具备严格的认知边界与事实锚定：

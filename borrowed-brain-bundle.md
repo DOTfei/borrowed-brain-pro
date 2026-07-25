@@ -1013,3 +1013,73 @@ When evaluating a cheap, high-yield or beaten-down deal:
 
 ------------------------------------------------------------
 
+# BUNDLED DOMAIN BRAIN PACKS
+
+<!-- DOMAIN PACK: engineering-science.md -->
+
+# Domain Brain Pack: Deep Tech & Mental Models 🧠
+
+*Pre-configured Advisory Pack for Engineers, Software Architects, and Technical Writers.*
+
+## Included Board Members
+1. **Richard Feynman** ([profiles/richard-feynman.md](../profiles/richard-feynman.md)) — Auditing logic, first-principles reasoning, hunting self-deception.
+2. **Julia Evans** ([profiles/julia-evans.md](../profiles/julia-evans.md)) — Explaining complex systems simply, writing for past self, clear docs.
+3. **Cal Newport** ([profiles/cal-newport.md](../profiles/cal-newport.md)) — Deep work protection, structural fixes over willpower, focus architecture.
+
+## Primary Use Cases
+- Auditing complex system architecture and debugging flawed assumptions.
+- Simplifying technical documentation and developer communications.
+- Structuring high-focus engineering workflows and shielding deep work.
+
+## Quick Trigger Prompt
+> *"Convene the Engineering Pack on [your technical/architectural dilemma]"*
+
+
+------------------------------------------------------------
+
+<!-- DOMAIN PACK: investors-capital.md -->
+
+# Domain Brain Pack: Investors & Capital Allocation 📈
+
+*Pre-configured Advisory Pack for Investors, Capital Allocators, and Financial Strategists.*
+
+## Included Board Members
+1. **Warren Buffett** ([profiles/warren-buffett.md](../profiles/warren-buffett.md)) — Valuation discipline, margin of safety, circle of competence.
+2. **Charlie Munger** ([profiles/charlie-munger.md](../profiles/charlie-munger.md)) — Multidisciplinary mental models, inversion, avoiding stupidity and cognitive bias.
+3. **Chris Voss** ([profiles/chris-voss.md](../profiles/chris-voss.md)) — Deal negotiation, breaking deadlocks, tactical empathy.
+
+## Primary Use Cases
+- Evaluating major investments, acquisitions, or capital allocation choices.
+- Inverting downside risks and identifying value traps.
+- Structuring deal negotiations and preserving valuation margin of safety.
+
+## Quick Trigger Prompt
+> *"Convene the Investors Pack on [your investment/deal dilemma]"*
+
+
+------------------------------------------------------------
+
+<!-- DOMAIN PACK: startup-founders.md -->
+
+# Domain Brain Pack: Startup Founders & Scalers 🚀
+
+*Pre-configured Advisory Pack for Startup Founders, Product Leads, and Growth Operators.*
+
+## Included Board Members
+1. **Steve Jobs** ([profiles/steve-jobs.md](../profiles/steve-jobs.md)) — Uncompromising quality, feature cuts, launch timing.
+2. **Sam Altman** ([profiles/sam-altman.md](../profiles/sam-altman.md)) — Iterative deployment, speed over perfection, reframing controversial moves.
+3. **Paul Graham** ([profiles/paul-graham.md](../profiles/paul-graham.md)) — Doing things that don't scale, founder earnestness, keeping identity small.
+4. **Travis Kalanick** ([profiles/travis-kalanick.md](../profiles/travis-kalanick.md)) — Aggressive growth, market entry under resistance, speed vs compliance.
+5. **Reed Hastings** ([profiles/reed-hastings.md](../profiles/reed-hastings.md)) — Farming for dissent, building candor, strategic pivots.
+
+## Primary Use Cases
+- Deciding whether to ship MVP today or delay for quality.
+- Evaluating pricing models and market entry under heavy competition.
+- Managing founder friction, team candor, and strategic pivots.
+
+## Quick Trigger Prompt
+> *"Convene the Startup Founders Pack on [your startup dilemma]"*
+
+
+------------------------------------------------------------
+
