@@ -19,9 +19,9 @@
   --text-secondary: #8b949e;
   --text-tertiary: #484f58;
 
-  /* Accent — single electric blue, no purple */
+  /* Accent — single electric blue */
   --accent: #58a6ff;
-  --accent-dim: rgba(88, 166, 255, 0.15);
+  --accent-dim: rgba(88, 166, 255, 0.12);
   --accent-border: rgba(88, 166, 255, 0.25);
 
   /* Semantic */
@@ -31,8 +31,8 @@
   --purple: #a371f7;
 
   /* Borders */
-  --border: rgba(240, 246, 252, 0.07);
-  --border-strong: rgba(240, 246, 252, 0.12);
+  --border: rgba(240, 246, 252, 0.08);
+  --border-strong: rgba(240, 246, 252, 0.15);
 
   /* Radius — ONE scale, no mixing */
   --r-sm: 4px;
@@ -60,7 +60,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px; /* base 16px — avoids iOS auto-zoom */
+  font-size: 16px;
 }
 
 body {
@@ -77,6 +77,15 @@ body {
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 var(--s5);
+}
+
+.section-tag {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: var(--s3);
 }
 
 /* ── Navigation ──────────────────────────────────────────────────────────── */
@@ -131,45 +140,60 @@ body {
   background: rgba(255,255,255,0.05);
 }
 
-.nav-links a:last-child {
-  color: var(--accent);
+.nav-github-btn {
+  color: var(--accent) !important;
   border: 1px solid var(--accent-border);
-  border-radius: var(--r-md);
+  border-radius: var(--r-md) !important;
   padding: var(--s1) var(--s3);
 }
 
-.nav-links a:last-child:hover {
-  background: var(--accent-dim);
+.nav-github-btn:hover {
+  background: var(--accent-dim) !important;
 }
 
-/* ── Hero — split left/right, NOT centered ────────────────────────────────
-   taste-skill §4.3: DESIGN_VARIANCE:7 → force non-center layout
-────────────────────────────────────────────────────────────────────────── */
+/* ── Hero ───────────────────────────────────────────────────────── */
 .hero {
-  min-height: 100dvh; /* §3.E: min-h-[100dvh] not h-screen */
+  min-height: 100dvh;
   display: flex;
   align-items: center;
-  padding-top: 60px; /* nav clearance */
+  padding-top: 60px;
   background: var(--bg-0);
 }
 
 .hero-grid {
   max-width: 1120px;
   margin: 0 auto;
-  padding: var(--s10) var(--s5) var(--s9);
+  padding: var(--s9) var(--s5) var(--s8);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--s8);
   align-items: center;
 }
 
+.hero-badge-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  margin-bottom: var(--s5);
+}
+
+.hero-badge {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid var(--accent-border);
+  border-radius: 4px;
+  padding: 2px 8px;
+  letter-spacing: 0.08em;
+}
+
 .hero-kicker {
   font-family: 'Geist Mono', monospace;
   font-size: 0.75rem;
   color: var(--text-tertiary);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin-bottom: var(--s5);
+  letter-spacing: 0.05em;
 }
 
 .hero-headline {
@@ -188,7 +212,7 @@ body {
   font-size: 1.05rem;
   color: var(--text-secondary);
   line-height: 1.65;
-  max-width: 52ch; /* §6 line-length: 65ch max */
+  max-width: 52ch;
   margin-bottom: var(--s7);
 }
 
@@ -198,7 +222,31 @@ body {
   align-items: center;
 }
 
-/* Hero image */
+/* Hero Right / Images */
+.hero-img-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+}
+
+.hero-banner-link {
+  display: block;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.hero-banner-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-border);
+}
+
+.hero-banner-img {
+  width: 100%;
+  display: block;
+}
+
 .hero-img-wrapper {
   position: relative;
 }
@@ -212,22 +260,18 @@ body {
 }
 
 .hero-img-caption {
-  margin-top: var(--s3);
   font-size: 0.75rem;
   color: var(--text-tertiary);
   font-family: 'Geist Mono', monospace;
 }
 
-/* ── Buttons ─────────────────────────────────────────────────────────────
-   taste-skill §4.5: BUTTON CONTRAST CHECK — white text on blue, 4.5:1 ✓
-   taste-skill §4.5: CTA BUTTON WRAP BAN — labels 2-3 words max
-────────────────────────────────────────────────────────────────────────── */
+/* ── Buttons ───────────────────────────────────────────────────────────── */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   padding: 10px 20px;
   background: var(--accent);
-  color: #000; /* max contrast on blue */
+  color: #000;
   font-size: 0.9rem;
   font-weight: 700;
   border-radius: var(--r-md);
@@ -238,7 +282,7 @@ body {
 }
 
 .btn-primary:hover { background: #79c0ff; }
-.btn-primary:active { transform: scale(0.98); } /* §4.5: tactile press feedback */
+.btn-primary:active { transform: scale(0.98); }
 
 .btn-ghost {
   display: inline-flex;
@@ -305,7 +349,6 @@ body {
   font-family: 'Geist Mono', monospace;
   font-size: 0.8rem;
   color: var(--text-tertiary);
-  text-transform: uppercase;
   letter-spacing: 0.1em;
   padding-top: 60px;
 }
@@ -349,9 +392,9 @@ body {
 }
 
 .output-icon {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  margin-top: 3px;
+  margin-top: 2px;
   flex-shrink: 0;
   font-family: 'Geist Mono', monospace;
 }
@@ -403,8 +446,8 @@ body {
   color: var(--accent);
   background: var(--accent-dim);
   border: 1px solid var(--accent-border);
-  border-radius: 30px;
-  padding: 2px 10px;
+  border-radius: 4px;
+  padding: 2px 8px;
   margin-bottom: var(--s3);
 }
 
@@ -452,7 +495,7 @@ body {
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: var(--text-tertiary);
+  color: var(--accent);
   margin-bottom: var(--s5);
 }
 
@@ -491,8 +534,8 @@ body {
   color: var(--accent);
   background: var(--accent-dim);
   border: 1px solid var(--accent-border);
-  border-radius: 30px;
-  padding: 3px 10px;
+  border-radius: 4px;
+  padding: 3px 8px;
 }
 
 .demo-topic {
@@ -574,9 +617,7 @@ body {
   border: 1px solid rgba(227, 179, 65, 0.2);
 }
 
-/* ── Features Bento ─────────────────────────────────────────────────────────
-   taste-skill §4.7: BENTO — varied cells, real visual diversity, not white cards
-────────────────────────────────────────────────────────────────────────── */
+/* ── Features Bento ───────────────────────────────────────────────────────── */
 .features-section {
   padding: var(--s10) 0;
   background: var(--bg-0);
@@ -650,8 +691,10 @@ body {
 
 .bento-icon-area {
   margin-bottom: var(--s4);
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
 }
 
 .bento-score {
@@ -697,10 +740,10 @@ body {
 
 .pill {
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 500;
   padding: var(--s2) var(--s4);
-  border-radius: 30px;
+  border-radius: var(--r-md);
   border: 1px solid var(--border-strong);
   cursor: default;
   transition: all 0.15s;
@@ -843,7 +886,7 @@ body {
   .bento-lg { grid-column: span 1; grid-template-columns: 1fr; }
   .bento-img { height: 200px; border-radius: var(--r-lg) var(--r-lg) 0 0; }
   .bento-text { padding: var(--s5); }
-  .nav-links li:not(:last-child) { display: none; } /* Condense on mobile */
+  .nav-links li:not(:last-child) { display: none; }
   .install-row { grid-template-columns: 1fr; }
   .install-platform { border-right: none; border-bottom: 1px solid var(--border); }
   .footer-inner { flex-direction: column; align-items: flex-start; }
@@ -855,7 +898,7 @@ body {
   .hero-actions { flex-direction: column; align-items: flex-start; }
 }
 
-/* ── Scroll animations (MOTION:6) ── */
+/* ── Scroll animations ── */
 @media (prefers-reduced-motion: no-preference) {
   .fade-in {
     opacity: 0;
