@@ -1,322 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Borrowed Brain Pro — Your Personal Advisory Board of World-Class Minds</title>
-  <meta name="description" content="Distill the thinking patterns of Jobs, Buffett, Munger, Socrates and 15+ more into verifiable, boundary-tested profiles. Apply them to your real decisions.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borrowed Brain Pro — Consult the World's Greatest Minds</title>
+  <meta name="description" content="Distill the decision-making frameworks of Jobs, Buffett, Socrates, and 15 more into verifiable profiles. Apply them to your real dilemmas. Not quotes. Not summaries. Thinking systems.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <div class="logo">⚡ Borrowed Brain Pro</div>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="/">Borrowed Brain Pro</a>
       <ul class="nav-links">
-        <li><a href="#why">Why</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#profiles">Profiles</a></li>
-        <li><a href="#packs">Packs</a></li>
+        <li><a href="#problem">Why</a></li>
+        <li><a href="#modes">Modes</a></li>
+        <li><a href="#roster">Profiles</a></li>
         <li><a href="#install">Install</a></li>
-        <li><a href="https://github.com/DOTfei/borrowed-brain-pro" target="_blank" class="btn-nav">GitHub ↗</a></li>
+        <li><a href="https://github.com/DOTfei/borrowed-brain-pro" target="_blank">GitHub ↗</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-bg-orbs">
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
-      <div class="orb orb-3"></div>
-    </div>
-    <div class="hero-content">
-      <a href=".github/assets/banner.svg"><img class="banner-img" src=".github/assets/banner.svg" alt="Borrowed Brain Pro"></a>
-      <div class="hero-badge">🧠 18 World-Class Minds · Philosophers to Tech Founders</div>
-      <h1>Stop Asking Generic AI.<br><span class="gradient-text">Borrow the Brain of the Best.</span></h1>
-      <p class="hero-desc">Borrowed Brain Pro distills the actual decision-making frameworks of Jobs, Buffett, Munger, Socrates, Laozi &amp; 13 others into verifiable, boundary-tested profiles — then applies them to your real dilemmas. No hallucinated quotes. No generic advice. Just structured thinking from documented decisions.</p>
-      <div class="hero-cta">
-        <a href="#install" class="btn-primary">Get Started — It's Free</a>
-        <a href="https://github.com/DOTfei/borrowed-brain-pro" target="_blank" class="btn-ghost">View on GitHub →</a>
+  <!-- HERO — Left-aligned split layout (taste-skill §4.3: anti-center bias, VARIANCE:7) -->
+  <section class="hero" id="hero">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-kicker">Open source · 18 verified profiles · 6 AI platforms</div>
+        <h1 class="hero-headline">
+          Stop asking generic AI.<br>
+          <span class="accent-text">Borrow the brain</span><br>
+          of the best.
+        </h1>
+        <p class="hero-sub">Distilled decision frameworks from Jobs, Buffett, Socrates, Laozi, and 14 others — sourced from primary documents, applied to your real dilemmas. Every profile ships with explicit failure boundaries. No hallucinated quotes.</p>
+        <div class="hero-actions">
+          <a href="#install" class="btn-primary">Get started free</a>
+          <a href="https://github.com/DOTfei/borrowed-brain-pro" target="_blank" class="btn-ghost">View on GitHub</a>
+        </div>
       </div>
-      <div class="hero-stats">
-        <div class="stat"><span class="stat-num">18</span><span class="stat-label">Verified Profiles</span></div>
-        <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-num">4</span><span class="stat-label">Domain Packs</span></div>
-        <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-num">4</span><span class="stat-label">Failure Audits</span></div>
-        <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-num">6+</span><span class="stat-label">AI Platforms</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Section -->
-  <section id="why" class="section">
-    <div class="container">
-      <div class="label">THE PROBLEM</div>
-      <h2 class="section-title">Generic AI Advice Is Useless for Real Decisions</h2>
-      <div class="comparison-table">
-        <div class="comparison-header">
-          <div class="col-header bad">❌ Generic AI Prompt</div>
-          <div class="col-header good">✅ Borrowed Brain Pro</div>
-        </div>
-        <div class="comparison-row">
-          <div class="col-bad">"Think like Warren Buffett and advise me"</div>
-          <div class="col-good">"Apply Buffett's profile to my SaaS expansion deal"</div>
-        </div>
-        <div class="comparison-row">
-          <div class="col-bad">Generic motivational quotes: <em>"Focus on long-term value"</em></div>
-          <div class="col-good">4-layer sourced reasoning with <strong>explicit failure boundaries</strong></div>
-        </div>
-        <div class="comparison-row">
-          <div class="col-bad">Unverifiable. Cliché. No traceable sources.</div>
-          <div class="col-good">Every claim traced to documented public events or primary sources.</div>
-        </div>
-        <div class="comparison-row">
-          <div class="col-bad">Value for your real decision: <span class="zero">Zero.</span></div>
-          <div class="col-good">Actionable decision lens with limits explicitly flagged.</div>
+      <div class="hero-right">
+        <div class="hero-img-wrapper">
+          <img src="C:\Users\khaij\.gemini\antigravity\brain\f7aab258-52ac-4b48-9845-b271893277e8\product_mockup_hero_1784986731103.png"
+               alt="Borrowed Brain Pro — Boardroom Mode interface showing a multi-figure debate"
+               class="hero-img">
+          <div class="hero-img-caption">Boardroom Mode — 4 minds debating your dilemma</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Features -->
-  <section id="features" class="section section-dark">
+  <!-- PROBLEM — Full-width contrast section -->
+  <section class="problem-section" id="problem">
     <div class="container">
-      <div class="label">CORE FEATURES</div>
-      <h2 class="section-title">Four Modes. One Skill.</h2>
-      <p class="section-sub">Install once on any AI platform. Unlock four powerful thinking modes instantly.</p>
+      <h2 class="problem-headline">Generic AI advice is useless for real decisions.</h2>
+      <div class="compare-grid">
+        <div class="compare-col compare-bad">
+          <div class="compare-label bad-label">What generic AI gives you</div>
+          <div class="compare-quote">"Think like Warren Buffett and advise me on this deal."</div>
+          <div class="compare-output">
+            <div class="output-row"><span class="output-icon fail-icon">✕</span> "Focus on long-term value creation."</div>
+            <div class="output-row"><span class="output-icon fail-icon">✕</span> "Stay within your circle of competence."</div>
+            <div class="output-row"><span class="output-icon fail-icon">✕</span> Unverifiable. Clichéd. Zero traceability.</div>
+            <div class="output-row"><span class="output-icon fail-icon">✕</span> No failure boundaries flagged.</div>
+          </div>
+        </div>
+        <div class="compare-divider">vs</div>
+        <div class="compare-col compare-good">
+          <div class="compare-label good-label">Borrowed Brain Pro</div>
+          <div class="compare-quote">"Apply Buffett's profile to my SaaS expansion deal."</div>
+          <div class="compare-output">
+            <div class="output-row"><span class="output-icon pass-icon">✓</span> 4-layer sourced reasoning from primary documents.</div>
+            <div class="output-row"><span class="output-icon pass-icon">✓</span> Explicit failure boundaries flagged per principle.</div>
+            <div class="output-row"><span class="output-icon pass-icon">✓</span> Decision tree rendered as visual flowchart.</div>
+            <div class="output-row"><span class="output-icon pass-icon">✓</span> Verified against his actual 2008 crisis decisions.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- MODES — 4 cards, varied layout (taste-skill §4.7: no repeated layout families) -->
+  <section class="modes-section" id="modes">
+    <div class="container">
+      <h2 class="section-headline">Four modes. One skill.</h2>
+      <p class="section-sub">Install once. Unlock four structured thinking modes across any AI platform.</p>
       <div class="modes-grid">
         <div class="mode-card">
-          <div class="mode-num">01</div>
-          <h3>Distill Mode</h3>
-          <p>Research and distill any public figure into a structured Thinking Profile using 4 layers: primary voice, documented decisions, 3rd-party biographies, and criticisms & failures.</p>
-          <div class="mode-example">
-            <code>"Build a thinking profile for Charlie Munger"</code>
-          </div>
+          <div class="mode-number">01</div>
+          <h3>Distill</h3>
+          <p>Build a structured thinking profile from any public figure using 4 research layers: primary voice, documented decisions, biographies, and failure critiques.</p>
+          <code class="mode-cmd">"Build a thinking profile for Charlie Munger"</code>
         </div>
         <div class="mode-card">
-          <div class="mode-num">02</div>
-          <h3>Apply Mode</h3>
-          <p>Load a single profile as a reasoning lens applied directly to your current dilemma. Surfaces hidden blind spots and explicitly flags what the lens misses.</p>
-          <div class="mode-example">
-            <code>"Using Munger's profile, should I expand into this market?"</code>
-          </div>
+          <div class="mode-number">02</div>
+          <h3>Apply</h3>
+          <p>Load a single profile as a reasoning lens. Surfaces hidden blind spots. Closes with an explicit statement of what this framework misses in your situation.</p>
+          <code class="mode-cmd">"Using Munger's profile, should I enter this market?"</code>
         </div>
         <div class="mode-card">
-          <div class="mode-num">03</div>
-          <h3>Compare Mode</h3>
-          <p>Load two or more profiles side-by-side. Map the conflicts and gaps between their thinking frameworks. See where great minds agree — and where they clash.</p>
-          <div class="mode-example">
-            <code>"Compare Jobs and Altman's profiles on my launch timing"</code>
-          </div>
+          <div class="mode-number">03</div>
+          <h3>Compare</h3>
+          <p>Load two or more profiles side-by-side. Maps their agreements, conflicts, and irreconcilable gaps on your specific decision.</p>
+          <code class="mode-cmd">"Compare Jobs and Altman on my launch timing"</code>
         </div>
         <div class="mode-card mode-card-featured">
-          <div class="mode-num">04</div>
-          <div class="mode-badge">Most Powerful</div>
-          <h3>🏛️ Boardroom Mode</h3>
-          <p>Convene 3–4 figures into a structured 3-round virtual board meeting. They debate, cross-examine each other, and produce an executive consensus + irreconcilable friction map.</p>
-          <div class="mode-example">
-            <code>"Convene the Boardroom (Jobs, Munger, Altman, Hastings) on my pricing dilemma"</code>
-          </div>
+          <div class="mode-badge">Most powerful</div>
+          <div class="mode-number">04</div>
+          <h3>Boardroom</h3>
+          <p>Convene 3–4 figures into a structured 3-round virtual board meeting. They cross-examine each other. You get consensus plus friction map.</p>
+          <code class="mode-cmd">"Convene the Boardroom (Jobs, Munger, Altman, Hastings) on pricing"</code>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Boardroom Demo -->
-  <section class="section boardroom-demo-section">
+  <!-- BOARDROOM DEMO — full-width editorial, different layout family -->
+  <section class="demo-section">
     <div class="container">
-      <div class="label">LIVE EXAMPLE</div>
-      <h2 class="section-title">Boardroom Mode in Action</h2>
-      <div class="demo-box">
-        <div class="demo-header">
-          <span class="demo-tag">TOPIC</span> Should we lower our SaaS prices to capture market share?
-          <span class="demo-members">Board: Jobs · Munger · Altman · Hastings</span>
+      <div class="demo-eyebrow">Live example</div>
+      <div class="demo-layout">
+        <div class="demo-meta">
+          <h2>Boardroom Mode in action.</h2>
+          <p>A 3-round structured debate. Figures respond to each other — not just to you. This is where real insight emerges.</p>
+          <div class="demo-participants">
+            <div class="participant">Jobs</div>
+            <div class="participant">Munger</div>
+            <div class="participant">Altman</div>
+            <div class="participant">Hastings</div>
+          </div>
+          <div class="demo-topic">Topic: "Should we lower our SaaS prices to capture market share?"</div>
         </div>
-        <div class="demo-rounds">
-          <div class="demo-round">
-            <div class="round-label">Round 1 — Opening Stances</div>
-            <div class="stance"><strong>Munger:</strong> "Invert the problem: why isn't the product valuable enough at full price?"</div>
-            <div class="stance"><strong>Jobs:</strong> "Never compete on price. If you discount, you're admitting lack of quality."</div>
-            <div class="stance"><strong>Altman:</strong> "Ship fast, iterate pricing dynamically. Scale users first, monetize later."</div>
-            <div class="stance"><strong>Hastings:</strong> "Farm for dissent internally before changing prices. What do your sales reps privately say?"</div>
-          </div>
-          <div class="demo-round">
-            <div class="round-label">Round 2 — Cross-Examination</div>
-            <div class="stance cross"><strong>Munger → Altman:</strong> "Your obsession with raw user growth ignores unit economics."</div>
-            <div class="stance cross"><strong>Jobs → Hastings:</strong> "Seeking consensus with sales reps leads to mediocrity."</div>
-          </div>
-          <div class="demo-round verdict">
-            <div class="round-label">Executive Verdict</div>
-            <div class="verdict-item">✅ Maintain core price tier, launch a stripped-down entry tier.</div>
-            <div class="verdict-item warn">⚠️ Board Blind Spot: None of these founders ran low-margin B2B SMB software.</div>
-          </div>
+        <div class="demo-transcript">
+          <div class="transcript-round">Round 1 — Opening Stances</div>
+          <div class="transcript-line"><span class="speaker">Munger</span> "Invert the problem: why isn't the product valuable enough at full price?"</div>
+          <div class="transcript-line"><span class="speaker">Jobs</span> "Never compete on price. Discounting is an admission of quality failure."</div>
+          <div class="transcript-line"><span class="speaker">Altman</span> "Scale users first. Iterate pricing dynamically. Monetize later."</div>
+          <div class="transcript-line"><span class="speaker">Hastings</span> "Farm for dissent internally first. What do your sales reps privately say?"</div>
+          <div class="transcript-round">Round 2 — Cross-Examination</div>
+          <div class="transcript-line cross"><span class="speaker orange">Munger → Altman</span> "Your obsession with raw user growth ignores unit economics entirely."</div>
+          <div class="transcript-line cross"><span class="speaker orange">Jobs → Hastings</span> "Seeking consensus with sales reps produces mediocre products."</div>
+          <div class="transcript-round verdict-round">Executive Verdict</div>
+          <div class="verdict-line pass-line">Maintain core price tier. Launch a stripped-down entry tier.</div>
+          <div class="verdict-line warn-line">Board blind spot: None of these founders ran low-margin B2B SMB software.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Kill Features -->
-  <section class="section section-dark">
+  <!-- KILL FEATURES — asymmetric bento grid (taste-skill §4.7: bento diversity) -->
+  <section class="features-section">
     <div class="container">
-      <div class="label">KILLER FEATURES</div>
-      <h2 class="section-title">What Makes This Different</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">📉</div>
-          <h3>Verified Failure Audits</h3>
-          <p>Standard AI regurgitates success quotes. We audit the blood-and-tears failures — Munger's Alibaba trap, Hastings' Qwikster split, Jobs' NeXT flop — so you don't repeat them.</p>
+      <h2 class="section-headline">What makes this different.</h2>
+      <div class="bento-grid">
+        <div class="bento-cell bento-lg">
+          <img src="C:\Users\khaij\.gemini\antigravity\brain\f7aab258-52ac-4b48-9845-b271893277e8\feature_audits_visual_1784986748758.png"
+               alt="Failure Audit case file illustration" class="bento-img">
+          <div class="bento-text">
+            <h3>Verified Failure Audits</h3>
+            <p>Standard AI regurgitates success quotes. We audit documented failures — Munger's Alibaba trap, Hastings' Qwikster split, Jobs' NeXT flop — so you don't repeat them.</p>
+          </div>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">📊</div>
+        <div class="bento-cell">
+          <div class="bento-icon-area bento-flowchart-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="12" y="2" width="16" height="10" rx="2" stroke="#58a6ff" stroke-width="1.5"/>
+              <line x1="20" y1="12" x2="20" y2="18" stroke="#58a6ff" stroke-width="1.5"/>
+              <rect x="2" y="18" width="16" height="10" rx="2" stroke="#f85149" stroke-width="1.5"/>
+              <rect x="22" y="18" width="16" height="10" rx="2" stroke="#3fb950" stroke-width="1.5"/>
+            </svg>
+          </div>
           <h3>Visual Decision Trees</h3>
-          <p>Every core profile ships with a native Mermaid flowchart. See exactly how Buffett, Socrates, or Laozi walks through a problem — rendered live on GitHub.</p>
+          <p>Every profile ships with a native Mermaid flowchart. See exactly how Buffett or Socrates walk through a problem — rendered live on GitHub.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">🏆</div>
+        <div class="bento-cell">
+          <div class="bento-score">
+            <div class="score-num">98%</div>
+            <div class="score-label">Accuracy on Buffett's 2008 Crisis Response</div>
+          </div>
           <h3>Historical Crisis Evals</h3>
-          <p>We blind-test each profile against real crises before the outcome was known. Buffett's 2008 crisis response: 98% match. Jobs' 1997 Apple recovery: 100% match.</p>
+          <p>We blind-test each profile against real crises before the outcome was known, then measure predictive accuracy.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">🛡️</div>
-          <h3>Epistemic Guardrails</h3>
-          <p>No fabricated quotes. No hallucinated facts. Every claim traces to a documented public event. Limits are always flagged: "Here is what this lens misses."</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🎒</div>
-          <h3>Domain Brain Packs</h3>
-          <p>Don't know who to pick? Use pre-configured packs: Startup Founders, Investors, Engineering, or Philosophy & Crisis. One command, instant specialist board.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">💬</div>
+        <div class="bento-cell">
+          <div class="bento-icon-area">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="18" stroke="#a371f7" stroke-width="1.5"/>
+              <path d="M14 20h12M20 14v12" stroke="#a371f7" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
           <h3>Minds That Cross-Talk</h3>
-          <p>In Boardroom Mode, the figures respond to each other, not just to you. Socrates challenges Torvalds. Laozi counters Musk. This is where the real insight emerges.</p>
+          <p>In Boardroom Mode, figures respond to each other. Socrates challenges Torvalds. Laozi counters Musk. That tension is the insight.</p>
+        </div>
+        <div class="bento-cell">
+          <div class="bento-icon-area">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <shield-check/>
+              <path d="M20 4L6 10v12c0 8 6.5 13.5 14 15 7.5-1.5 14-7 14-15V10L20 4z" stroke="#3fb950" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M13 20l5 5 9-9" stroke="#3fb950" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Epistemic Guardrails</h3>
+          <p>No fabricated quotes. Every claim traces to a documented public event. Every response closes with what this lens explicitly misses.</p>
+        </div>
+        <div class="bento-cell">
+          <div class="bento-icon-area">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="8" width="32" height="24" rx="3" stroke="#d29922" stroke-width="1.5"/>
+              <path d="M4 14h32" stroke="#d29922" stroke-width="1.5"/>
+              <path d="M14 8v6M26 8v6" stroke="#d29922" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3>Domain Packs</h3>
+          <p>One command. Instant specialist board: Startup Founders, Investors, Engineering, or Philosophy &amp; Crisis.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Profiles -->
-  <section id="profiles" class="section">
+  <!-- ROSTER — pill cloud, different layout family -->
+  <section class="roster-section" id="roster">
     <div class="container">
-      <div class="label">THE ROSTER</div>
-      <h2 class="section-title">18 Minds. Tech Founders to Ancient Philosophers.</h2>
-      <p class="section-sub">Each profile is built from primary sources, biographies, documented crises, and explicit failure boundaries. Not a Wikipedia summary.</p>
-      <div class="profiles-grid">
-        <div class="profile-pill" data-domain="Investing">💰 Warren Buffett</div>
-        <div class="profile-pill" data-domain="Multidisciplinary">🧩 Charlie Munger</div>
-        <div class="profile-pill" data-domain="Product">🍎 Steve Jobs</div>
-        <div class="profile-pill" data-domain="AI & Startups">🤖 Sam Altman</div>
-        <div class="profile-pill" data-domain="Engineering">🚀 Elon Musk</div>
-        <div class="profile-pill" data-domain="Hardware">⚡ Jensen Huang</div>
-        <div class="profile-pill" data-domain="Open Source">🐧 Linus Torvalds</div>
-        <div class="profile-pill" data-domain="Leadership">📺 Reed Hastings</div>
-        <div class="profile-pill" data-domain="Startups">📝 Paul Graham</div>
-        <div class="profile-pill" data-domain="Negotiation">🤝 Chris Voss</div>
-        <div class="profile-pill" data-domain="Reasoning">⚛️ Richard Feynman</div>
-        <div class="profile-pill" data-domain="Deep Work">📚 Cal Newport</div>
-        <div class="profile-pill" data-domain="Aggressive Growth">🦅 Travis Kalanick</div>
-        <div class="profile-pill" data-domain="Tech Writing">🖊️ Julia Evans</div>
-        <div class="profile-pill" data-domain="Philosophy">🏛️ Marcus Aurelius</div>
-        <div class="profile-pill" data-domain="Philosophy">❓ Socrates</div>
-        <div class="profile-pill" data-domain="Philosophy">☯️ Laozi (老子)</div>
-        <div class="profile-pill" data-domain="Philosophy">⚡ Friedrich Nietzsche</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Packs -->
-  <section id="packs" class="section section-dark">
-    <div class="container">
-      <div class="label">DOMAIN PACKS</div>
-      <h2 class="section-title">Pre-Configured Advisory Boards</h2>
-      <p class="section-sub">One command. Instant specialist board convened and ready to debate.</p>
-      <div class="packs-grid">
-        <div class="pack-card">
-          <div class="pack-icon">🚀</div>
-          <h3>Startup Founders Pack</h3>
-          <p class="pack-members">Jobs · Altman · Musk · Huang · Graham · Hastings · Laozi</p>
-          <code class="pack-cmd">"Convene the Startup Founders Pack on [your dilemma]"</code>
+      <div class="roster-layout">
+        <div class="roster-left">
+          <h2 class="section-headline">18 minds.<br>Tech founders to ancient philosophers.</h2>
+          <p class="section-sub">Each profile is built from primary sources, biographies, documented crises, and explicit failure boundaries. Not Wikipedia summaries.</p>
+          <a href="https://github.com/DOTfei/borrowed-brain-pro/tree/main/profiles" target="_blank" class="btn-ghost btn-sm">Browse all profiles →</a>
         </div>
-        <div class="pack-card">
-          <div class="pack-icon">💰</div>
-          <h3>Investors Pack</h3>
-          <p class="pack-members">Buffett · Munger · Voss</p>
-          <code class="pack-cmd">"Convene the Investors Pack on [deal dilemma]"</code>
-        </div>
-        <div class="pack-card">
-          <div class="pack-icon">🧠</div>
-          <h3>Engineering Pack</h3>
-          <p class="pack-members">Torvalds · Musk · Feynman · Evans · Newport · Socrates</p>
-          <code class="pack-cmd">"Convene the Engineering Pack on [architecture dilemma]"</code>
-        </div>
-        <div class="pack-card">
-          <div class="pack-icon">🏛️</div>
-          <h3>Philosophy & Crisis Pack</h3>
-          <p class="pack-members">Marcus Aurelius · Socrates · Laozi · Nietzsche · Munger · Feynman</p>
-          <code class="pack-cmd">"Convene the Crisis Leadership Pack on [crisis dilemma]"</code>
+        <div class="roster-right">
+          <div class="roster-pills">
+            <span class="pill pill-investing">Warren Buffett · Investing</span>
+            <span class="pill pill-multi">Charlie Munger · Multidisciplinary</span>
+            <span class="pill pill-product">Steve Jobs · Product</span>
+            <span class="pill pill-ai">Sam Altman · AI &amp; Startups</span>
+            <span class="pill pill-eng">Elon Musk · Engineering</span>
+            <span class="pill pill-hw">Jensen Huang · Hardware</span>
+            <span class="pill pill-oss">Linus Torvalds · Open Source</span>
+            <span class="pill pill-lead">Reed Hastings · Leadership</span>
+            <span class="pill pill-startup">Paul Graham · Startups</span>
+            <span class="pill pill-neg">Chris Voss · Negotiation</span>
+            <span class="pill pill-reason">Richard Feynman · Reasoning</span>
+            <span class="pill pill-prod">Cal Newport · Productivity</span>
+            <span class="pill pill-growth">Travis Kalanick · Growth</span>
+            <span class="pill pill-write">Julia Evans · Tech Writing</span>
+            <span class="pill pill-phil">Marcus Aurelius · Philosophy</span>
+            <span class="pill pill-phil">Socrates · Philosophy</span>
+            <span class="pill pill-phil">Laozi · Philosophy</span>
+            <span class="pill pill-phil">Nietzsche · Philosophy</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Install -->
-  <section id="install" class="section">
+  <!-- INSTALL — clean table layout, different family -->
+  <section class="install-section" id="install">
     <div class="container">
-      <div class="label">INSTALLATION</div>
-      <h2 class="section-title">Works on 6+ AI Platforms. Zero Setup.</h2>
-      <p class="section-sub">One universal Markdown bundle. Copy and paste into any AI system prompt.</p>
-      <div class="install-grid">
-        <div class="install-card">
+      <h2 class="section-headline">Works on 6 AI platforms. Zero setup.</h2>
+      <p class="section-sub">One universal Markdown bundle. Copy into any system prompt.</p>
+      <div class="install-table">
+        <div class="install-row">
           <div class="install-platform">ChatGPT / Custom GPT</div>
-          <p>Paste the bundle into your System Prompt.</p>
+          <div class="install-method">Paste the bundle into your System Prompt</div>
         </div>
-        <div class="install-card">
+        <div class="install-row">
           <div class="install-platform">Claude.ai / Claude Projects</div>
-          <p>Upload bundle via Settings → Skills, or paste into Project prompt.</p>
+          <div class="install-method">Upload via Settings → Skills or paste into Project prompt</div>
         </div>
-        <div class="install-card">
+        <div class="install-row">
           <div class="install-platform">Cursor / Windsurf</div>
-          <p>Copy <code>.cursorrules</code> into your project root.</p>
+          <div class="install-method">Copy <code>.cursorrules</code> into project root</div>
         </div>
-        <div class="install-card">
+        <div class="install-row">
           <div class="install-platform">Ollama / Local LLMs</div>
-          <p>Paste the bundle into your Modelfile system field.</p>
+          <div class="install-method">Paste bundle into Modelfile system field</div>
         </div>
-        <div class="install-card">
+        <div class="install-row">
           <div class="install-platform">Open WebUI</div>
-          <p>Paste the bundle into the System Prompt field.</p>
+          <div class="install-method">Paste bundle into System Prompt field</div>
         </div>
-        <div class="install-card">
-          <div class="install-platform">Any AI with System Prompt</div>
-          <p>The universal bundle works on any platform that supports a system prompt.</p>
+        <div class="install-row">
+          <div class="install-platform">Any platform with system prompt</div>
+          <div class="install-method">The universal bundle works anywhere</div>
         </div>
       </div>
       <div class="install-cta">
-        <a href="https://github.com/DOTfei/borrowed-brain-pro" target="_blank" class="btn-primary btn-large">Download from GitHub →</a>
-        <p class="install-note">Free forever. MIT License. Open-source.</p>
+        <a href="https://github.com/DOTfei/borrowed-brain-pro" target="_blank" class="btn-primary btn-lg">Download from GitHub →</a>
+        <div class="install-note">Free forever · MIT License · Open source</div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
-      <div class="footer-logo">⚡ Borrowed Brain Pro</div>
-      <p class="footer-tagline">Distill the world's greatest minds. Apply them to your decisions.</p>
+      <div class="footer-left">
+        <div class="footer-logo">Borrowed Brain Pro</div>
+        <div class="footer-tagline">Distill the world's greatest minds. Apply them to your decisions.</div>
+      </div>
       <div class="footer-links">
         <a href="https://github.com/DOTfei/borrowed-brain-pro" target="_blank">GitHub</a>
         <a href="https://github.com/DOTfei/borrowed-brain-pro/blob/main/LICENSE" target="_blank">MIT License</a>
         <a href="https://github.com/DOTfei/borrowed-brain-pro/blob/main/CONTRIBUTING.md" target="_blank">Contribute</a>
+        <a href="https://github.com/DOTfei/borrowed-brain-pro/blob/main/README.md" target="_blank">Docs</a>
       </div>
-      <p class="footer-copy">© 2026 Borrowed Brain Pro · Made by <a href="https://github.com/DOTfei" target="_blank">DOTfei</a></p>
     </div>
+    <div class="container footer-copy">© 2026 Borrowed Brain Pro · Made by <a href="https://github.com/DOTfei" target="_blank">DOTfei</a></div>
   </footer>
 
   <script src="main.js"></script>

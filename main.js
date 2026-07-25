@@ -1,35 +1,36 @@
-// Sticky navbar shadow on scroll
-const navbar = document.getElementById('navbar');
-if (navbar) {
+// ui-ux-pro-max §7: scroll-driven animations, MOTION_INTENSITY:6
+// No useState, no React — plain DOM with IntersectionObserver
+// prefers-reduced-motion respected
+
+const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Sticky nav shadow on scroll
+const nav = document.getElementById('nav');
+if (nav) {
   window.addEventListener('scroll', () => {
-    navbar.style.boxShadow = window.scrollY > 20 ? '0 4px 30px rgba(0,0,0,0.5)' : 'none';
-  });
+    nav.style.boxShadow = window.scrollY > 20
+      ? '0 4px 24px rgba(0,0,0,0.4)'
+      : 'none';
+  }, { passive: true });
 }
 
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', e => {
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-});
+// Scroll-driven fade-in (§7: duration 150-450ms, ease-out enter)
+if (!prefersReduced) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -48px 0px' });
 
-// Animate elements on scroll into view
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
+  // Stagger grid children (§7: stagger-sequence 30-50ms)
+  document.querySelectorAll(
+    '.mode-card, .bento-cell, .install-row, .pill, .compare-col'
+  ).forEach((el, i) => {
+    el.classList.add('fade-in');
+    el.style.transitionDelay = `${Math.min(i * 40, 200)}ms`;
+    observer.observe(el);
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-document.querySelectorAll('.mode-card, .feature-card, .pack-card, .install-card, .profile-pill').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  observer.observe(el);
-});
+}
