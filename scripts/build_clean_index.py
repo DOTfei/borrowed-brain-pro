@@ -6,9 +6,6 @@ with open('assets/hero_mockup.png', 'rb') as f:
 with open('assets/audits_visual.png', 'rb') as f:
     audit_b64 = base64.b64encode(f.read()).decode('utf-8')
 
-with open('assets/banner.svg', 'r', encoding='utf-8') as f:
-    banner_svg = f.read()
-
 html_content = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,13 +55,10 @@ html_content = f'''<!DOCTYPE html>
       </div>
       <div class="hero-right">
         <div class="hero-img-card">
-          <div class="hero-banner-container" style="margin-bottom: 16px;">
-            {banner_svg}
-          </div>
           <div class="hero-img-wrapper">
             <img src="data:image/jpeg;base64,{hero_b64}" alt="Borrowed Brain Pro Interface Preview" class="hero-img">
           </div>
-          <div class="hero-img-caption" style="margin-top: 8px;">Boardroom Mode — 4 minds debating your dilemma in real time</div>
+          <div class="hero-img-caption" style="margin-top: 10px;">Boardroom Mode — 4 minds debating your dilemma in real time</div>
         </div>
       </div>
     </div>
@@ -327,6 +321,8 @@ html_content = f'''<!DOCTYPE html>
     <div class="container footer-copy">© 2026 Borrowed Brain Pro · Made by <a href="https://github.com/DOTfei" target="_blank">DOTfei</a></div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
@@ -335,4 +331,4 @@ html_content = f'''<!DOCTYPE html>
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(html_content)
 
-print("SUCCESS! Clean index.html written with JPEG MIME types and inline SVG banner!")
+print("Clean index.html updated! Overflow eliminated!")
