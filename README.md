@@ -1,4 +1,4 @@
-<img src=".github/assets/banner.svg" alt="borrowed-brain-pro" width="100%">
+<a href="https://DOTfei.github.io/borrowed-brain-pro/"><img src=".github/assets/banner.svg" alt="borrowed-brain-pro" width="100%"></a>
 
 <p center>
   <a href="README.md"><b>English</b></a> | <a href="README.zh-CN.md"><b>简体中文</b></a>

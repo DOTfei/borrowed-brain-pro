@@ -3,61 +3,139 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Borrowed Brain Pro</title>
+  <title>Borrowed Brain Pro - Your Personal Advisory Board</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <img class="banner" src=".github/assets/banner.svg" alt="Borrowed Brain Pro Banner" />
-    <h1>Borrowed Brain Pro</h1>
-    <p class="tagline">Your personal advisory board in a click</p>
-  </header>
-
-  <nav class="main-nav">
-    <ul>
-      <li><a href="#features">Feature Spotlights</a></li>
-      <li><a href="#packs">Domain Packs</a></li>
-      <li><a href="#audits">Failure Audits</a></li>
-    </ul>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Borrowed Brain Pro</div>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#profiles">Profiles</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="https://github.com/DOTfei/borrowed-brain-pro" target="_blank" class="github-link">GitHub</a></li>
+      </ul>
+    </div>
   </nav>
 
+  <header class="hero">
+    <div class="hero-content">
+      <img class="banner" src=".github/assets/banner.svg" alt="Borrowed Brain Pro Banner" />
+      <h1 class="gradient-text">Your Personal Advisory Board in a Click.</h1>
+      <p class="tagline">Stop relying on generic AI advice. Borrowed Brain Pro distills the world's greatest minds into verifiable, boundary-tested thinking profiles applied directly to your real-world dilemmas.</p>
+      <div class="cta-buttons">
+        <a href="#installation" class="btn btn-primary">Get Started Now</a>
+        <a href="https://github.com/DOTfei/borrowed-brain-pro" class="btn btn-secondary" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </header>
+
   <main>
-    <section id="features" class="card">
-      <h2>Feature Spotlights</h2>
-      <ul>
-        <li>✅ Verified Failure Audits</li>
-        <li>📊 Visual Decision Trees (Mermaid)</li>
-        <li>🏆 Historical Crisis Evals</li>
-      </ul>
+    <section class="section engines">
+      <h2 class="section-title">Two Core Superpowers</h2>
+      <div class="grid-2">
+        <div class="card glass-card">
+          <div class="card-icon">🧠</div>
+          <h3>1. Distill Engine</h3>
+          <p>Research and distill ANY public figure (past or present) into a reusable, structured Thinking Profile. We analyze primary sources, biographies, and documented failures to build an accurate mental model.</p>
+        </div>
+        <div class="card glass-card">
+          <div class="card-icon">⚡</div>
+          <h3>2. Decision Engine</h3>
+          <p>Apply pre-built or custom profiles to your real decision dilemmas. Support for single-lens reasoning or multi-lens contrast to surface hidden blind spots.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="packs" class="card">
-      <h2>Domain Packs</h2>
-      <p>Pick a pre‑configured advisory board and ask your question in one line.</p>
-      <pre><code>Convene the Startup Founders Pack on [your dilemma]</code></pre>
+    <section id="features" class="section features">
+      <h2 class="section-title">Feature Spotlights</h2>
+      <div class="grid-3">
+        <div class="card feature-card">
+          <h3>🏛️ Boardroom Mode</h3>
+          <p>Convene a Virtual Board Meeting. The AI launches a multi-round debate among multiple figures (e.g., Jobs, Munger, Altman) to cross-examine your dilemma and find consensus or friction.</p>
+        </div>
+        <div class="card feature-card">
+          <h3>📉 Verified Failure Audits</h3>
+          <p>We don't just regurgitate success quotes. We audit blood-and-tears failures (like Hastings' Qwikster or Musk's Model 3 automation) so you don't repeat them.</p>
+        </div>
+        <div class="card feature-card">
+          <h3>🎒 Domain Packs</h3>
+          <p>Don't know who to pick? Load a pre-configured Specialist Advisory Board, such as the Startup Founders Pack, Investors Pack, or Crisis Leadership Pack.</p>
+        </div>
+        <div class="card feature-card">
+          <h3>📊 Visual Decision Trees</h3>
+          <p>No walls of text. Every core profile includes a native Mermaid Decision Flowchart, allowing you to visually trace the mental algorithms of top performers.</p>
+        </div>
+        <div class="card feature-card">
+          <h3>🏆 Historical Crisis Evals</h3>
+          <p>We run reverse blind-tests on historical crises before the outcome was known (e.g., 1997 Apple Bankruptcy, 2008 Financial Crisis) to prove profile accuracy.</p>
+        </div>
+        <div class="card feature-card">
+          <h3>🛡️ Epistemic Guardrails</h3>
+          <p>No fabricated quotes. Every claim is traceable to a documented public event. Limits are always flagged at the end of every AI response.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="audits" class="card">
-      <h2>Failure Audits</h2>
-      <p>Explore real‑world crisis case files to avoid repeating costly mistakes.</p>
-      <ul>
-        <li><a href="audits/munger-alibaba.md" target="_blank">Munger's Alibaba Trap</a></li>
-        <li><a href="audits/hastings-qwikster.md" target="_blank">Hastings' Qwikster Split</a></li>
-        <li><a href="audits/jobs-next.md" target="_blank">Jobs' NeXT Flop</a></li>
-        <li><a href="audits/musk-model3-automation.md" target="_blank">Musk's Model 3 Automation</a></li>
-      </ul>
+    <section id="profiles" class="section profiles">
+      <h2 class="section-title">18 Pre-Built Profiles</h2>
+      <p class="section-subtitle">Ready out-of-the-box. Hand-crafted and boundary-tested.</p>
+      <div class="tags-container">
+        <span class="tag">Warren Buffett</span>
+        <span class="tag">Charlie Munger</span>
+        <span class="tag">Steve Jobs</span>
+        <span class="tag">Elon Musk</span>
+        <span class="tag">Sam Altman</span>
+        <span class="tag">Jensen Huang</span>
+        <span class="tag">Linus Torvalds</span>
+        <span class="tag">Reed Hastings</span>
+        <span class="tag">Paul Graham</span>
+        <span class="tag">Richard Feynman</span>
+        <span class="tag">Socrates</span>
+        <span class="tag">Laozi (老子)</span>
+        <span class="tag">Marcus Aurelius</span>
+        <span class="tag">Friedrich Nietzsche</span>
+        <span class="tag">Chris Voss</span>
+        <span class="tag">Travis Kalanick</span>
+        <span class="tag">Cal Newport</span>
+        <span class="tag">Julia Evans</span>
+      </div>
     </section>
 
-    <section class="card">
-      <h2>Try it now</h2>
-      <input type="text" id="query" placeholder="Convene the ... Pack on ..." />
-      <button id="runBtn">Run</button>
-      <pre id="output"></pre>
+    <section id="installation" class="section install">
+      <h2 class="section-title">Multi-Platform Installation</h2>
+      <div class="card install-card">
+        <h3>One-Click Setup</h3>
+        <p>Borrowed Brain Pro is packaged as a single universal Markdown bundle. You can inject it into almost any AI platform.</p>
+        <div class="install-steps">
+          <div class="step">
+            <h4>ChatGPT / Custom GPT</h4>
+            <p>Copy the bundle and paste it into your System Prompt.</p>
+          </div>
+          <div class="step">
+            <h4>Cursor / Windsurf AI</h4>
+            <p>Copy the <code>.cursorrules</code> file into your project root.</p>
+          </div>
+          <div class="step">
+            <h4>Claude.ai</h4>
+            <p>Upload the bundle or paste it directly into a Claude Project.</p>
+          </div>
+        </div>
+        <div class="code-block-wrapper">
+          <input type="text" readonly value="https://raw.githubusercontent.com/DOTfei/borrowed-brain-pro/main/borrowed-brain-bundle.md" id="bundleUrl">
+          <button id="copyBtn">Copy Bundle URL</button>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 Borrowed Brain Pro • Open‑source • <a href="https://github.com/DOTfei/borrowed-brain-pro" target="_blank">GitHub</a></p>
+    <div class="footer-content">
+      <p>© 2026 Borrowed Brain Pro. Open-source under the MIT License.</p>
+      <p>Built by <a href="https://github.com/DOTfei" target="_blank">DOTfei</a></p>
+    </div>
   </footer>
 
   <script src="main.js"></script>
