@@ -12,7 +12,7 @@ html_content = f'''<!DOCTYPE html>
   <meta name="description" content="Distill the decision-making frameworks of Jobs, Buffett, Socrates, and 15 more into verifiable profiles. Apply them to your real dilemmas. Not quotes. Not summaries. Thinking systems.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
