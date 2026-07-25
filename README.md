@@ -12,7 +12,9 @@
   <a href="https://github.com/DOTfei/borrowed-brain-pro/stargazers"><img src="https://img.shields.io/github/stars/DOTfei/borrowed-brain-pro?style=social" alt="Stars"></a>
 </p>
 
-> **Distill any public figure's thinking into a structured profile — then use it as a lens (or contrast multiple lenses) on a real decision you're facing.**
+> **Borrowed Brain Pro is powered by Two Core Superpowers:**
+> 1. **Distill Engine**: Research and distill ANY public figure (past or present) into a reusable, structured Thinking Profile (`profiles/name.md`).
+> 2. **Decision Engine**: Apply pre-built or custom profiles (single lens or multi-lens contrast) to your real decision dilemmas.
 
 ---
 
