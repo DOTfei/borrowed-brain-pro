@@ -6,12 +6,6 @@ export const Explainer: React.FC = () => {
   const { fps } = useVideoConfig();
 
   // 450 frames total (15 seconds at 30 fps)
-  // Scene 1: 0 - 90 (Distill Funnel)
-  // Scene 2: 90 - 180 (Virtual Boardroom Debate)
-  // Scene 3: 180 - 270 (Verified Failure Audit)
-  // Scene 4: 270 - 360 (Domain Brain Packs & 98% Accuracy Evals)
-  // Scene 5: 360 - 450 (Outro Logo & Call to Action)
-
   const opacity1 = interpolate(frame, [0, 15, 75, 90], [0, 1, 1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
   const opacity2 = interpolate(frame, [90, 105, 165, 180], [0, 1, 1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
   const opacity3 = interpolate(frame, [180, 195, 255, 270], [0, 1, 1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
@@ -27,7 +21,11 @@ export const Explainer: React.FC = () => {
   ];
 
   const cardSpring = spring({ frame: frame - 45, fps, config: { damping: 8, mass: 0.6 } });
-  const boardSpring = spring({ frame: frame - 105, fps, config: { damping: 9, mass: 0.5 } });
+  
+  // Scene 2 springs for chat messages
+  const msg1Spring = spring({ frame: frame - 100, fps, config: { damping: 10, mass: 0.5 } });
+  const msg2Spring = spring({ frame: frame - 120, fps, config: { damping: 10, mass: 0.5 } });
+  const msg3Spring = spring({ frame: frame - 140, fps, config: { damping: 10, mass: 0.5 } });
 
   return (
     <div
@@ -68,7 +66,6 @@ export const Explainer: React.FC = () => {
           </div>
 
           <div style={{ position: 'relative', width: '900px', height: '420px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            {/* Falling Name Pills */}
             <div style={{ position: 'absolute', top: '0px', width: '650px', height: '140px', overflow: 'hidden' }}>
               {names.map((item, idx) => {
                 const dropY = interpolate(frame - item.delay, [0, 25], [-60, 95], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
@@ -96,7 +93,6 @@ export const Explainer: React.FC = () => {
               })}
             </div>
 
-            {/* Giant SVG Funnel Graphic */}
             <svg width="560" height="200" viewBox="0 0 560 200" style={{ marginTop: '85px' }}>
               <defs>
                 <linearGradient id="funnelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -108,7 +104,6 @@ export const Explainer: React.FC = () => {
               <rect x="235" y="165" width="90" height="30" fill="#0ea5e9" rx="5" />
             </svg>
 
-            {/* Outgoing Profile Card */}
             {frame >= 40 && (
               <div
                 style={{
@@ -136,43 +131,91 @@ export const Explainer: React.FC = () => {
         </div>
       )}
 
-      {/* ================= SCENE 2: VIRTUAL BOARDROOM DEBATE ================= */}
+      {/* ================= SCENE 2: VIRTUAL BOARDROOM — LIVE INTERPOLATED DEBATE ================= */}
       {frame >= 90 && frame < 180 && (
         <div style={{ opacity: opacity2, display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', transform: 'scale(1.1)' }}>
-          <div style={{ fontSize: '30px', fontWeight: 900, color: '#f43f5e', letterSpacing: '4px', marginBottom: '20px', textTransform: 'uppercase' }}>
-            2. VIRTUAL BOARDROOM DEBATE
+          <div style={{ fontSize: '28px', fontWeight: 900, color: '#f43f5e', letterSpacing: '3px', marginBottom: '8px', textTransform: 'uppercase' }}>
+            2. VIRTUAL BOARDROOM: LIVE INTERACTIVE DEBATE
+          </div>
+          <div style={{ fontSize: '15px', color: '#cbd5e1', fontWeight: 700, marginBottom: '20px' }}>
+            Board members directly talk to each other & challenge each other's blind spots!
           </div>
 
           <div
             style={{
-              width: '850px',
+              width: '880px',
               backgroundColor: '#0f172a',
               border: '2px solid #f43f5e',
               borderRadius: '20px',
-              padding: '28px 36px',
+              padding: '24px 30px',
               textAlign: 'left',
-              boxShadow: '0 0 50px rgba(244, 63, 94, 0.3)',
-              transform: `scale(${boardSpring})`,
+              boxShadow: '0 0 50px rgba(244, 63, 94, 0.35)',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '14px',
             }}
           >
-            <div style={{ fontSize: '13px', color: '#f43f5e', fontWeight: 900, letterSpacing: '2px', marginBottom: '12px' }}>
-              BOARDROOM TOPIC: "SHOULD WE CUT SAAS PRICES?"
-            </div>
+            {/* Chat Bubble 1: Munger -> Altman */}
+            {frame >= 100 && (
+              <div
+                style={{
+                  transform: `scale(${msg1Spring})`,
+                  backgroundColor: '#1e1b4b',
+                  borderLeft: '5px solid #f59e0b',
+                  borderRadius: '10px',
+                  padding: '12px 18px',
+                }}
+              >
+                <div style={{ fontSize: '14px', color: '#f59e0b', fontWeight: 900 }}>
+                  💬 Charlie Munger ➔ Sam Altman:
+                </div>
+                <div style={{ fontSize: '16px', color: '#ffffff', fontWeight: 700, marginTop: '4px' }}>
+                  "Sam, your obsession with rapid growth ignores unit economics. Moving too fast here is a value trap."
+                </div>
+              </div>
+            )}
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              <div style={{ fontSize: '16px', color: '#38bdf8', fontWeight: 700 }}>
-                <b>Charlie Munger:</b> "Invert the problem: Why isn't value clear at full price?"
+            {/* Chat Bubble 2: Altman -> Jobs */}
+            {frame >= 120 && (
+              <div
+                style={{
+                  transform: `scale(${msg2Spring})`,
+                  backgroundColor: '#0f2942',
+                  borderLeft: '5px solid #a78bfa',
+                  borderRadius: '10px',
+                  padding: '12px 18px',
+                  marginLeft: '40px',
+                }}
+              >
+                <div style={{ fontSize: '14px', color: '#a78bfa', fontWeight: 900 }}>
+                  💬 Sam Altman ➔ Steve Jobs:
+                </div>
+                <div style={{ fontSize: '16px', color: '#ffffff', fontWeight: 700, marginTop: '4px' }}>
+                  "Steve, if we wait for 100% perfection like NeXT, we miss the AI market window. Iterative deployment is safety."
+                </div>
               </div>
-              <div style={{ fontSize: '16px', color: '#4ade80', fontWeight: 700 }}>
-                <b>Steve Jobs:</b> "Never compete on price. Discounting admits lack of quality."
+            )}
+
+            {/* Chat Bubble 3: Jobs -> Munger & Altman */}
+            {frame >= 140 && (
+              <div
+                style={{
+                  transform: `scale(${msg3Spring})`,
+                  backgroundColor: '#1c1917',
+                  borderLeft: '5px solid #38bdf8',
+                  borderRadius: '10px',
+                  padding: '12px 18px',
+                  marginLeft: '20px',
+                }}
+              >
+                <div style={{ fontSize: '14px', color: '#38bdf8', fontWeight: 900 }}>
+                  💬 Steve Jobs ➔ Charlie & Sam:
+                </div>
+                <div style={{ fontSize: '16px', color: '#ffffff', fontWeight: 700, marginTop: '4px' }}>
+                  "Never compete on price. Discounting is admitting lack of quality. Focus on core essence, say NO to bloat."
+                </div>
               </div>
-              <div style={{ fontSize: '16px', color: '#a78bfa', fontWeight: 700 }}>
-                <b>Sam Altman:</b> "Scale users first, iterate pricing dynamically live."
-              </div>
-              <div style={{ fontSize: '14px', color: '#f87171', borderTop: '1px solid #334155', paddingTop: '10px', fontWeight: 800 }}>
-                CROSS-EXAMINATION: Munger challenges Altman's speed bias vs unit economics.
-              </div>
-            </div>
+            )}
           </div>
         </div>
       )}
