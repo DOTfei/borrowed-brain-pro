@@ -7,7 +7,7 @@
 <p center>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License"></a>
   <a href="profiles/INDEX.md"><img src="https://img.shields.io/badge/Profiles-11%20Ready-blue.svg" alt="Profiles"></a>
-  <a href="SKILL.md"><img src="https://img.shields.io/badge/Claude-Skill%20v0.3.0-6b4fbb" alt="Skill Version"></a>
+  <a href="SKILL.md"><img src="https://img.shields.io/badge/Skill-v0.3.0-6b4fbb" alt="Skill Version"></a>
   <a href="https://github.com/DOTfei/borrowed-brain-pro/actions"><img src="https://img.shields.io/github/actions/workflow/status/DOTfei/borrowed-brain-pro/build-bundle.yml?branch=main&label=CI" alt="Build Status"></a>
   <a href="https://github.com/DOTfei/borrowed-brain-pro/stargazers"><img src="https://img.shields.io/github/stars/DOTfei/borrowed-brain-pro?style=social" alt="Stars"></a>
 </p>
@@ -16,36 +16,36 @@
 
 ---
 
-## ⚡ 普通 Prompt vs. Borrowed Brain Pro
+## 普通 Prompt vs. Borrowed Brain Pro
 
 | 方案 | 提示词示例 | 输出质量 | 对真实决策的价值 |
 | :--- | :--- | :--- | :--- |
-| ❌ **普通 AI Prompt** | *“请模仿巴菲特的思维给我建议”* | 泛化的鸡汤语录（*“关注长期价值，保持耐心”*） | 🔴 **零** — 无法验证的陈词滥调 |
-| ✅ **Borrowed Brain Pro** | *“套用巴菲特的档案分析我的 SaaS 拓展交易”* | 分层研究、真实案例与 **明确的原则失效边界** | 🟢 **极高** — 附带具体局限性的实战决策视角 |
+| **普通 AI Prompt** | *“请模仿巴菲特的思维给我建议”* | 泛化的鸡汤语录（*“关注长期价值，保持耐心”*） | **零** — 无法验证的陈词滥调 |
+| **Borrowed Brain Pro** | *“套用巴菲特的档案分析我的 SaaS 拓展交易”* | 分层研究、真实案例与 **明确的原则失效边界** | **极高** — 附带具体局限性的实战决策视角 |
 
 ---
 
-## 🧩 工作原理：三大模式，一个 Skill
+## 工作原理：三大模式，一个 Skill
 
 ```mermaid
 flowchart TD
-    User(["👤 用户的真实决策 / 提问"]) --> Router{"模式自动路由"}
+    User(["用户的真实决策 / 提问"]) --> Router{"模式自动路由"}
 
-    Router -->|1. Distill 蒸馏模式| Distill["🔍 4 层深度网络研究\n• 本人原话与访谈实录\n• 真实发生的决策案例\n• 第三方传记与同僚评价\n• 批评与公开失败案例"]
-    Distill --> Save["📄 保存档案\nprofiles/name.md"]
+    Router -->|1. Distill 蒸馏模式| Distill["4 层深度网络研究\n• 本人原话与访谈实录\n• 真实发生的决策案例\n• 第三方传记与同僚评价\n• 批评与公开失败案例"]
+    Distill --> Save["保存档案\nprofiles/name.md"]
 
-    Router -->|2. Apply 应用模式| Apply["🔍 单视角推理\n应用 1 份档案 → 挖掘被忽略的盲点"]
+    Router -->|2. Apply 应用模式| Apply["单视角推理\n应用 1 份档案 → 挖掘被忽略的盲点"]
 
-    Router -->|3. Compare 对比模式| Compare["⚡ 多视角冲突对比\n对比 2+ 份档案 → 呈现分歧与共同盲点"]
+    Router -->|3. Compare 对比模式| Compare["多视角冲突对比\n对比 2+ 份档案 → 呈现分歧与共同盲点"]
 
     Save --> Apply
     Save --> Compare
 
-    Apply --> Output["💡 决策输出\n(明确标注该视角覆盖不到的因素)"]
+    Apply --> Output["决策输出\n(明确标注该视角覆盖不到的因素)"]
     Compare --> Output
 ```
 
-### 🎯 常用命令速查
+### 常用命令速查
 
 ```bash
 # 1. 蒸馏一个全新人物
@@ -60,50 +60,50 @@ flowchart TD
 
 ---
 
-## 📄 档案结构拆解 (Anatomy of a Profile)
+## 档案结构拆解 (Profile Anatomy)
 
-每一份 Profile 中的每一条原则，都具备**严格的认知边界与事实锚定**：
+每一份 Profile 中的每一条原则，都具备严格的认知边界与事实锚定：
 
 ```markdown
-🎯 原则 (Principle): 主动征求异议，而不是把沉默当成同意 ("farming for dissent")。
+原则 (Principle): 主动征求异议，而不是把沉默当成同意 ("farming for dissent")。
 
-📍 体现之处 (Where it shows up): 直接源自 Qwikster 的失败案例（2011 年）—— Hastings 发现多位 VP 私下有疑虑却不敢提。
+体现之处 (Where it shows up): 直接源自 Qwikster 的失败案例（2011 年）—— Hastings 发现多位 VP 私下有疑虑却不敢提。
 
-⚠️ 可能失效之处 (Where it likely breaks down): 该原则是事后补救——是在一次导致 80 万订阅流失、股价暴跌 77% 的惨痛失败后才确立的。
+可能失效之处 (Where it likely breaks down): 该原则是事后补救——是在一次导致 80 万订阅流失、股价暴跌 77% 的惨痛失败后才确立的。
 ```
 
 ---
 
-## 📚 已内置 11 份思维档案 (装完即用)
+## 已内置 11 份思维档案 (装完即用)
 
 | 人物 | 领域 | 核心强项 / 最适合解决的问题 |
 | :--- | :--- | :--- |
-| 📈 **[Warren Buffett（巴菲特）](profiles/warren-buffett.md)** | 投资 | 评估下注机会、估值纪律、果断拒绝不确定交易 |
-| 🧩 **[Charlie Munger（查理·芒格）](profiles/charlie-munger.md)** | 多学科/投资 | 逆向思考复杂难题、多学科思维模型、避免愚蠢与心理偏见 |
-| 🎨 **[Steve Jobs（乔布斯）](profiles/steve-jobs.md)** | 产品 / 愿景 | 砍掉非核心功能、发布时机控制、极致简化与品质保护 |
-| 🤝 **[Chris Voss](profiles/chris-voss.md)** | 谈判 | 打破谈判僵局、合同谈判、应对强硬或敌对谈判对手 |
-| 🔬 **[Richard Feynman（费曼）](profiles/richard-feynman.md)** | 研究 / 推理 | 审查自身逻辑、防范自我欺骗、用极简语言解释复杂事物 |
-| ⚡ **[Cal Newport](profiles/cal-newport.md)** | 个人效率 | 保护深度工作、用结构性修复代替意志力、时间分配 |
-| 👔 **[Reed Hastings](profiles/reed-hastings.md)** | 领导力 | 建立坦诚团队文化、主动征求异议、处理重大战略转向 |
-| 🚀 **[Travis Kalanick](profiles/travis-kalanick.md)** | 激进增长 | 强攻高阻力市场、速度与合规之间的权衡取舍 |
-| ✍️ **[Julia Evans](profiles/julia-evans.md)** | 技术写作 | 通俗解释硬核技术、为过去的自己写作、高效文档化 |
-| 🤖 **[Sam Altman](profiles/sam-altman.md)** | AI & 创业 | 迭代部署策略、速度与安全的权衡、争议性决策的框架 |
-| 💡 **[Paul Graham（保罗·格雷厄姆）](profiles/paul-graham.md)** | 创业 & 随笔 | 做无法规模化的事情、创始人真诚度判断、保持轻量身份 |
+| **[Warren Buffett（巴菲特）](profiles/warren-buffett.md)** | 投资 | 评估下注机会、估值纪律、果断拒绝不确定交易 |
+| **[Charlie Munger（查理·芒格）](profiles/charlie-munger.md)** | 多学科/投资 | 逆向思考复杂难题、多学科思维模型、避免愚蠢与心理偏见 |
+| **[Steve Jobs（乔布斯）](profiles/steve-jobs.md)** | 产品 / 愿景 | 砍掉非核心功能、发布时机控制、极致简化与品质保护 |
+| **[Chris Voss](profiles/chris-voss.md)** | 谈判 | 打破谈判僵局、合同谈判、应对强硬或敌对谈判对手 |
+| **[Richard Feynman（费曼）](profiles/richard-feynman.md)** | 研究 / 推理 | 审查自身逻辑、防范自我欺骗、用极简语言解释复杂事物 |
+| **[Cal Newport](profiles/cal-newport.md)** | 个人效率 | 保护深度工作、用结构性修复代替意志力、时间分配 |
+| **[Reed Hastings](profiles/reed-hastings.md)** | 领导力 | 建立坦诚团队文化、主动征求异议、处理重大战略转向 |
+| **[Travis Kalanick](profiles/travis-kalanick.md)** | 激进增长 | 强攻高阻力市场、速度与合规之间的权衡取舍 |
+| **[Julia Evans](profiles/julia-evans.md)** | 技术写作 | 通俗解释硬核技术、为过去的自己写作、高效文档化 |
+| **[Sam Altman](profiles/sam-altman.md)** | AI & 创业 | 迭代部署策略、速度与安全的权衡、争议性决策的框架 |
+| **[Paul Graham（保罗·格雷厄姆）](profiles/paul-graham.md)** | 创业 & 随笔 | 做无法规模化的事情、创始人真诚度判断、保持轻量身份 |
 
 ---
 
-## 💻 多平台安装矩阵
+## 多平台安装矩阵
 
 | 运行平台 | 推荐安装方式 | 具体步骤 |
 | :--- | :--- | :--- |
-| **Claude Code (命令行)** | 🟢 **Git Clone (原生 Skill)** | `git clone https://github.com/DOTfei/borrowed-brain-pro.git ~/.claude/skills/borrowed-brain-pro` |
-| **Claude.ai** | 🔵 **Skill 上传 / 提示词** | 在 Settings → Capabilities → Skills 上传 `SKILL.md` 或直接粘贴 `claude-ai-bundle.md` |
-| **ChatGPT / Custom GPT** | 🟡 **单文件 System Prompt** | 直接复制 [`claude-ai-bundle.md`](claude-ai-bundle.md) 全文粘贴至 System Prompt |
-| **Open WebUI / 本地模型** | 🟣 **System Prompt 粘贴** | 将 [`claude-ai-bundle.md`](claude-ai-bundle.md) 粘贴进系统提示词区域 |
+| **Claude / CLI** | **Git Clone** | `git clone https://github.com/DOTfei/borrowed-brain-pro.git ~/.claude/skills/borrowed-brain-pro` |
+| **Claude.ai** | **Skill 上传 / 提示词** | 在 Settings → Capabilities → Skills 上传 `SKILL.md` 或直接粘贴 `claude-ai-bundle.md` |
+| **ChatGPT / Custom GPT** | **单文件 System Prompt** | 直接复制 [`claude-ai-bundle.md`](claude-ai-bundle.md) 全文粘贴至 System Prompt |
+| **Open WebUI / 本地模型** | **System Prompt 粘贴** | 将 [`claude-ai-bundle.md`](claude-ai-bundle.md) 粘贴进系统提示词区域 |
 
 ---
 
-## 🛡️ 内置认知护栏 (Guardrails)
+## 内置认知护栏 (Guardrails)
 
 > [!IMPORTANT]
 > - **绝不伪造引言**: 直接引用严格限制在每源 15 字以内，其余全部用客观语言重新表述。
@@ -113,7 +113,7 @@ flowchart TD
 
 ---
 
-## 🤝 参与贡献
+## 参与贡献
 
 欢迎提交 issue、补充来源或贡献新的 Profile！详情请见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
@@ -125,5 +125,5 @@ python scripts/build_bundle.py
 ---
 
 <p center>
-  <i>License: <a href="LICENSE">MIT</a> · Maintainer: <a href="https://github.com/DOTfei">DOTfei</a></i>
+  <i>License: <a href="LICENSE">MIT</a> · Author & Maintainer: <a href="https://github.com/DOTfei">DOTfei</a></i>
 </p>
