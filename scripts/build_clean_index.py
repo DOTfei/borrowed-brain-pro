@@ -9,7 +9,7 @@ html_content = f'''<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Borrowed Brain Pro — Consult the World's Greatest Minds</title>
-  <meta name="description" content="Distill the decision-making frameworks of Jobs, Buffett, Socrates, and 15 more into verifiable profiles. Apply them to your real dilemmas. Not quotes. Not summaries. Thinking systems.">
+  <meta name="description" content="An open-source cognitive engine that distills the decision-making frameworks of the world's greatest minds into verifiable profiles. Load them as active reasoning lenses for your real dilemmas.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=2">
@@ -37,14 +37,14 @@ html_content = f'''<!DOCTYPE html>
       <div class="hero-left">
         <div class="hero-badge-wrap">
           <span class="hero-badge">OPEN SOURCE</span>
-          <span class="hero-kicker">18 Verified Profiles · 6 AI Platforms</span>
+          <span class="hero-kicker">Growing Cognitive Library · 6 AI Platforms</span>
         </div>
         <h1 class="hero-headline">
           Stop asking generic AI.<br>
           <span class="accent-text">Borrow the brain</span><br>
           of the best.
         </h1>
-        <p class="hero-sub">Distilled decision frameworks from Jobs, Buffett, Socrates, Laozi, and 14 others — sourced from primary documents, applied to your real dilemmas. Every profile ships with explicit failure boundaries.</p>
+        <p class="hero-sub">An open-source cognitive engine that distills the decision-making frameworks of the world's greatest minds into verifiable profiles. Load them as active reasoning lenses across any AI platform to solve your real dilemmas.</p>
         <div class="hero-actions">
           <a href="#install" class="btn-primary">Get Started Free</a>
           <a href="https://github.com/DOTfei/borrowed-brain-pro" target="_blank" class="btn-ghost">View on GitHub</a>
