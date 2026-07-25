@@ -7,11 +7,12 @@ description: Distills any public figure's thinking into a structured, sourced "t
 
 Turn a real person's public track record into a structured "thinking profile" — then use that profile to add a perspective to a decision, without pretending to speak for them.
 
-This skill has three modes. Figure out which one the user needs before starting:
+This skill has four modes. Figure out which one the user needs before starting:
 
 - **Distill mode**: no profile exists yet (or the user wants to refresh/build a new one for ANY figure) → research the person and produce `profiles/<name>.md`
 - **Apply mode**: a single profile already exists in `profiles/` → read it and use it to give the user another angle on their actual question
 - **Compare mode**: 2 or more profiles are named or loaded → contrast where their principles agree, where they conflict, and what neither lens covers
+- **Boardroom mode**: user requests a "board meeting", "virtual boardroom", "convene the board", "召集董事会", or names 3+ figures for a multi-party debate → simulate an interactive board meeting where profiles cross-examine each other and output consensus vs. friction!
 
 ### 💡 Interactive Profile Generator (Distill Any Person)
 Whenever the user asks to *"create a profile"*, *"distill someone"*, or *"build a new thinking framework"*, instantly trigger Distill Mode. Prompt the user with 3 quick options (or infer them automatically if provided):
@@ -27,6 +28,7 @@ If unsure which mode, check whether `profiles/<name>.md` already exists first.
 > - "Build a thinking profile for [name]" → researches them, saves `profiles/[name].md`
 > - "Using [name]'s profile, what am I missing in [situation]?" → applies an existing one to your actual question
 > - "Compare [Name A] and [Name B] on [situation]" → maps where their frameworks conflict
+> - "Convene the Boardroom on [situation]" → 🏛️ runs an interactive 4-figure virtual board debate with cross-examination!
 >
 > Check `profiles/` for ones already built.
 
@@ -200,6 +202,21 @@ Don't answer as if you *are* the person. Structure the response depending on mod
 - **Where they agree**: highlight underlying shared principles or tactical moves.
 - **Where they conflict**: name the tension explicitly without forcing a compromise: "[Name A]'s [principle] points toward X; [Name B]'s [principle] points toward Y — these actually conflict here because [reason]."
 - **What neither lens covers**: highlight situational factors specific to the user that both frameworks miss (e.g. company size, capital slack, regulatory environment).
+
+#### Boardroom Mode (Virtual Board Debate) 🏛️
+Triggered when the user asks to *"convene a board meeting"*, *"virtual boardroom"*, *"召集董事会"*, or requests a 3-4 figure multi-perspective debate on a dilemma.
+
+1. **Board Formation**: Convene 3–4 figures from `profiles/` (either user-specified or auto-selected from `profiles/INDEX.md` based on relevant domain expertise).
+2. **Round 1 — Opening Stances**: Each board member opens with a 1-2 sentence gut reaction and their core principle applied to the user's dilemma.
+3. **Round 2 — Cross-Examination (Direct Challenges)**:
+   - Board members directly challenge each other's assumptions based on documented tradeoffs and failure boundaries.
+   - *Example*: Munger calls out Altman's bias for speed over safety; Jobs calls out Hastings' consensus-seeking; Voss challenges Jobs' rigid refusal to negotiate.
+4. **Round 3 — Consensus & Irreconcilable Conflicts**:
+   - **Unanimous Agreement**: What do ALL board members agree is a non-negotiable?
+   - **Irreconcilable Conflict**: Where do their principles fundamentally collide, and why?
+5. **Executive Summary & Board Blind Spots**:
+   - Output a clean executive decision summary table with actionable next steps.
+   - Close by naming what the ENTIRE board might collectively miss in the user's situation.
 
 ### Step 3 — Keep the epistemic boundary visible
 

@@ -29,7 +29,7 @@
 
 ---
 
-## How It Works: 3 Modes, 1 Skill
+## How It Works: 4 Modes, 1 Skill
 
 ```mermaid
 flowchart TD
@@ -42,11 +42,15 @@ flowchart TD
 
     Router -->|3. Compare Mode| Compare["Multi-Lens Contrast\nCompare 2+ Profiles → Map Conflicts & Gaps"]
 
+    Router -->|4. Boardroom Mode| Boardroom["Virtual Board Debate\nConvene 3-4 Figures → Cross-Examine & Output Consensus"]
+
     Save --> Apply
     Save --> Compare
+    Save --> Boardroom
 
     Apply --> Output["Decision Lens Output\n(Explicitly flags what the lens misses)"]
     Compare --> Output
+    Boardroom --> Output
 ```
 
 ### Quick Commands
@@ -60,6 +64,9 @@ flowchart TD
 
 # 3. Compare two profiles on a dilemma
 "Compare Jobs and Altman's profiles on my launch timing dilemma"
+
+# 4. Convene a 4-Figure Virtual Boardroom Debate
+"Convene the Boardroom (Jobs, Munger, Altman, Hastings) on my pricing dilemma"
 ```
 
 ---

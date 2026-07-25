@@ -29,7 +29,7 @@
 
 ---
 
-## 工作原理：三大模式，一个 Skill
+## 工作原理：四大模式，一个 Skill
 
 ```mermaid
 flowchart TD
@@ -42,11 +42,15 @@ flowchart TD
 
     Router -->|3. Compare 对比模式| Compare["多视角冲突对比\n对比 2+ 份档案 → 呈现分歧与共同盲点"]
 
+    Router -->|4. Boardroom 董事会模式| Boardroom["虚拟董事会辩论\n召集 3-4 位大佬 → 互相质问辩论与一致共识"]
+
     Save --> Apply
     Save --> Compare
+    Save --> Boardroom
 
     Apply --> Output["决策输出\n(明确标注该视角覆盖不到的因素)"]
     Compare --> Output
+    Boardroom --> Output
 ```
 
 ### 常用命令速查
@@ -60,6 +64,9 @@ flowchart TD
 
 # 3. 对比两位大佬在同一难题上的分歧
 "对比 Jobs 和 Altman 的档案，分析我的产品发布时机难题"
+
+# 4. 召集 4 位大佬组建虚拟董事会会诊
+"召集董事会（Jobs, Munger, Altman, Hastings），帮我研判定价策略难题"
 ```
 
 ---
