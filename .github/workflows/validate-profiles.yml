@@ -1,0 +1,57 @@
+name: Validate Profiles Schema
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-schema:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate Profile Headings
+        run: |
+          python -c "
+          import sys
+          from pathlib import Path
+
+          required_headings = [
+              '## Sources',
+              '## Core stance',
+              '## Recurring principles',
+              '## Default reasoning order',
+              '## Tradeoffs they lean toward',
+              '## One documented failure or criticism',
+              '## Vocabulary / analogies they reach for',
+              '## Confidence note'
+          ]
+
+          profiles_dir = Path('profiles')
+          errors = []
+
+          for p in profiles_dir.glob('*.md'):
+              if p.name == 'INDEX.md':
+                  continue
+              content = p.read_text(encoding='utf-8')
+              for h in required_headings:
+                  if h not in content:
+                      errors.append(f'{p.name}: Missing section header \"{h}\"')
+
+          if errors:
+              print('Profile validation errors found:')
+              for err in errors:
+                  print('  -', err)
+              sys.exit(1)
+          else:
+              print('All profiles passed schema validation!')
+          "

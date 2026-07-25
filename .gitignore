@@ -1,3 +1,25 @@
+# Operating System Files
 ._*
 .DS_Store
+Thumbs.db
+
+# Editor & IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Runtime & Environment
+.env
+.env.local
+*.log
+
+# Python / Build Artifacts
+__pycache__/
+*.pyc
+venv/
+.venv/
+.python-version
+
+# Local Claude & Tool Artifacts
 CLAUDE.md

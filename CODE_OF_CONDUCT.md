@@ -50,8 +50,7 @@ when an individual is officially representing the community in public spaces.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the project maintainers by opening an issue or, for sensitive
-reports, contacting a maintainer directly. All complaints will be reviewed
+reported to the project maintainers via GitHub Issues or by contacting the repository owner directly at `dotfei@users.noreply.github.com`. All complaints will be reviewed
 and investigated promptly and fairly.
 
 ## Attribution

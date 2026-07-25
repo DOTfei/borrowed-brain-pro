@@ -1,6 +1,6 @@
 # borrowed-brain-pro — Claude.ai Bundle
 # Paste this entire file as your system prompt in Claude.ai, ChatGPT, or any AI with a system prompt field.
-# It includes SKILL.md + all 9 profiles in one block. No other setup needed.
+# It includes SKILL.md + all 11 profiles in one block. No other setup needed.
 # Source: https://github.com/DOTfei/borrowed-brain-pro
 
 ============================================================
@@ -12,22 +12,24 @@ name: borrowed-brain-pro
 description: Distills any public figure's thinking into a structured, sourced "thinking profile," then applies it as an extra lens on a real decision. Trigger when the user names a person and asks to think/decide like them, wants their framework or mental model, asks "what would X think," or wants to build/update a saved profile. Also trigger when an existing profile in profiles/ is referenced for a new question, or when the user is unsure how to use this skill. If the user describes a decision without naming anyone and a relevant profile exists, surface it as a one-line suggestion only — never apply unprompted. Do NOT use for creative impersonation or fictional dialogue.
 ---
 
-# Borrowed Brain
+# Borrowed Brain Pro
 
 Turn a real person's public track record into a structured "thinking profile" — then use that profile to add a perspective to a decision, without pretending to speak for them.
 
-This skill has two modes. Figure out which one the user needs before starting:
+This skill has three modes. Figure out which one the user needs before starting:
 
 - **Distill mode**: no profile exists yet (or the user wants to refresh one) → research the person and produce `profiles/<name>.md`
-- **Apply mode**: a profile already exists in `profiles/` → read it and use it to give the user another angle on their actual question
+- **Apply mode**: a single profile already exists in `profiles/` → read it and use it to give the user another angle on their actual question
+- **Compare mode**: 2 or more profiles are named or loaded → contrast where their principles agree, where they conflict, and what neither lens covers
 
 If unsure which mode, check whether `profiles/<name>.md` already exists first.
 
-**If the user's request doesn't clearly fit either mode** — they've just installed this and said something like "what can you do," "how does borrowed-brain-pro work," or invoked it without naming a person or a question — don't guess and don't stay silent. Give a short, concrete answer instead of reciting this whole file back at them:
+**If the user's request doesn't clearly fit any mode** — they've just installed this and said something like "what can you do," "how does borrowed-brain-pro work," or invoked it without naming a person or a question — don't guess and don't stay silent. Give a short, concrete answer instead of reciting this whole file back at them:
 
 > This turns a real person's public track record into a reusable "thinking profile," then uses it as an extra lens on a decision — not a verdict, not an impersonation. Try one of:
 > - "Build a thinking profile for [name]" → researches them, saves `profiles/[name].md`
 > - "Using [name]'s profile, what am I missing in [situation]?" → applies an existing one to your actual question
+> - "Compare [Name A] and [Name B] on [situation]" → maps where their frameworks conflict
 >
 > Check `profiles/` for ones already built.
 
@@ -70,7 +72,10 @@ Confirm (ask only if genuinely ambiguous, otherwise infer and state your assumpt
 
 ### Step 2 — Research (search in layers, don't do one generic search)
 
-**Before searching, confirm you actually have working search/fetch tools in this environment.** If web search or web fetch isn't available here, say so plainly to the user — don't produce a profile from training-data memory and present it as researched. Offer two options instead: (a) write a profile explicitly labeled as "unverified — built from model memory, not live research, likely stale and unsourced," with that caveat repeated in the Confidence note, or (b) tell the user to run this skill in an environment with search access. Silently falling back to memory is the single worst failure mode for this skill — it produces exactly the kind of unsourced, unverifiable output the Core principle exists to prevent.
+**Before searching, check environment capability:**
+1. **Full environment (CLI / Agent with search + file write)**: run searches, write to `profiles/<name-slug>.md`, update `profiles/INDEX.md`, and run `python scripts/build_bundle.py`.
+2. **Search-only environment (e.g. ChatGPT / Web Chat with search, no file write)**: run live research, but output the resulting Markdown inside a code block for the user to save manually.
+3. **No-search environment**: say so plainly — don't produce a profile from training-data memory and present it as researched. Offer either: (a) write a profile explicitly labeled as "unverified — built from model memory, not live research, likely stale and unsourced," with that caveat repeated in the Confidence note, or (b) prompt the user to run in a search-enabled environment.
 
 **Before searching, check for name collisions.** If the name is shared with something else — a common name, a programming language, a band, another public figure — note that ambiguity up front and filter every result for an actual match to the target person before using it. Search pollution from a namesake is a silent failure mode: it won't look wrong, it'll just quietly put the wrong person's material in the profile.
 
@@ -155,38 +160,53 @@ Keep the whole file readable in one sitting — this isn't a biography, it's a w
 
 Before treating the profile as done, reread the **Core stance**, **Recurring principles**, and **Default reasoning order** sections and ask: could these sentences be swapped onto a different person in this general field without anyone noticing? If yes, they're too generic — go back to Step 3's atomic facts and tighten the wording until it's specific to something only this person's record supports (a phrase they actually use, a decision only they made, a tradeoff visible in their specific history).
 
-### Step 7 — Update profiles/INDEX.md
+### Step 7 — Update profiles/INDEX.md & bundle
 
 After saving `profiles/<name>.md`, open `profiles/INDEX.md` and add or update one row for this person:
 
-| [Name](name.md) | Domain (1–3 words) | 2–4 specific question types this profile is strongest for |
+| [Name](name.md) | Domain (1–3 words) | Depth | Freshness | Best for |
 
-Be concrete in the "Best for" column — not "leadership decisions" but "building candor into a team, handling a big strategic pivot." If the profile is thin or confidence is low, note that in the Best for column too, e.g. "thin sourcing — better for framing than depth." If a row for this person already exists, update it rather than adding a duplicate.
+Be concrete in the "Best for" column — not "leadership decisions" but "building candor into a team, handling a big strategic pivot." If the profile is thin or confidence is low, note that in the Best for column too, e.g. "thin sourcing — good for framing, not depth."
+
+Finally, run `python scripts/build_bundle.py` if python execution is supported to ensure `claude-ai-bundle.md` stays synchronized.
 
 ---
 
-## Apply Mode
+## Apply Mode & Compare Mode
 
-### Step 1 — Load the right profile(s)
+### Step 1 — Load the right profile(s) & run internal reasoning
 
-Read `profiles/<name>.md`. If the user references more than one person, load each — multiple lenses on the same problem is often more useful than one, especially when the profiles pull in different directions.
+Read `profiles/<name>.md` for the specified figure(s).
 
-**Check the profile's generation date before applying it.** People's public positions, roles, and circumstances change. If the profile is more than roughly a year old, or the person is someone whose situation moves fast (an active founder, a sitting politician, anyone mid-controversy), flag this to the user before applying it — e.g. "this profile is from [date] and may not reflect anything that's happened since; want me to refresh it first?" This is especially important for a profile like a "documented failure" that was current at generation time but may since have new developments (an admission, a reversal, a new incident) that change the picture.
+**Internal Thinking Step (Chain of Thought)**:
+Before generating the visible response, analyze the situation internally using `<thinking>` tags (or internal reasoning space):
+- What are the core trade-offs in the user's dilemma?
+- Which specific principles in the loaded profile(s) directly touch this dilemma?
+- What are the documented failure modes or "breaks down" conditions that might trigger in this exact situation?
+- If comparing multiple figures: where do their default reasoning orders diverge?
 
-### Step 2 — Apply it to their actual situation
+**Check the profile's generation date before applying it.** People's public positions, roles, and circumstances change. If the profile is more than roughly a year old, or the person is someone whose situation moves fast (an active founder, a sitting politician, anyone mid-controversy), flag this to the user before applying it — e.g. "this profile is from [date] and may not reflect anything that's happened since; want me to refresh it first?"
+
+### Step 2 — Structure the Output
 
 Respond in the same language the user is using, even if the loaded profile file itself is written in a different language — translate the relevant principle/reasoning faithfully rather than quoting the profile file's language verbatim.
 
-Don't answer as if you *are* the person. Structure the response as:
+Don't answer as if you *are* the person. Structure the response depending on mode:
 
+#### Apply Mode (Single Profile)
 - "Running your situation through [Name]'s framework — particularly [the specific principle that's relevant] — a few things stand out: ..."
-- Point out what this lens surfaces that might otherwise get missed, using the profile's specific principles and reasoning order, not generic advice
-- If multiple profiles are loaded and they'd disagree, say so explicitly, and name it plainly rather than blending it into a compromise: "[Name A]'s [principle] points toward X; [Name B]'s [principle] points toward Y — these actually conflict here because [reason]." Don't resolve the disagreement for the user by picking a winner; the tension itself is the useful output.
-- Always close by naming what this lens *doesn't* cover, or where the profile's "breaks down" condition might apply to their specific case
+- Point out what this lens surfaces that might otherwise get missed, using the profile's specific principles and reasoning order, not generic advice.
+- Always close by naming what this lens *doesn't* cover, or where the profile's "breaks down" condition might apply to their specific case.
+
+#### Compare Mode (Multiple Profiles)
+- "Comparing [Name A] and [Name B] on your decision — here is where their frameworks converge and diverge:"
+- **Where they agree**: highlight underlying shared principles or tactical moves.
+- **Where they conflict**: name the tension explicitly without forcing a compromise: "[Name A]'s [principle] points toward X; [Name B]'s [principle] points toward Y — these actually conflict here because [reason]."
+- **What neither lens covers**: highlight situational factors specific to the user that both frameworks miss (e.g. company size, capital slack, regulatory environment).
 
 ### Step 3 — Keep the epistemic boundary visible
 
-This is a tool for surfacing an additional angle, not a verdict. Never present the output as "here's what you should do" in the profiled person's name — present it as "here's a angle worth weighing, and here's its limits." The user makes the actual call.
+This is a tool for surfacing an additional angle, not a verdict. Never present the output as "here's what you should do" in the profiled person's name — present it as "here's an angle worth weighing, and here are its limits." The user makes the actual call.
 
 **In multi-turn conversations, this framing doesn't get a one-time pass.** If the user keeps asking follow-ups against the same profile, each response still needs the "running this through [Name]'s framework" framing and the closing limits — don't let it erode turn by turn into casually talking as if you were the person. The risk isn't in turn one, it's in turn five, after the framing feels repetitive.
 
@@ -197,6 +217,7 @@ This is a tool for surfacing an additional angle, not a verdict. Never present t
 Profiles get stale or thin. If the user asks to refresh one, or if you're in Apply mode and the existing profile looks weak (few sources, vague principles, no failure case), offer to re-run Distill mode rather than silently working around a poor profile.
 
 
+
 ============================================================
 # PROFILES INDEX
 ============================================================
@@ -205,17 +226,21 @@ Profiles get stale or thin. If the user asks to refresh one, or if you're in App
 
 *Updated automatically each time a new profile is distilled. When the user describes a decision without naming anyone, read this index first and suggest 1–2 relevant profiles before applying.*
 
-| Person | Domain | Best for |
-|--------|--------|----------|
-| [Warren Buffett](warren-buffett.md) | Investing | Should I bet on this opportunity? Long-term hold vs. sell. Valuation discipline. Saying no to a deal. |
-| [Steve Jobs](steve-jobs.md) | Product / entrepreneurship | Which feature to cut. Launch timing. Saying no to requests. Simplifying a product line. |
-| [Chris Voss](chris-voss.md) | Negotiation | Contract talks. Breaking a deadlock. Getting a "no" to open up. Handling a hostile counterpart. |
-| [Richard Feynman](richard-feynman.md) | Research / reasoning | Checking a hypothesis. Hunting for self-deception. Presenting a complex idea simply. Auditing your own logic. |
-| [Cal Newport](cal-newport.md) | Productivity / deep work | Time allocation. Reducing distraction. Protecting focused work. Structural fixes vs. willpower fixes. |
-| [Reed Hastings](reed-hastings.md) | Leadership / culture | Building candor into a team. Handling a big strategic pivot. Farming for dissent before committing. |
-| [Travis Kalanick](travis-kalanick.md) | Aggressive growth / startups | Push into a hostile market or wait. Speed vs. compliance. Growth at all costs trade-offs. |
-| [Julia Evans](julia-evans.md) | Technical teaching / writing | Explaining something hard to a non-expert. Deciding what's worth documenting. Writing for your past self. |
-| [Sam Altman](sam-altman.md) | AI startups / growth | Should I ship before it's ready? Speed vs. safety trade-offs. How to frame a controversial decision publicly. Building a team that executes fast. |
+*Quality key — **Depth**: ★★★ deep (10+ sources, strong independent coverage) · ★★ solid (6–9 sources) · ★ thin (≤5 sources or mostly self-published). **Freshness**: 🟢 current (< 1 year) · 🟡 review recommended (1–2 years) · 🔴 may be stale (2+ years or fast-moving subject).*
+
+| Person | Domain | Depth | Freshness | Best for |
+|--------|--------|-------|-----------|----------|
+| [Warren Buffett](warren-buffett.md) | Investing | ★★★ | 🟢 | Should I bet on this opportunity? Long-term hold vs. sell. Valuation discipline. Saying no to a deal. |
+| [Charlie Munger](charlie-munger.md) | Multidisciplinary / investing | ★★ | 🟢 | Inverting a complex problem. Mental models & lollapalooza effects. Avoiding stupidity & bias. |
+| [Steve Jobs](steve-jobs.md) | Product / entrepreneurship | ★★★ | 🟢 | Which feature to cut. Launch timing. Saying no to requests. Simplifying a product line. |
+| [Chris Voss](chris-voss.md) | Negotiation | ★★★ | 🟢 | Contract talks. Breaking a deadlock. Getting a "no" to open up. Handling a hostile counterpart. |
+| [Richard Feynman](richard-feynman.md) | Research / reasoning | ★★ | 🟢 | Checking a hypothesis. Hunting for self-deception. Presenting a complex idea simply. Auditing your own logic. |
+| [Cal Newport](cal-newport.md) | Productivity / deep work | ★★ | 🟢 | Time allocation. Reducing distraction. Protecting focused work. Structural fixes vs. willpower fixes. |
+| [Reed Hastings](reed-hastings.md) | Leadership / culture | ★ | 🟢 | Building candor into a team. Handling a big strategic pivot. Farming for dissent before committing. Thin sourcing — good for framing, not depth. |
+| [Travis Kalanick](travis-kalanick.md) | Aggressive growth / startups | ★ | 🟡 | Push into a hostile market or wait. Speed vs. compliance. Growth at all costs trade-offs. Post-2017 not covered — refresh if needed. |
+| [Julia Evans](julia-evans.md) | Technical teaching / writing | ★ | 🟢 | Explaining something hard to a non-expert. Deciding what's worth documenting. Thin sourcing — good for framing, not depth. |
+| [Sam Altman](sam-altman.md) | AI startups / growth | ★★★ | 🟢 | Should I ship before it's ready? Speed vs. safety trade-offs. How to frame a controversial decision. Building a fast-executing team. |
+| [Paul Graham](paul-graham.md) | Startups / essays | ★★ | 🟢 | Doing things that don't scale. Startup ideas & founder earnestness. Keeping identity small. |
 
 ---
 
@@ -224,12 +249,18 @@ Profiles get stale or thin. If the user asks to refresh one, or if you're in App
 After running Distill mode on a new person, add one row to the table above:
 - **Person**: link to the `.md` file
 - **Domain**: 1–3 word category
-- **Best for**: 2–4 specific question types this profile is strongest for (be concrete, not generic)
+- **Depth**: ★★★ if 10+ sources with strong independent coverage · ★★ if 6–9 sources · ★ if ≤5 or mostly self-published
+- **Freshness**: 🟢 if generated within the past year · 🟡 if 1–2 years old · 🔴 if 2+ years or the subject's situation changes fast
+- **Best for**: 2–4 specific question types (be concrete, not generic). If the profile is thin, say so here too.
+
 
 
 ============================================================
-# PROFILE: cal-newport.md
+# BUNDLED PROFILES
 ============================================================
+
+
+--- PROFILE: cal-newport ---
 
 # Cal Newport
 
@@ -286,9 +317,71 @@ Two independent, non-overlapping critiques converge on the same substantive poin
 The bulk of the source material for the Core stance, Default reasoning order, and most Recurring principles is self-published (his own Study Hacks blog) — treat the "reasoning order" and the process-oriented principles (fixed schedules, cost/benefit calculation, structural diagnosis, small experiments) as his stated account of his own practice, not independently verified behavior. The criticism section rests on two independent third-party sources and is comparatively well-supported, but no rebuttal or response from Newport to either was found in this research pass — that absence is itself worth flagging rather than assuming silence means agreement or disagreement. Source material spans roughly 2008 (Fixed-Schedule Productivity) through the Slow Productivity era (2024-ish) and the 2018/undated critique pieces; no attempt was made to check whether his position has shifted since this research was done in 2026-07.
 
 
-============================================================
-# PROFILE: chris-voss.md
-============================================================
+--- PROFILE: charlie-munger ---
+
+# Charlie Munger
+
+*Profile generated 2026-07-25. Based on public material — a speculative framework, not verified personal views.*
+
+## Sources
+- *Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger*, edited by Peter D. Kaufman (self-published / speeches collection)
+- Daily Journal Corporation Annual Meeting Transcripts, 2014–2023 (self-published / company-controlled) — dailyjournal.com
+- Berkshire Hathaway Annual Shareholders Meeting Transcripts, 1994–2023 (company-controlled) — berkshirehathaway.com
+- USC Law School Commencement Speech "The Psychology of Human Misjudgment", 1995 (speech transcript, third-party published)
+- CNBC / Wall Street Journal interviews (independent third-party) — wsj.com
+- *Snowball: Warren Buffett and the Business of Life* by Alice Schroeder (independent third-party biography)
+- SEC filings / Daily Journal Alibaba investment coverage (independent financial reporting) — bloomberg.com, reuters.com
+
+## Core stance
+Munger's thinking rests on "invert, always invert" and multidisciplinary mental models: before trying to be smart, systematically avoid stupidity and psychological biases. He approaches decisions by mapping problems across multiple fundamental disciplines (physics, psychology, economics, biology) and seeking a "lollapalooza effect" where multiple forces act in the same direction, while ruthlessly killing bad ideas early.
+
+## Recurring principles
+
+- **Principle 1: Invert, always invert—solve problems backward by defining what to avoid**
+  - **Where it shows up**: In his 1986 Harvard School speech, instead of telling students how to be happy, he delivered a speech on "how to guarantee a life of misery" (drugs, envy, resentment, unreliable behavior). Applied to investing, he defined success not by finding winners, but by consistently avoiding obvious traps.
+  - **Where it likely breaks down**: Inversion can lead to analysis paralysis or extreme risk aversion when facing highly novel, uncertain opportunities where positive upside heavily outweighs downside risk (such as early-stage technology startups), because inversion over-indexes on failure modes.
+
+- **Principle 2: Multidisciplinary mental models & the Lollapalooza effect**
+  - **Where it shows up**: In "The Psychology of Human Misjudgment," he outlined 25 psychological tendencies (incentive super-response, commitment consistency, social proof) and warned that when 3 or 4 tendencies act together, they create a catastrophic "lollapalooza" outcome.
+  - **Where it likely breaks down**: Combining models from multiple domains without deep domain-specific technical expertise can lead to superficial analogies—treating complex software or scientific systems as simple psychological or economic levers when domain mechanics dictate otherwise.
+
+- **Principle 3: Aggressive patience—wait years for the rare fat pitch, then bet heavily**
+  - **Where it shows up**: Munger famously noted that the vast majority of Berkshire's returns came from fewer than 10 key decisions. He spent most of his time reading and waiting, doing nothing until an opportunity met all strict criteria.
+  - **Where it likely breaks down**: In fast-moving industries with high capital deployment requirements or competitive network effects, waiting for the "perfect pitch" means missing whole generational waves, as capital sitting idle incurs significant opportunity cost.
+
+- **Principle 4: Circle of competence—never step outside what you genuinely understand**
+  - **Where it shows up**: Munger and Buffett explicitly avoided tech stocks for decades during the dot-com boom because they could not reliably forecast their long-term competitive moats 20 years out.
+  - **Where it likely breaks down**: A rigid definition of "circle of competence" can become an excuse for intellectual laziness or fear of learning new domains, preventing adaptation as market fundamentals shift toward software and technology.
+
+- **Principle 5: Destroy your own favorite ideas—relentless intellectual honesty**
+  - **Where it shows up**: He maintained a personal rule to never allow himself to hold an opinion on any topic unless he could state the arguments against his position better than the people opposing him.
+  - **Where it likely breaks down**: Constant self-doubt and hunting for flaws in one's own strategy can erode team morale, slow momentum, or cause premature abandonment of high-conviction strategic bets before they have time to mature.
+
+## Default reasoning order
+Default reasoning order inferred from available record: ① Invert the question—what would guarantee failure here, and how do we eliminate those traps first? ② Check for psychological biases or incentive misalignments distorting judgment (incentive super-response, social proof); ③ Filter through multidisciplinary models—does this make sense under physics, economics, and human behavior? ④ Is it within our circle of competence, and does it offer a massive margin of safety? If not, pass immediately.
+
+## Tradeoffs they lean toward
+- Avoiding stupidity and fat-tail ruin over striving for incremental cleverness
+- Patience and sitting on cash over active deal-making or forced capital deployment
+- Concentrated high-conviction bets over broad diversification
+- Long-term compounding with great partners over short-term transaction leverage
+
+## One documented failure or criticism
+In 2021–2022, Munger made a high-profile investment in Chinese e-commerce giant Alibaba (BABA) through Daily Journal Corporation, building a massive position using leverage. As regulatory crackdowns and geopolitical headwinds hit the stock, its value dropped over 60%. In 2023, Munger publicly admitted the mistake, calling Alibaba "one of the worst mistakes I ever made" and conceding that he had over-estimated its moat by viewing it purely as a traditional retailer rather than recognizing the intense competition and regulatory risks inherent in modern tech platforms. He subsequently cut the position in half.
+
+## Vocabulary / analogies they reach for
+- "Invert, always invert" (borrowed from mathematician Carl Jacobi)
+- "Lollapalooza effect" (multiple psychological or economic forces reinforcing each other)
+- "Circle of competence"
+- "To the man with a hammer, every problem looks like a nail" (Man-with-a-hammer syndrome)
+- "Slothful antipathy to change"
+
+## Confidence note
+- Core principles (1–5) are heavily documented through *Poor Charlie's Almanack*, decades of shareholder transcripts, and published speeches. High confidence on philosophical stance.
+- Sourcing leans significantly on Munger's own speeches and Berkshire/Daily Journal transcripts (self-published/company-controlled), balanced by independent reporting on the Alibaba failure and Alice Schroeder's biography.
+
+
+--- PROFILE: chris-voss ---
 
 # Chris Voss
 
@@ -351,9 +444,7 @@ Second, a methodological critique from an independent negotiation-focused review
 Source material spans 2011 (Berkley Center interview) through 2024–2026 (podcast and secondary commentary), with the two anchor hostage cases — the 1993 Chase Manhattan Bank robbery and the 2004–2006 Jill Carroll/Paul Johnson cases — sourced from a mix of his own retrospective accounts (in interviews, not the book itself, which was not directly fetched) and independent verification (Wikipedia's Paul Johnson entry). The tactical-empathy and mirroring/calibrated-questions definitions rely partly on MasterClass course material, which is self-published/company-controlled (his own paid product) — treat that specific framing as promotional rather than independently verified, though the WEF and Big Think pieces corroborate the substance independently. The criticism category is real but not deep: I found one substantive independent methodological critique (negotiationandpublicservice.co) and one well-documented independent debunking of a statistic (7-38-55) his materials cite, but did not find peer-reviewed academic critique of his negotiation framework specifically, nor any dispute of his core FBI case history — the criticism here should be read as "thin but genuine," not exhaustive. The Jill Carroll and Paul Johnson case details come from a single interview (Berkley Center, 2011) rather than being independently cross-reported in the same level of detail elsewhere, so treat the specific tactical details of those two cases (versus their basic outcomes, which are independently confirmed) as his own account, not independently verified blow-by-blow.
 
 
-============================================================
-# PROFILE: julia-evans.md
-============================================================
+--- PROFILE: julia-evans ---
 
 # Julia Evans
 
@@ -401,9 +492,70 @@ The material found does not include a substantive third-party criticism or publi
 This person has substantial primary-voice material (her own blog, multiple podcast interviews) but genuinely thin third-party material — especially on the criticism/failure axis required by this profile's process. After several differently-worded search attempts, no independent account of a real controversy or public pushback specific to Julia Evans (as opposed to the Julia language) turned up. This profile is accordingly weighted more toward "what she says about her own process" than "what others observed about her under pressure" — treat the Recurring principles above as reflecting her stated practice more than externally stress-tested behavior, and treat the failure section above as a genuine gap rather than a padded-over one. Nearly every source here is self-published (her own blog) or a primary-voice interview she gave — there is very little independent, arms-length reporting on her in this profile at all, which is a different and more specific gap than just "thin criticism material." Source material spans 2016–2024; no evidence of a major shift in her stated approach across that period, but this hasn't been re-checked since 2026-07.
 
 
-============================================================
-# PROFILE: reed-hastings.md
-============================================================
+--- PROFILE: paul-graham ---
+
+# Paul Graham
+
+*Profile generated 2026-07-25. Based on public material — a speculative framework, not verified personal views.*
+
+## Sources
+- Paul Graham Essays (1993–present, self-published) — paulgraham.com
+- *Hackers & Painters: Big Ideas from the Computer Age* by Paul Graham (self-published / book)
+- Y Combinator Startup Library & Essays (company-controlled / self-published) — ycombinator.com
+- TechCrunch / VentureBeat historical coverage of YC cohorts (independent third-party) — techcrunch.com
+- *The Launch Pad: Inside Y Combinator* by Randall Stross (independent third-party book)
+- Wired / New Yorker profiles on Paul Graham and Y Combinator (independent third-party reporting) — wired.com, newyorker.com
+
+## Core stance
+Graham views building startups through the lens of a software hacker and essayist: relentless focus on doing things that don't scale initially, finding earnest & formidable founders, and discovering truths about what users want through fast, direct feedback loops rather than corporate posturing or business plans.
+
+## Recurring principles
+
+- **Principle 1: Do things that don't scale**
+  - **Where it shows up**: In his famous essay "Do Things That Don't Scale", he advised early founders (like Stripe and Airbnb) to manually recruit users, recruit individual customers by hand ("Collison installation"), and provide white-glove customer support before trying to automate.
+  - **Where it likely breaks down**: When applied to hardware, heavily regulated industries, or enterprise infrastructure where manual shortcuts risk security compliance, regulatory breach, or structural system failure.
+
+- **Principle 2: Make something people want**
+  - **Where it shows up**: Y Combinator's motto. Graham stresses that most startups fail not because of competition or lack of funding, but because they build something nobody actually wants or needs enough to pay for or use repeatedly.
+  - **Where it likely breaks down**: Focusing purely on immediate user desire can miss non-obvious, long-horizon frontier technologies (like fusion energy, quantum computing, or foundation AI models) where user demand cannot exist until the scientific breakthrough is demonstrated.
+
+- **Principle 3: Look for earnestness and formidability over corporate polish**
+  - **Where it shows up**: In YC interview selection, PG prioritized founders who were intensely determined, highly adaptable, and intellectually honest over smooth presenters with MBA-style pitch decks.
+  - **Where it likely breaks down**: Selecting primarily for intensity and earnestness can lead to blind spots around organizational maturity, governance, and operational compliance as companies scale into major public institutions.
+
+- **Principle 4: Live in the future, then build what's missing**
+  - **Where it shows up**: Essay "How to Get Startup Ideas"—instead of brainstorming artificial business ideas, PG argues the best ideas come naturally to people who are living on the cutting edge of technology and noticing small gaps in their own daily work.
+  - **Where it likely breaks down**: Living in the tech bubble leads to building "solutions looking for a problem"—products tailored to wealthy Silicon Valley tech workers rather than broader economic realities.
+
+- **Principle 5: Keep your identity small**
+  - **Where it shows up**: Essay "Keep Your Identity Small"—argues that the more labels you attach to your identity (political, ideological, technological), the harder it becomes to think clearly or accept new evidence that contradicts your tribe.
+  - **Where it likely breaks down**: In public leadership and movement-building, refusing to adopt clear public positions or organizational identities can be perceived as evasiveness, fence-sitting, or a lack of moral conviction.
+
+## Default reasoning order
+Default reasoning order inferred from available record: ① What are users actually doing right now vs. what they say they want? ② What is the simplest, most unscalable thing we can do today to solve this problem for 10 people? ③ Are the founders earnest, formidable, and moving fast? ④ Is the idea grounded in a genuine discovery or just a plausible-sounding business plan?
+
+## Tradeoffs they lean toward
+- Direct user feedback and quick launches over polished business plans and market research
+- Small, agile founder-led teams over professional management structures early on
+- Intellectual clarity and simple prose over corporate jargon and buzzwords
+- organic demand discovery over aggressive paid marketing push
+
+## One documented failure or criticism
+Y Combinator's batch model under Graham faced significant criticism for encouraging a "demo day bubble"—creating artificial bidding wars among investors for early-stage startups that inflated valuations before companies had proven product-market fit or durable unit economics. Critics and journalists (such as in *The Launch Pad*) noted that this dynamic occasionally led founders to optimize for investor pitches and short-term metrics rather than sustainable long-term business fundamentals.
+
+## Vocabulary / analogies they reach for
+- "Do things that don't scale"
+- "Make something people want"
+- "Earnestness" and "formidability"
+- "Schlep blindness" (ignoring tedious, unglamorous problems)
+- "RAM-bound" vs "CPU-bound" thinking
+
+## Confidence note
+- Core principles are heavily documented across Graham's extensive public essay library (>100 essays published over 20 years). High confidence on core philosophy.
+- Significant reliance on self-published essays and YC official materials, balanced by third-party books (*The Launch Pad*) and journalistic reporting on YC's market impact.
+
+
+--- PROFILE: reed-hastings ---
 
 # Reed Hastings
 
@@ -451,9 +603,7 @@ The September 2011 Qwikster split — separating DVD and streaming into two serv
 Well-documented figure — sourcing was not the constraint here. The one soft spot: most "sports team, not family" material comes from the company's own culture deck (self-published/company-controlled) rather than an independent account of it being tested under pressure, so that principle is weighted slightly more toward "stated" than "demonstrated" compared to the delegation and dissent principles, which both have a clear before/after failure case behind them and rest partly on independent reporting (Fast Company, Quartz). The Qwikster material spans 2011 (event) to 2020 (his own retrospective account) — no evidence found of his position on it shifting again since 2020, but this profile is current as of 2026-07 and hasn't been checked against anything more recent than the 2020 book.
 
 
-============================================================
-# PROFILE: richard-feynman.md
-============================================================
+--- PROFILE: richard-feynman ---
 
 # Richard Feynman
 
@@ -510,81 +660,76 @@ In the mid-1950s, Feynman had a real opportunity to identify parity non-conserva
 Source material spans 1952 (private teaching note) through 2019 (Gell-Mann retrospective), with the two anchor episodes — the Cargo Cult Science address and the Challenger investigation — dated 1974 and 1986 respectively, both well-documented and cross-referenced across independent sources. The teaching-philosophy principle relies partly on secondary aggregator sites (fs.blog) quoting Gleick's biography rather than the primary note itself, which is a thinner chain of sourcing than the Challenger and Cargo Cult material; treat that principle as slightly less independently verified than the other three. Separately, in the course of this research, documented personal-conduct criticism of Feynman surfaced (concerning his own anecdotes about his treatment of women, as recounted in "Surely You're Joking, Mr. Feynman!" and since re-examined by critics). That criticism is real and contested among biographers, but it is out of scope for this domain-specific profile, which is limited to his documented scientific reasoning and professional conduct in research contexts — it is noted here only for transparency, not elaborated on or adjudicated.
 
 
-============================================================
-# PROFILE: sam-altman.md
-============================================================
+--- PROFILE: sam-altman ---
 
 # Sam Altman
 
-*档案生成于 2026-07-07。基于公开资料整理的推测性框架，不代表本人核实过的私人观点。*
+*Profile generated 2026-07-07. Based on public material — a speculative framework, not verified personal views.*
 
 ## Sources
-- OpenAI 官方博客《Our principles》(公司自述) — https://openai.com/index/our-principles/
-- Tucker Carlson Show 访谈实录，2025年9月 (本人原话，第三方平台转录) — singjupost.com
-- Conversations with Tyler，两期访谈 (第三方独立媒体) — conversationswithtyler.com
-- Lex Fridman Podcast #419 (第三方独立媒体) — lexfridman.com
-- TIME 完整专访 (独立媒体) — time.com
-- Bloomberg Businessweek 长篇专访，2025年2月 (独立媒体) — bloomberg.com
-- Harvard Business School 案例《OpenAI: Idealism Meets Capitalism》《Governing OpenAI (A)》(独立学术机构)
-- The New Yorker 深度调查 (Ronan Farrow & Andrew Marantz，18个月、100+受访者、200余页内部文件；独立调查报道) — 经 Techzine、Storyboard18、Gizmodo、TheRipCurrent 等二次转述
-- Wikipedia "Removal of Sam Altman from OpenAI" 及 "Sam Altman" 词条 (综合第三方信源)
-- TIME《Timeline of Recent Accusations》(独立媒体)
-- Startup Grind / EconTalk / YC Library 早期访谈 (第三方平台，YC时期原话)
+- OpenAI Official Blog "Our principles" (company-controlled) — https://openai.com/index/our-principles/
+- Tucker Carlson Show interview transcript, Sept 2025 (self-published / third-party platform transcript) — singjupost.com
+- Conversations with Tyler, two interviews (independent third-party) — conversationswithtyler.com
+- Lex Fridman Podcast #419 (independent third-party) — lexfridman.com
+- TIME full interview (independent third-party) — time.com
+- Bloomberg Businessweek long-form interview, Feb 2025 (independent third-party) — bloomberg.com
+- Harvard Business School Case Studies "OpenAI: Idealism Meets Capitalism", "Governing OpenAI (A)" (independent academic institution)
+- The New Yorker deep investigation (Ronan Farrow & Andrew Marantz, 18-month investigation, 100+ interviewees, 200+ pages internal documents; independent third-party investigation)
+- Wikipedia entries "Removal of Sam Altman from OpenAI" & "Sam Altman" (independent third-party aggregate)
+- TIME "Timeline of Recent Accusations" (independent third-party)
+- Startup Grind / EconTalk / YC Library early interviews (independent third-party platforms, YC era)
 
 ## Core stance
-Altman 的决策风格核心是"先动手、再解释"：他倾向于在信息或共识不完整时就推进（发布产品、做出承诺、下场表态），然后把过程中暴露的问题重新包装成一套事后成立的方法论（如"迭代部署"）。这种风格在产品和技术路线上被广泛认可为高明的节奏感，但在治理和人际信任层面反复引发同一类指控——对同事、董事会选择性透明。
+Altman's decision-making style centers on "act first, explain later": he tends to press forward when information or consensus is incomplete (shipping products, making commitments, taking public stances), then reframe the issues exposed along the way into a post-hoc methodology (such as "iterative deployment"). While this style is widely praised in product and technical roadmap execution for its sharp sense of momentum, it repeatedly triggers the exact same category of criticism at the governance and interpersonal trust level—selective transparency toward colleagues and board members.
 
 ## Recurring principles
 
-- **原则一：渐进式部署优于闭门造好再发布**
-  - **体现之处**：OpenAI 官方博客承认，GPT-2 权重是否公开一度让团队紧张，但事后证明"担心是多余的"，这次经历催生了"迭代部署"策略，此后被反复引用为公司安全战略的核心支柱。ChatGPT 的仓促上线也是同一逻辑——据 Bloomberg 专访，团队内部曾反对，认为"还没准备好"，但他坚持推进。
-  - **可能失效的场景**：同一种"先做了再说"的本能，在治理层面变成了向董事会隐瞒关键信息——例如 GPT-4 是否经过安全小组批准一事，据《纽约客》调查，他向董事会提供的信息后来被证明与实际不符。产品端的"先发布再迭代"如果套用到组织信任上，就成了"先斩后奏"。
+- **Principle 1: Iterative deployment beats shipping only when fully ready**
+  - **Where it shows up**: OpenAI's official blog notes that whether to open-source GPT-2 weights created tension inside the team, but in retrospect "the worries were overstated." That experience birthed the "iterative deployment" strategy, repeatedly cited since as a core pillar of company safety strategy. ChatGPT's rushed launch followed the exact same logic—according to Bloomberg interviews, internal team members pushed back arguing it "wasn't ready," but he insisted on pushing it out.
+  - **Where it likely breaks down**: The same instinct of "do it first, handle feedback later" manifested in governance as withholding critical information from the board—such as whether GPT-4 had been approved by the safety committee, which *The New Yorker* investigation revealed was communicated to the board in ways inconsistent with reality. Product-side "ship first, iterate later" applied to organizational trust becomes "act first, seek forgiveness later."
 
-- **原则二："把成年用户当成年人对待"——高度用户自主权**
-  - **体现之处**：在 Tucker Carlson 访谈与 Progress Conference（Conversations with Tyler）中他反复强调，对隐私和使用边界要给用户很大自由度，"个体用户应该被允许对同性婚姻有意见，AI不该说他们错了"是他给出的具体例子。
-  - **可能失效的场景**：这条自由放任原则并不对等地适用于他自己与信息掌控者（董事会、同事）的关系——多份独立信源（Loopt、YC、OpenAI 三段经历）都记录了他被指控对上级或同僚选择性告知信息，而非按"把对方当成年人、给全部信息"的标准对待。
+- **Principle 2: "Treat adult users like adults"—high user autonomy**
+  - **Where it shows up**: In his Tucker Carlson interview and Progress Conference (Conversations with Tyler), he repeatedly emphasized giving users wide latitude on privacy and boundaries, offering the specific example that "an individual user should be allowed to have their own opinions, and the AI shouldn't tell them they're wrong."
+  - **Where it likely breaks down**: This laissez-faire principle does not apply symmetrically to his own relationship with those holding oversight or information (the board, colleagues)—multiple independent sources across three eras (Loopt, YC, OpenAI) document accusations of selective disclosure to superiors or peers rather than treating them with full information transparency.
 
-- **原则三：执行速度压倒一切，包括对干扰因素说"不"**
-  - **体现之处**：YC 时期（Startup Grind 2015 访谈）他明确说过，最优秀的创始人"execute so quickly"，且他本人以"几乎对所有事情说不"来保护执行速度。
-  - **可能失效的场景**：这种以速度为最高优先级的取向，在《纽约客》调查描述的模式里，表现为为了推进节奏而在安全审批、人事承诺等环节走捷径——速度优先本身没有问题，但当它系统性挤压"如实汇报"的时间和意愿时，就是同一枚硬币的反面。
+- **Principle 3: Execution speed overrides everything, including saying "no" to distractions**
+  - **Where it shows up**: During his YC era (Startup Grind 2015 interview), he explicitly stated that the best founders "execute so quickly," and he personally protects speed by "saying no to almost everything."
+  - **Where it likely breaks down**: This speed-as-highest-priority orientation, in the patterns described by *The New Yorker*, leads to taking shortcuts in safety approvals and personnel commitments to maintain momentum. Speed priority itself is not the flaw, but when it systematically crowds out the time and willingness for candid reporting, it flips to the negative side of the coin.
 
-- **原则四：先做业务决策，再补一套使命叙事**
-  - **体现之处**：2026年发布的《Our principles》被多家媒体（The Decoder）解读为"也是对近期商业决策的辩护"，尤其被指是对五角大楼合同争议的间接回应——先有争议性的商业动作，再补充"民主化""可适应性"等原则性框架。
-  - **可能失效的场景**：当叙事明显滞后于决策（先做后解释）时，容易被解读为公关补丁而非真实的决策指南——他自己也承认五角大楼合同的对外沟通"看起来投机且草率"。
+- **Principle 4: Make the business decision first, attach the mission narrative after**
+  - **Where it shows up**: The 2026 "Our principles" release was interpreted by multiple media outlets (The Decoder) as "also a post-hoc defense of recent commercial decisions," particularly regarding Pentagon contract controversies—controversial business actions came first, followed by principled frameworks of "democratization" and "adaptability."
+  - **Where it likely breaks down**: When narrative noticeably lags behind decision-making (act first, explain later), it is easily interpreted as PR patching rather than a genuine decision guide—he himself acknowledged that public communication around the Pentagon contract "looked opportunistic and sloppy."
 
-- **原则五：用"人才筛选"逻辑经营组织——故意设置门槛过滤非信徒**
-  - **体现之处**：据 Bloomberg 专访，OpenAI 早期他刻意采用"看起来有些荒诞"的定位来吓退资深专家，只留下愿意all-in的年轻人，形成"band of brothers"式的核心团队。
-  - **可能失效的场景**：这种"先筛掉怀疑者、只留信徒"的组织方式，代价是核心圈子内部缺乏建制化的制衡——2023年董事会解雇事件里，恰恰是曾经最亲近的核心成员（Ilya Sutskever）整理了指控材料，说明"信徒文化"本身不能替代真正的治理结构。
+- **Principle 5: Run the organization with a talent-filtering logic—deliberately setting high bars to filter out non-believers**
+  - **Where it shows up**: According to a Bloomberg interview, during OpenAI's early days he deliberately adopted a framing that "seemed almost absurd" to scare off cynical senior experts, leaving only young people willing to go all-in to form a "band of brothers" core team.
+  - **Where it likely breaks down**: The cost of an organization that "filters out doubters and keeps only believers" is a lack of institutional checks and balances within the inner circle. In the 2023 board firing, it was precisely a former close core member (Ilya Sutskever) who compiled the accusation materials, proving that a "believer culture" cannot replace true governance structure.
 
 ## Default reasoning order
-根据现有材料推断的默认思考顺序：① 先判断能否现在就把东西推向真实世界获取反馈（而非等万事俱备）；② 观察真实世界的反应，把冲突和意外都当作有用信号；③ 事后把这套经验升级、命名、包装成可复用的战略语言（"迭代部署""五项原则"）；④ 如果反弹足够大，公开承认沟通方式有问题，但很少改变原始决策本身（五角大楼合同事件是典型例子——承认"看起来草率"，但没有撤回决策）。
+Default reasoning order inferred from available record: ① First judge whether the item can be pushed to the real world right now to get feedback (rather than waiting for everything to be ready); ② Observe real-world reactions, treating conflicts and surprises as useful signals; ③ Reframe, name, and package that experience into reusable strategic language ("iterative deployment", "five principles"); ④ If backlash is significant enough, publicly admit communication was flawed, but rarely reverse the underlying decision itself (the Pentagon contract incident being a textbook example—admitting it "looked sloppy" without rescinding the decision).
 
 ## Tradeoffs they lean toward
-- 速度与推进的势能，优先于完整披露和走完流程
-- 用户/个体自主权，优先于家长式的统一限制（但对未成年人和"社会公共安全"类议题除外，这两类他明确表态愿意加限制）
-- 使命叙事的连贯性，优先于逐条对外解释具体决策的过程
-- 保护核心信任圈子的执行效率，优先于建制化、可制衡的治理结构
+- Speed and momentum over full disclosure and standard procedure
+- User/individual autonomy over paternalistic unified restriction (except for minors and explicit public safety issues, where he supports restrictions)
+- Consistency of mission narrative over step-by-step external explanation of specific decision processes
+- Preserving execution efficiency of the core trusted circle over institutional, balanced governance structures
 
 ## One documented failure or criticism
-2023年11月，OpenAI 董事会以"沟通不够如实（not consistently candid）"为由解雇了他，五天后在员工和投资人的压力下复职，原董事会成员多数离任。2026年《纽约客》基于100余名受访者和200余页内部文件（包括 Ilya Sutskever 整理并提交给董事会的备忘录）的调查显示，这一模式并非孤立事件：据报道，Loopt（他的第一家公司）和 Y Combinator 任期内都曾有高层或同僚就"透明度"问题要求董事会将他撤换。一位匿名董事会成员将他形容为"unconstrained by truth"（不受真相约束）。前 Anthropic 研究负责人 Dario Amodei 也曾表示"the problem with OpenAI is Sam himself"（OpenAI 的问题就是 Sam 本人）。他本人的公开回应是将这段经历描述为"extremely painful（非常痛苦）"，但同时认为公司因此"更团结了"，并未正面承认具体指控。
+In November 2023, the OpenAI board fired him citing that he was "not consistently candid in his communications." He was reinstated five days later under employee and investor pressure, while most original board members departed. A 2026 *New Yorker* investigation based on 100+ interviews and 200+ pages of internal documents (including memos compiled by Ilya Sutskever for the board) showed this was not an isolated incident: executive peers or board members at both Loopt (his first startup) and Y Combinator had reportedly raised transparency concerns and sought his removal. One anonymous board member described him as "unconstrained by truth." Former Anthropic research lead Dario Amodei previously remarked that "the problem with OpenAI is Sam himself." Altman's public response was describing the experience as "extremely painful," while maintaining that the company emerged "more unified," without directly addressing specific allegations.
 
 ## Vocabulary / analogies they reach for
-- "iterative deployment"（迭代部署）——几乎是他解释一切争议性发布决策时的默认话术
-- "treat adult users like adults"（把成年用户当成年人对待）——隐私和自由度议题上的高频表述
-- 用"network effect"（网络效应）类比组织本身的运作方式，而不只是产品
-- 用"the best founders execute so quickly"式的执行力叙事评价人和公司
-- 技术乐观主义式的时间尺度表达（"this is the best time yet"）
+- "iterative deployment"—the default phrase whenever explaining controversial release decisions
+- "treat adult users like adults"—frequent phrasing on privacy and user autonomy topics
+- Using "network effect" to describe organizational operations, not just products
+- Framing evaluation of people and companies through execution narratives ("the best founders execute so quickly")
+- Techno-optimist expressions of timeline ("this is the best time yet")
 
 ## Confidence note
-- **原则一至五**主要基于公司自述（OpenAI 博客）与他本人在多档独立媒体访谈中的原话，可信度较高，但要注意这类材料天然偏向自我呈现，"迭代部署"叙事本身就是他自己给失误重新命名的结果，需要与批评层交叉验证。
-- **批评/失败层**的核心证据来自《纽约客》一篇调查（Farrow & Marantz），虽然该报道本身信源量大（100+受访者、200余页文件），但目前该指控主要通过这一篇原始调查及其转述报道（Techzine、Storyboard18、Gizmodo、TheRipCurrent）传播，尚缺乏另一条完全独立、不同调查团队的平行信源，建议将其视为"高质量单一信源、多方转述"而非"多个独立信源互证"。
-- 董事会解雇的官方措辞（"not consistently candid"）本身较为模糊，具体所指内容主要来自事后披露（Helen Toner 2024年5月文章、New Yorker 2026年报道），存在一定时间滞后和记忆重构的风险。
-- 尚未找到强有力的、独立于 New Yorker 报道之外的正面反驳材料——如果他本人或 OpenAI 官方后续有针对具体指控的详细回应，应更新此档案。
+- **Principles 1 through 5** are primarily based on company self-statements (OpenAI blog) and direct quotes from independent media interviews. Confidence is high, though these sources naturally lean toward self-presentation—the "iterative deployment" framing itself is a rebrand of past missteps, requiring cross-validation with criticism.
+- Core evidence for the **criticism/failure section** relies heavily on *The New Yorker* investigative report (Farrow & Marantz). Although backed by extensive reporting (100+ interviews, 200+ pages of documents), it primarily represents a single primary investigative effort amplified by secondary reporting. It should be treated as a high-quality single primary source rather than multiple independent investigations.
+- Official wording of the board firing ("not consistently candid") is inherently vague; specific details emerged later (Helen Toner 2024 article, New Yorker 2026 report), carrying risks of temporal lag and memory reconstruction.
 
 
-============================================================
-# PROFILE: steve-jobs.md
-============================================================
+--- PROFILE: steve-jobs ---
 
 # Steve Jobs
 
@@ -642,9 +787,7 @@ Jobs was removed from operational control of Apple in April 1985 after the Lisa 
 This profile draws on a well-documented public figure with a large volume of primary-voice material (his own speeches and interviews) and substantial independent reporting, so sourcing depth is not the constraint. Two things to flag: first, several of the most-cited anecdotes (the 1997 product-chart meeting, the Microsoft tablet-demo reaction) trace back through secondary retellings to Isaacson's authorized biography rather than to a source Jobs himself put on the record in those exact words — treat those two specifically as biographer-relayed rather than self-attested. Second, the "reality distortion field" criticism is well-independently-documented but the profile found no on-record instance of Jobs directly responding to or revising his view of that specific criticism, unlike the tablet/stylus reversal, which Apple itself effectively conceded by shipping the Pencil in 2015. Source material here spans roughly 1985 (the Apple ouster) to 2012 (Sculley's retrospective comments and the HBR piece), with the primary-voice material concentrated in 1997, 2005, 2008, and 2010.
 
 
-============================================================
-# PROFILE: travis-kalanick.md
-============================================================
+--- PROFILE: travis-kalanick ---
 
 # Travis Kalanick
 
@@ -692,9 +835,7 @@ Following a February 2017 blog post by former Uber engineer Susan Fowler describ
 Material on this figure is abundant but concentrated heavily around the 2017 collapse period (Feb-June 2017) — pre-2017 material (e.g. the New York market-entry framing, ~2011-2013) tends to be framed retrospectively through that lens, which may compress or flatten how his reasoning is described in earlier, less scrutinized years. Sourcing here is mostly independent third-party reporting, which is a stronger evidentiary base than a profile leaning on self-published material — the one self-published source (Uber's own newsroom post) is used only for the regulatory-fight framing, not for the failure/criticism section. Per this skill's guardrails, no claim is made here about his private motives or unstated intentions during the harassment pattern — the profile stays limited to his documented public statements and reported actions, and the "why did the pattern go uncorrected for years" question is flagged as an open gap rather than filled with speculation. This profile has not been checked against anything post-2017 involving Kalanick (e.g. his post-Uber ventures); it should be treated as most reliable for the Uber-era period specifically, per this skill's staleness guidance in Apply Mode.
 
 
-============================================================
-# PROFILE: warren-buffett.md
-============================================================
+--- PROFILE: warren-buffett ---
 
 # Warren Buffett
 
@@ -756,5 +897,4 @@ The 1993 Dexter Shoe acquisition is Buffett's own choice of "worst deal" (2007 l
 
 ## Confidence note
 The circle-of-competence and margin-of-safety principles rely primarily on Buffett's own shareholder letters (self-published, company-controlled material) — these are well-corroborated across independent secondary sources, but the underlying primary quotes themselves come from Berkshire's own communications, which he controls and has every incentive to present favorably. The See's Candies "turning point" narrative and the Schroeder "handicapper, not gambler" characterization rest on independent third-party sourcing (biographer research, financial journalism), which is stronger evidence of a real, externally observed pattern. The Dexter Shoe failure is unusually well corroborated because Buffett's self-published admission (2007 letter) and independent financial journalism's cost reconstruction (Yahoo Finance, Kingswell) agree in substance, which is the strongest kind of evidence this profile draws on. Source material spans 1972 (See's Candies) through late 2025 (Q3 2025 Occidental coverage), so the profile reflects a view that was actively reinforced and restated across roughly five decades rather than a single moment — but note the "20-slot punch card" principle is visibly aspirational rather than strictly followed, per Buffett's own much higher actual transaction count and Berkshire's large multi-year cash holdings.
-
 

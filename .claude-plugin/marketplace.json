@@ -1,8 +1,8 @@
 {
   "name": "borrowed-brain-pro",
   "display_name": "Borrowed Brain Pro",
-  "description": "Distills any public figure's thinking into a structured, sourced profile — then applies it as an extra lens on a real decision you're facing. Ships with 9 pre-built profiles (Buffett, Jobs, Voss, Feynman, Newport, Altman, and more). Works with Claude, ChatGPT, Open WebUI, and any AI that accepts a system prompt.",
-  "version": "0.2.0",
+  "description": "Distills any public figure's thinking into a structured, sourced profile — then applies it as an extra lens on a real decision you're facing. Ships with 11 pre-built profiles (Buffett, Munger, Jobs, Voss, Feynman, Newport, Altman, Graham, and more). Works with Claude, ChatGPT, Open WebUI, and any AI that accepts a system prompt.",
+  "version": "0.3.0",
   "author": "DOTfei",
   "repository": "https://github.com/DOTfei/borrowed-brain-pro",
   "skill_file": "SKILL.md",
@@ -16,7 +16,7 @@
     "any_ai": "Paste claude-ai-bundle.md as system prompt"
   },
   "languages": ["en", "zh-CN"],
-  "profiles_included": 9,
+  "profiles_included": 11,
   "requires_web_search": false,
   "works_offline": true
 }

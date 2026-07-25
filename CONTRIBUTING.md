@@ -25,7 +25,9 @@ These come directly from `SKILL.md`'s Core principle and won't be relaxed for an
 
 1. Fork, branch, make your change.
 2. If you're adding a profile, include the actual sources you used (real URLs, not placeholders).
-3. Open a PR describing what you tested and what you found — "I ran Distill mode on X and here's the output" is more useful than "improved profile quality."
+3. Add a row to `profiles/INDEX.md` following the key and format specified in that file.
+4. Run `python scripts/build_bundle.py` to update `claude-ai-bundle.md` automatically.
+5. Open a PR describing what you tested and what you found — "I ran Distill mode on X and here's the output" is more useful than "improved profile quality."
 
 ## Questions
 

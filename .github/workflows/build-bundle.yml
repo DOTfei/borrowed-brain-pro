@@ -1,0 +1,27 @@
+name: Build & Verify Bundle
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  verify-bundle:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build Bundle
+        run: python scripts/build_bundle.py
+
+      - name: Check for Uncommitted Bundle Changes
+        run: |
+          git diff --exit-code claude-ai-bundle.md || (echo "Error: claude-ai-bundle.md is out of sync with profiles or SKILL.md. Run 'python scripts/build_bundle.py' and commit." && exit 1)

@@ -7,14 +7,16 @@
 | Person | Domain | Depth | Freshness | Best for |
 |--------|--------|-------|-----------|----------|
 | [Warren Buffett](warren-buffett.md) | Investing | ★★★ | 🟢 | Should I bet on this opportunity? Long-term hold vs. sell. Valuation discipline. Saying no to a deal. |
+| [Charlie Munger](charlie-munger.md) | Multidisciplinary / investing | ★★ | 🟢 | Inverting a complex problem. Mental models & lollapalooza effects. Avoiding stupidity & bias. |
 | [Steve Jobs](steve-jobs.md) | Product / entrepreneurship | ★★★ | 🟢 | Which feature to cut. Launch timing. Saying no to requests. Simplifying a product line. |
 | [Chris Voss](chris-voss.md) | Negotiation | ★★★ | 🟢 | Contract talks. Breaking a deadlock. Getting a "no" to open up. Handling a hostile counterpart. |
-| [Richard Feynman](richard-feynman.md) | Research / reasoning | ★★★ | 🟢 | Checking a hypothesis. Hunting for self-deception. Presenting a complex idea simply. Auditing your own logic. |
+| [Richard Feynman](richard-feynman.md) | Research / reasoning | ★★ | 🟢 | Checking a hypothesis. Hunting for self-deception. Presenting a complex idea simply. Auditing your own logic. |
 | [Cal Newport](cal-newport.md) | Productivity / deep work | ★★ | 🟢 | Time allocation. Reducing distraction. Protecting focused work. Structural fixes vs. willpower fixes. |
-| [Reed Hastings](reed-hastings.md) | Leadership / culture | ★★★ | 🟢 | Building candor into a team. Handling a big strategic pivot. Farming for dissent before committing. |
-| [Travis Kalanick](travis-kalanick.md) | Aggressive growth / startups | ★★ | 🟡 | Push into a hostile market or wait. Speed vs. compliance. Growth at all costs trade-offs. Post-2017 not covered — refresh if needed. |
+| [Reed Hastings](reed-hastings.md) | Leadership / culture | ★ | 🟢 | Building candor into a team. Handling a big strategic pivot. Farming for dissent before committing. Thin sourcing — good for framing, not depth. |
+| [Travis Kalanick](travis-kalanick.md) | Aggressive growth / startups | ★ | 🟡 | Push into a hostile market or wait. Speed vs. compliance. Growth at all costs trade-offs. Post-2017 not covered — refresh if needed. |
 | [Julia Evans](julia-evans.md) | Technical teaching / writing | ★ | 🟢 | Explaining something hard to a non-expert. Deciding what's worth documenting. Thin sourcing — good for framing, not depth. |
 | [Sam Altman](sam-altman.md) | AI startups / growth | ★★★ | 🟢 | Should I ship before it's ready? Speed vs. safety trade-offs. How to frame a controversial decision. Building a fast-executing team. |
+| [Paul Graham](paul-graham.md) | Startups / essays | ★★ | 🟢 | Doing things that don't scale. Startup ideas & founder earnestness. Keeping identity small. |
 
 ---
 

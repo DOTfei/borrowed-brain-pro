@@ -1,0 +1,8 @@
+{
+  "name": "borrowed-brain-pro",
+  "version": "0.2.0",
+  "description": "Distill public figures' thinking into structured profiles and apply them as lenses to real decisions.",
+  "author": "DOTfei",
+  "license": "MIT",
+  "skills": ["SKILL.md"]
+}

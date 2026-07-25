@@ -3,22 +3,24 @@ name: borrowed-brain-pro
 description: Distills any public figure's thinking into a structured, sourced "thinking profile," then applies it as an extra lens on a real decision. Trigger when the user names a person and asks to think/decide like them, wants their framework or mental model, asks "what would X think," or wants to build/update a saved profile. Also trigger when an existing profile in profiles/ is referenced for a new question, or when the user is unsure how to use this skill. If the user describes a decision without naming anyone and a relevant profile exists, surface it as a one-line suggestion only — never apply unprompted. Do NOT use for creative impersonation or fictional dialogue.
 ---
 
-# Borrowed Brain
+# Borrowed Brain Pro
 
 Turn a real person's public track record into a structured "thinking profile" — then use that profile to add a perspective to a decision, without pretending to speak for them.
 
-This skill has two modes. Figure out which one the user needs before starting:
+This skill has three modes. Figure out which one the user needs before starting:
 
 - **Distill mode**: no profile exists yet (or the user wants to refresh one) → research the person and produce `profiles/<name>.md`
-- **Apply mode**: a profile already exists in `profiles/` → read it and use it to give the user another angle on their actual question
+- **Apply mode**: a single profile already exists in `profiles/` → read it and use it to give the user another angle on their actual question
+- **Compare mode**: 2 or more profiles are named or loaded → contrast where their principles agree, where they conflict, and what neither lens covers
 
 If unsure which mode, check whether `profiles/<name>.md` already exists first.
 
-**If the user's request doesn't clearly fit either mode** — they've just installed this and said something like "what can you do," "how does borrowed-brain-pro work," or invoked it without naming a person or a question — don't guess and don't stay silent. Give a short, concrete answer instead of reciting this whole file back at them:
+**If the user's request doesn't clearly fit any mode** — they've just installed this and said something like "what can you do," "how does borrowed-brain-pro work," or invoked it without naming a person or a question — don't guess and don't stay silent. Give a short, concrete answer instead of reciting this whole file back at them:
 
 > This turns a real person's public track record into a reusable "thinking profile," then uses it as an extra lens on a decision — not a verdict, not an impersonation. Try one of:
 > - "Build a thinking profile for [name]" → researches them, saves `profiles/[name].md`
 > - "Using [name]'s profile, what am I missing in [situation]?" → applies an existing one to your actual question
+> - "Compare [Name A] and [Name B] on [situation]" → maps where their frameworks conflict
 >
 > Check `profiles/` for ones already built.
 
@@ -61,7 +63,10 @@ Confirm (ask only if genuinely ambiguous, otherwise infer and state your assumpt
 
 ### Step 2 — Research (search in layers, don't do one generic search)
 
-**Before searching, confirm you actually have working search/fetch tools in this environment.** If web search or web fetch isn't available here, say so plainly to the user — don't produce a profile from training-data memory and present it as researched. Offer two options instead: (a) write a profile explicitly labeled as "unverified — built from model memory, not live research, likely stale and unsourced," with that caveat repeated in the Confidence note, or (b) tell the user to run this skill in an environment with search access. Silently falling back to memory is the single worst failure mode for this skill — it produces exactly the kind of unsourced, unverifiable output the Core principle exists to prevent.
+**Before searching, check environment capability:**
+1. **Full environment (CLI / Agent with search + file write)**: run searches, write to `profiles/<name-slug>.md`, update `profiles/INDEX.md`, and run `python scripts/build_bundle.py`.
+2. **Search-only environment (e.g. ChatGPT / Web Chat with search, no file write)**: run live research, but output the resulting Markdown inside a code block for the user to save manually.
+3. **No-search environment**: say so plainly — don't produce a profile from training-data memory and present it as researched. Offer either: (a) write a profile explicitly labeled as "unverified — built from model memory, not live research, likely stale and unsourced," with that caveat repeated in the Confidence note, or (b) prompt the user to run in a search-enabled environment.
 
 **Before searching, check for name collisions.** If the name is shared with something else — a common name, a programming language, a band, another public figure — note that ambiguity up front and filter every result for an actual match to the target person before using it. Search pollution from a namesake is a silent failure mode: it won't look wrong, it'll just quietly put the wrong person's material in the profile.
 
@@ -146,38 +151,53 @@ Keep the whole file readable in one sitting — this isn't a biography, it's a w
 
 Before treating the profile as done, reread the **Core stance**, **Recurring principles**, and **Default reasoning order** sections and ask: could these sentences be swapped onto a different person in this general field without anyone noticing? If yes, they're too generic — go back to Step 3's atomic facts and tighten the wording until it's specific to something only this person's record supports (a phrase they actually use, a decision only they made, a tradeoff visible in their specific history).
 
-### Step 7 — Update profiles/INDEX.md
+### Step 7 — Update profiles/INDEX.md & bundle
 
 After saving `profiles/<name>.md`, open `profiles/INDEX.md` and add or update one row for this person:
 
-| [Name](name.md) | Domain (1–3 words) | 2–4 specific question types this profile is strongest for |
+| [Name](name.md) | Domain (1–3 words) | Depth | Freshness | Best for |
 
-Be concrete in the "Best for" column — not "leadership decisions" but "building candor into a team, handling a big strategic pivot." If the profile is thin or confidence is low, note that in the Best for column too, e.g. "thin sourcing — better for framing than depth." If a row for this person already exists, update it rather than adding a duplicate.
+Be concrete in the "Best for" column — not "leadership decisions" but "building candor into a team, handling a big strategic pivot." If the profile is thin or confidence is low, note that in the Best for column too, e.g. "thin sourcing — good for framing, not depth."
+
+Finally, run `python scripts/build_bundle.py` if python execution is supported to ensure `claude-ai-bundle.md` stays synchronized.
 
 ---
 
-## Apply Mode
+## Apply Mode & Compare Mode
 
-### Step 1 — Load the right profile(s)
+### Step 1 — Load the right profile(s) & run internal reasoning
 
-Read `profiles/<name>.md`. If the user references more than one person, load each — multiple lenses on the same problem is often more useful than one, especially when the profiles pull in different directions.
+Read `profiles/<name>.md` for the specified figure(s).
 
-**Check the profile's generation date before applying it.** People's public positions, roles, and circumstances change. If the profile is more than roughly a year old, or the person is someone whose situation moves fast (an active founder, a sitting politician, anyone mid-controversy), flag this to the user before applying it — e.g. "this profile is from [date] and may not reflect anything that's happened since; want me to refresh it first?" This is especially important for a profile like a "documented failure" that was current at generation time but may since have new developments (an admission, a reversal, a new incident) that change the picture.
+**Internal Thinking Step (Chain of Thought)**:
+Before generating the visible response, analyze the situation internally using `<thinking>` tags (or internal reasoning space):
+- What are the core trade-offs in the user's dilemma?
+- Which specific principles in the loaded profile(s) directly touch this dilemma?
+- What are the documented failure modes or "breaks down" conditions that might trigger in this exact situation?
+- If comparing multiple figures: where do their default reasoning orders diverge?
 
-### Step 2 — Apply it to their actual situation
+**Check the profile's generation date before applying it.** People's public positions, roles, and circumstances change. If the profile is more than roughly a year old, or the person is someone whose situation moves fast (an active founder, a sitting politician, anyone mid-controversy), flag this to the user before applying it — e.g. "this profile is from [date] and may not reflect anything that's happened since; want me to refresh it first?"
+
+### Step 2 — Structure the Output
 
 Respond in the same language the user is using, even if the loaded profile file itself is written in a different language — translate the relevant principle/reasoning faithfully rather than quoting the profile file's language verbatim.
 
-Don't answer as if you *are* the person. Structure the response as:
+Don't answer as if you *are* the person. Structure the response depending on mode:
 
+#### Apply Mode (Single Profile)
 - "Running your situation through [Name]'s framework — particularly [the specific principle that's relevant] — a few things stand out: ..."
-- Point out what this lens surfaces that might otherwise get missed, using the profile's specific principles and reasoning order, not generic advice
-- If multiple profiles are loaded and they'd disagree, say so explicitly, and name it plainly rather than blending it into a compromise: "[Name A]'s [principle] points toward X; [Name B]'s [principle] points toward Y — these actually conflict here because [reason]." Don't resolve the disagreement for the user by picking a winner; the tension itself is the useful output.
-- Always close by naming what this lens *doesn't* cover, or where the profile's "breaks down" condition might apply to their specific case
+- Point out what this lens surfaces that might otherwise get missed, using the profile's specific principles and reasoning order, not generic advice.
+- Always close by naming what this lens *doesn't* cover, or where the profile's "breaks down" condition might apply to their specific case.
+
+#### Compare Mode (Multiple Profiles)
+- "Comparing [Name A] and [Name B] on your decision — here is where their frameworks converge and diverge:"
+- **Where they agree**: highlight underlying shared principles or tactical moves.
+- **Where they conflict**: name the tension explicitly without forcing a compromise: "[Name A]'s [principle] points toward X; [Name B]'s [principle] points toward Y — these actually conflict here because [reason]."
+- **What neither lens covers**: highlight situational factors specific to the user that both frameworks miss (e.g. company size, capital slack, regulatory environment).
 
 ### Step 3 — Keep the epistemic boundary visible
 
-This is a tool for surfacing an additional angle, not a verdict. Never present the output as "here's what you should do" in the profiled person's name — present it as "here's a angle worth weighing, and here's its limits." The user makes the actual call.
+This is a tool for surfacing an additional angle, not a verdict. Never present the output as "here's what you should do" in the profiled person's name — present it as "here's an angle worth weighing, and here are its limits." The user makes the actual call.
 
 **In multi-turn conversations, this framing doesn't get a one-time pass.** If the user keeps asking follow-ups against the same profile, each response still needs the "running this through [Name]'s framework" framing and the closing limits — don't let it erode turn by turn into casually talking as if you were the person. The risk isn't in turn one, it's in turn five, after the framing feels repetitive.
 
