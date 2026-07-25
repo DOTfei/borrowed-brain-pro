@@ -1,4 +1,4 @@
-<svg viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Borrowed Brain Pro Banner">
+banner_svg = '''<svg viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Borrowed Brain Pro Banner">
   <defs>
     <!-- Background Gradients -->
     <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -117,4 +117,12 @@
     <rect x="330" y="172" width="95" height="24" rx="12" fill="rgba(63, 185, 80, 0.15)" stroke="rgba(63, 185, 80, 0.3)" stroke-width="1"/>
     <text x="343" y="188" font-family="'Geist Mono', monospace" font-size="10" font-weight="600" fill="#3fb950">CONSENSUS</text>
   </g>
-</svg>
+</svg>'''
+
+with open('assets/banner.svg', 'w', encoding='utf-8') as f:
+    f.write(banner_svg)
+
+with open('.github/assets/banner.svg', 'w', encoding='utf-8') as f:
+    f.write(banner_svg)
+
+print("NEW BEAUTIFUL BANNER GENERATED AND SAVED TO ASSETS!")
