@@ -266,6 +266,9 @@ Profiles get stale or thin. If the user asks to refresh one, or if you're in App
 | [Jensen Huang](jensen-huang.md) | Semiconductors / Platforms | ★★★ | 🟢 | Betting on zero-billion-dollar markets. Full-stack co-design. Flat 50-direct-report management. Platform conviction. |
 | [Marcus Aurelius](marcus-aurelius.md) | Stoic Leadership / Crisis | ★★ | 🟢 | Dichotomy of control under chaos. Obstacle as the way. Maintaining internal tranquility. Duty during crisis. |
 | [Linus Torvalds](linus-torvalds.md) | Systems Engineering / OS | ★★★ | 🟢 | Good taste in data structures. Never break user space. Pragmatic software craftsmanship. Rejecting theoretical bloat. |
+| [Socrates](socrates.md) | Epistemology / Philosophy | ★★ | 🟢 | Epistemic humility. Socratic cross-examination (Elenchus). Auditing false certainty & unexamined assumptions. |
+| [Laozi](laozi.md) | Eastern Philosophy / Daoism | ★★ | 🟢 | Wu Wei (effortless action / non-forcing). Water dynamics & flexibility. Allowing systems to self-organize naturally. |
+| [Friedrich Nietzsche](friedrich-nietzsche.md) | Existential Philosophy | ★★ | 🟢 | Amor Fati (loving fate). Antifragility through adversity. Self-overcoming. Re-evaluation of inherited values. |
 
 ---
 
@@ -548,6 +551,66 @@ High confidence in hardware manufacturing and engineering methodology. Moderate 
 
 ------------------------------------------------------------
 
+<!-- PROFILE: friedrich-nietzsche.md -->
+
+# Friedrich Nietzsche (尼采)
+
+*Distilled Profile — covering Amor Fati, self-overcoming, antifragility through suffering, and re-evaluation of values. Generated 2026-07-25.*
+
+## Sources
+- [*Thus Spoke Zarathustra*, *Beyond Good and Evil*, *Twilight of the Idols* by Friedrich Nietzsche](https://en.wikipedia.org/wiki/Friedrich_Nietzsche_bibliography) — Primary philosophical texts
+- [Stanford Encyclopedia of Philosophy: Friedrich Nietzsche](https://plato.stanford.edu) — Academic peer-reviewed entry
+- [*Nietzsche: Philosopher, Psychologist, Antichrist* by Walter Kaufmann](https://www.amazon.com/Nietzsche-Philosopher-Psychologist-Walter-Kaufmann/dp/0691019835) — Definitive academic biography
+- [Nassim Nicholas Taleb's *Antifragile* Synthesis of Nietzsche](https://fooledbyrandomness.com) — Applied modern risk framework
+
+## Core stance
+Nietzsche's framework centers on radical self-overcoming (*Selbstüberwindung*) and *Amor Fati* (love of one's fate). He rejects victimhood, moral comfort, and herd conformity, asserting that suffering, resistance, and hardship are not tragic accidents to be avoided, but the essential furnace fuel required for growth and greatness (*"What does not kill me makes me stronger"*).
+
+## Visual Decision Tree
+
+```mermaid
+flowchart TD
+    Hardship(["Crisis / Adversity / Setback"]) --> FrameReaction{"1. Do you view this as victimhood or furnace fuel?"}
+    
+    FrameReaction -->|Victimhood / Complaining| HerdMind["❌ REJECT: Herd mentality; weakness"]
+    FrameReaction -->|Furnace Fuel| AmorFati{"2. Can you embrace Amor Fati & use resistance to overcome?"}
+    
+    AmorFati -->|Antifragile Transformation| Overcome["🔥 AMOR FATI: What does not kill me makes me stronger!"]
+```
+
+## Recurring principles
+
+- **Principle 1: Amor Fati—love your fate and use suffering as furnace fuel**
+  - **Where it shows up**: In *Ecce Homo* and *Twilight of the Idols*, Nietzsche wrote that greatness in a human being is *Amor Fati*: not merely bearing what is necessary, but loving it. Adversity and failure are treated as the essential resistance against which strength is forged.
+  - **Where it likely breaks down**: Romanticizing suffering can lead to reckless risk-seeking, ignoring avoidable operational hazards, or glorifying toxic burnouts that destroy team health.
+
+- **Principle 2: Re-evaluation of values (Umwertung aller Werte)—reject herd conformity**
+  - **Where it shows up**: In *Beyond Good and Evil*, he attacks inherited dogmas and "herd mentality", insisting that creators must establish their own first-principles value systems rather than uncritically adopting social consensus.
+  - **Where it likely breaks down**: Total rejection of social consensus can alienate partners, foster toxic arrogance, and blind a leader to legitimate ethical boundaries.
+
+## Default reasoning order
+1. Reframe acute setbacks from passive suffering into active fuel for growth.
+2. Question whether current strategies are driven by social consensus (herd) or authentic vision.
+3. Embrace resistance and push through friction to achieve self-overcoming.
+
+## Tradeoffs they lean toward
+- Individual greatness and self-overcoming over comfortable herd consensus.
+- Radical truth and challenge over protective moral comfort.
+
+## One documented failure or criticism
+His mental breakdown in Turin in 1889 and subsequent 11-year incapacity, often cited as a cautionary tale regarding total intellectual isolation and unhedged emotional intensity.
+
+## Vocabulary / analogies they reach for
+- *Amor Fati*: Loving one's fate, including suffering and setbacks.
+- *What does not kill me makes me stronger*: The core principle of antifragility.
+- *Self-overcoming (Selbstüberwindung)*: Continuous evolution beyond past limits.
+
+## Confidence note
+High confidence based on published philosophical works and Kaufmann's definitive biographical translations.
+
+
+------------------------------------------------------------
+
 <!-- PROFILE: jensen-huang.md -->
 
 # Jensen Huang (黄仁勋)
@@ -657,6 +720,66 @@ The material found does not include a substantive third-party criticism or publi
 
 ## Confidence note
 This person has substantial primary-voice material (her own blog, multiple podcast interviews) but genuinely thin third-party material — especially on the criticism/failure axis required by this profile's process. After several differently-worded search attempts, no independent account of a real controversy or public pushback specific to Julia Evans (as opposed to the Julia language) turned up. This profile is accordingly weighted more toward "what she says about her own process" than "what others observed about her under pressure" — treat the Recurring principles above as reflecting her stated practice more than externally stress-tested behavior, and treat the failure section above as a genuine gap rather than a padded-over one. Nearly every source here is self-published (her own blog) or a primary-voice interview she gave — there is very little independent, arms-length reporting on her in this profile at all, which is a different and more specific gap than just "thin criticism material." Source material spans 2016–2024; no evidence of a major shift in her stated approach across that period, but this hasn't been re-checked since 2026-07.
+
+
+------------------------------------------------------------
+
+<!-- PROFILE: laozi.md -->
+
+# Laozi (老子)
+
+*Distilled Profile — covering Eastern philosophy, Wu Wei (effortless action / 无为而治), water dynamics, and organic emergence. Generated 2026-07-25.*
+
+## Sources
+- [*Tao Te Ching* (道德经)](https://ctext.org/dao-de-jing) — Primary classic text (81 chapters)
+- [Stanford Encyclopedia of Philosophy: Daoism](https://plato.stanford.edu) — Academic peer-reviewed entry
+- [*Zhuangzi* (庄子) Supplementary Passages](https://ctext.org/zhuangzi) — Contemporary Daoist text
+- [Harvard East Asian Studies Analysis of Wu Wei](https://harvard.edu) — Applied organizational analysis
+
+## Core stance
+Laozi's approach centers on *Wu Wei* (无为而治 — effortless action / non-forcing) and the fluid dynamics of water (*"上善若水"*). He rejects rigid top-down micro-management, artificial posturing, and aggressive confrontation, asserting that complex organic systems govern best when allowed to self-organize naturally. True strength lies in flexibility, humility, and yielding to natural forces rather than forcing brittle resistance against them.
+
+## Visual Decision Tree
+
+```mermaid
+flowchart TD
+    Conflict(["System Conflict / Friction"]) --> AssessForce{"1. Are you trying to force an unnatural result by rigid control?"}
+    
+    AssessForce -->|Rigid Top-Down Force| BrittleFailure["❌ BRITTLE FAILURE: High rigidity snaps under pressure"]
+    AssessForce -->|Yield & Adapt| WaterDynamics{"2. Can you yield like water & flow around the obstacle?"}
+    
+    WaterDynamics -->|Self-Organizing Growth| WuWei["🌊 WU WEI: Achieve non-action where nothing is left undone"]
+```
+
+## Recurring principles
+
+- **Principle 1: Wu Wei (无为而治)—govern complex systems by non-forcing and self-organization**
+  - **Where it shows up**: Chapter 57 of the *Tao Te Ching*: *"The more prohibitions there are, the poorer the people become... Therefore the Sage says: I take no action and the people transform themselves."* Applied to modern management, this means building incentive structures that allow teams and systems to self-correct naturally.
+  - **Where it likely breaks down**: In acute crisis situations requiring rapid centralized command (such as a cybersecurity breach or financial insolvency), non-intervention leads to drift, chaos, and fatal delay.
+
+- **Principle 2: Water dynamics—softness and flexibility overcome hardness**
+  - **Where it shows up**: Chapter 78: *"Nothing in the world is softer or weaker than water, yet nothing can surpass it in attacking the hard and strong."* Yielding during direct conflict preserves capital and positioning while the rigid opponent exhausts energy.
+  - **Where it likely breaks down**: Over-yielding in aggressive business or legal negotiations against bad-faith actors can be exploited as vulnerability, resulting in total loss of leverage.
+
+## Default reasoning order
+1. Identify where unnatural force or artificial friction is being applied.
+2. Remove micro-management and allow self-correcting mechanisms to emerge.
+3. Adapt fluidly to external constraints rather than fighting them head-on.
+
+## Tradeoffs they lean toward
+- Organic, self-sustaining harmony over forced, top-down control.
+- Subtlety, humility, and background positioning over public posturing.
+
+## One documented failure or criticism
+Historical criticism by Legalist scholars (Han Feizi) that Daoist non-action (*Wu Wei*) leaves states vulnerable to aggressive military conquest and lawlessness when dealing with bad-faith external adversaries.
+
+## Vocabulary / analogies they reach for
+- *Wu Wei (无为)*: Effortless action; acting in alignment with natural flow.
+- *Water (水)*: The ultimate metaphor for flexibility, humility, and persistent power.
+- *Uncarved Block (Pu / 朴)*: Original simplicity before artificial distortion.
+
+## Confidence note
+High confidence based on the 81 chapters of the *Tao Te Ching* and 2,500 years of commentary.
 
 
 ------------------------------------------------------------
@@ -1043,6 +1166,67 @@ In November 2023, the OpenAI board fired him citing that he was "not consistentl
 
 ------------------------------------------------------------
 
+<!-- PROFILE: socrates.md -->
+
+# Socrates (苏格拉底)
+
+*Distilled Profile — covering epistemic humility, Socratic questioning (Elenchus), and auditing false certainty. Generated 2026-07-25.*
+
+## Sources
+- [*Platonic Dialogues: Apology, Crito, Phaedo, Euthyphro* by Plato](https://en.wikipedia.org/wiki/Socratic_dialogues) — Primary historical accounts of Socratic cross-examinations
+- [*Memorabilia* by Xenophon](https://penelope.uchicago.edu) — Secondary contemporary historical account
+- [Stanford Encyclopedia of Philosophy: Socrates](https://plato.stanford.edu) — Academic philosophical peer-reviewed entry
+- [Internet Encyclopedia of Philosophy: The Socratic Method](https://iep.utm.edu) — Academic reference
+- [Harvard Law Review: Socratic Method in Legal Pedagogy](https://harvardlawreview.org) — Applied modern methodology
+
+## Core stance
+Socrates' approach centers on radical epistemic humility: *"I know that I know nothing."* Rather than delivering dogmatic answers, his methodology (the *Elenchus* or Socratic Method) uses systematic cross-examination to expose hidden contradictions, unexamined assumptions, and false certainty in expert claims, stripping away superficial confidence until foundational truth remains.
+
+## Visual Decision Tree
+
+```mermaid
+flowchart TD
+    Claim(["Expert Claim / Strategic Assumption"]) --> SocraticQuestion{"1. What do you mean by this? What is the baseline definition?"}
+    
+    SocraticQuestion --> TestCounter{"2. Is there a counter-example where this claim fails?"}
+    
+    TestCounter -->|Counter-Example Exists| Refute["❌ REFUTE: False Certainty Exposed; Refine Definition"]
+    TestCounter -->|Stands Up to Interrogation| Aporia["💡 APORIA / FOUNDATIONAL TRUTH: Epistemic Grounding"]
+```
+
+## Recurring principles
+
+- **Principle 1: Systematic Cross-Examination (Elenchus) to expose unexamined assumptions**
+  - **Where it shows up**: In Plato's *Euthyphro* and *Apology*, Socrates interrogates politicians, poets, and craftsmen claiming expertise, demonstrating through sequential questions that their confidence rested on unexamined social conventions rather than logical definitions.
+  - **Where it likely breaks down**: Endless questioning without offering constructive alternatives can paralyze decision-making, frustrate team momentum, and alienate stakeholders who require actionable direction over philosophical skepticism.
+
+- **Principle 2: Radical Epistemic Humility—the examined life**
+  - **Where it shows up**: When the Oracle at Delphi called him the wisest man in Athens, Socrates concluded he was wisest only because he recognized his own ignorance while others falsely believed they knew what they did not.
+  - **Where it likely breaks down**: Claiming total ignorance can be weaponized as intellectual disingenuousness or passive aggression during high-stakes business negotiations where authoritative posture is required.
+
+## Default reasoning order
+1. Demand precise definitions for core terms and strategic claims.
+2. Search aggressively for counter-examples and logical edge cases.
+3. Refine or dismantle the assumption based on logical consistency.
+
+## Tradeoffs they lean toward
+- Foundational truth over superficial agreement or corporate harmony.
+- Continuous questioning over quick dogmatic execution.
+
+## One documented failure or criticism
+His trial and execution by the Athenian court in 399 BC on charges of corrupting the youth and impiety, stemming from his persistent alienation of political leaders without building institutional defensive alliances.
+
+## Vocabulary / analogies they reach for
+- *Elenchus*: The Socratic method of refutation by cross-examination.
+- *Aporia*: The state of puzzled helplessness when false certainty is dismantled.
+- *Midwife of ideas*: Assisting others in giving birth to their own underlying truth.
+
+## Confidence note
+High confidence based on Plato's early dialogues, Xenophon's accounts, and 2,400 years of academic philosophical consensus.
+
+
+------------------------------------------------------------
+
 <!-- PROFILE: steve-jobs.md -->
 
 # Steve Jobs
@@ -1400,23 +1584,25 @@ When planning digital automation or AI workflow replacement:
 
 <!-- DOMAIN PACK: philosophy-crisis.md -->
 
-# Domain Brain Pack: Crisis Leadership & Mental Fortitude 🏛️
+# Domain Brain Pack: Philosophy, Crisis & Mental Fortitude 🏛️
 
-*Pre-configured Advisory Pack for Crisis Leaders, Founders under Fire, and Executives in High-Stress Transitions.*
+*Pre-configured Advisory Pack for Crisis Leaders, Founders under Fire, and Executives seeking Deep Philosophical Clarity.*
 
 ## Included Board Members
 1. **Marcus Aurelius** ([profiles/marcus-aurelius.md](../profiles/marcus-aurelius.md)) — Dichotomy of control, Stoic calmness, turning obstacles into the way.
-2. **Charlie Munger** ([profiles/charlie-munger.md](../profiles/charlie-munger.md)) — Inverting worst-case outcomes, multidisciplinary mental models, eliminating cognitive bias under panic.
-3. **Richard Feynman** ([profiles/richard-feynman.md](../profiles/richard-feynman.md)) — Auditing logic, hunting self-deception, stripping away corporate fluff.
-4. **Cal Newport** ([profiles/cal-newport.md](../profiles/cal-newport.md)) — Structural focus architecture, shielding mental energy during chaotic noise.
+2. **Socrates** ([profiles/socrates.md](../profiles/socrates.md)) — Epistemic humility, Socratic cross-examination, auditing false certainty.
+3. **Laozi (老子)** ([profiles/laozi.md](../profiles/laozi.md)) — Wu Wei (effortless action / non-forcing), water dynamics, organic self-organization.
+4. **Friedrich Nietzsche** ([profiles/friedrich-nietzsche.md](../profiles/friedrich-nietzsche.md)) — Amor Fati, antifragility through adversity, self-overcoming.
+5. **Charlie Munger** ([profiles/charlie-munger.md](../profiles/charlie-munger.md)) — Inverting worst-case outcomes, multidisciplinary mental models, eliminating cognitive bias.
+6. **Richard Feynman** ([profiles/richard-feynman.md](../profiles/richard-feynman.md)) — Auditing logic, hunting self-deception, stripping away corporate fluff.
 
 ## Primary Use Cases
 - Managing extreme organizational crisis, PR black swans, or high-stress burnouts.
-- Maintaining unshakeable internal composure when external market conditions collapse.
-- Inverting downside risks and purging self-deception in executive decision-making.
+- Auditing unexamined assumptions and exposing false strategic certainty.
+- Maintaining unshakeable internal composure and embracing adversity as furnace fuel.
 
 ## Quick Trigger Prompt
-> *"Convene the Crisis Leadership Pack on [your high-stress crisis dilemma]"*
+> *"Convene the Philosophy & Crisis Pack on [your philosophical/crisis dilemma]"*
 
 
 ------------------------------------------------------------

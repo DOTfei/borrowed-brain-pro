@@ -21,6 +21,9 @@
 | [Jensen Huang](jensen-huang.md) | Semiconductors / Platforms | ★★★ | 🟢 | Betting on zero-billion-dollar markets. Full-stack co-design. Flat 50-direct-report management. Platform conviction. |
 | [Marcus Aurelius](marcus-aurelius.md) | Stoic Leadership / Crisis | ★★ | 🟢 | Dichotomy of control under chaos. Obstacle as the way. Maintaining internal tranquility. Duty during crisis. |
 | [Linus Torvalds](linus-torvalds.md) | Systems Engineering / OS | ★★★ | 🟢 | Good taste in data structures. Never break user space. Pragmatic software craftsmanship. Rejecting theoretical bloat. |
+| [Socrates](socrates.md) | Epistemology / Philosophy | ★★ | 🟢 | Epistemic humility. Socratic cross-examination (Elenchus). Auditing false certainty & unexamined assumptions. |
+| [Laozi](laozi.md) | Eastern Philosophy / Daoism | ★★ | 🟢 | Wu Wei (effortless action / non-forcing). Water dynamics & flexibility. Allowing systems to self-organize naturally. |
+| [Friedrich Nietzsche](friedrich-nietzsche.md) | Existential Philosophy | ★★ | 🟢 | Amor Fati (loving fate). Antifragility through adversity. Self-overcoming. Re-evaluation of inherited values. |
 
 ---
 
