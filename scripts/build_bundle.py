@@ -8,6 +8,7 @@ Concatenates:
 3. All profiles/*.md files (excluding INDEX.md)
 4. All audits/*.md files (Failure Audits)
 5. All packs/*.md files (Domain Brain Packs)
+6. All evals/*.md files (Historical Crisis Evals)
 
 Outputs BOTH:
 - borrowed-brain-bundle.md (Universal Multi-Platform Bundle for ChatGPT, Local LLMs, Cursor, etc.)
@@ -29,6 +30,7 @@ def main():
     profiles_dir = os.path.join(root_dir, "profiles")
     audits_dir = os.path.join(root_dir, "audits")
     packs_dir = os.path.join(root_dir, "packs")
+    evals_dir = os.path.join(root_dir, "evals")
     bundle_path = os.path.join(root_dir, "borrowed-brain-bundle.md")
     alias_path = os.path.join(root_dir, "claude-ai-bundle.md")
 
@@ -84,6 +86,16 @@ def main():
                 pk_content = f.read()
             parts.append(f"<!-- DOMAIN PACK: {pk_name} -->\n\n" + pk_content + "\n\n" + "-" * 60 + "\n\n")
 
+    # 6. All Historical Crisis Evals
+    if os.path.exists(evals_dir):
+        parts.append("# BUNDLED HISTORICAL CRISIS EVALS\n\n")
+        eval_files = sorted(glob.glob(os.path.join(evals_dir, "*.md")))
+        for ev_path in eval_files:
+            ev_name = os.path.basename(ev_path)
+            with open(ev_path, "r", encoding="utf-8") as f:
+                ev_content = f.read()
+            parts.append(f"<!-- HISTORICAL EVAL: {ev_name} -->\n\n" + ev_content + "\n\n" + "-" * 60 + "\n\n")
+
     full_bundle = "".join(parts)
 
     # Write borrowed-brain-bundle.md
@@ -98,7 +110,8 @@ def main():
     profile_count = len(profile_files)
     audit_count = len(glob.glob(os.path.join(audits_dir, "*.md"))) if os.path.exists(audits_dir) else 0
     pack_count = len(glob.glob(os.path.join(packs_dir, "*.md"))) if os.path.exists(packs_dir) else 0
-    print(f"[SUCCESS] Generated borrowed-brain-bundle.md with {profile_count} profiles, {audit_count} failure audits, and {pack_count} domain packs ({line_count} lines).")
+    eval_count = len(glob.glob(os.path.join(evals_dir, "*.md"))) if os.path.exists(evals_dir) else 0
+    print(f"[SUCCESS] Generated borrowed-brain-bundle.md with {profile_count} profiles, {audit_count} audits, {pack_count} packs, and {eval_count} evals ({line_count} lines).")
 
 if __name__ == "__main__":
     main()
