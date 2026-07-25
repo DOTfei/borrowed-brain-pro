@@ -96,14 +96,16 @@ flowchart TD
 
 ---
 
-## 多平台安装矩阵
+## 多平台一键装载矩阵
 
-| 运行平台 | 推荐安装方式 | 具体步骤 |
+| 运行平台 | 推荐装载方式 | 一键步骤 / 指令 |
 | :--- | :--- | :--- |
-| **Claude / CLI** | **Git Clone** | `git clone https://github.com/DOTfei/borrowed-brain-pro.git ~/.claude/skills/borrowed-brain-pro` |
-| **Claude.ai** | **Skill 上传 / 提示词** | 在 Settings → Capabilities → Skills 上传 `SKILL.md` 或直接粘贴 `claude-ai-bundle.md` |
-| **ChatGPT / Custom GPT** | **单文件 System Prompt** | 直接复制 [`claude-ai-bundle.md`](claude-ai-bundle.md) 全文粘贴至 System Prompt |
-| **Open WebUI / 本地模型** | **System Prompt 粘贴** | 将 [`claude-ai-bundle.md`](claude-ai-bundle.md) 粘贴进系统提示词区域 |
+| **ChatGPT / Custom GPT** | **单文件 System Prompt** | 直接复制 [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) 全文粘贴至 System Prompt |
+| **Cursor / Windsurf AI** | **原生 `.cursorrules`** | 克隆仓库或将 [`.cursorrules`](.cursorrules) 复制到你的项目根目录 |
+| **Ollama / 本地 LLM** | **Modelfile / 系统提示词** | 将 [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) 全文粘贴至 Modelfile 系统字段 |
+| **Claude / CLI** | **Git Clone (原生 Skill)** | `git clone https://github.com/DOTfei/borrowed-brain-pro.git ~/.claude/skills/borrowed-brain-pro` |
+| **Claude.ai** | **Skill 上传 / 提示词** | Settings → Skills 上传 `SKILL.md` 或粘贴 [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) |
+| **Open WebUI** | **System Prompt** | 将 [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) 全文粘贴至 System Prompt 框 |
 
 ---
 

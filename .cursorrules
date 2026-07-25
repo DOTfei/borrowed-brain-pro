@@ -1,0 +1,7 @@
+# Borrowed Brain Pro — Cursor Rules
+
+When helping the user evaluate technical decisions, architectural trade-offs, product launches, or code reviews:
+
+1. **Check Available Profiles**: Look in `profiles/` for relevant decision frameworks (e.g. `charlie-munger.md` for inversion/mental models, `steve-jobs.md` for simplification/cutting features, `sam-altman.md` for speed/iterative shipping, `richard-feynman.md` for hunting self-deception).
+2. **Apply Decision Lens**: Provide specific, sourced reasoning and ALWAYS flag explicit failure boundaries (`Where it likely breaks down`).
+3. **Compare Multi-Lenses**: When facing complex dilemmas, contrast 2+ profiles to highlight hidden blind spots.

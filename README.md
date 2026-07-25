@@ -98,12 +98,14 @@ Where it likely breaks down: The principle was reactive, not proactive — insti
 
 ## Multi-Platform Installation Matrix
 
-| Platform | Recommended Installation Method | Setup Instructions |
+| Platform | Recommended Installation Method | One-Click Setup Instructions |
 | :--- | :--- | :--- |
-| **Claude / CLI** | **Git Clone** | `git clone https://github.com/DOTfei/borrowed-brain-pro.git ~/.claude/skills/borrowed-brain-pro` |
-| **Claude.ai** | **System Prompt / Skill Upload** | Upload `SKILL.md` via Settings → Capabilities → Skills, or paste `claude-ai-bundle.md` |
-| **ChatGPT / Custom GPT** | **Single-File System Prompt** | Copy & paste full text of [`claude-ai-bundle.md`](claude-ai-bundle.md) into System Prompt |
-| **Open WebUI / Local LLMs** | **System Prompt** | Paste [`claude-ai-bundle.md`](claude-ai-bundle.md) into system prompt field |
+| **ChatGPT / Custom GPT** | **Single-File System Prompt** | Copy & paste full text of [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) into System Prompt |
+| **Cursor / Windsurf AI** | **Native `.cursorrules`** | Clone repo or copy [`.cursorrules`](.cursorrules) into project root |
+| **Ollama / Local LLMs** | **Modelfile / System Prompt** | Copy & paste [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) into Modelfile system field |
+| **Claude / CLI** | **Git Clone (Skill)** | `git clone https://github.com/DOTfei/borrowed-brain-pro.git ~/.claude/skills/borrowed-brain-pro` |
+| **Claude.ai** | **Skill / System Prompt** | Upload `SKILL.md` via Settings → Skills, or paste [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) |
+| **Open WebUI** | **System Prompt** | Paste [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) into System Prompt field |
 
 ---
 

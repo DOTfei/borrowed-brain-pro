@@ -1,63 +1,78 @@
 #!/usr/bin/env python3
 """
-Bundle Generator Script for borrowed-brain-pro
+build_bundle.py — Automated Single-File Bundle Compiler for borrowed-brain-pro
 
-Combines SKILL.md, profiles/INDEX.md, and all profiles/*.md files into a single
-`claude-ai-bundle.md` file suitable for pasting into system prompt fields.
+Concatenates:
+1. SKILL.md
+2. profiles/INDEX.md
+3. All profiles/*.md files (excluding INDEX.md)
+
+Outputs BOTH:
+- borrowed-brain-bundle.md (Universal Multi-Platform Bundle for ChatGPT, Local LLMs, Cursor, etc.)
+- claude-ai-bundle.md (Backward compatibility alias)
 """
 
+import glob
 import os
-from pathlib import Path
+import sys
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
-SKILL_PATH = REPO_ROOT / "SKILL.md"
-INDEX_PATH = REPO_ROOT / "profiles" / "INDEX.md"
-PROFILES_DIR = REPO_ROOT / "profiles"
-BUNDLE_PATH = REPO_ROOT / "claude-ai-bundle.md"
+# Force UTF-8 stdout
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
+def main():
+    root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    skill_path = os.path.join(root_dir, "SKILL.md")
+    index_path = os.path.join(root_dir, "profiles", "INDEX.md")
+    profiles_dir = os.path.join(root_dir, "profiles")
+    bundle_path = os.path.join(root_dir, "borrowed-brain-bundle.md")
+    alias_path = os.path.join(root_dir, "claude-ai-bundle.md")
 
-def build_bundle():
-    print("Building claude-ai-bundle.md...")
+    if not os.path.exists(skill_path):
+        print(f"[ERROR] SKILL.md not found at {skill_path}")
+        sys.exit(1)
 
-    profile_files = sorted(
-        [
-            p
-            for p in PROFILES_DIR.glob("*.md")
-            if p.name != "INDEX.md"
-        ]
-    )
+    print("Building universal borrowed-brain-bundle.md...")
 
-    content_blocks = []
+    parts = []
 
-    header = (
-        "# borrowed-brain-pro — Claude.ai Bundle\n"
-        "# Paste this entire file as your system prompt in Claude.ai, ChatGPT, or any AI with a system prompt field.\n"
-        f"# It includes SKILL.md + all {len(profile_files)} profiles in one block. No other setup needed.\n"
-        "# Source: https://github.com/DOTfei/borrowed-brain-pro\n"
-    )
-    content_blocks.append(header)
+    # 1. Header & SKILL.md
+    with open(skill_path, "r", encoding="utf-8") as f:
+        skill_content = f.read()
+    parts.append(skill_content)
+    parts.append("\n\n" + "=" * 80 + "\n\n")
 
-    # 1. SKILL.md
-    if SKILL_PATH.exists():
-        content_blocks.append("============================================================\n# SKILL INSTRUCTIONS (SKILL.md)\n============================================================\n")
-        content_blocks.append(SKILL_PATH.read_text(encoding="utf-8"))
+    # 2. INDEX.md
+    if os.path.exists(index_path):
+        with open(index_path, "r", encoding="utf-8") as f:
+            index_content = f.read()
+        parts.append("# PROFILES INDEX\n\n" + index_content)
+        parts.append("\n\n" + "=" * 80 + "\n\n")
 
-    # 2. PROFILES INDEX
-    if INDEX_PATH.exists():
-        content_blocks.append("\n\n============================================================\n# PROFILES INDEX\n============================================================\n")
-        content_blocks.append(INDEX_PATH.read_text(encoding="utf-8"))
+    # 3. All Profiles
+    parts.append("# BUNDLED PRE-BUILT THINKING PROFILES\n\n")
+    profile_files = sorted(glob.glob(os.path.join(profiles_dir, "*.md")))
+    profile_files = [p for p in profile_files if not p.endswith("INDEX.md")]
 
-    # 3. PROFILES
-    content_blocks.append("\n\n============================================================\n# BUNDLED PROFILES\n============================================================\n")
-    for profile in profile_files:
-        content_blocks.append(f"\n--- PROFILE: {profile.stem} ---\n")
-        content_blocks.append(profile.read_text(encoding="utf-8"))
+    for p_path in profile_files:
+        p_name = os.path.basename(p_path)
+        with open(p_path, "r", encoding="utf-8") as f:
+            p_content = f.read()
+        parts.append(f"<!-- PROFILE: {p_name} -->\n\n" + p_content + "\n\n" + "-" * 60 + "\n\n")
 
-    bundle_content = "\n".join(content_blocks) + "\n"
-    BUNDLE_PATH.write_text(bundle_content, encoding="utf-8")
+    full_bundle = "".join(parts)
 
-    print(f"Successfully generated {BUNDLE_PATH.name} with {len(profile_files)} profiles ({len(bundle_content.splitlines())} lines).")
+    # Write borrowed-brain-bundle.md
+    with open(bundle_path, "w", encoding="utf-8") as f:
+        f.write(full_bundle)
 
+    # Write claude-ai-bundle.md (alias)
+    with open(alias_path, "w", encoding="utf-8") as f:
+        f.write(full_bundle)
+
+    line_count = len(full_bundle.splitlines())
+    profile_count = len(profile_files)
+    print(f"[SUCCESS] Generated borrowed-brain-bundle.md & claude-ai-bundle.md with {profile_count} profiles ({line_count} lines).")
 
 if __name__ == "__main__":
-    build_bundle()
+    main()
