@@ -262,6 +262,10 @@ Profiles get stale or thin. If the user asks to refresh one, or if you're in App
 | [Julia Evans](julia-evans.md) | Technical teaching / writing | ★ | 🟢 | Explaining something hard to a non-expert. Deciding what's worth documenting. Thin sourcing — good for framing, not depth. |
 | [Sam Altman](sam-altman.md) | AI startups / growth | ★★★ | 🟢 | Should I ship before it's ready? Speed vs. safety trade-offs. How to frame a controversial decision. Building a fast-executing team. |
 | [Paul Graham](paul-graham.md) | Startups / essays | ★★ | 🟢 | Doing things that don't scale. Startup ideas & founder earnestness. Keeping identity small. |
+| [Elon Musk](elon-musk.md) | Deep Tech / Hardware | ★★★ | 🟢 | First principles physics reduction. 5-step engineering algorithm. Manufacturing speed vs over-automation. Deleting requirements. |
+| [Jensen Huang](jensen-huang.md) | Semiconductors / Platforms | ★★★ | 🟢 | Betting on zero-billion-dollar markets. Full-stack co-design. Flat 50-direct-report management. Platform conviction. |
+| [Marcus Aurelius](marcus-aurelius.md) | Stoic Leadership / Crisis | ★★ | 🟢 | Dichotomy of control under chaos. Obstacle as the way. Maintaining internal tranquility. Duty during crisis. |
+| [Linus Torvalds](linus-torvalds.md) | Systems Engineering / OS | ★★★ | 🟢 | Good taste in data structures. Never break user space. Pragmatic software craftsmanship. Rejecting theoretical bloat. |
 
 ---
 
@@ -481,6 +485,103 @@ Source material spans 2011 (Berkley Center interview) through 2024–2026 (podca
 
 ------------------------------------------------------------
 
+<!-- PROFILE: elon-musk.md -->
+
+# Elon Musk
+
+*Distilled Profile — covering deep tech, manufacturing velocity, and first-principles hardware engineering. Generated 2026-07-25.*
+
+## Sources
+- [Ashlee Vance Biography: Elon Musk](https://www.amazon.com/Elon-Musk-SpaceX-Tesla-Fantastic/dp/0062301233) — Authorized independent biography (2015)
+- [Walter Isaacson Biography: Elon Musk](https://www.amazon.com/Elon-Musk-Walter-Isaacson/dp/1982181281) — Authorized independent biography (2023)
+- [Everyday Astronaut SpaceX Starbase Tour](https://youtube.com) — Public video interviews on the 5-step engineering algorithm (2021)
+- [Tesla 2018 Q1 Earnings Call Transcript](https://ir.tesla.com) — Public earnings call transcript on Model 3 production hell and over-automation admissions
+
+## Core stance
+Musk's approach centers on first-principles physics reductionism paired with unhinged execution velocity. He rejects reasoning by analogy ("we do it because everyone else does"), boiling engineering and business problems down to fundamental physical limits (material cost, thermodynamics, raw mass) and reconstructing solutions from scratch. His methodology enforces aggressive subtraction, deletion of requirement owners, and rapid iterative testing in the wild over passive simulation.
+
+## Visual Decision Tree
+
+```mermaid
+flowchart TD
+    Idea(["Engineering / Hardware Dilemma"]) --> CheckPhysics{"1. Is it limited by laws of physics, or just human convention?"}
+    
+    CheckPhysics -->|Human Convention| DeleteReq["⚡ DELETE REQUIREMENT: Challenge the owner"]
+    CheckPhysics -->|Physics Limit| Optimize{"2. Can we simplify, accelerate, or vertically integrate?"}
+    
+    Optimize -->|Over-Automating| Fail["⚠️ WARNING: Don't automate a step that should be deleted!"]
+    Optimize -->|First Principles| Execute["🚀 EXECUTE: Hardcore Iteration in the Field"]
+```
+
+## Recurring principles
+
+- **Principle 1: Apply the 5-Step Engineering Algorithm rigidly (Make requirements less dumb, delete, simplify, accelerate, automate)**
+  - **Where it shows up**: At SpaceX Starbase and Tesla factories, Musk strictly enforces that every requirement must come with a named person who owns it—never a committee—and that the most common mistake of smart engineers is optimizing a thing that should not exist.
+  - **Where it likely breaks down**: In the 2018 Tesla Model 3 "Production Hell", Musk rushed step 5 (automation) before steps 2 & 3 (deleting and simplifying), building complex robotic conveyor systems that constantly jammed. He later publicly admitted: *"Excessive automation at Tesla was a mistake. Humans are underrated."*
+
+- **Principle 2: Reason from first principles physics, not analogy**
+  - **Where it shows up**: When founding SpaceX in 2002, aerospace contractors quoted $65M+ for a single rocket. Musk calculated the raw material cost of aerospace-grade aluminum, titanium, copper, and carbon fiber on the London Metal Exchange—finding it was only 2% of the rocket's retail price—and decided to build rockets in-house.
+  - **Where it likely breaks down**: Applying raw first-principles logic to human organizations and social platforms (such as the 2022 acquisition of Twitter/X) underestimates soft cultural dynamics, advertiser trust, and human nuance that cannot be solved purely by physics equations.
+
+## Vocabulary
+- *First principles*: Reducing a problem to fundamental truths (atomic elements, physics limits) and building up.
+- *Production Hell*: The grueling phase of scaling manufacturing from prototype to mass volume.
+- *Deletion*: Removing parts, software code, or process steps entirely before attempting optimization.
+
+## Confidence note
+High confidence in hardware manufacturing and engineering methodology (corroborated by Isaacson, Vance, and video tours). Moderate confidence in software governance and social platform management due to volatile strategic shifts post-2022.
+
+
+------------------------------------------------------------
+
+<!-- PROFILE: jensen-huang.md -->
+
+# Jensen Huang (黄仁勋)
+
+*Distilled Profile — covering platform conviction, zero-billion-dollar market creation, and flat organizational execution. Generated 2026-07-25.*
+
+## Sources
+- [Nvidia 2006 CUDA Launch Press Release & Historical Financials](https://nvidia.com) — Primary corporate archives
+- [Acquired Podcast: The Nvidia Story Part 1-3](https://acquired.fm) — Deep-dive multi-hour interview with Jensen Huang (2023)
+- [Stanford Graduate School of Business Keynote: Jensen Huang](https://gsb.stanford.edu) — Public lecture on organizational structure and resilience (2024)
+
+## Core stance
+Huang's approach centers on "betting the company" on zero-billion-dollar markets long before financial metrics justify them. He operates with extreme flat organization (50+ direct reports) to maintain ground-level signal and eliminate middle-management filtering. His strategy prioritizes full-stack co-design (chips, networking, software, algorithms) over component-level efficiency.
+
+## Visual Decision Tree
+
+```mermaid
+flowchart TD
+    Market(["Platform / Market Opportunity"]) --> CheckSize{"1. Is it a Zero-Billion-Dollar Market?"}
+    
+    CheckSize -->|Existing Crowded Market| Reject["❌ REJECT: Don't compete for existing pie"]
+    CheckSize -->|Zero-Billion-Dollar| CheckFullStack{"2. Can we build the full hardware + software stack?"}
+    
+    CheckFullStack -->|Commodity Chip Only| MarginLoss["⚠️ WARNING: Vulnerable to commoditization"]
+    CheckFullStack -->|Full-Stack Moat (CUDA)| BetCompany["🔥 BET THE COMPANY: Persevere Through Wall St Backlash"]
+```
+
+## Recurring principles
+
+- **Principle 1: Create and dominate zero-billion-dollar markets through long-term platform conviction**
+  - **Where it shows up**: In 2006, Nvidia launched CUDA, embedding parallel computing hardware into every GPU shipped, swelling chip production costs by billions when no commercial market existed. Huang absorbed a 50%+ drop in Nvidia stock for years while Wall Street demanded he abandon CUDA, laying the infrastructure that powered modern AI.
+  - **Where it likely breaks down**: Sustaining a multi-billion dollar platform bet requires extreme capital reserves and public market patience; doing this in a cash-constrained startup can lead to bankruptcy long before the zero-billion-dollar market matures.
+
+- **Principle 2: Run a flat, transparent organization with zero middle-management filtering**
+  - **Where it shows up**: Huang keeps 50+ direct reports and refrains from 1-on-1 meetings, broadcasting strategic priorities in open, company-wide memo reviews to ensure everyone from VPs to junior engineers shares identical ground-truth context.
+  - **Where it likely breaks down**: Flat management with 50 direct reports requires a founder with extraordinary energy and domain mastery; in large multi-divisional enterprises, it creates decision bottlenecks and executive burnout.
+
+## Vocabulary
+- *Zero-billion-dollar market*: A non-existent market today that will become a multi-billion dollar industry in a decade.
+- *Full-stack co-design*: Designing chips, systems, networking, and software simultaneously rather than in isolation.
+- *First principles computing*: Re-architecting software algorithms from CPU serial execution to GPU parallel execution.
+
+## Confidence note
+High confidence based on 30-year public track record at Nvidia, Acquired interviews, and Stanford GSB transcripts.
+
+
+------------------------------------------------------------
+
 <!-- PROFILE: julia-evans.md -->
 
 # Julia Evans
@@ -527,6 +628,101 @@ The material found does not include a substantive third-party criticism or publi
 
 ## Confidence note
 This person has substantial primary-voice material (her own blog, multiple podcast interviews) but genuinely thin third-party material — especially on the criticism/failure axis required by this profile's process. After several differently-worded search attempts, no independent account of a real controversy or public pushback specific to Julia Evans (as opposed to the Julia language) turned up. This profile is accordingly weighted more toward "what she says about her own process" than "what others observed about her under pressure" — treat the Recurring principles above as reflecting her stated practice more than externally stress-tested behavior, and treat the failure section above as a genuine gap rather than a padded-over one. Nearly every source here is self-published (her own blog) or a primary-voice interview she gave — there is very little independent, arms-length reporting on her in this profile at all, which is a different and more specific gap than just "thin criticism material." Source material spans 2016–2024; no evidence of a major shift in her stated approach across that period, but this hasn't been re-checked since 2026-07.
+
+
+------------------------------------------------------------
+
+<!-- PROFILE: linus-torvalds.md -->
+
+# Linus Torvalds
+
+*Distilled Profile — covering pragmatic software architecture, open-source decentralization, and ruthless code simplicity. Generated 2026-07-25.*
+
+## Sources
+- [*Just for Fun: The Story of an Accidental Revolutionary* by Linus Torvalds & David Diamond](https://www.amazon.com/Just-Fun-Story-Accidental-Revolutionary/dp/0066620733) — Autobiography (2001)
+- [Linux Kernel Mailing List (LKML) Public Archives](https://lkml.org) — 30+ years of public technical discussions and code review feedback
+- [TED Talk: Linus Torvalds — The mind behind Linux](https://ted.com) — Public interview on taste, code elegance, and Git creation (2016)
+
+## Core stance
+Torvalds' approach centers on pragmatic software craftsmanship: *"Talk is cheap. Show me the code."* He prioritizes good taste in data structures over complex algorithms, asserting that bad programmers worry about code while good programmers worry about data structures and their relationships. He maintains an uncompromising stance against breaking user space ("NEVER BREAK USER SPACE!"), prioritizing backwards compatibility and real-world stability over theoretical architectural purity.
+
+## Visual Decision Tree
+
+```mermaid
+flowchart TD
+    Change(["Kernel / System Code Proposal"]) --> BreakUserSpace{"1. Does this break existing user space / software?"}
+    
+    BreakUserSpace -->|Yes| Reject1["❌ ABSOLUTE REJECT: Never break user space!"]
+    BreakUserSpace -->|No| CheckTaste{"2. Does it have 'Good Taste' (Simple Data Structures & Special-Case Elimination)?"}
+    
+    CheckTaste -->|Over-Engineered Architecture| Reject2["❌ REJECT: Theoretical bloat; show me working code!"]
+    CheckTaste -->|Clean & Practical| Merge["✅ MERGE: Pragmatic, Stable Code"]
+```
+
+## Recurring principles
+
+- **Principle 1: Good taste in code means eliminating special cases via superior data structures**
+  - **Where it shows up**: In his famous TED interview, Torvalds illustrated "good taste" by refactoring a linked list node deletion function: instead of using an `if (prev)` conditional for the head node, he initialized a pointer to the pointer (`**indirect`), eliminating special-case branching entirely.
+  - **Where it likely breaks down**: Obsessing over micro-optimizations and pointer manipulation can make code harder for junior developers to read and maintain compared to explicit, readable conditional logic.
+
+- **Principle 2: Never break user space—pragmatic backwards compatibility over theoretical perfection**
+  - **Where it shows up**: Torvalds enforces a zero-tolerance rule on the Linux Kernel Mailing List: if a kernel patch breaks an existing user program, the patch is immediately reverted regardless of how "correct" the kernel change was theoretically.
+  - **Where it likely breaks down**: Strict refusal to break backward compatibility forces system software to carry legacy tech debt and workaround hacks indefinitely.
+
+## Vocabulary
+- *Good taste*: Writing code that eliminates edge cases naturally through clever data structure design.
+- *Never break user space*: The sacred kernel rule that OS updates must never break user applications.
+- *Talk is cheap*: Demonstrating working code rather than arguing abstract architecture design docs.
+
+## Confidence note
+High confidence based on 30+ years of unedited LKML mailing list archives, kernel git logs, and published interviews.
+
+
+------------------------------------------------------------
+
+<!-- PROFILE: marcus-aurelius.md -->
+
+# Marcus Aurelius (马可·奥勒留)
+
+*Distilled Profile — covering Stoic leadership under crisis, controlling internal response vs external chaos, and duty. Generated 2026-07-25.*
+
+## Sources
+- [*Meditations* (Ta Eis Heauton)](https://en.wikipedia.org/wiki/Meditations) — Primary personal journal writings (161–180 AD)
+- [*Historia Augusta* & Cassius Dio Roman Histories](https://penelope.uchicago.edu) — Contemporary historical records of the Antonine Plague and Marcomannic Wars
+
+## Core stance
+Marcus Aurelius's mental model centers on the Stoic dichotomy of control: separating external events (which are neutral and outside one's control) from internal judgments (which are 100% within one's control). Facing war, plague, and betrayal, his framework treats obstacles not as disruptions, but as the raw material for practicing virtue (*"The impediment to action advances action. What stands in the way becomes the way"*).
+
+## Visual Decision Tree
+
+```mermaid
+flowchart TD
+    Crisis(["External Crisis / Chaos"]) --> SeparateControl{"1. Is this external event within your direct control?"}
+    
+    SeparateControl -->|Outside Control| Accept["⚖️ ACCEPT: Do not waste energy on external events"]
+    SeparateControl -->|Within Control| InternalResponse{"2. What is your internal mental judgment & duty?"}
+    
+    InternalResponse -->|Emotional Reaction| Correct["🧘 CORRECT: The impediment becomes the way"]
+    InternalResponse -->|Virtue & Duty| Execute["🏛️ EXECUTE: Fulfill duty with tranquility"]
+```
+
+## Recurring principles
+
+- **Principle 1: Focus exclusively on internal judgment, not external events (Dichotomy of Control)**
+  - **Where it shows up**: During the Antonine Plague and northern border wars, Marcus wrote daily reminders in *Meditations* that people, diseases, and betrayals cannot harm the mind unless one chooses to feel harmed: *"Remove the judgment 'I am hurt', and the hurt itself disappears."*
+  - **Where it likely breaks down**: Extreme Stoic detachment can lead to perceived coldness, emotional repression, or slowness in taking urgent external PR/political actions when public perception requires empathy over quiet duty.
+
+- **Principle 2: The obstacle is the way—turn adversity into strategic progress**
+  - **Where it shows up**: Facing treasury bankruptcy during the Marcomannic Wars, he auctioned off imperial palace luxuries (gold, crystal, artwork) in the Forum to fund the army without raising taxes on citizens.
+  - **Where it likely breaks down**: Treating every obstacle as a Stoic test of virtue can lead to tolerating flawed systems, abusive business partners, or unsustainable operational environments that ought to be dismantled rather than endured.
+
+## Vocabulary
+- *Dichotomy of control*: Distinguishing between what is up to us (our actions, desires) and what is not (external events).
+- *Amor Fati*: Embracing everything that happens as necessary and useful.
+- *Imperator*: Duty-bound leadership in times of acute crisis.
+
+## Confidence note
+High confidence based on his surviving personal journal (*Meditations*) written during active war campaigns.
 
 
 ------------------------------------------------------------

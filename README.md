@@ -6,7 +6,7 @@
 
 <p center>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License"></a>
-  <a href="profiles/INDEX.md"><img src="https://img.shields.io/badge/Profiles-11%20Ready-blue.svg" alt="Profiles"></a>
+  <a href="profiles/INDEX.md"><img src="https://img.shields.io/badge/Profiles-15%20Ready-blue.svg" alt="Profiles"></a>
   <a href="SKILL.md"><img src="https://img.shields.io/badge/Skill-v0.3.0-6b4fbb" alt="Skill Version"></a>
   <a href="https://github.com/DOTfei/borrowed-brain-pro/actions"><img src="https://img.shields.io/github/actions/workflow/status/DOTfei/borrowed-brain-pro/build-bundle.yml?branch=main&label=CI" alt="Build Status"></a>
   <a href="https://github.com/DOTfei/borrowed-brain-pro/stargazers"><img src="https://img.shields.io/github/stars/DOTfei/borrowed-brain-pro?style=social" alt="Stars"></a>

@@ -17,6 +17,10 @@
 | [Julia Evans](julia-evans.md) | Technical teaching / writing | ★ | 🟢 | Explaining something hard to a non-expert. Deciding what's worth documenting. Thin sourcing — good for framing, not depth. |
 | [Sam Altman](sam-altman.md) | AI startups / growth | ★★★ | 🟢 | Should I ship before it's ready? Speed vs. safety trade-offs. How to frame a controversial decision. Building a fast-executing team. |
 | [Paul Graham](paul-graham.md) | Startups / essays | ★★ | 🟢 | Doing things that don't scale. Startup ideas & founder earnestness. Keeping identity small. |
+| [Elon Musk](elon-musk.md) | Deep Tech / Hardware | ★★★ | 🟢 | First principles physics reduction. 5-step engineering algorithm. Manufacturing speed vs over-automation. Deleting requirements. |
+| [Jensen Huang](jensen-huang.md) | Semiconductors / Platforms | ★★★ | 🟢 | Betting on zero-billion-dollar markets. Full-stack co-design. Flat 50-direct-report management. Platform conviction. |
+| [Marcus Aurelius](marcus-aurelius.md) | Stoic Leadership / Crisis | ★★ | 🟢 | Dichotomy of control under chaos. Obstacle as the way. Maintaining internal tranquility. Duty during crisis. |
+| [Linus Torvalds](linus-torvalds.md) | Systems Engineering / OS | ★★★ | 🟢 | Good taste in data structures. Never break user space. Pragmatic software craftsmanship. Rejecting theoretical bloat. |
 
 ---
 
