@@ -110,6 +110,7 @@ Standard AI regurgitates success quotes. **Borrowed Brain Pro audits blood-and-t
 | **[Munger's Alibaba Trap](audits/munger-alibaba.md)** | Charlie Munger | 70% stock crash on $100M+ BABA bet | Low valuation cannot save an eroding tech moat; retail loyalty in tech decays fast. |
 | **[Hastings' Qwikster Split](audits/hastings-qwikster.md)** | Reed Hastings | 800k lost subscribers & 77% stock drop | Never let internal org chart convenience force customer UX friction. Farm for dissent. |
 | **[Jobs' NeXT Workstation Flop](audits/jobs-next.md)** | Steve Jobs | $12,000 price tag, 50k sales in 8 years | Aesthetic perfection cannot compensate for price ceiling blindness. |
+| **[Musk's Model 3 Hell](audits/musk-model3-automation.md)** | Elon Musk | Stalled Fremont factory & sleeping under desk | Never automate a process step before deleting and simplifying it first. |
 
 > **Run a Failure Audit**: Simply ask `"Run a Failure Audit on Munger's Alibaba investment"` to inspect the full post-mortem.
 
@@ -121,9 +122,10 @@ Don't know which individual profiles to pick? Load a pre-configured **Specialist
 
 | Pack | Focus Domain | Board Members Included | Quick Command |
 | :--- | :--- | :--- | :--- |
-| **[Startup Founders Pack](packs/startup-founders.md)** | Product, Speed & Scaling | Jobs, Altman, Graham, Kalanick, Hastings | `"Convene the Startup Founders Pack on [dilemma]"` |
+| **[Startup Founders Pack](packs/startup-founders.md)** | Product, Speed & Scaling | Jobs, Altman, Musk, Huang, Graham, Hastings | `"Convene the Startup Founders Pack on [dilemma]"` |
 | **[Investors Pack](packs/investors-capital.md)** | Capital & Valuation | Buffett, Munger, Voss | `"Convene the Investors Pack on [deal dilemma]"` |
-| **[Engineering Pack](packs/engineering-science.md)** | System Design & Focus | Feynman, Evans, Newport | `"Convene the Engineering Pack on [architecture dilemma]"` |
+| **[Engineering Pack](packs/engineering-science.md)** | System Design & Code Taste | Torvalds, Musk, Feynman, Evans, Newport | `"Convene the Engineering Pack on [architecture dilemma]"` |
+| **[Crisis Leadership Pack](packs/philosophy-crisis.md)** | Crisis & Mental Fortitude | Aurelius, Munger, Feynman, Newport | `"Convene the Crisis Leadership Pack on [crisis dilemma]"` |
 
 ---
 
@@ -153,6 +155,7 @@ How do we prove our profiles accurately model real decision-making? **We run rev
 | **[2008 Financial Crisis](evals/eval-2008-financial-crisis.md)** | Warren Buffett | Sept 2008 Lehman collapse & Wall St liquidity freeze | **98% Match** (Predicted exact 10% preferred stock + warrant structure) |
 | **[1997 Apple Bankruptcy](evals/eval-1997-apple-near-bankrupcy.md)** | Steve Jobs | Aug 1997 Apple 90 days from insolvency | **100% Match** (Predicted exact 70% product cut & 2x2 grid) |
 | **[2023 OpenAI Governance Crisis](evals/eval-2023-openai-governance-crisis.md)** | Sam Altman | Nov 2023 Board firing & reinstatement | **95% Match** (Predicted rapid external leverage & 5-day return) |
+| **[2006 Nvidia CUDA Crisis](evals/eval-2006-nvidia-cuda-bet.md)** | Jensen Huang | Nov 2006 50% stock drop during CUDA multi-billion bet | **96% Match** (Predicted unwavering platform conviction over short-term margins) |
 
 > **Run a Benchmark Eval**: Simply ask `"Run a Blind Eval on Buffett's 2008 liquidity decision"` to verify profile predictive accuracy.
 

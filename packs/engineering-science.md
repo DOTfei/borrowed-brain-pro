@@ -3,9 +3,11 @@
 *Pre-configured Advisory Pack for Engineers, Software Architects, and Technical Writers.*
 
 ## Included Board Members
-1. **Richard Feynman** ([profiles/richard-feynman.md](../profiles/richard-feynman.md)) — Auditing logic, first-principles reasoning, hunting self-deception.
-2. **Julia Evans** ([profiles/julia-evans.md](../profiles/julia-evans.md)) — Explaining complex systems simply, writing for past self, clear docs.
-3. **Cal Newport** ([profiles/cal-newport.md](../profiles/cal-newport.md)) — Deep work protection, structural fixes over willpower, focus architecture.
+1. **Linus Torvalds** ([profiles/linus-torvalds.md](../profiles/linus-torvalds.md)) — Good taste in data structures, never break user space, pragmatic code craftsmanship.
+2. **Elon Musk** ([profiles/elon-musk.md](../profiles/elon-musk.md)) — First principles physics reduction, deleting requirements before optimizing.
+3. **Richard Feynman** ([profiles/richard-feynman.md](../profiles/richard-feynman.md)) — Auditing logic, first-principles reasoning, hunting self-deception.
+4. **Julia Evans** ([profiles/julia-evans.md](../profiles/julia-evans.md)) — Explaining complex systems simply, writing for past self, clear docs.
+5. **Cal Newport** ([profiles/cal-newport.md](../profiles/cal-newport.md)) — Deep work protection, structural fixes over willpower, focus architecture.
 
 ## Primary Use Cases
 - Auditing complex system architecture and debugging flawed assumptions.

@@ -6,6 +6,9 @@
 - [Nvidia 2006 CUDA Launch Press Release & Historical Financials](https://nvidia.com) — Primary corporate archives
 - [Acquired Podcast: The Nvidia Story Part 1-3](https://acquired.fm) — Deep-dive multi-hour interview with Jensen Huang (2023)
 - [Stanford Graduate School of Business Keynote: Jensen Huang](https://gsb.stanford.edu) — Public lecture on organizational structure and resilience (2024)
+- [Nvidia Annual Shareholder Letters 2010-2024](https://nvidia.com) — Corporate archive
+- [IEEE Spectrum Analysis of GPU Parallel Computing](https://spectrum.ieee.org) — Independent technical reporting
+- [Wall Street Journal Profile on Jensen Huang Management Style](https://wsj.com) — Independent journalism
 
 ## Core stance
 Huang's approach centers on "betting the company" on zero-billion-dollar markets long before financial metrics justify them. He operates with extreme flat organization (50+ direct reports) to maintain ground-level signal and eliminate middle-management filtering. His strategy prioritizes full-stack co-design (chips, networking, software, algorithms) over component-level efficiency.
@@ -33,10 +36,22 @@ flowchart TD
   - **Where it shows up**: Huang keeps 50+ direct reports and refrains from 1-on-1 meetings, broadcasting strategic priorities in open, company-wide memo reviews to ensure everyone from VPs to junior engineers shares identical ground-truth context.
   - **Where it likely breaks down**: Flat management with 50 direct reports requires a founder with extraordinary energy and domain mastery; in large multi-divisional enterprises, it creates decision bottlenecks and executive burnout.
 
-## Vocabulary
+## Default reasoning order
+1. Identify fundamental shifts in computing paradigms.
+2. Build full-stack hardware and software ecosystems before demand arrives.
+3. Maintain flat organizational alignment through direct communication.
+
+## Tradeoffs they lean toward
+- Long-term ecosystem control over short-term gross margins: Invested heavily in CUDA software when hardware margins were compressed.
+- High risk platform bets over incremental product updates.
+
+## One documented failure or criticism
+The 2011 Nvidia Tegra mobile processor push, where Nvidia attempted to compete with Qualcomm in smartphone SoCs but was forced to pivot away after losing major handset design wins.
+
+## Vocabulary / analogies they reach for
 - *Zero-billion-dollar market*: A non-existent market today that will become a multi-billion dollar industry in a decade.
-- *Full-stack co-design*: Designing chips, systems, networking, and software simultaneously rather than in isolation.
-- *First principles computing*: Re-architecting software algorithms from CPU serial execution to GPU parallel execution.
+- *Full-stack co-design*: Designing chips, systems, networking, and software simultaneously.
+- *Accelerated computing*: Shifting serial CPU tasks to parallel GPU execution.
 
 ## Confidence note
 High confidence based on 30-year public track record at Nvidia, Acquired interviews, and Stanford GSB transcripts.

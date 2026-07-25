@@ -8,8 +8,8 @@
 - Berkshire Hathaway Annual Shareholders Meeting Transcripts, 1994–2023 (company-controlled) — berkshirehathaway.com
 - USC Law School Commencement Speech "The Psychology of Human Misjudgment", 1995 (speech transcript, third-party published)
 - CNBC / Wall Street Journal interviews (independent third-party) — wsj.com
-- *Snowball: Warren Buffett and the Business of Life* by Alice Schroeder (independent third-party biography)
-- SEC filings / Daily Journal Alibaba investment coverage (independent financial reporting) — bloomberg.com, reuters.com
+## Core stance
+Munger's thinking rests on "invert, always invert" and multidisciplinary mental models: before trying to be smart, systematically avoid stupidity and psychological biases. He approaches decisions by mapping problems across multiple fundamental disciplines (physics, psychology, economics, biology) and seeking a "lollapalooza effect" where multiple forces act in the same direction, while ruthlessly killing bad ideas early.
 
 ## Visual Decision Tree
 

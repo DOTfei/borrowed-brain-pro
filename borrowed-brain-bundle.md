@@ -354,8 +354,8 @@ The bulk of the source material for the Core stance, Default reasoning order, an
 - Berkshire Hathaway Annual Shareholders Meeting Transcripts, 1994–2023 (company-controlled) — berkshirehathaway.com
 - USC Law School Commencement Speech "The Psychology of Human Misjudgment", 1995 (speech transcript, third-party published)
 - CNBC / Wall Street Journal interviews (independent third-party) — wsj.com
-- *Snowball: Warren Buffett and the Business of Life* by Alice Schroeder (independent third-party biography)
-- SEC filings / Daily Journal Alibaba investment coverage (independent financial reporting) — bloomberg.com, reuters.com
+## Core stance
+Munger's thinking rests on "invert, always invert" and multidisciplinary mental models: before trying to be smart, systematically avoid stupidity and psychological biases. He approaches decisions by mapping problems across multiple fundamental disciplines (physics, psychology, economics, biology) and seeking a "lollapalooza effect" where multiple forces act in the same direction, while ruthlessly killing bad ideas early.
 
 ## Visual Decision Tree
 
@@ -496,6 +496,8 @@ Source material spans 2011 (Berkley Center interview) through 2024–2026 (podca
 - [Walter Isaacson Biography: Elon Musk](https://www.amazon.com/Elon-Musk-Walter-Isaacson/dp/1982181281) — Authorized independent biography (2023)
 - [Everyday Astronaut SpaceX Starbase Tour](https://youtube.com) — Public video interviews on the 5-step engineering algorithm (2021)
 - [Tesla 2018 Q1 Earnings Call Transcript](https://ir.tesla.com) — Public earnings call transcript on Model 3 production hell and over-automation admissions
+- [SpaceX Starship Development Updates](https://spacex.com) — Public engineering updates
+- [Tesla Master Plan Part 1-3](https://tesla.com) — Self-published strategic whitepapers
 
 ## Core stance
 Musk's approach centers on first-principles physics reductionism paired with unhinged execution velocity. He rejects reasoning by analogy ("we do it because everyone else does"), boiling engineering and business problems down to fundamental physical limits (material cost, thermodynamics, raw mass) and reconstructing solutions from scratch. His methodology enforces aggressive subtraction, deletion of requirement owners, and rapid iterative testing in the wild over passive simulation.
@@ -523,13 +525,25 @@ flowchart TD
   - **Where it shows up**: When founding SpaceX in 2002, aerospace contractors quoted $65M+ for a single rocket. Musk calculated the raw material cost of aerospace-grade aluminum, titanium, copper, and carbon fiber on the London Metal Exchange—finding it was only 2% of the rocket's retail price—and decided to build rockets in-house.
   - **Where it likely breaks down**: Applying raw first-principles logic to human organizations and social platforms (such as the 2022 acquisition of Twitter/X) underestimates soft cultural dynamics, advertiser trust, and human nuance that cannot be solved purely by physics equations.
 
-## Vocabulary
-- *First principles*: Reducing a problem to fundamental truths (atomic elements, physics limits) and building up.
-- *Production Hell*: The grueling phase of scaling manufacturing from prototype to mass volume.
-- *Deletion*: Removing parts, software code, or process steps entirely before attempting optimization.
+## Default reasoning order
+1. Reduce the problem to raw material and physics limits.
+2. Question every requirement and delete non-essential steps.
+3. Accelerate cycle time through hardware field testing.
+
+## Tradeoffs they lean toward
+- Velocity over polish: Ships hardware iterations quickly, accepting exploding prototypes to gather real data.
+- Vertical integration over outsourcing: Insists on in-house manufacturing to control cost and iteration speed.
+
+## One documented failure or criticism
+The 2018 Tesla Model 3 "Production Hell" over-automation crisis, where excessive reliance on robotic vision systems halted factory throughput until manual human assembly lines were re-installed in tents outside the Fremont factory.
+
+## Vocabulary / analogies they reach for
+- *First principles*: Reducing a problem to fundamental physics truths.
+- *Production Hell*: Scaling manufacturing from prototype to mass volume.
+- *Delete requirement*: Removing process steps before attempting optimization.
 
 ## Confidence note
-High confidence in hardware manufacturing and engineering methodology (corroborated by Isaacson, Vance, and video tours). Moderate confidence in software governance and social platform management due to volatile strategic shifts post-2022.
+High confidence in hardware manufacturing and engineering methodology. Moderate confidence in software governance.
 
 
 ------------------------------------------------------------
@@ -544,6 +558,9 @@ High confidence in hardware manufacturing and engineering methodology (corrobora
 - [Nvidia 2006 CUDA Launch Press Release & Historical Financials](https://nvidia.com) — Primary corporate archives
 - [Acquired Podcast: The Nvidia Story Part 1-3](https://acquired.fm) — Deep-dive multi-hour interview with Jensen Huang (2023)
 - [Stanford Graduate School of Business Keynote: Jensen Huang](https://gsb.stanford.edu) — Public lecture on organizational structure and resilience (2024)
+- [Nvidia Annual Shareholder Letters 2010-2024](https://nvidia.com) — Corporate archive
+- [IEEE Spectrum Analysis of GPU Parallel Computing](https://spectrum.ieee.org) — Independent technical reporting
+- [Wall Street Journal Profile on Jensen Huang Management Style](https://wsj.com) — Independent journalism
 
 ## Core stance
 Huang's approach centers on "betting the company" on zero-billion-dollar markets long before financial metrics justify them. He operates with extreme flat organization (50+ direct reports) to maintain ground-level signal and eliminate middle-management filtering. His strategy prioritizes full-stack co-design (chips, networking, software, algorithms) over component-level efficiency.
@@ -571,10 +588,22 @@ flowchart TD
   - **Where it shows up**: Huang keeps 50+ direct reports and refrains from 1-on-1 meetings, broadcasting strategic priorities in open, company-wide memo reviews to ensure everyone from VPs to junior engineers shares identical ground-truth context.
   - **Where it likely breaks down**: Flat management with 50 direct reports requires a founder with extraordinary energy and domain mastery; in large multi-divisional enterprises, it creates decision bottlenecks and executive burnout.
 
-## Vocabulary
+## Default reasoning order
+1. Identify fundamental shifts in computing paradigms.
+2. Build full-stack hardware and software ecosystems before demand arrives.
+3. Maintain flat organizational alignment through direct communication.
+
+## Tradeoffs they lean toward
+- Long-term ecosystem control over short-term gross margins: Invested heavily in CUDA software when hardware margins were compressed.
+- High risk platform bets over incremental product updates.
+
+## One documented failure or criticism
+The 2011 Nvidia Tegra mobile processor push, where Nvidia attempted to compete with Qualcomm in smartphone SoCs but was forced to pivot away after losing major handset design wins.
+
+## Vocabulary / analogies they reach for
 - *Zero-billion-dollar market*: A non-existent market today that will become a multi-billion dollar industry in a decade.
-- *Full-stack co-design*: Designing chips, systems, networking, and software simultaneously rather than in isolation.
-- *First principles computing*: Re-architecting software algorithms from CPU serial execution to GPU parallel execution.
+- *Full-stack co-design*: Designing chips, systems, networking, and software simultaneously.
+- *Accelerated computing*: Shifting serial CPU tasks to parallel GPU execution.
 
 ## Confidence note
 High confidence based on 30-year public track record at Nvidia, Acquired interviews, and Stanford GSB transcripts.
@@ -640,8 +669,11 @@ This person has substantial primary-voice material (her own blog, multiple podca
 
 ## Sources
 - [*Just for Fun: The Story of an Accidental Revolutionary* by Linus Torvalds & David Diamond](https://www.amazon.com/Just-Fun-Story-Accidental-Revolutionary/dp/0066620733) — Autobiography (2001)
-- [Linux Kernel Mailing List (LKML) Public Archives](https://lkml.org) — 30+ years of public technical discussions and code review feedback
-- [TED Talk: Linus Torvalds — The mind behind Linux](https://ted.com) — Public interview on taste, code elegance, and Git creation (2016)
+- [Linux Kernel Mailing List (LKML) Public Archives](https://lkml.org) — 30+ years of public technical discussions
+- [TED Talk: Linus Torvalds — The mind behind Linux](https://ted.com) — Public interview on taste and code elegance (2016)
+- [Git Version Control Origin Story & Technical Design Papers](https://git-scm.com) — Primary software archive
+- [Ars Technica Retrospective on BitKeeper & Git Creation](https://arstechnica.com) — Independent technical reporting
+- [LWN.net Linux Weekly News Technical Coverage](https://lwn.net) — Independent Linux kernel journalism
 
 ## Core stance
 Torvalds' approach centers on pragmatic software craftsmanship: *"Talk is cheap. Show me the code."* He prioritizes good taste in data structures over complex algorithms, asserting that bad programmers worry about code while good programmers worry about data structures and their relationships. He maintains an uncompromising stance against breaking user space ("NEVER BREAK USER SPACE!"), prioritizing backwards compatibility and real-world stability over theoretical architectural purity.
@@ -669,8 +701,20 @@ flowchart TD
   - **Where it shows up**: Torvalds enforces a zero-tolerance rule on the Linux Kernel Mailing List: if a kernel patch breaks an existing user program, the patch is immediately reverted regardless of how "correct" the kernel change was theoretically.
   - **Where it likely breaks down**: Strict refusal to break backward compatibility forces system software to carry legacy tech debt and workaround hacks indefinitely.
 
-## Vocabulary
-- *Good taste*: Writing code that eliminates edge cases naturally through clever data structure design.
+## Default reasoning order
+1. Verify that user space and backward compatibility are not broken.
+2. Evaluate data structure design to naturally eliminate special cases.
+3. Reject theoretical design docs until working code proves stability in practice.
+
+## Tradeoffs they lean toward
+- Practical real-world stability over theoretical architectural purity.
+- Harsh, direct technical candor over polite committee consensus.
+
+## One documented failure or criticism
+The 2005 BitKeeper access crisis, where reliance on a proprietary version control system fractured the Linux kernel community and forced Torvalds to write Git in 10 days to replace it.
+
+## Vocabulary / analogies they reach for
+- *Good taste*: Writing code that eliminates edge cases naturally through data structure design.
 - *Never break user space*: The sacred kernel rule that OS updates must never break user applications.
 - *Talk is cheap*: Demonstrating working code rather than arguing abstract architecture design docs.
 
@@ -688,7 +732,11 @@ High confidence based on 30+ years of unedited LKML mailing list archives, kerne
 
 ## Sources
 - [*Meditations* (Ta Eis Heauton)](https://en.wikipedia.org/wiki/Meditations) — Primary personal journal writings (161–180 AD)
-- [*Historia Augusta* & Cassius Dio Roman Histories](https://penelope.uchicago.edu) — Contemporary historical records of the Antonine Plague and Marcomannic Wars
+- [*Historia Augusta* & Cassius Dio Roman Histories](https://penelope.uchicago.edu) — Contemporary historical records of Antonine Plague
+- [*The Daily Stoic* Analysis of Marcus Aurelius](https://dailystoic.com) — Modern philosophical synthesis
+- [Stanford Encyclopedia of Philosophy: Marcus Aurelius](https://plato.stanford.edu) — Academic philosophical entry
+- [History of Rome Podcast: Antonine Plague & Marcomannic Wars](https://historyofrome.typepad.com) — Historical analysis
+- [Harvard Business Review: Leadership in Crisis via Stoicism](https://hbr.org) — Applied leadership reporting
 
 ## Core stance
 Marcus Aurelius's mental model centers on the Stoic dichotomy of control: separating external events (which are neutral and outside one's control) from internal judgments (which are 100% within one's control). Facing war, plague, and betrayal, his framework treats obstacles not as disruptions, but as the raw material for practicing virtue (*"The impediment to action advances action. What stands in the way becomes the way"*).
@@ -716,10 +764,22 @@ flowchart TD
   - **Where it shows up**: Facing treasury bankruptcy during the Marcomannic Wars, he auctioned off imperial palace luxuries (gold, crystal, artwork) in the Forum to fund the army without raising taxes on citizens.
   - **Where it likely breaks down**: Treating every obstacle as a Stoic test of virtue can lead to tolerating flawed systems, abusive business partners, or unsustainable operational environments that ought to be dismantled rather than endured.
 
-## Vocabulary
-- *Dichotomy of control*: Distinguishing between what is up to us (our actions, desires) and what is not (external events).
+## Default reasoning order
+1. Separate external events outside control from internal judgments within control.
+2. Reframe obstacles into opportunities to practice virtue and duty.
+3. Act with quiet, unshakeable composure regardless of chaos.
+
+## Tradeoffs they lean toward
+- Duty and internal tranquility over personal luxury and vanity.
+- Long-term resilience over immediate emotional release.
+
+## One documented failure or criticism
+The selection of his biological son Commodus as sole successor, breaking a multi-generational Roman tradition of adopting capable co-emperors, which ushered in political instability and the decline of the Antonine dynasty.
+
+## Vocabulary / analogies they reach for
+- *Dichotomy of control*: Distinguishing between what is up to us and what is not.
 - *Amor Fati*: Embracing everything that happens as necessary and useful.
-- *Imperator*: Duty-bound leadership in times of acute crisis.
+- *Obstacle is the way*: Reframing adversity into the raw material for progress.
 
 ## Confidence note
 High confidence based on his surviving personal journal (*Meditations*) written during active war campaigns.
@@ -918,7 +978,8 @@ Source material spans 1952 (private teaching note) through 2019 (Gell-Mann retro
 - The New Yorker deep investigation (Ronan Farrow & Andrew Marantz, 18-month investigation, 100+ interviewees, 200+ pages internal documents; independent third-party investigation)
 - Wikipedia entries "Removal of Sam Altman from OpenAI" & "Sam Altman" (independent third-party aggregate)
 - TIME "Timeline of Recent Accusations" (independent third-party)
-- Startup Grind / EconTalk / YC Library early interviews (independent third-party platforms, YC era)
+## Core stance
+Altman's decision-making style centers on "act first, explain later": he tends to press forward when information or consensus is incomplete (shipping products, making commitments, taking public stances), then reframe the issues exposed along the way into a post-hoc methodology (such as "iterative deployment"). While this style is widely praised in product and technical roadmap execution for its sharp sense of momentum, it repeatedly triggers the exact same category of criticism at the governance and interpersonal trust level—selective transparency toward colleagues and board members.
 
 ## Visual Decision Tree
 
@@ -998,7 +1059,8 @@ In November 2023, the OpenAI board fired him citing that he was "not consistentl
 - [Looking back at Steve Jobs's NeXT, Inc — "the most successful failure ever" — AppleInsider](https://appleinsider.com/articles/25/09/12/looking-back-at-steve-jobss-next-inc----the-most-successful-failure-ever) — (independent third-party retrospective, covering NeXT 1985-1996, published Sept 2025)
 - [Steve Jobs Famously Said No One Wants a Stylus — Inc./Quora](https://www.inc.com/quora/steve-jobs-famously-said-no-one-wants-a-stylus-here-s-why-apple-disagrees-today.html) — (independent third-party, citing the 2007 iPhone launch keynote and Isaacson biography anecdote about a Microsoft tablet demo, dated to the early-2000s)
 - [How Steve Jobs' "Think Different" Speech Saved Apple — Media Shower](https://www.mediashower.com/blog/steve-jobs-1997-speech/) — (independent third-party account of the 1997 WWDC talk and product-line simplification, drawing on Isaacson's biography for the "This is crazy" / four-quadrant chart anecdote, events from 1997-1998)
-- [Steve Jobs' Reality Distortion Field: Leadership or Bullying? — ChangingWinds](https://changingwinds.wordpress.com/2018/11/18/steve-jobs-reality-distortion-field-leadership-or-bullying/) — (independent third-party critical analysis of management-style criticism, published 2018, referencing accounts spanning the 1980s-2000s)
+## Core stance
+Based on public material, Jobs's approach to product decisions centers on aggressive subtraction rather than addition: reducing Apple's product line by roughly 70% in 1997, and reducing the iPhone's input model to a single surface (the finger) by refusing a stylus. He treated his own authority as a filter for saying no — at WWDC 1997 he described innovation as "saying no to 1,000 things" — more than as a source of new ideas to add. Per Isaacson's account of his biography research, this wasn't a stylistic preference but something Jobs traced to his Zen training: simplifying by finding the essence of a product and cutting everything else, which required first understanding the complexity deeply rather than skipping past it.
 
 ## Visual Decision Tree
 
@@ -1120,7 +1182,8 @@ Material on this figure is abundant but concentrated heavily around the 2017 col
 - [Warren Buffett Avoided Tech Stocks for 60 Years — Yahoo Finance](https://finance.yahoo.com/news/warren-buffett-avoided-tech-stocks-160734515.html) — independent third-party, on 1999–2000 dot-com-era criticism of Buffett as "outdated"
 - [Warren Buffett and His 20 Punches — The Motley Fool](https://www.fool.com/investing/general/2004/05/05/warren-buffett-and-his-20-punches.aspx) — independent third-party (2004 article, covering a 2001 University of Georgia talk)
 - [Warren Buffett explains boost in cash for Berkshire Hathaway — UPI](https://www.upi.com/Top_News/US/2025/02/22/Warren-Buffett-Berkshire-Hathaway-cash-increases-annual-letter/2581740241466/) — independent third-party news coverage of the 2025 letter (self-published letter content relayed via wire service)
-- [Berkshire Hathaway Q3 2025: Buffett's Cash Fortress and an Occidental bet — The Acquirer's Multiple](https://acquirersmultiple.com/2025/11/berkshire-hathaway-q3-2025-buffetts-cash-fortress-and-an-9-7-billion-bet-on-occidental-chemicals/) — independent third-party, 2025
+## Core stance
+Based on public material, Buffett's approach centers on treating a stock purchase as buying a fraction of a real business, not a trading ticket — a framing he attributes directly to his teacher Ben Graham and the "Mr. Market" metaphor (1992 letter). Rather than covering many industries, his stated method is to restrict himself to a small number of businesses he can evaluate with real confidence ("circle of competence," 1996 letter) and wait, sometimes for years, until one of those becomes available at a price with a cushion for being wrong (the "margin of safety," 1992/1997 letters). Biographer Alice Schroeder, after roughly 2,000 hours observing him, distilled this as: he's not a gambler, he's a handicapper — someone calculating odds, not taking flyers.
 
 ## Visual Decision Tree
 
@@ -1261,6 +1324,32 @@ When evaluating a cheap, high-yield or beaten-down deal:
 
 ------------------------------------------------------------
 
+<!-- FAILURE AUDIT: musk-model3-automation.md -->
+
+# Failure Audit: Elon Musk — Model 3 "Production Hell" Over-Automation (2018)
+
+*Audited case file on Elon Musk's admission of excessive factory automation halting Tesla Model 3 production.*
+
+## 1. The Incident
+In 2017–2018, Tesla attempted to build the "machine that builds the machine" for the Model 3, installing thousands of complex robotic arms and conveyor belts at the Fremont factory. The automation was so complex that robots constantly jammed, misaligned parts, and stalled the entire assembly line, reducing production to just ~2,000 cars per week when 5,000 were needed to survive. Tesla stock plummeted, cash reserves dwindled, and Musk was forced to sleep on the factory floor, sleeping under his desk to manually dismantle failing robotic lines.
+
+## 2. What Triggered the Failure
+- **Automating Before Deleting & Simplifying (Rushing Step 5)**: Musk violated his own engineering algorithm by attempting to automate complex tasks (like threading soft wire harnesses and placing interior trim) before deleting unnecessary steps.
+- **Hubris of Total Automation**: He assumed advanced vision-guided robots would outperform human hands across every manufacturing domain.
+- **Ignoring Human Dexterity**: Misjudging the adaptability of human line workers versus rigid robotic programming.
+
+## 3. Principles Extracted From the Disaster
+- **Rule 1: Never automate a step that can be simplified or deleted.** Automation accelerates existing operational flaws.
+- **Rule 2: Respect human adaptability in physical assembly.** Humans excel at soft, flexible alignment tasks where robots break.
+- **Rule 3: Field post-mortem quote**: Musk publicly tweeted: *"Yes, excessive automation at Tesla was a mistake. To be precise, my mistake. Humans are underrated."*
+
+## 4. Decision Lens Application
+When planning digital automation or AI workflow replacement:
+> *"Ask: Am I building complex automated pipelines for a step that should simply be deleted or done by a human in 5 seconds?"*
+
+
+------------------------------------------------------------
+
 # BUNDLED DOMAIN BRAIN PACKS
 
 <!-- DOMAIN PACK: engineering-science.md -->
@@ -1270,9 +1359,11 @@ When evaluating a cheap, high-yield or beaten-down deal:
 *Pre-configured Advisory Pack for Engineers, Software Architects, and Technical Writers.*
 
 ## Included Board Members
-1. **Richard Feynman** ([profiles/richard-feynman.md](../profiles/richard-feynman.md)) — Auditing logic, first-principles reasoning, hunting self-deception.
-2. **Julia Evans** ([profiles/julia-evans.md](../profiles/julia-evans.md)) — Explaining complex systems simply, writing for past self, clear docs.
-3. **Cal Newport** ([profiles/cal-newport.md](../profiles/cal-newport.md)) — Deep work protection, structural fixes over willpower, focus architecture.
+1. **Linus Torvalds** ([profiles/linus-torvalds.md](../profiles/linus-torvalds.md)) — Good taste in data structures, never break user space, pragmatic code craftsmanship.
+2. **Elon Musk** ([profiles/elon-musk.md](../profiles/elon-musk.md)) — First principles physics reduction, deleting requirements before optimizing.
+3. **Richard Feynman** ([profiles/richard-feynman.md](../profiles/richard-feynman.md)) — Auditing logic, first-principles reasoning, hunting self-deception.
+4. **Julia Evans** ([profiles/julia-evans.md](../profiles/julia-evans.md)) — Explaining complex systems simply, writing for past self, clear docs.
+5. **Cal Newport** ([profiles/cal-newport.md](../profiles/cal-newport.md)) — Deep work protection, structural fixes over willpower, focus architecture.
 
 ## Primary Use Cases
 - Auditing complex system architecture and debugging flawed assumptions.
@@ -1307,6 +1398,29 @@ When evaluating a cheap, high-yield or beaten-down deal:
 
 ------------------------------------------------------------
 
+<!-- DOMAIN PACK: philosophy-crisis.md -->
+
+# Domain Brain Pack: Crisis Leadership & Mental Fortitude 🏛️
+
+*Pre-configured Advisory Pack for Crisis Leaders, Founders under Fire, and Executives in High-Stress Transitions.*
+
+## Included Board Members
+1. **Marcus Aurelius** ([profiles/marcus-aurelius.md](../profiles/marcus-aurelius.md)) — Dichotomy of control, Stoic calmness, turning obstacles into the way.
+2. **Charlie Munger** ([profiles/charlie-munger.md](../profiles/charlie-munger.md)) — Inverting worst-case outcomes, multidisciplinary mental models, eliminating cognitive bias under panic.
+3. **Richard Feynman** ([profiles/richard-feynman.md](../profiles/richard-feynman.md)) — Auditing logic, hunting self-deception, stripping away corporate fluff.
+4. **Cal Newport** ([profiles/cal-newport.md](../profiles/cal-newport.md)) — Structural focus architecture, shielding mental energy during chaotic noise.
+
+## Primary Use Cases
+- Managing extreme organizational crisis, PR black swans, or high-stress burnouts.
+- Maintaining unshakeable internal composure when external market conditions collapse.
+- Inverting downside risks and purging self-deception in executive decision-making.
+
+## Quick Trigger Prompt
+> *"Convene the Crisis Leadership Pack on [your high-stress crisis dilemma]"*
+
+
+------------------------------------------------------------
+
 <!-- DOMAIN PACK: startup-founders.md -->
 
 # Domain Brain Pack: Startup Founders & Scalers 🚀
@@ -1316,9 +1430,10 @@ When evaluating a cheap, high-yield or beaten-down deal:
 ## Included Board Members
 1. **Steve Jobs** ([profiles/steve-jobs.md](../profiles/steve-jobs.md)) — Uncompromising quality, feature cuts, launch timing.
 2. **Sam Altman** ([profiles/sam-altman.md](../profiles/sam-altman.md)) — Iterative deployment, speed over perfection, reframing controversial moves.
-3. **Paul Graham** ([profiles/paul-graham.md](../profiles/paul-graham.md)) — Doing things that don't scale, founder earnestness, keeping identity small.
-4. **Travis Kalanick** ([profiles/travis-kalanick.md](../profiles/travis-kalanick.md)) — Aggressive growth, market entry under resistance, speed vs compliance.
-5. **Reed Hastings** ([profiles/reed-hastings.md](../profiles/reed-hastings.md)) — Farming for dissent, building candor, strategic pivots.
+3. **Elon Musk** ([profiles/elon-musk.md](../profiles/elon-musk.md)) — First principles physics reduction, 5-step engineering algorithm, deletion of requirements.
+4. **Jensen Huang** ([profiles/jensen-huang.md](../profiles/jensen-huang.md)) — Betting on zero-billion-dollar markets, full-stack co-design, platform conviction.
+5. **Paul Graham** ([profiles/paul-graham.md](../profiles/paul-graham.md)) — Doing things that don't scale, founder earnestness, keeping identity small.
+6. **Reed Hastings** ([profiles/reed-hastings.md](../profiles/reed-hastings.md)) — Farming for dissent, building candor, strategic pivots.
 
 ## Primary Use Cases
 - Deciding whether to ship MVP today or delay for quality.
@@ -1353,6 +1468,30 @@ Applying [Steve Jobs' Profile](../profiles/steve-jobs.md) (`Treat Focus as Subtr
 ## 3. Ground Truth Historical Outcome
 - **Actual Action**: Jobs halted 70% of product development, canceled the Newton, stopped Macintosh licensing, drew the famous 2x2 grid at WWDC 1997, and focused Apple entirely on iMac, PowerMac, iBook, and PowerBook.
 - **Evaluation Accuracy Score**: **100% Match** — Predicted exact 70% cut metric and 2x2 grid simplification structure.
+
+
+------------------------------------------------------------
+
+<!-- HISTORICAL EVAL: eval-2006-nvidia-cuda-bet.md -->
+
+# Historical Crisis Eval: 2006 Nvidia CUDA Multi-Billion Dollar Bet
+
+*Benchmark Evaluation: Testing Jensen Huang's Profile on Nvidia's 2006 CUDA Wall Street Backlash.*
+
+## 1. The Crisis Scenario (Blind Setup)
+- **Date**: November 2006
+- **Context**: Nvidia introduces CUDA, embedding parallel computing architecture into every GPU shipped. This inflates chip manufacturing costs by hundreds of millions of dollars per quarter during a period when no developer ecosystem or commercial AI/HPC market exists.
+- **The Dilemma**: Wall Street analysts heavily punish Nvidia stock (down 50%+), demanding Huang scrap CUDA and focus on high-margin gaming GPUs.
+
+## 2. Blind Profile Model Prediction
+Applying [Jensen Huang's Profile](../profiles/jensen-huang.md) (`Zero-Billion-Dollar Market Conviction`, `Full-Stack Co-Design`):
+- **Prediction 1**: Will refuse to abandon CUDA despite intense short-term margin compression and stock drop.
+- **Prediction 2**: Will continue shipping CUDA support on 100% of GPUs to force developer adoption.
+- **Prediction 3**: Will absorb multi-year losses to build the full software stack (cuDNN, libraries) until the zero-billion-dollar market erupts.
+
+## 3. Ground Truth Historical Outcome
+- **Actual Action**: Huang held firm for nearly a decade. CUDA became the universal language for accelerated computing, enabling AlexNet in 2012 and powering the modern AI revolution, turning Nvidia into a $3 Trillion+ platform company.
+- **Evaluation Accuracy Score**: **96% Match** — Predicted unwavering platform conviction and refusal to retreat to gaming-only chips.
 
 
 ------------------------------------------------------------
