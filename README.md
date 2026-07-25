@@ -5,6 +5,7 @@
 </p>
 
 <p center>
+  <a href="https://DOTfei.github.io/borrowed-brain-pro/"><img src="https://img.shields.io/badge/Website-Live%20Demo-success" alt="Website"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License"></a>
   <a href="profiles/INDEX.md"><img src="https://img.shields.io/badge/Profiles-18%20Ready-blue.svg" alt="Profiles"></a>
   <a href="SKILL.md"><img src="https://img.shields.io/badge/Skill-v0.3.0-6b4fbb" alt="Skill Version"></a>
@@ -14,6 +15,8 @@
 
 ![Borrowed Brain Pro Explainer Animation](.github/assets/explainer.gif)
 
+> 🌐 **[Live Demo & Web Interface](https://DOTfei.github.io/borrowed-brain-pro/)**
+> 
 > **Borrowed Brain Pro is powered by Two Core Superpowers:**
 > 1. **Distill Engine**: Research and distill ANY public figure (past or present) into a reusable, structured Thinking Profile (`profiles/name.md`).
 > 2. **Decision Engine**: Apply pre-built or custom profiles (single lens or multi-lens contrast) to your real decision dilemmas.

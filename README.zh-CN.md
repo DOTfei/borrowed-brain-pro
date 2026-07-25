@@ -5,6 +5,7 @@
 </p>
 
 <p center>
+  <a href="https://DOTfei.github.io/borrowed-brain-pro/"><img src="https://img.shields.io/badge/Website-Live%20Demo-success" alt="Website"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License"></a>
   <a href="profiles/INDEX.md"><img src="https://img.shields.io/badge/Profiles-18%20Ready-blue.svg" alt="Profiles"></a>
   <a href="SKILL.md"><img src="https://img.shields.io/badge/Skill-v0.3.0-6b4fbb" alt="Skill Version"></a>
@@ -14,7 +15,9 @@
 
 ![Borrowed Brain Pro 演示动画](.github/assets/explainer.gif)
 
-> **Borrowed Brain Pro 由两大核心能力驱动：**
+> 🌐 **[官网在线预览与交互体验](https://DOTfei.github.io/borrowed-brain-pro/)**
+> 
+> **Borrowed Brain Pro 由两大核心引擎驱动：**
 > 1. **大脑蒸馏引擎 (Distill Engine)**：为你指定的**任何公众人物**（无论古今中外）进行 4 层深度研究，生成结构化的思维档案 (`profiles/name.md`)。
 > 2. **决策套用引擎 (Decision Engine)**：调取预置或自定义的思维档案（支持单视角推理或多视角冲突对比），套用到你正面对的真实决策难题中。
 
