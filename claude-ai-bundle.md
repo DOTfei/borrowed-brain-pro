@@ -1548,6 +1548,7 @@ When planning digital automation or AI workflow replacement:
 3. **Richard Feynman** ([profiles/richard-feynman.md](../profiles/richard-feynman.md)) — Auditing logic, first-principles reasoning, hunting self-deception.
 4. **Julia Evans** ([profiles/julia-evans.md](../profiles/julia-evans.md)) — Explaining complex systems simply, writing for past self, clear docs.
 5. **Cal Newport** ([profiles/cal-newport.md](../profiles/cal-newport.md)) — Deep work protection, structural fixes over willpower, focus architecture.
+6. **Socrates** ([profiles/socrates.md](../profiles/socrates.md)) — Auditing false certainty in architectural decisions, Socratic cross-examination of constraints.
 
 ## Primary Use Cases
 - Auditing complex system architecture and debugging flawed assumptions.
@@ -1620,6 +1621,7 @@ When planning digital automation or AI workflow replacement:
 4. **Jensen Huang** ([profiles/jensen-huang.md](../profiles/jensen-huang.md)) — Betting on zero-billion-dollar markets, full-stack co-design, platform conviction.
 5. **Paul Graham** ([profiles/paul-graham.md](../profiles/paul-graham.md)) — Doing things that don't scale, founder earnestness, keeping identity small.
 6. **Reed Hastings** ([profiles/reed-hastings.md](../profiles/reed-hastings.md)) — Farming for dissent, building candor, strategic pivots.
+7. **Laozi (老子)** ([profiles/laozi.md](../profiles/laozi.md)) — Wu Wei (effortless scaling), decentralized organic team growth, managing without micromanaging.
 
 ## Primary Use Cases
 - Deciding whether to ship MVP today or delay for quality.

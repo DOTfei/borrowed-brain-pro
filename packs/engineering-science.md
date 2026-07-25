@@ -8,6 +8,7 @@
 3. **Richard Feynman** ([profiles/richard-feynman.md](../profiles/richard-feynman.md)) — Auditing logic, first-principles reasoning, hunting self-deception.
 4. **Julia Evans** ([profiles/julia-evans.md](../profiles/julia-evans.md)) — Explaining complex systems simply, writing for past self, clear docs.
 5. **Cal Newport** ([profiles/cal-newport.md](../profiles/cal-newport.md)) — Deep work protection, structural fixes over willpower, focus architecture.
+6. **Socrates** ([profiles/socrates.md](../profiles/socrates.md)) — Auditing false certainty in architectural decisions, Socratic cross-examination of constraints.
 
 ## Primary Use Cases
 - Auditing complex system architecture and debugging flawed assumptions.

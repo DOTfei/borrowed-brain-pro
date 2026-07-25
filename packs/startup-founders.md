@@ -9,6 +9,7 @@
 4. **Jensen Huang** ([profiles/jensen-huang.md](../profiles/jensen-huang.md)) — Betting on zero-billion-dollar markets, full-stack co-design, platform conviction.
 5. **Paul Graham** ([profiles/paul-graham.md](../profiles/paul-graham.md)) — Doing things that don't scale, founder earnestness, keeping identity small.
 6. **Reed Hastings** ([profiles/reed-hastings.md](../profiles/reed-hastings.md)) — Farming for dissent, building candor, strategic pivots.
+7. **Laozi (老子)** ([profiles/laozi.md](../profiles/laozi.md)) — Wu Wei (effortless scaling), decentralized organic team growth, managing without micromanaging.
 
 ## Primary Use Cases
 - Deciding whether to ship MVP today or delay for quality.
