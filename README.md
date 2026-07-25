@@ -71,6 +71,36 @@ flowchart TD
 
 ---
 
+## 🏛️ Feature Spotlight: Boardroom Mode (Virtual Board Meeting)
+
+Simply install the Skill and say: `"Convene the Boardroom on [your dilemma]"`. The AI automatically launches a 3-round multi-figure debate:
+
+```markdown
+🏛️ VIRTUAL BOARDROOM DEBATE
+Topic: "Should we lower our SaaS prices to capture market share?"
+Board Members: Steve Jobs, Charlie Munger, Sam Altman, Reed Hastings
+
+Round 1 — Opening Stances
+- Munger: "Margin reduction increases risk. Invert the problem: why isn't the product valuable enough at full price?"
+- Jobs: "Never compete on price. If you discount, you're admitting lack of quality."
+- Altman: "Ship fast, iterate pricing dynamically. Scale users first, monetize later."
+- Hastings: "Farm for dissent internally before changing prices. What do your sales reps privately say?"
+
+Round 2 — Direct Cross-Examination
+- Munger → Altman: "Your obsession with raw user growth ignores unit economics."
+- Jobs → Hastings: "Seeking consensus with sales reps leads to mediocrity. Focus on product perfection."
+
+Round 3 — Consensus & Irreconcilable Friction
+- Unanimous Consent: Do not cut price without cutting non-essential features.
+- Core Friction: Jobs (never discount) vs. Altman (scale first).
+
+Executive Verdict & Blind Spot Warning:
+- Action Plan: Maintain core price tier, launch a stripped-down entry tier.
+- Board Blind Spot: None of these founders ran low-margin B2B SMB software.
+```
+
+---
+
 ## Profile Anatomy
 
 Every principle in every profile is structured with rigorous epistemic boundaries:
