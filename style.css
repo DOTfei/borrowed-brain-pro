@@ -5,6 +5,7 @@
    Spacing: 4/8px base unit
    WCAG AA: all text ≥ 4.5:1 contrast verified
    NO: AI purple gradients, centered hero, emoji icons, Inter font
+   NO: External image dependencies for core UI previews (100% native vector/HTML)
 ────────────────────────────────────────────────────────────────────────── */
 
 :root {
@@ -165,7 +166,7 @@ body {
   margin: 0 auto;
   padding: var(--s9) var(--s5) var(--s8);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.15fr;
   gap: var(--s8);
   align-items: center;
 }
@@ -222,48 +223,164 @@ body {
   align-items: center;
 }
 
-/* Hero Right / Images */
-.hero-img-card {
+/* ── Native UI Panel Component (100% Vector/HTML, 0 Broken Images) ───── */
+.product-ui-panel {
+  background: var(--bg-1);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-lg);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+  overflow: hidden;
+}
+
+.panel-header {
+  background: var(--bg-2);
+  border-bottom: 1px solid var(--border);
+  padding: var(--s3) var(--s4);
   display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: var(--s3);
 }
 
-.hero-banner-link {
-  display: block;
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  border: 1px solid var(--border-strong);
-  transition: transform 0.2s, border-color 0.2s;
+.window-controls {
+  display: flex;
+  gap: 6px;
 }
 
-.hero-banner-link:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent-border);
+.control-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 }
 
-.hero-banner-img {
-  width: 100%;
-  display: block;
-}
+.control-dot.close { background: #ff5f56; }
+.control-dot.minimize { background: #ffbd2e; }
+.control-dot.expand { background: #27c93f; }
 
-.hero-img-wrapper {
-  position: relative;
-}
-
-.hero-img {
-  width: 100%;
-  border-radius: var(--r-lg);
-  border: 1px solid var(--border-strong);
-  display: block;
-  box-shadow: 0 24px 64px rgba(0,0,0,0.6);
-}
-
-.hero-img-caption {
-  font-size: 0.75rem;
-  color: var(--text-tertiary);
+.panel-title {
   font-family: 'Geist Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  flex: 1;
+  text-align: center;
 }
+
+.panel-status {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--green);
+  background: rgba(63, 185, 80, 0.1);
+  border: 1px solid rgba(63, 185, 80, 0.2);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.panel-body {
+  padding: var(--s5);
+}
+
+.panel-meta-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s3);
+  margin-bottom: var(--s3);
+  font-size: 0.8rem;
+}
+
+.meta-label {
+  font-family: 'Geist Mono', monospace;
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: var(--accent-dim);
+  padding: 2px 6px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.meta-value {
+  color: var(--text-primary);
+  font-style: italic;
+}
+
+.panel-members-row {
+  display: flex;
+  gap: var(--s2);
+  flex-wrap: wrap;
+  margin-bottom: var(--s5);
+  padding-bottom: var(--s4);
+  border-bottom: 1px solid var(--border);
+}
+
+.member-chip {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+
+.panel-debate-stream {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+  margin-bottom: var(--s5);
+}
+
+.stream-line {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.speaker-name {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.speaker-name.jobs { color: #f2f2f7; }
+.speaker-name.munger { color: var(--accent); }
+.speaker-name.altman { color: var(--purple); }
+.speaker-name.cross { color: var(--orange); }
+
+.speaker-text {
+  color: var(--text-secondary);
+}
+
+.stream-line.cross-talk {
+  background: rgba(227, 179, 65, 0.05);
+  border-left: 2px solid var(--orange);
+  padding: var(--s2) var(--s3);
+  border-radius: 0 4px 4px 0;
+}
+
+.panel-verdict-box {
+  background: rgba(63, 185, 80, 0.05);
+  border: 1px solid rgba(63, 185, 80, 0.2);
+  border-radius: var(--r-md);
+  padding: var(--s4);
+}
+
+.verdict-header {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--green);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--s2);
+}
+
+.verdict-item {
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.verdict-item.pass { color: var(--text-primary); margin-bottom: 4px; }
+.verdict-item.warn { color: var(--orange); font-size: 0.75rem; }
 
 /* ── Buttons ───────────────────────────────────────────────────────────── */
 .btn-primary {
@@ -617,7 +734,7 @@ body {
   border: 1px solid rgba(227, 179, 65, 0.2);
 }
 
-/* ── Features Bento ───────────────────────────────────────────────────────── */
+/* ── Features Bento & Audit Card Preview Component ────────────────────────── */
 .features-section {
   padding: var(--s10) 0;
   background: var(--bg-0);
@@ -649,20 +766,93 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: var(--s6);
   align-items: center;
-  padding: 0;
+  padding: var(--s5);
   overflow: hidden;
 }
 
-.bento-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* Native Audit Card Component */
+.audit-card-preview {
+  background: var(--bg-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-md);
+  padding: var(--s4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+}
+
+.audit-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.audit-tag {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--red);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: rgba(248, 81, 73, 0.1);
+  border: 1px solid rgba(248, 81, 73, 0.2);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.audit-date {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--text-tertiary);
+}
+
+.audit-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.audit-card-metrics {
+  display: flex;
+  gap: var(--s4);
+  padding: var(--s2) 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-num {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--red);
+}
+
+.metric-sub {
+  font-size: 0.68rem;
+  color: var(--text-tertiary);
+  font-family: 'Geist Mono', monospace;
+}
+
+.audit-card-rule {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.rule-label {
   display: block;
-  border-radius: var(--r-lg) 0 0 var(--r-lg);
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--text-tertiary);
+  font-weight: 700;
+  margin-bottom: 2px;
 }
 
 .bento-text {
-  padding: var(--s6);
+  padding: 0;
 }
 
 .bento-lg h3 {
@@ -884,8 +1074,7 @@ body {
   .modes-grid { grid-template-columns: 1fr; }
   .bento-grid { grid-template-columns: 1fr; }
   .bento-lg { grid-column: span 1; grid-template-columns: 1fr; }
-  .bento-img { height: 200px; border-radius: var(--r-lg) var(--r-lg) 0 0; }
-  .bento-text { padding: var(--s5); }
+  .bento-text { padding: var(--s3) 0 0 0; }
   .nav-links li:not(:last-child) { display: none; }
   .install-row { grid-template-columns: 1fr; }
   .install-platform { border-right: none; border-bottom: 1px solid var(--border); }
