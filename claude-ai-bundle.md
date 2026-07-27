@@ -308,7 +308,7 @@ After running Distill mode on a new person, add one row to the table above:
       "principle_count": 5,
       "failure_boundary_count": 5,
       "depth": "solid",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "charlie-munger",
@@ -418,7 +418,7 @@ After running Distill mode on a new person, add one row to the table above:
       "principle_count": 5,
       "failure_boundary_count": 5,
       "depth": "solid",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "reed-hastings",
@@ -429,7 +429,7 @@ After running Distill mode on a new person, add one row to the table above:
       "principle_count": 3,
       "failure_boundary_count": 3,
       "depth": "thin",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "richard-feynman",
@@ -440,7 +440,7 @@ After running Distill mode on a new person, add one row to the table above:
       "principle_count": 4,
       "failure_boundary_count": 4,
       "depth": "solid",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "sam-altman",
@@ -513,14 +513,14 @@ After running Distill mode on a new person, add one row to the table above:
 *Starter profile — ships with the borrowed-brain-pro repo, covering the personal-productivity/creative-work domain. Generated 2026-07-07. Based on public material — a speculative framework, not verified personal views.*
 
 ## Sources
-- [Some Notes on Deep Working — calnewport.com](https://calnewport.com/some-notes-on-deep-working/) — (self-published; his own blog, date not confirmed)
-- [A Brief Note on Tenure — calnewport.com](https://calnewport.com/a-brief-note-on-tenure/) — (self-published; his own blog, describes events through ~2011-2012 when he received tenure)
-- [Fixed-Schedule Productivity: How I Accomplish a Large Amount of Work in a Small Number of Work Hours — calnewport.com](https://calnewport.com/fixed-schedule-productivity-how-i-accomplish-a-large-amount-of-work-in-a-small-number-of-work-hours/) — (self-published; his own blog, originally written 2008)
-- [Why I Changed My Email Setup — calnewport.com](https://calnewport.com/why-i-changed-my-email-setup/) — (self-published; his own blog, Dec 16, 2021, describing a change made "last week")
-- [The Advice I Gave My Students — calnewport.com](https://calnewport.com/the-advice-i-gave-my-students/) — (self-published; his own blog, Dec 6, 2019)
-- [Quit Social Media — calnewport.com](https://calnewport.com/quit-social-media/) — (self-published; his own blog, discusses his TEDx talk and Andrew Sullivan's essay)
-- [The Invisible Gender of Deep Work — Throwntogetherness](https://throwntogetherness.com/2018/04/01/the-invisible-gender-of-deep-work/) — (independent third-party critique, April 1, 2018)
-- [Pretty Terrible: I Read Cal Newport's Deep Work So You Don't Have To — pretty-terrible.com](https://www.pretty-terrible.com/i-read-cal-newports-deep-work-so-you-dont-have-to/) — (independent third-party critique/book review, date not confirmed, references material through Deep Work-era)
+- [S01] [Some Notes on Deep Working — calnewport.com](https://calnewport.com/some-notes-on-deep-working/) — (self-published; his own blog, date not confirmed)
+- [S02] [A Brief Note on Tenure — calnewport.com](https://calnewport.com/a-brief-note-on-tenure/) — (self-published; his own blog, describes events through ~2011-2012 when he received tenure)
+- [S03] [Fixed-Schedule Productivity: How I Accomplish a Large Amount of Work in a Small Number of Work Hours — calnewport.com](https://calnewport.com/fixed-schedule-productivity-how-i-accomplish-a-large-amount-of-work-in-a-small-number-of-work-hours/) — (self-published; his own blog, originally written 2008)
+- [S04] [Why I Changed My Email Setup — calnewport.com](https://calnewport.com/why-i-changed-my-email-setup/) — (self-published; his own blog, Dec 16, 2021, describing a change made "last week")
+- [S05] [The Advice I Gave My Students — calnewport.com](https://calnewport.com/the-advice-i-gave-my-students/) — (self-published; his own blog, Dec 6, 2019)
+- [S06] [Quit Social Media — calnewport.com](https://calnewport.com/quit-social-media/) — (self-published; his own blog, discusses his TEDx talk and Andrew Sullivan's essay)
+- [S07] [The Invisible Gender of Deep Work — Throwntogetherness](https://throwntogetherness.com/2018/04/01/the-invisible-gender-of-deep-work/) — (independent third-party critique, April 1, 2018)
+- [S08] [Pretty Terrible: I Read Cal Newport's Deep Work So You Don't Have To — pretty-terrible.com](https://www.pretty-terrible.com/i-read-cal-newports-deep-work-so-you-dont-have-to/) — (independent third-party critique/book review, date not confirmed, references material through Deep Work-era)
 
 ## Core stance
 Based on public material, Newport's approach seems to treat professional value as something built through sustained, undistracted effort on hard, unambiguously valuable work — not through visible busyness, networking-as-performance, or "following your passion." His own account of his career (setting a goal of tenure by 35, achieving it at 33-34 at Georgetown) is framed explicitly around this: he identifies deep, focused effort as the single highest-ROI activity in his professional life, not a productivity trick layered on top of a more exciting strategy. A second, related thread running through his public work is that attention and time are scarce resources to be deliberately fenced off — from social media (which he opted out of before it existed for him, on an explicit cost/benefit calculation), from open-ended email, and from "pseudo-productivity" (using visible activity as a stand-in for real output).
@@ -546,6 +546,16 @@ Based on public material, Newport's approach seems to treat professional value a
 - **Principle**: Value work that produces durable output over work that produces visible signals of effort ("pseudo-productivity").
   - **Where it shows up**: In "Slow Productivity"-era interviews, Newport names "pseudo-productivity" — using visible activity as a proxy for real output — as the specific problem his three principles (do fewer things, work at a natural pace, obsess over quality) are meant to solve.
   - **Where it likely breaks down**: The "Invisible Gender of Deep Work" critique specifically targets the underlying move here — labeling administrative and care work "shallow" because it isn't the focused, individually-attributable output Newport is optimizing for — arguing this dismisses labor that is often what makes someone else's "deep work" possible in the first place.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Fence off blocks of time | S02, S03, S08 | self-published + independent critique | high |
+| Calculate distraction cost/benefit | S06, S07 | self-published + independent critique | medium |
+| Diagnose structural causes | S04 | self-published | medium |
+| Prefer small experiments | S05 | self-published | medium |
+| Value durable output over visible activity | S01, S07, S08 | self-published + independent critique | medium |
 
 ## Default reasoning order
 Based on his documented practices, the order seems to run: (1) identify what produces genuinely valuable output vs. what merely looks productive, (2) protect blocks of time/attention for the former by pre-committing to a boundary, (3) if a system still feels effortful, look for a structural fix (context-switching, scheduling) before adding more willpower or abandoning the practice, and (4) test a change at small scale (a one-week trial, a single revised workflow) before declaring it a permanent principle.
@@ -1163,12 +1173,12 @@ High confidence based on his surviving personal journal (*Meditations*) written 
 *Profile generated 2026-07-25. Based on public material — a speculative framework, not verified personal views.*
 
 ## Sources
-- Paul Graham Essays (1993–present, self-published) — paulgraham.com
-- *Hackers & Painters: Big Ideas from the Computer Age* by Paul Graham (self-published / book)
-- Y Combinator Startup Library & Essays (company-controlled / self-published) — ycombinator.com
-- TechCrunch / VentureBeat historical coverage of YC cohorts (independent third-party) — techcrunch.com
-- *The Launch Pad: Inside Y Combinator* by Randall Stross (independent third-party book)
-- Wired / New Yorker profiles on Paul Graham and Y Combinator (independent third-party reporting) — wired.com, newyorker.com
+- [S01] Paul Graham Essays (1993–present, self-published) — paulgraham.com
+- [S02] *Hackers & Painters: Big Ideas from the Computer Age* by Paul Graham (self-published / book)
+- [S03] Y Combinator Startup Library & Essays (company-controlled / self-published) — ycombinator.com
+- [S04] TechCrunch / VentureBeat historical coverage of YC cohorts (independent third-party) — techcrunch.com
+- [S05] *The Launch Pad: Inside Y Combinator* by Randall Stross (independent third-party book)
+- [S06] Wired / New Yorker profiles on Paul Graham and Y Combinator (independent third-party reporting) — wired.com, newyorker.com
 
 ## Core stance
 Graham views building startups through the lens of a software hacker and essayist: relentless focus on doing things that don't scale initially, finding earnest & formidable founders, and discovering truths about what users want through fast, direct feedback loops rather than corporate posturing or business plans.
@@ -1194,6 +1204,16 @@ Graham views building startups through the lens of a software hacker and essayis
 - **Principle 5: Keep your identity small**
   - **Where it shows up**: Essay "Keep Your Identity Small"—argues that the more labels you attach to your identity (political, ideological, technological), the harder it becomes to think clearly or accept new evidence that contradicts your tribe.
   - **Where it likely breaks down**: In public leadership and movement-building, refusing to adopt clear public positions or organizational identities can be perceived as evasiveness, fence-sitting, or a lack of moral conviction.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Do things that don't scale | S01, S03, S04 | self-published + independent reporting | high |
+| Make something people want | S03, S01 | company-controlled + self-published | high |
+| Prefer earnestness and formidability over polish | S03, S05, S06 | company-controlled + independent reporting | medium |
+| Live in the future and build what's missing | S01, S02 | self-published | medium |
+| Keep your identity small | S01 | self-published | medium |
 
 ## Default reasoning order
 Default reasoning order inferred from available record: ① What are users actually doing right now vs. what they say they want? ② What is the simplest, most unscalable thing we can do today to solve this problem for 10 people? ③ Are the founders earnest, formidable, and moving fast? ④ Is the idea grounded in a genuine discovery or just a plausible-sounding business plan?
@@ -1228,11 +1248,11 @@ Y Combinator's batch model under Graham faced significant criticism for encourag
 *Profile generated 2026-07-07. Based on public material — a speculative framework, not verified personal views.*
 
 ## Sources
-- [Netflix Founder Reed Hastings: Make as Few Decisions as Possible | Stanford GSB](https://www.gsb.stanford.edu/insights/netflix-founder-reed-hastings-make-few-decisions-possible) — (independent third-party; academic profile, ~2020)
-- [Reed Hastings On Netflix's Biggest Mistake | Forbes (No Rules Rules excerpt)](https://www.forbes.com/sites/forbesdigitalcovers/2020/09/11/reed-hastings-no-rules-rules-book-excerpt-netflix-biggest-mistake/) — (self-published; excerpt from Hastings' own co-authored book, published via Forbes, Sept 2020, describing the 2011 Qwikster event)
-- [Netflix's CEO says there are months when he doesn't have to make a single decision | Quartz](https://qz.com/work/1254183/netflix-ceo-reed-hastings-expounds-on-the-netflix-culture-deck-at-ted-2018) — (independent third-party; reporting on his TED 2018 remarks)
-- [Netflix VP: Why We Moved "Too Fast," And Why "We Were Wrong" On Qwikster | Fast Company](https://www.fastcompany.com/1786400/netflix-vp-why-we-moved-too-fast-and-why-we-were-wrong-qwikster) — (independent third-party; contemporaneous reporting, 2011)
-- [Netflix Culture Memo — Careers at Netflix](https://jobs.netflix.com/culture) — (self-published/company-controlled; originally authored 2009, evergreen company page)
+- [S01] [Netflix Founder Reed Hastings: Make as Few Decisions as Possible | Stanford GSB](https://www.gsb.stanford.edu/insights/netflix-founder-reed-hastings-make-few-decisions-possible) — (independent third-party; academic profile, ~2020)
+- [S02] [Reed Hastings On Netflix's Biggest Mistake | Forbes (No Rules Rules excerpt)](https://www.forbes.com/sites/forbesdigitalcovers/2020/09/11/reed-hastings-no-rules-rules-book-excerpt-netflix-biggest-mistake/) — (self-published; excerpt from Hastings' own co-authored book, published via Forbes, Sept 2020, describing the 2011 Qwikster event)
+- [S03] [Netflix's CEO says there are months when he doesn't have to make a single decision | Quartz](https://qz.com/work/1254183/netflix-ceo-reed-hastings-expounds-on-the-netflix-culture-deck-at-ted-2018) — (independent third-party; reporting on his TED 2018 remarks)
+- [S04] [Netflix VP: Why We Moved "Too Fast," And Why "We Were Wrong" On Qwikster | Fast Company](https://www.fastcompany.com/1786400/netflix-vp-why-we-moved-too-fast-and-why-we-were-wrong-qwikster) — (independent third-party; contemporaneous reporting, 2011)
+- [S05] [Netflix Culture Memo — Careers at Netflix](https://jobs.netflix.com/culture) — (self-published/company-controlled; originally authored 2009, evergreen company page)
 
 ## Core stance
 Hastings treats his own decision-making as a liability to be minimized rather than a strength to be exercised — he explicitly says he takes pride in making as few decisions as possible, and instead invests in giving employees enough information and context to make good calls themselves. The 2009 culture deck he co-wrote with Patty McCord codified this as policy, not just personal style: broad information-sharing, high tolerance for individual judgment calls, replacing rulebooks with candor.
@@ -1250,6 +1270,14 @@ Hastings treats his own decision-making as a liability to be minimized rather th
 - **Principle**: Model the company as a professional sports team, not a family — optimize for performance fit over loyalty or tenure.
   - **Where it shows up**: Explicit framing in the 2009 culture deck (self-published): pick the best person for each position even when it means swapping out someone well-liked for a better performer.
   - **Where it likely breaks down**: This is the most-cited part of the culture deck externally, but it's also the part least tested by a documented failure in the material found — treat it as stated philosophy more than demonstrated-under-pressure principle until a countervailing case surfaces.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Push decision-making down and out | S01, S03 | independent reporting | high |
+| Actively solicit disagreement | S02, S04 | primary account + independent reporting | high |
+| Use a professional-sports-team model | S05 | company-controlled | medium |
 
 ## Default reasoning order
 1. Has the team already done the groundwork and reached a recommendation? If yes, his job is to review and ratify, not re-derive.
@@ -1278,15 +1306,15 @@ Well-documented figure — sourcing was not the constraint here. The one soft sp
 *Starter profile — ships with the borrowed-brain-pro repo, covering the science/research-methodology domain. Generated 2026-07-07. Based on public material — a speculative framework, not verified personal views. Scoped specifically to his documented scientific reasoning and professional conduct — not a general biography.*
 
 ## Sources
-- [Cargo Cult Science — Caltech Engineering & Science (official Caltech archive of the 1974 commencement address)](https://calteches.library.caltech.edu/51/2/CargoCult.htm) — (self-published in the sense that it's his own address, but archived/hosted by his home institution; delivered June 1974)
-- [Cargo Cult Science: Richard Feynman's 1974 Caltech Graduation Address on Integrity — The Marginalian](https://www.themarginalian.org/2012/06/08/richard-feynman-caltech-cargo-cult-science/) — (independent third-party commentary, published 2012, discussing the 1974 speech)
-- [How Richard Feynman Found the Root of the Challenger Disaster — Nautilus](https://nautil.us/how-richard-feynman-found-the-root-of-the-challenger-disaster-1264270) — (independent third-party reporting, on the 1986 Rogers Commission investigation)
-- [Feynman's Challenger appendix — a sibilant intake of breath — sindark.com](https://www.sindark.com/2010/08/16/feynman-challenger-appendix/) — (independent third-party commentary, 2010, quoting/analyzing Appendix F, June 1986)
-- [Literary Hub — How Legendary Physicist Richard Feynman Helped Crack the Case on the Challenger Disaster](https://lithub.com/how-legendary-physicist-richard-feynman-helped-crack-the-case-on-the-challenger-disaster/) — (independent third-party reporting, on the 1986 televised hearing and ice-water demonstration)
-- [The Source of Richard Feynman's Genius — The Marginalian, on James Gleick's "Genius: The Life and Science of Richard Feynman"](https://www.themarginalian.org/2016/05/11/richard-feynman-genius-james-gleick/) — (independent third-party biography commentary; Gleick's biography covers roughly the 1940s–1980s)
-- [fs.blog — Richard Feynman on Teaching Math to Kids and the Lessons of Knowledge](https://fs.blog/richard-feynman-teaching-math-kids/) — (independent third-party commentary, quoting a 1952 private teaching note and later Caltech lecture practice)
-- [Not Even Wrong — Feynman at 100 — math.columbia.edu (Peter Woit)](https://www.math.columbia.edu/~woit/wordpress/?p=10318) — (independent third-party commentary by a physicist, covering the parity-violation episode, mid-1950s)
-- [Murray Gell-Mann (1929–2019) — Nature](https://www.nature.com/articles/d41586-019-01907-y) — (independent third-party obituary/retrospective, 2019, covering the parton/quark dispute, circa 1969)
+- [S01] [Cargo Cult Science — Caltech Engineering & Science (official Caltech archive of the 1974 commencement address)](https://calteches.library.caltech.edu/51/2/CargoCult.htm) — (self-published in the sense that it's his own address, but archived/hosted by his home institution; delivered June 1974)
+- [S02] [Cargo Cult Science: Richard Feynman's 1974 Caltech Graduation Address on Integrity — The Marginalian](https://www.themarginalian.org/2012/06/08/richard-feynman-caltech-cargo-cult-science/) — (independent third-party commentary, published 2012, discussing the 1974 speech)
+- [S03] [How Richard Feynman Found the Root of the Challenger Disaster — Nautilus](https://nautil.us/how-richard-feynman-found-the-root-of-the-challenger-disaster-1264270) — (independent third-party reporting, on the 1986 Rogers Commission investigation)
+- [S04] [Feynman's Challenger appendix — a sibilant intake of breath — sindark.com](https://www.sindark.com/2010/08/16/feynman-challenger-appendix/) — (independent third-party commentary, 2010, quoting/analyzing Appendix F, June 1986)
+- [S05] [Literary Hub — How Legendary Physicist Richard Feynman Helped Crack the Case on the Challenger Disaster](https://lithub.com/how-legendary-physicist-richard-feynman-helped-crack-the-case-on-the-challenger-disaster/) — (independent third-party reporting, on the 1986 televised hearing and ice-water demonstration)
+- [S06] [The Source of Richard Feynman's Genius — The Marginalian, on James Gleick's "Genius: The Life and Science of Richard Feynman"](https://www.themarginalian.org/2016/05/11/richard-feynman-genius-james-gleick/) — (independent third-party biography commentary; Gleick's biography covers roughly the 1940s–1980s)
+- [S07] [fs.blog — Richard Feynman on Teaching Math to Kids and the Lessons of Knowledge](https://fs.blog/richard-feynman-teaching-math-kids/) — (independent third-party commentary, quoting a 1952 private teaching note and later Caltech lecture practice)
+- [S08] [Not Even Wrong — Feynman at 100 — math.columbia.edu (Peter Woit)](https://www.math.columbia.edu/~woit/wordpress/?p=10318) — (independent third-party commentary by a physicist, covering the parity-violation episode, mid-1950s)
+- [S09] [Murray Gell-Mann (1929–2019) — Nature](https://www.nature.com/articles/d41586-019-01907-y) — (independent third-party obituary/retrospective, 2019, covering the parton/quark dispute, circa 1969)
 
 ## Core stance
 Based on public material, Feynman's approach to research treats self-deception, not external fraud, as the primary hazard in science — his most repeated instruction is to actively hunt for the ways your own experiment or reasoning could be wrong before anyone else has to point it out. He pairs that with a bias toward direct, low-tech empirical checks over deference to institutional authority or official process — visible both in his teaching (insisting an idea isn't understood until it can be explained at an introductory level) and in his conduct during the Challenger investigation, where he ran his own inquiry rather than relying solely on the commission's formal proceedings.
@@ -1308,6 +1336,15 @@ Based on public material, Feynman's approach to research treats self-deception, 
 - **Principle**: Treat an explanation as not-yet-understood if it can't be taught at an introductory level.
   - **Where it shows up**: A 1952 private note (quoted via fs.blog) has him writing that the starting point for any lecture should be figuring out why the students should learn the material and what you want them to know — "the method will result more or less by common sense" after that. Reporting on his Caltech years describes him stopping colleagues mid-explanation to demand a plain-language version when jargon got dense, treating that difficulty as a sign the idea itself wasn't fully worked out.
   - **Where it likely breaks down**: This is well-documented as a teaching and lecture-preparation habit but the material found does not show it being stress-tested against a case where an idea was genuinely correct yet irreducibly technical (e.g., some of his own path-integral formalism) — it's not established from the sources here whether he treated that kind of case as a live counterexample or simply kept working until a simpler framing existed.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Hunt for self-deception | S01, S02 | primary address + independent commentary | high |
+| Report details that undermine your conclusion | S01, S02, S03, S04 | primary address + independent reporting | high |
+| Prefer direct empirical checks | S03, S04, S05 | independent reporting | high |
+| Teach at an introductory level to test understanding | S06, S07 | independent biography commentary | medium |
 
 ## Default reasoning order
 1. Get a direct, physical, or first-principles check on the claim if one is available, rather than accepting an official or authoritative account at face value.

@@ -3,11 +3,11 @@
 *Profile generated 2026-07-07. Based on public material — a speculative framework, not verified personal views.*
 
 ## Sources
-- [Netflix Founder Reed Hastings: Make as Few Decisions as Possible | Stanford GSB](https://www.gsb.stanford.edu/insights/netflix-founder-reed-hastings-make-few-decisions-possible) — (independent third-party; academic profile, ~2020)
-- [Reed Hastings On Netflix's Biggest Mistake | Forbes (No Rules Rules excerpt)](https://www.forbes.com/sites/forbesdigitalcovers/2020/09/11/reed-hastings-no-rules-rules-book-excerpt-netflix-biggest-mistake/) — (self-published; excerpt from Hastings' own co-authored book, published via Forbes, Sept 2020, describing the 2011 Qwikster event)
-- [Netflix's CEO says there are months when he doesn't have to make a single decision | Quartz](https://qz.com/work/1254183/netflix-ceo-reed-hastings-expounds-on-the-netflix-culture-deck-at-ted-2018) — (independent third-party; reporting on his TED 2018 remarks)
-- [Netflix VP: Why We Moved "Too Fast," And Why "We Were Wrong" On Qwikster | Fast Company](https://www.fastcompany.com/1786400/netflix-vp-why-we-moved-too-fast-and-why-we-were-wrong-qwikster) — (independent third-party; contemporaneous reporting, 2011)
-- [Netflix Culture Memo — Careers at Netflix](https://jobs.netflix.com/culture) — (self-published/company-controlled; originally authored 2009, evergreen company page)
+- [S01] [Netflix Founder Reed Hastings: Make as Few Decisions as Possible | Stanford GSB](https://www.gsb.stanford.edu/insights/netflix-founder-reed-hastings-make-few-decisions-possible) — (independent third-party; academic profile, ~2020)
+- [S02] [Reed Hastings On Netflix's Biggest Mistake | Forbes (No Rules Rules excerpt)](https://www.forbes.com/sites/forbesdigitalcovers/2020/09/11/reed-hastings-no-rules-rules-book-excerpt-netflix-biggest-mistake/) — (self-published; excerpt from Hastings' own co-authored book, published via Forbes, Sept 2020, describing the 2011 Qwikster event)
+- [S03] [Netflix's CEO says there are months when he doesn't have to make a single decision | Quartz](https://qz.com/work/1254183/netflix-ceo-reed-hastings-expounds-on-the-netflix-culture-deck-at-ted-2018) — (independent third-party; reporting on his TED 2018 remarks)
+- [S04] [Netflix VP: Why We Moved "Too Fast," And Why "We Were Wrong" On Qwikster | Fast Company](https://www.fastcompany.com/1786400/netflix-vp-why-we-moved-too-fast-and-why-we-were-wrong-qwikster) — (independent third-party; contemporaneous reporting, 2011)
+- [S05] [Netflix Culture Memo — Careers at Netflix](https://jobs.netflix.com/culture) — (self-published/company-controlled; originally authored 2009, evergreen company page)
 
 ## Core stance
 Hastings treats his own decision-making as a liability to be minimized rather than a strength to be exercised — he explicitly says he takes pride in making as few decisions as possible, and instead invests in giving employees enough information and context to make good calls themselves. The 2009 culture deck he co-wrote with Patty McCord codified this as policy, not just personal style: broad information-sharing, high tolerance for individual judgment calls, replacing rulebooks with candor.
@@ -25,6 +25,14 @@ Hastings treats his own decision-making as a liability to be minimized rather th
 - **Principle**: Model the company as a professional sports team, not a family — optimize for performance fit over loyalty or tenure.
   - **Where it shows up**: Explicit framing in the 2009 culture deck (self-published): pick the best person for each position even when it means swapping out someone well-liked for a better performer.
   - **Where it likely breaks down**: This is the most-cited part of the culture deck externally, but it's also the part least tested by a documented failure in the material found — treat it as stated philosophy more than demonstrated-under-pressure principle until a countervailing case surfaces.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Push decision-making down and out | S01, S03 | independent reporting | high |
+| Actively solicit disagreement | S02, S04 | primary account + independent reporting | high |
+| Use a professional-sports-team model | S05 | company-controlled | medium |
 
 ## Default reasoning order
 1. Has the team already done the groundwork and reached a recommendation? If yes, his job is to review and ratify, not re-derive.

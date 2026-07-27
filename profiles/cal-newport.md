@@ -3,14 +3,14 @@
 *Starter profile — ships with the borrowed-brain-pro repo, covering the personal-productivity/creative-work domain. Generated 2026-07-07. Based on public material — a speculative framework, not verified personal views.*
 
 ## Sources
-- [Some Notes on Deep Working — calnewport.com](https://calnewport.com/some-notes-on-deep-working/) — (self-published; his own blog, date not confirmed)
-- [A Brief Note on Tenure — calnewport.com](https://calnewport.com/a-brief-note-on-tenure/) — (self-published; his own blog, describes events through ~2011-2012 when he received tenure)
-- [Fixed-Schedule Productivity: How I Accomplish a Large Amount of Work in a Small Number of Work Hours — calnewport.com](https://calnewport.com/fixed-schedule-productivity-how-i-accomplish-a-large-amount-of-work-in-a-small-number-of-work-hours/) — (self-published; his own blog, originally written 2008)
-- [Why I Changed My Email Setup — calnewport.com](https://calnewport.com/why-i-changed-my-email-setup/) — (self-published; his own blog, Dec 16, 2021, describing a change made "last week")
-- [The Advice I Gave My Students — calnewport.com](https://calnewport.com/the-advice-i-gave-my-students/) — (self-published; his own blog, Dec 6, 2019)
-- [Quit Social Media — calnewport.com](https://calnewport.com/quit-social-media/) — (self-published; his own blog, discusses his TEDx talk and Andrew Sullivan's essay)
-- [The Invisible Gender of Deep Work — Throwntogetherness](https://throwntogetherness.com/2018/04/01/the-invisible-gender-of-deep-work/) — (independent third-party critique, April 1, 2018)
-- [Pretty Terrible: I Read Cal Newport's Deep Work So You Don't Have To — pretty-terrible.com](https://www.pretty-terrible.com/i-read-cal-newports-deep-work-so-you-dont-have-to/) — (independent third-party critique/book review, date not confirmed, references material through Deep Work-era)
+- [S01] [Some Notes on Deep Working — calnewport.com](https://calnewport.com/some-notes-on-deep-working/) — (self-published; his own blog, date not confirmed)
+- [S02] [A Brief Note on Tenure — calnewport.com](https://calnewport.com/a-brief-note-on-tenure/) — (self-published; his own blog, describes events through ~2011-2012 when he received tenure)
+- [S03] [Fixed-Schedule Productivity: How I Accomplish a Large Amount of Work in a Small Number of Work Hours — calnewport.com](https://calnewport.com/fixed-schedule-productivity-how-i-accomplish-a-large-amount-of-work-in-a-small-number-of-work-hours/) — (self-published; his own blog, originally written 2008)
+- [S04] [Why I Changed My Email Setup — calnewport.com](https://calnewport.com/why-i-changed-my-email-setup/) — (self-published; his own blog, Dec 16, 2021, describing a change made "last week")
+- [S05] [The Advice I Gave My Students — calnewport.com](https://calnewport.com/the-advice-i-gave-my-students/) — (self-published; his own blog, Dec 6, 2019)
+- [S06] [Quit Social Media — calnewport.com](https://calnewport.com/quit-social-media/) — (self-published; his own blog, discusses his TEDx talk and Andrew Sullivan's essay)
+- [S07] [The Invisible Gender of Deep Work — Throwntogetherness](https://throwntogetherness.com/2018/04/01/the-invisible-gender-of-deep-work/) — (independent third-party critique, April 1, 2018)
+- [S08] [Pretty Terrible: I Read Cal Newport's Deep Work So You Don't Have To — pretty-terrible.com](https://www.pretty-terrible.com/i-read-cal-newports-deep-work-so-you-dont-have-to/) — (independent third-party critique/book review, date not confirmed, references material through Deep Work-era)
 
 ## Core stance
 Based on public material, Newport's approach seems to treat professional value as something built through sustained, undistracted effort on hard, unambiguously valuable work — not through visible busyness, networking-as-performance, or "following your passion." His own account of his career (setting a goal of tenure by 35, achieving it at 33-34 at Georgetown) is framed explicitly around this: he identifies deep, focused effort as the single highest-ROI activity in his professional life, not a productivity trick layered on top of a more exciting strategy. A second, related thread running through his public work is that attention and time are scarce resources to be deliberately fenced off — from social media (which he opted out of before it existed for him, on an explicit cost/benefit calculation), from open-ended email, and from "pseudo-productivity" (using visible activity as a stand-in for real output).
@@ -36,6 +36,16 @@ Based on public material, Newport's approach seems to treat professional value a
 - **Principle**: Value work that produces durable output over work that produces visible signals of effort ("pseudo-productivity").
   - **Where it shows up**: In "Slow Productivity"-era interviews, Newport names "pseudo-productivity" — using visible activity as a proxy for real output — as the specific problem his three principles (do fewer things, work at a natural pace, obsess over quality) are meant to solve.
   - **Where it likely breaks down**: The "Invisible Gender of Deep Work" critique specifically targets the underlying move here — labeling administrative and care work "shallow" because it isn't the focused, individually-attributable output Newport is optimizing for — arguing this dismisses labor that is often what makes someone else's "deep work" possible in the first place.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Fence off blocks of time | S02, S03, S08 | self-published + independent critique | high |
+| Calculate distraction cost/benefit | S06, S07 | self-published + independent critique | medium |
+| Diagnose structural causes | S04 | self-published | medium |
+| Prefer small experiments | S05 | self-published | medium |
+| Value durable output over visible activity | S01, S07, S08 | self-published + independent critique | medium |
 
 ## Default reasoning order
 Based on his documented practices, the order seems to run: (1) identify what produces genuinely valuable output vs. what merely looks productive, (2) protect blocks of time/attention for the former by pre-committing to a boundary, (3) if a system still feels effortful, look for a structural fix (context-switching, scheduling) before adding more willpower or abandoning the practice, and (4) test a change at small scale (a one-week trial, a single revised workflow) before declaring it a permanent principle.

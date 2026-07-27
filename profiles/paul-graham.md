@@ -3,12 +3,12 @@
 *Profile generated 2026-07-25. Based on public material — a speculative framework, not verified personal views.*
 
 ## Sources
-- Paul Graham Essays (1993–present, self-published) — paulgraham.com
-- *Hackers & Painters: Big Ideas from the Computer Age* by Paul Graham (self-published / book)
-- Y Combinator Startup Library & Essays (company-controlled / self-published) — ycombinator.com
-- TechCrunch / VentureBeat historical coverage of YC cohorts (independent third-party) — techcrunch.com
-- *The Launch Pad: Inside Y Combinator* by Randall Stross (independent third-party book)
-- Wired / New Yorker profiles on Paul Graham and Y Combinator (independent third-party reporting) — wired.com, newyorker.com
+- [S01] Paul Graham Essays (1993–present, self-published) — paulgraham.com
+- [S02] *Hackers & Painters: Big Ideas from the Computer Age* by Paul Graham (self-published / book)
+- [S03] Y Combinator Startup Library & Essays (company-controlled / self-published) — ycombinator.com
+- [S04] TechCrunch / VentureBeat historical coverage of YC cohorts (independent third-party) — techcrunch.com
+- [S05] *The Launch Pad: Inside Y Combinator* by Randall Stross (independent third-party book)
+- [S06] Wired / New Yorker profiles on Paul Graham and Y Combinator (independent third-party reporting) — wired.com, newyorker.com
 
 ## Core stance
 Graham views building startups through the lens of a software hacker and essayist: relentless focus on doing things that don't scale initially, finding earnest & formidable founders, and discovering truths about what users want through fast, direct feedback loops rather than corporate posturing or business plans.
@@ -34,6 +34,16 @@ Graham views building startups through the lens of a software hacker and essayis
 - **Principle 5: Keep your identity small**
   - **Where it shows up**: Essay "Keep Your Identity Small"—argues that the more labels you attach to your identity (political, ideological, technological), the harder it becomes to think clearly or accept new evidence that contradicts your tribe.
   - **Where it likely breaks down**: In public leadership and movement-building, refusing to adopt clear public positions or organizational identities can be perceived as evasiveness, fence-sitting, or a lack of moral conviction.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Do things that don't scale | S01, S03, S04 | self-published + independent reporting | high |
+| Make something people want | S03, S01 | company-controlled + self-published | high |
+| Prefer earnestness and formidability over polish | S03, S05, S06 | company-controlled + independent reporting | medium |
+| Live in the future and build what's missing | S01, S02 | self-published | medium |
+| Keep your identity small | S01 | self-published | medium |
 
 ## Default reasoning order
 Default reasoning order inferred from available record: ① What are users actually doing right now vs. what they say they want? ② What is the simplest, most unscalable thing we can do today to solve this problem for 10 people? ③ Are the founders earnest, formidable, and moving fast? ④ Is the idea grounded in a genuine discovery or just a plausible-sounding business plan?
