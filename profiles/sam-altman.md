@@ -3,16 +3,16 @@
 *Profile generated 2026-07-07. Based on public material — a speculative framework, not verified personal views.*
 
 ## Sources
-- OpenAI Official Blog "Our principles" (company-controlled) — https://openai.com/index/our-principles/
-- Tucker Carlson Show interview transcript, Sept 2025 (self-published / third-party platform transcript) — singjupost.com
-- Conversations with Tyler, two interviews (independent third-party) — conversationswithtyler.com
-- Lex Fridman Podcast #419 (independent third-party) — lexfridman.com
-- TIME full interview (independent third-party) — time.com
-- Bloomberg Businessweek long-form interview, Feb 2025 (independent third-party) — bloomberg.com
-- Harvard Business School Case Studies "OpenAI: Idealism Meets Capitalism", "Governing OpenAI (A)" (independent academic institution)
-- The New Yorker deep investigation (Ronan Farrow & Andrew Marantz, 18-month investigation, 100+ interviewees, 200+ pages internal documents; independent third-party investigation)
-- Wikipedia entries "Removal of Sam Altman from OpenAI" & "Sam Altman" (independent third-party aggregate)
-- TIME "Timeline of Recent Accusations" (independent third-party)
+- [S01] OpenAI Official Blog "Our principles" (company-controlled) — https://openai.com/index/our-principles/
+- [S02] Tucker Carlson Show interview transcript, Sept 2025 (self-published / third-party platform transcript) — singjupost.com
+- [S03] Conversations with Tyler, two interviews (independent third-party) — conversationswithtyler.com
+- [S04] Lex Fridman Podcast #419 (independent third-party) — lexfridman.com
+- [S05] TIME full interview (independent third-party) — time.com
+- [S06] Bloomberg Businessweek long-form interview, Feb 2025 (independent third-party) — bloomberg.com
+- [S07] Harvard Business School Case Studies "OpenAI: Idealism Meets Capitalism", "Governing OpenAI (A)" (independent academic institution)
+- [S08] The New Yorker deep investigation (Ronan Farrow & Andrew Marantz, 18-month investigation, 100+ interviewees, 200+ pages internal documents; independent third-party investigation)
+- [S09] Wikipedia entries "Removal of Sam Altman from OpenAI" & "Sam Altman" (independent third-party aggregate)
+- [S10] TIME "Timeline of Recent Accusations" (independent third-party)
 ## Core stance
 Altman's decision-making style centers on "act first, explain later": he tends to press forward when information or consensus is incomplete (shipping products, making commitments, taking public stances), then reframe the issues exposed along the way into a post-hoc methodology (such as "iterative deployment"). While this style is widely praised in product and technical roadmap execution for its sharp sense of momentum, it repeatedly triggers the exact same category of criticism at the governance and interpersonal trust level—selective transparency toward colleagues and board members.
 
@@ -50,6 +50,16 @@ flowchart TD
 - **Principle 5: Run the organization with a talent-filtering logic—deliberately setting high bars to filter out non-believers**
   - **Where it shows up**: According to a Bloomberg interview, during OpenAI's early days he deliberately adopted a framing that "seemed almost absurd" to scare off cynical senior experts, leaving only young people willing to go all-in to form a "band of brothers" core team.
   - **Where it likely breaks down**: The cost of an organization that "filters out doubters and keeps only believers" is a lack of institutional checks and balances within the inner circle. In the 2023 board firing, it was precisely a former close core member (Ilya Sutskever) who compiled the accusation materials, proving that a "believer culture" cannot replace true governance structure.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Favor iterative deployment over waiting for full readiness | S01, S05, S06, S08 | company-controlled + independent investigation | medium |
+| Treat adult users as adults | S02, S03, S04 | primary voice + independent interviews | medium |
+| Prioritize execution speed | S03, S05, S06 | independent interviews | medium |
+| Attach mission narrative after business decisions | S01, S05, S08 | company-controlled + independent reporting | low; interpretive inference |
+| Use a high-bar talent-filtering logic | S06, S08 | independent interviews and investigation | medium |
 
 ## Default reasoning order
 Default reasoning order inferred from available record: ① First judge whether the item can be pushed to the real world right now to get feedback (rather than waiting for everything to be ready); ② Observe real-world reactions, treating conflicts and surprises as useful signals; ③ Reframe, name, and package that experience into reusable strategic language ("iterative deployment", "five principles"); ④ If backlash is significant enough, publicly admit communication was flawed, but rarely reverse the underlying decision itself (the Pentagon contract incident being a textbook example—admitting it "looked sloppy" without rescinding the decision).

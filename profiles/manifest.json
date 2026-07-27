@@ -65,7 +65,7 @@
       "principle_count": 2,
       "failure_boundary_count": 2,
       "depth": "solid",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "julia-evans",
@@ -98,7 +98,7 @@
       "principle_count": 2,
       "failure_boundary_count": 2,
       "depth": "solid",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "marcus-aurelius",
@@ -109,7 +109,7 @@
       "principle_count": 2,
       "failure_boundary_count": 2,
       "depth": "solid",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "paul-graham",
@@ -153,7 +153,7 @@
       "principle_count": 5,
       "failure_boundary_count": 5,
       "depth": "deep",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "socrates",

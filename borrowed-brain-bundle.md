@@ -363,7 +363,7 @@ After running Distill mode on a new person, add one row to the table above:
       "principle_count": 2,
       "failure_boundary_count": 2,
       "depth": "solid",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "julia-evans",
@@ -396,7 +396,7 @@ After running Distill mode on a new person, add one row to the table above:
       "principle_count": 2,
       "failure_boundary_count": 2,
       "depth": "solid",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "marcus-aurelius",
@@ -407,7 +407,7 @@ After running Distill mode on a new person, add one row to the table above:
       "principle_count": 2,
       "failure_boundary_count": 2,
       "depth": "solid",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "paul-graham",
@@ -451,7 +451,7 @@ After running Distill mode on a new person, add one row to the table above:
       "principle_count": 5,
       "failure_boundary_count": 5,
       "depth": "deep",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "socrates",
@@ -874,12 +874,12 @@ High confidence based on published philosophical works and Kaufmann's definitive
 *Distilled Profile — covering platform conviction, zero-billion-dollar market creation, and flat organizational execution. Generated 2026-07-25.*
 
 ## Sources
-- [Nvidia 2006 CUDA Launch Press Release & Historical Financials](https://nvidia.com) — Primary corporate archives
-- [Acquired Podcast: The Nvidia Story Part 1-3](https://acquired.fm) — Deep-dive multi-hour interview with Jensen Huang (2023)
-- [Stanford Graduate School of Business Keynote: Jensen Huang](https://gsb.stanford.edu) — Public lecture on organizational structure and resilience (2024)
-- [Nvidia Annual Shareholder Letters 2010-2024](https://nvidia.com) — Corporate archive
-- [IEEE Spectrum Analysis of GPU Parallel Computing](https://spectrum.ieee.org) — Independent technical reporting
-- [Wall Street Journal Profile on Jensen Huang Management Style](https://wsj.com) — Independent journalism
+- [S01] [Nvidia 2006 CUDA Launch Press Release & Historical Financials](https://nvidia.com) — Primary corporate archives
+- [S02] [Acquired Podcast: The Nvidia Story Part 1-3](https://acquired.fm) — Deep-dive multi-hour interview with Jensen Huang (2023)
+- [S03] [Stanford Graduate School of Business Keynote: Jensen Huang](https://gsb.stanford.edu) — Public lecture on organizational structure and resilience (2024)
+- [S04] [Nvidia Annual Shareholder Letters 2010-2024](https://nvidia.com) — Corporate archive
+- [S05] [IEEE Spectrum Analysis of GPU Parallel Computing](https://spectrum.ieee.org) — Independent technical reporting
+- [S06] [Wall Street Journal Profile on Jensen Huang Management Style](https://wsj.com) — Independent journalism
 
 ## Core stance
 Huang's approach centers on "betting the company" on zero-billion-dollar markets long before financial metrics justify them. He operates with extreme flat organization (50+ direct reports) to maintain ground-level signal and eliminate middle-management filtering. His strategy prioritizes full-stack co-design (chips, networking, software, algorithms) over component-level efficiency.
@@ -906,6 +906,13 @@ flowchart TD
 - **Principle 2: Run a flat, transparent organization with zero middle-management filtering**
   - **Where it shows up**: Huang keeps 50+ direct reports and refrains from 1-on-1 meetings, broadcasting strategic priorities in open, company-wide memo reviews to ensure everyone from VPs to junior engineers shares identical ground-truth context.
   - **Where it likely breaks down**: Flat management with 50 direct reports requires a founder with extraordinary energy and domain mastery; in large multi-divisional enterprises, it creates decision bottlenecks and executive burnout.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Create zero-billion-dollar markets through platform conviction | S01, S02, S04, S05 | corporate archive + independent technical reporting | medium |
+| Run a flat, transparent organization | S03, S06 | primary lecture + independent journalism | medium |
 
 ## Default reasoning order
 1. Identify fundamental shifts in computing paradigms.
@@ -1047,12 +1054,12 @@ High confidence based on the 81 chapters of the *Tao Te Ching* and 2,500 years o
 *Distilled Profile — covering pragmatic software architecture, open-source decentralization, and ruthless code simplicity. Generated 2026-07-25.*
 
 ## Sources
-- [*Just for Fun: The Story of an Accidental Revolutionary* by Linus Torvalds & David Diamond](https://www.amazon.com/Just-Fun-Story-Accidental-Revolutionary/dp/0066620733) — Autobiography (2001)
-- [Linux Kernel Mailing List (LKML) Public Archives](https://lkml.org) — 30+ years of public technical discussions
-- [TED Talk: Linus Torvalds — The mind behind Linux](https://ted.com) — Public interview on taste and code elegance (2016)
-- [Git Version Control Origin Story & Technical Design Papers](https://git-scm.com) — Primary software archive
-- [Ars Technica Retrospective on BitKeeper & Git Creation](https://arstechnica.com) — Independent technical reporting
-- [LWN.net Linux Weekly News Technical Coverage](https://lwn.net) — Independent Linux kernel journalism
+- [S01] [*Just for Fun: The Story of an Accidental Revolutionary* by Linus Torvalds & David Diamond](https://www.amazon.com/Just-Fun-Story-Accidental-Revolutionary/dp/0066620733) — Autobiography (2001)
+- [S02] [Linux Kernel Mailing List (LKML) Public Archives](https://lkml.org) — 30+ years of public technical discussions
+- [S03] [TED Talk: Linus Torvalds — The mind behind Linux](https://ted.com) — Public interview on taste and code elegance (2016)
+- [S04] [Git Version Control Origin Story & Technical Design Papers](https://git-scm.com) — Primary software archive
+- [S05] [Ars Technica Retrospective on BitKeeper & Git Creation](https://arstechnica.com) — Independent technical reporting
+- [S06] [LWN.net Linux Weekly News Technical Coverage](https://lwn.net) — Independent Linux kernel journalism
 
 ## Core stance
 Torvalds' approach centers on pragmatic software craftsmanship: *"Talk is cheap. Show me the code."* He prioritizes good taste in data structures over complex algorithms, asserting that bad programmers worry about code while good programmers worry about data structures and their relationships. He maintains an uncompromising stance against breaking user space ("NEVER BREAK USER SPACE!"), prioritizing backwards compatibility and real-world stability over theoretical architectural purity.
@@ -1079,6 +1086,13 @@ flowchart TD
 - **Principle 2: Never break user space—pragmatic backwards compatibility over theoretical perfection**
   - **Where it shows up**: Torvalds enforces a zero-tolerance rule on the Linux Kernel Mailing List: if a kernel patch breaks an existing user program, the patch is immediately reverted regardless of how "correct" the kernel change was theoretically.
   - **Where it likely breaks down**: Strict refusal to break backward compatibility forces system software to carry legacy tech debt and workaround hacks indefinitely.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Eliminate special cases through good data structures | S02, S03 | public technical discussions + primary interview | high |
+| Never break user space | S02, S04, S06 | technical archives + independent journalism | high |
 
 ## Default reasoning order
 1. Verify that user space and backward compatibility are not broken.
@@ -1110,12 +1124,12 @@ High confidence based on 30+ years of unedited LKML mailing list archives, kerne
 *Distilled Profile — covering Stoic leadership under crisis, controlling internal response vs external chaos, and duty. Generated 2026-07-25.*
 
 ## Sources
-- [*Meditations* (Ta Eis Heauton)](https://en.wikipedia.org/wiki/Meditations) — Primary personal journal writings (161–180 AD)
-- [*Historia Augusta* & Cassius Dio Roman Histories](https://penelope.uchicago.edu) — Contemporary historical records of Antonine Plague
-- [*The Daily Stoic* Analysis of Marcus Aurelius](https://dailystoic.com) — Modern philosophical synthesis
-- [Stanford Encyclopedia of Philosophy: Marcus Aurelius](https://plato.stanford.edu) — Academic philosophical entry
-- [History of Rome Podcast: Antonine Plague & Marcomannic Wars](https://historyofrome.typepad.com) — Historical analysis
-- [Harvard Business Review: Leadership in Crisis via Stoicism](https://hbr.org) — Applied leadership reporting
+- [S01] [*Meditations* (Ta Eis Heauton)](https://en.wikipedia.org/wiki/Meditations) — Primary personal journal writings (161–180 AD)
+- [S02] [*Historia Augusta* & Cassius Dio Roman Histories](https://penelope.uchicago.edu) — Contemporary historical records of Antonine Plague
+- [S03] [*The Daily Stoic* Analysis of Marcus Aurelius](https://dailystoic.com) — Modern philosophical synthesis
+- [S04] [Stanford Encyclopedia of Philosophy: Marcus Aurelius](https://plato.stanford.edu) — Academic philosophical entry
+- [S05] [History of Rome Podcast: Antonine Plague & Marcomannic Wars](https://historyofrome.typepad.com) — Historical analysis
+- [S06] [Harvard Business Review: Leadership in Crisis via Stoicism](https://hbr.org) — Applied leadership reporting
 
 ## Core stance
 Marcus Aurelius's mental model centers on the Stoic dichotomy of control: separating external events (which are neutral and outside one's control) from internal judgments (which are 100% within one's control). Facing war, plague, and betrayal, his framework treats obstacles not as disruptions, but as the raw material for practicing virtue (*"The impediment to action advances action. What stands in the way becomes the way"*).
@@ -1142,6 +1156,13 @@ flowchart TD
 - **Principle 2: The obstacle is the way—turn adversity into strategic progress**
   - **Where it shows up**: Facing treasury bankruptcy during the Marcomannic Wars, he auctioned off imperial palace luxuries (gold, crystal, artwork) in the Forum to fund the army without raising taxes on citizens.
   - **Where it likely breaks down**: Treating every obstacle as a Stoic test of virtue can lead to tolerating flawed systems, abusive business partners, or unsustainable operational environments that ought to be dismantled rather than endured.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Focus on internal judgment, not external events | S01, S04 | primary journal + academic synthesis | high |
+| Turn obstacles into strategic progress | S01, S02, S05, S06 | primary journal + historical and applied analysis | medium |
 
 ## Default reasoning order
 1. Separate external events outside control from internal judgments within control.
@@ -1374,16 +1395,16 @@ Source material spans 1952 (private teaching note) through 2019 (Gell-Mann retro
 *Profile generated 2026-07-07. Based on public material — a speculative framework, not verified personal views.*
 
 ## Sources
-- OpenAI Official Blog "Our principles" (company-controlled) — https://openai.com/index/our-principles/
-- Tucker Carlson Show interview transcript, Sept 2025 (self-published / third-party platform transcript) — singjupost.com
-- Conversations with Tyler, two interviews (independent third-party) — conversationswithtyler.com
-- Lex Fridman Podcast #419 (independent third-party) — lexfridman.com
-- TIME full interview (independent third-party) — time.com
-- Bloomberg Businessweek long-form interview, Feb 2025 (independent third-party) — bloomberg.com
-- Harvard Business School Case Studies "OpenAI: Idealism Meets Capitalism", "Governing OpenAI (A)" (independent academic institution)
-- The New Yorker deep investigation (Ronan Farrow & Andrew Marantz, 18-month investigation, 100+ interviewees, 200+ pages internal documents; independent third-party investigation)
-- Wikipedia entries "Removal of Sam Altman from OpenAI" & "Sam Altman" (independent third-party aggregate)
-- TIME "Timeline of Recent Accusations" (independent third-party)
+- [S01] OpenAI Official Blog "Our principles" (company-controlled) — https://openai.com/index/our-principles/
+- [S02] Tucker Carlson Show interview transcript, Sept 2025 (self-published / third-party platform transcript) — singjupost.com
+- [S03] Conversations with Tyler, two interviews (independent third-party) — conversationswithtyler.com
+- [S04] Lex Fridman Podcast #419 (independent third-party) — lexfridman.com
+- [S05] TIME full interview (independent third-party) — time.com
+- [S06] Bloomberg Businessweek long-form interview, Feb 2025 (independent third-party) — bloomberg.com
+- [S07] Harvard Business School Case Studies "OpenAI: Idealism Meets Capitalism", "Governing OpenAI (A)" (independent academic institution)
+- [S08] The New Yorker deep investigation (Ronan Farrow & Andrew Marantz, 18-month investigation, 100+ interviewees, 200+ pages internal documents; independent third-party investigation)
+- [S09] Wikipedia entries "Removal of Sam Altman from OpenAI" & "Sam Altman" (independent third-party aggregate)
+- [S10] TIME "Timeline of Recent Accusations" (independent third-party)
 ## Core stance
 Altman's decision-making style centers on "act first, explain later": he tends to press forward when information or consensus is incomplete (shipping products, making commitments, taking public stances), then reframe the issues exposed along the way into a post-hoc methodology (such as "iterative deployment"). While this style is widely praised in product and technical roadmap execution for its sharp sense of momentum, it repeatedly triggers the exact same category of criticism at the governance and interpersonal trust level—selective transparency toward colleagues and board members.
 
@@ -1421,6 +1442,16 @@ flowchart TD
 - **Principle 5: Run the organization with a talent-filtering logic—deliberately setting high bars to filter out non-believers**
   - **Where it shows up**: According to a Bloomberg interview, during OpenAI's early days he deliberately adopted a framing that "seemed almost absurd" to scare off cynical senior experts, leaving only young people willing to go all-in to form a "band of brothers" core team.
   - **Where it likely breaks down**: The cost of an organization that "filters out doubters and keeps only believers" is a lack of institutional checks and balances within the inner circle. In the 2023 board firing, it was precisely a former close core member (Ilya Sutskever) who compiled the accusation materials, proving that a "believer culture" cannot replace true governance structure.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Favor iterative deployment over waiting for full readiness | S01, S05, S06, S08 | company-controlled + independent investigation | medium |
+| Treat adult users as adults | S02, S03, S04 | primary voice + independent interviews | medium |
+| Prioritize execution speed | S03, S05, S06 | independent interviews | medium |
+| Attach mission narrative after business decisions | S01, S05, S08 | company-controlled + independent reporting | low; interpretive inference |
+| Use a high-bar talent-filtering logic | S06, S08 | independent interviews and investigation | medium |
 
 ## Default reasoning order
 Default reasoning order inferred from available record: ① First judge whether the item can be pushed to the real world right now to get feedback (rather than waiting for everything to be ready); ② Observe real-world reactions, treating conflicts and surprises as useful signals; ③ Reframe, name, and package that experience into reusable strategic language ("iterative deployment", "five principles"); ④ If backlash is significant enough, publicly admit communication was flawed, but rarely reverse the underlying decision itself (the Pentagon contract incident being a textbook example—admitting it "looked sloppy" without rescinding the decision).

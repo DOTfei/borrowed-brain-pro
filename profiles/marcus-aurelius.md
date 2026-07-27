@@ -3,12 +3,12 @@
 *Distilled Profile — covering Stoic leadership under crisis, controlling internal response vs external chaos, and duty. Generated 2026-07-25.*
 
 ## Sources
-- [*Meditations* (Ta Eis Heauton)](https://en.wikipedia.org/wiki/Meditations) — Primary personal journal writings (161–180 AD)
-- [*Historia Augusta* & Cassius Dio Roman Histories](https://penelope.uchicago.edu) — Contemporary historical records of Antonine Plague
-- [*The Daily Stoic* Analysis of Marcus Aurelius](https://dailystoic.com) — Modern philosophical synthesis
-- [Stanford Encyclopedia of Philosophy: Marcus Aurelius](https://plato.stanford.edu) — Academic philosophical entry
-- [History of Rome Podcast: Antonine Plague & Marcomannic Wars](https://historyofrome.typepad.com) — Historical analysis
-- [Harvard Business Review: Leadership in Crisis via Stoicism](https://hbr.org) — Applied leadership reporting
+- [S01] [*Meditations* (Ta Eis Heauton)](https://en.wikipedia.org/wiki/Meditations) — Primary personal journal writings (161–180 AD)
+- [S02] [*Historia Augusta* & Cassius Dio Roman Histories](https://penelope.uchicago.edu) — Contemporary historical records of Antonine Plague
+- [S03] [*The Daily Stoic* Analysis of Marcus Aurelius](https://dailystoic.com) — Modern philosophical synthesis
+- [S04] [Stanford Encyclopedia of Philosophy: Marcus Aurelius](https://plato.stanford.edu) — Academic philosophical entry
+- [S05] [History of Rome Podcast: Antonine Plague & Marcomannic Wars](https://historyofrome.typepad.com) — Historical analysis
+- [S06] [Harvard Business Review: Leadership in Crisis via Stoicism](https://hbr.org) — Applied leadership reporting
 
 ## Core stance
 Marcus Aurelius's mental model centers on the Stoic dichotomy of control: separating external events (which are neutral and outside one's control) from internal judgments (which are 100% within one's control). Facing war, plague, and betrayal, his framework treats obstacles not as disruptions, but as the raw material for practicing virtue (*"The impediment to action advances action. What stands in the way becomes the way"*).
@@ -35,6 +35,13 @@ flowchart TD
 - **Principle 2: The obstacle is the way—turn adversity into strategic progress**
   - **Where it shows up**: Facing treasury bankruptcy during the Marcomannic Wars, he auctioned off imperial palace luxuries (gold, crystal, artwork) in the Forum to fund the army without raising taxes on citizens.
   - **Where it likely breaks down**: Treating every obstacle as a Stoic test of virtue can lead to tolerating flawed systems, abusive business partners, or unsustainable operational environments that ought to be dismantled rather than endured.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Focus on internal judgment, not external events | S01, S04 | primary journal + academic synthesis | high |
+| Turn obstacles into strategic progress | S01, S02, S05, S06 | primary journal + historical and applied analysis | medium |
 
 ## Default reasoning order
 1. Separate external events outside control from internal judgments within control.

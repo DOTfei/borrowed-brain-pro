@@ -3,12 +3,12 @@
 *Distilled Profile — covering pragmatic software architecture, open-source decentralization, and ruthless code simplicity. Generated 2026-07-25.*
 
 ## Sources
-- [*Just for Fun: The Story of an Accidental Revolutionary* by Linus Torvalds & David Diamond](https://www.amazon.com/Just-Fun-Story-Accidental-Revolutionary/dp/0066620733) — Autobiography (2001)
-- [Linux Kernel Mailing List (LKML) Public Archives](https://lkml.org) — 30+ years of public technical discussions
-- [TED Talk: Linus Torvalds — The mind behind Linux](https://ted.com) — Public interview on taste and code elegance (2016)
-- [Git Version Control Origin Story & Technical Design Papers](https://git-scm.com) — Primary software archive
-- [Ars Technica Retrospective on BitKeeper & Git Creation](https://arstechnica.com) — Independent technical reporting
-- [LWN.net Linux Weekly News Technical Coverage](https://lwn.net) — Independent Linux kernel journalism
+- [S01] [*Just for Fun: The Story of an Accidental Revolutionary* by Linus Torvalds & David Diamond](https://www.amazon.com/Just-Fun-Story-Accidental-Revolutionary/dp/0066620733) — Autobiography (2001)
+- [S02] [Linux Kernel Mailing List (LKML) Public Archives](https://lkml.org) — 30+ years of public technical discussions
+- [S03] [TED Talk: Linus Torvalds — The mind behind Linux](https://ted.com) — Public interview on taste and code elegance (2016)
+- [S04] [Git Version Control Origin Story & Technical Design Papers](https://git-scm.com) — Primary software archive
+- [S05] [Ars Technica Retrospective on BitKeeper & Git Creation](https://arstechnica.com) — Independent technical reporting
+- [S06] [LWN.net Linux Weekly News Technical Coverage](https://lwn.net) — Independent Linux kernel journalism
 
 ## Core stance
 Torvalds' approach centers on pragmatic software craftsmanship: *"Talk is cheap. Show me the code."* He prioritizes good taste in data structures over complex algorithms, asserting that bad programmers worry about code while good programmers worry about data structures and their relationships. He maintains an uncompromising stance against breaking user space ("NEVER BREAK USER SPACE!"), prioritizing backwards compatibility and real-world stability over theoretical architectural purity.
@@ -35,6 +35,13 @@ flowchart TD
 - **Principle 2: Never break user space—pragmatic backwards compatibility over theoretical perfection**
   - **Where it shows up**: Torvalds enforces a zero-tolerance rule on the Linux Kernel Mailing List: if a kernel patch breaks an existing user program, the patch is immediately reverted regardless of how "correct" the kernel change was theoretically.
   - **Where it likely breaks down**: Strict refusal to break backward compatibility forces system software to carry legacy tech debt and workaround hacks indefinitely.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Eliminate special cases through good data structures | S02, S03 | public technical discussions + primary interview | high |
+| Never break user space | S02, S04, S06 | technical archives + independent journalism | high |
 
 ## Default reasoning order
 1. Verify that user space and backward compatibility are not broken.
