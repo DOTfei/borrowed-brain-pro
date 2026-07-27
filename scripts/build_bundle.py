@@ -89,7 +89,7 @@ def main():
     # 6. All Historical Crisis Evals
     if os.path.exists(evals_dir):
         parts.append("# BUNDLED HISTORICAL CRISIS EVALS\n\n")
-        eval_files = sorted(glob.glob(os.path.join(evals_dir, "*.md")))
+        eval_files = sorted(glob.glob(os.path.join(evals_dir, "eval-*.md")))
         for ev_path in eval_files:
             ev_name = os.path.basename(ev_path)
             with open(ev_path, "r", encoding="utf-8") as f:
@@ -110,7 +110,7 @@ def main():
     profile_count = len(profile_files)
     audit_count = len(glob.glob(os.path.join(audits_dir, "*.md"))) if os.path.exists(audits_dir) else 0
     pack_count = len(glob.glob(os.path.join(packs_dir, "*.md"))) if os.path.exists(packs_dir) else 0
-    eval_count = len(glob.glob(os.path.join(evals_dir, "*.md"))) if os.path.exists(evals_dir) else 0
+    eval_count = len(glob.glob(os.path.join(evals_dir, "eval-*.md"))) if os.path.exists(evals_dir) else 0
     print(f"[SUCCESS] Generated borrowed-brain-bundle.md with {profile_count} profiles, {audit_count} audits, {pack_count} packs, and {eval_count} evals ({line_count} lines).")
 
 if __name__ == "__main__":

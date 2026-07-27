@@ -1640,6 +1640,8 @@ When planning digital automation or AI workflow replacement:
 
 # Historical Crisis Eval: 1997 Apple Product Simplification
 
+*Status: case-study*
+
 *Benchmark Evaluation: Testing Steve Jobs' Profile on Apple's Near-Bankruptcy in August 1997.*
 
 ## 1. The Crisis Scenario (Blind Setup)
@@ -1653,9 +1655,22 @@ Applying [Steve Jobs' Profile](../profiles/steve-jobs.md) (`Treat Focus as Subtr
 - **Prediction 2**: Will map the entire company roadmap onto a simple 2x2 grid (Consumer/Pro x Desktop/Portable).
 - **Prediction 3**: Will cut non-core hardware peripherals (printers, Newton) to focus resources entirely on 4 killer products.
 
+## Evaluation Contract
+
+- **Profile version / commit**: Steve Jobs profile shipped with this repository at the time of review.
+- **Prompt used**: Apply Steve Jobs's profile to the crisis scenario without revealing the historical outcome.
+- **Information withheld until scoring**: The ground-truth outcome and product decisions below.
+- **Scoring status**: Not independently scored.
+
 ## 3. Ground Truth Historical Outcome
 - **Actual Action**: Jobs halted 70% of product development, canceled the Newton, stopped Macintosh licensing, drew the famous 2x2 grid at WWDC 1997, and focused Apple entirely on iMac, PowerMac, iBook, and PowerBook.
 - **Evaluation status**: Qualitative retrospective only. This case was not run as a blind, independently scored benchmark, so no numerical accuracy claim is made.
+
+## 4. Scoring and Limits
+
+- **Raw scores**: Not collected.
+- **Evaluator notes**: The predictions and outcome are directionally comparable, but this file was authored retrospectively.
+- **What this case cannot establish**: It cannot establish predictive accuracy or generalize to future product turnarounds.
 
 
 ------------------------------------------------------------
@@ -1663,6 +1678,8 @@ Applying [Steve Jobs' Profile](../profiles/steve-jobs.md) (`Treat Focus as Subtr
 <!-- HISTORICAL EVAL: eval-2006-nvidia-cuda-bet.md -->
 
 # Historical Crisis Eval: 2006 Nvidia CUDA Multi-Billion Dollar Bet
+
+*Status: case-study*
 
 *Benchmark Evaluation: Testing Jensen Huang's Profile on Nvidia's 2006 CUDA Wall Street Backlash.*
 
@@ -1677,9 +1694,22 @@ Applying [Jensen Huang's Profile](../profiles/jensen-huang.md) (`Zero-Billion-Do
 - **Prediction 2**: Will continue shipping CUDA support on 100% of GPUs to force developer adoption.
 - **Prediction 3**: Will absorb multi-year losses to build the full software stack (cuDNN, libraries) until the zero-billion-dollar market erupts.
 
+## Evaluation Contract
+
+- **Profile version / commit**: Jensen Huang profile shipped with this repository at the time of review.
+- **Prompt used**: Apply Jensen Huang's profile to the crisis scenario without revealing the historical outcome.
+- **Information withheld until scoring**: The ground-truth outcome and later market results below.
+- **Scoring status**: Not independently scored.
+
 ## 3. Ground Truth Historical Outcome
 - **Actual Action**: Huang held firm for nearly a decade. CUDA became the universal language for accelerated computing, enabling AlexNet in 2012 and powering the modern AI revolution, turning Nvidia into a $3 Trillion+ platform company.
 - **Evaluation status**: Qualitative retrospective only. This case was not run as a blind, independently scored benchmark, so no numerical accuracy claim is made.
+
+## 4. Scoring and Limits
+
+- **Raw scores**: Not collected.
+- **Evaluator notes**: The predictions and outcome are directionally comparable, but this file was authored retrospectively.
+- **What this case cannot establish**: It cannot establish predictive accuracy or generalize to future platform bets.
 
 
 ------------------------------------------------------------
@@ -1687,6 +1717,8 @@ Applying [Jensen Huang's Profile](../profiles/jensen-huang.md) (`Zero-Billion-Do
 <!-- HISTORICAL EVAL: eval-2008-financial-crisis.md -->
 
 # Historical Crisis Eval: 2008 Financial Crisis Liquidity Deploy
+
+*Status: case-study*
 
 *Benchmark Evaluation: Testing Warren Buffett's Profile on the September 2008 Wall Street Meltdown.*
 
@@ -1701,9 +1733,22 @@ Applying [Warren Buffett's Profile](../profiles/warren-buffett.md) (`Circle of C
 - **Prediction 2**: Will demand cumulative preferred stock with a mandatory 10% dividend rate to guarantee immediate cash yield.
 - **Prediction 3**: Will require equity warrants for upside participation if the financial system survives.
 
+## Evaluation Contract
+
+- **Profile version / commit**: Warren Buffett profile shipped with this repository at the time of review.
+- **Prompt used**: Apply Warren Buffett's profile to the crisis scenario without revealing the historical outcome.
+- **Information withheld until scoring**: The ground-truth outcome and deal terms below.
+- **Scoring status**: Not independently scored.
+
 ## 3. Ground Truth Historical Outcome
 - **Actual Action**: On Sept 23, 2008, Buffett invested $5 Billion in Goldman Sachs preferred stock yielding a 10% dividend, plus warrants to buy $5B of common stock at $115/share. Days later, he struck an identical deal with General Electric ($3B at 10%).
 - **Evaluation status**: Qualitative retrospective only. This case was not run as a blind, independently scored benchmark, so no numerical accuracy claim is made.
+
+## 4. Scoring and Limits
+
+- **Raw scores**: Not collected.
+- **Evaluator notes**: The predictions and outcome are directionally comparable, but this file was authored retrospectively.
+- **What this case cannot establish**: It cannot establish predictive accuracy or generalize to future financial crises.
 
 
 ------------------------------------------------------------
@@ -1711,6 +1756,8 @@ Applying [Warren Buffett's Profile](../profiles/warren-buffett.md) (`Circle of C
 <!-- HISTORICAL EVAL: eval-2023-openai-governance-crisis.md -->
 
 # Historical Crisis Eval: 2023 OpenAI Governance Firing Crisis
+
+*Status: case-study*
 
 *Benchmark Evaluation: Testing Sam Altman's Profile on the November 2023 Board Ouster.*
 
@@ -1725,9 +1772,22 @@ Applying [Sam Altman's Profile](../profiles/sam-altman.md) (`Act First, Reframe 
 - **Prediction 2**: Will rapidly create an alternative execution vehicle (announcing joining Microsoft AI) to force the board's hand.
 - **Prediction 3**: Will return reinstated within days and restructure governance without accepting blame.
 
+## Evaluation Contract
+
+- **Profile version / commit**: Sam Altman profile shipped with this repository at the time of review.
+- **Prompt used**: Apply Sam Altman's profile to the crisis scenario without revealing the historical outcome.
+- **Information withheld until scoring**: The ground-truth outcome and later governance events below.
+- **Scoring status**: Not independently scored.
+
 ## 3. Ground Truth Historical Outcome
 - **Actual Action**: Within 48 hours, Microsoft announced Altman would lead a new AI team; 95%+ of OpenAI employees signed an open letter threatening to leave unless Altman was reinstated. Altman was reinstated as CEO 5 days later with a newly restructured board.
 - **Evaluation status**: Qualitative retrospective only. This case was not run as a blind, independently scored benchmark, so no numerical accuracy claim is made.
+
+## 4. Scoring and Limits
+
+- **Raw scores**: Not collected.
+- **Evaluator notes**: The predictions and outcome are directionally comparable, but this file was authored retrospectively.
+- **What this case cannot establish**: It cannot establish predictive accuracy or generalize to future governance crises.
 
 
 ------------------------------------------------------------

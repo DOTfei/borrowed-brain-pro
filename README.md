@@ -176,7 +176,7 @@ flowchart TD
 
 ## 🏆 Feature Spotlight: Historical Crisis Evals
 
-How do we prove our profiles accurately model real decision-making? **We run reverse blind-tests on historical crises before the outcome was known:**
+The current files are historical case studies. They document how a profile's principles relate to a known crisis; they are not yet independently scored blind tests:
 
 | Crisis Benchmark | Figure | Historical Context | Evaluation status |
 | :--- | :--- | :--- | :--- |
