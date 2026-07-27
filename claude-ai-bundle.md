@@ -473,7 +473,7 @@ After running Distill mode on a new person, add one row to the table above:
       "principle_count": 4,
       "failure_boundary_count": 4,
       "depth": "solid",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "travis-kalanick",
@@ -495,7 +495,7 @@ After running Distill mode on a new person, add one row to the table above:
       "principle_count": 4,
       "failure_boundary_count": 4,
       "depth": "deep",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     }
   ]
 }
@@ -1454,15 +1454,15 @@ High confidence based on Plato's early dialogues, Xenophon's accounts, and 2,400
 *Starter profile — ships with the borrowed-brain-pro repo, covering the product/entrepreneurship domain. Generated 2026-07-07. Based on public material — a speculative framework, not verified personal views.*
 
 ## Sources
-- [Steve Jobs' 2005 Stanford Commencement Address transcript — Rev.com](https://www.rev.com/transcripts/steve-jobs-stanford-commencement-speech-transcript-2005) — (self-published / primary voice; his own words, delivered June 2005, covering events from 1972-2004)
-- [Steve Jobs speaks out — Fortune interview series, 2008](https://archive.fortune.com/galleries/2008/fortune/0803/gallery.jobsqna.fortune/index.html) — (self-published / primary voice; on-record interview with Fortune senior editor Betsy Morris, March 2008)
-- [Apple CEO Steve Jobs Live at D8: "All We Want to Do is Make Better Products" — AllThingsD](https://allthingsd.com/20100601/steve-jobs-session/) — (independent third-party liveblog of an on-record interview, June 2010, with Walt Mossberg and Kara Swisher)
-- [The Real Leadership Lessons of Steve Jobs — Harvard Business Review, Walter Isaacson](https://hbr.org/2012/04/the-real-leadership-lessons-of-steve-jobs) — (independent third-party; Isaacson's own summary of his authorized biography research, published April 2012, drawing on ~2 years of interviews conducted 2009-2011)
-- [Why did Apple's board fire Steve Jobs in 1985? — The Corporate Governance Institute](https://www.thecorporategovernanceinstitute.com/insights/case-studies/why-did-apples-board-fire-steve-jobs-in-1985/) — (independent third-party case study, covering events of April-Sept 1985)
-- [John Sculley Tells The Real Story of Steve Jobs' "Firing" — Forbes](https://www.forbes.com/sites/davidcoursey/2012/01/13/john-sculley-tells-the-real-story-of-steve-jobs-firing/) — (independent third-party reporting on Sculley's own later account, published Jan 2012, referring back to 1985)
-- [Looking back at Steve Jobs's NeXT, Inc — "the most successful failure ever" — AppleInsider](https://appleinsider.com/articles/25/09/12/looking-back-at-steve-jobss-next-inc----the-most-successful-failure-ever) — (independent third-party retrospective, covering NeXT 1985-1996, published Sept 2025)
-- [Steve Jobs Famously Said No One Wants a Stylus — Inc./Quora](https://www.inc.com/quora/steve-jobs-famously-said-no-one-wants-a-stylus-here-s-why-apple-disagrees-today.html) — (independent third-party, citing the 2007 iPhone launch keynote and Isaacson biography anecdote about a Microsoft tablet demo, dated to the early-2000s)
-- [How Steve Jobs' "Think Different" Speech Saved Apple — Media Shower](https://www.mediashower.com/blog/steve-jobs-1997-speech/) — (independent third-party account of the 1997 WWDC talk and product-line simplification, drawing on Isaacson's biography for the "This is crazy" / four-quadrant chart anecdote, events from 1997-1998)
+- [S01] [Steve Jobs' 2005 Stanford Commencement Address transcript — Rev.com](https://www.rev.com/transcripts/steve-jobs-stanford-commencement-speech-transcript-2005) — (self-published / primary voice; his own words, delivered June 2005, covering events from 1972-2004)
+- [S02] [Steve Jobs speaks out — Fortune interview series, 2008](https://archive.fortune.com/galleries/2008/fortune/0803/gallery.jobsqna.fortune/index.html) — (self-published / primary voice; on-record interview with Fortune senior editor Betsy Morris, March 2008)
+- [S03] [Apple CEO Steve Jobs Live at D8: "All We Want to Do is Make Better Products" — AllThingsD](https://allthingsd.com/20100601/steve-jobs-session/) — (independent third-party liveblog of an on-record interview, June 2010, with Walt Mossberg and Kara Swisher)
+- [S04] [The Real Leadership Lessons of Steve Jobs — Harvard Business Review, Walter Isaacson](https://hbr.org/2012/04/the-real-leadership-lessons-of-steve-jobs) — (independent third-party; Isaacson's own summary of his authorized biography research, published April 2012, drawing on ~2 years of interviews conducted 2009-2011)
+- [S05] [Why did Apple's board fire Steve Jobs in 1985? — The Corporate Governance Institute](https://www.thecorporategovernanceinstitute.com/insights/case-studies/why-did-apples-board-fire-steve-jobs-in-1985/) — (independent third-party case study, covering events of April-Sept 1985)
+- [S06] [John Sculley Tells The Real Story of Steve Jobs' "Firing" — Forbes](https://www.forbes.com/sites/davidcoursey/2012/01/13/john-sculley-tells-the-real-story-of-steve-jobs-firing/) — (independent third-party reporting on Sculley's own later account, published Jan 2012, referring back to 1985)
+- [S07] [Looking back at Steve Jobs's NeXT, Inc — "the most successful failure ever" — AppleInsider](https://appleinsider.com/articles/25/09/12/looking-back-at-steve-jobss-next-inc----the-most-successful-failure-ever) — (independent third-party retrospective, covering NeXT 1985-1996, published Sept 2025)
+- [S08] [Steve Jobs Famously Said No One Wants a Stylus — Inc./Quora](https://www.inc.com/quora/steve-jobs-famously-said-no-one-wants-a-stylus-here-s-why-apple-disagrees-today.html) — (independent third-party, citing the 2007 iPhone launch keynote and Isaacson biography anecdote about a Microsoft tablet demo, dated to the early-2000s)
+- [S09] [How Steve Jobs' "Think Different" Speech Saved Apple — Media Shower](https://www.mediashower.com/blog/steve-jobs-1997-speech/) — (independent third-party account of the 1997 WWDC talk and product-line simplification, drawing on Isaacson's biography for the "This is crazy" / four-quadrant chart anecdote, events from 1997-1998)
 ## Core stance
 Based on public material, Jobs's approach to product decisions centers on aggressive subtraction rather than addition: reducing Apple's product line by roughly 70% in 1997, and reducing the iPhone's input model to a single surface (the finger) by refusing a stylus. He treated his own authority as a filter for saying no — at WWDC 1997 he described innovation as "saying no to 1,000 things" — more than as a source of new ideas to add. Per Isaacson's account of his biography research, this wasn't a stylistic preference but something Jobs traced to his Zen training: simplifying by finding the essence of a product and cutting everything else, which required first understanding the complexity deeply rather than skipping past it.
 
@@ -1496,6 +1496,15 @@ flowchart TD
 - **Principle**: Push for aggressive, sometimes confrontational directness with employees rather than smoothing over disagreement.
   - **Where it shows up**: Multiple independent accounts (e.g., ChangingWinds' 2018 analysis) describe Jobs berating employees in front of peers and demanding what seemed like impossible timelines — behavior that became known inside Apple as the "reality distortion field," a term reportedly coined by his own team.
   - **Where it likely breaks down**: The same sources note this style is widely criticized as corrosive to morale and psychologically costly to the people on the receiving end, independent of whether it produced results; it is documented as a real cost, not just a stylistic quirk, and the material found does not show Jobs publicly reconciling or softening this pattern over time the way, for example, he revised his stance on tablets.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Treat focus as subtraction | S04, S09, S08 | independent + biographer-relayed | high |
+| Reject a flawed input/design pattern outright | S03, S08 | primary voice via reporting + independent | medium |
+| Frame setbacks as necessary steps | S01, S06, S07 | primary + independent | medium |
+| Use aggressive, confrontational directness | S04, S05, S06 | independent | medium; one cited analysis still needs to be added to the Sources list |
 
 ## Default reasoning order
 1. Strip the decision to its essential question first (e.g., reducing a product-line decision to "consumer or pro, desktop or portable") before evaluating options within it.
@@ -1575,17 +1584,17 @@ Material on this figure is abundant but concentrated heavily around the 2017 col
 *Starter profile — ships with the borrowed-brain-pro repo, covering the investing domain. Generated 2026-07-07. Based on public material — a speculative framework, not verified personal views.*
 
 ## Sources
-- [1996 Berkshire Hathaway Chairman's Letter](https://www.berkshirehathaway.com/letters/1996.html) — Berkshire Hathaway shareholder letters archive (self-published — 1996, referenced via secondary summaries at Chian.io and AES International)
-- [1992 & 1997 Berkshire Hathaway Chairman's Letters, "margin of safety" passages](http://mastersinvest.com/marginofsafetyquotes) — compiled from self-published letters (self-published — 1992/1997, aggregated by Investment Masters Class)
-- [Warren Buffett: "The Worst Deal That I've Made" — The Acquirer's Multiple](https://acquirersmultiple.com/2018/07/warren-buffett-the-worst-deal-that-ive-made/) — independent third-party summary of 2007 letter (2018 article covering 2007 letter content)
-- [Warren Buffett's 'most gruesome' mistake was buying Dexter Shoe — Yahoo Finance](https://finance.yahoo.com/news/warren-buffetts-most-gruesome-mistake-105805818.html) — independent third-party financial journalism (undated, covering 1993–2007 events)
-- [Warren Buffett's $11 Billion Mistake — Kingswell](https://www.kingswell.io/p/warren-buffetts-11-billion-mistake) — independent third-party, corroborates Dexter Shoe cost figures
-- [A Dozen Things Warren Buffett and Charlie Munger Learned From See's Candies — 25iq](https://25iq.com/2016/11/25/a-dozen-things-warren-buffett-and-charlie-munger-learned-from-sees-candies/) — independent third-party analysis (2016, covering 1972 decision)
-- [Tasting Quality: Berkshire's Defining Bet on See's Candies — Quartr](https://quartr.com/insights/edge/tasting-quality-berkshires-defining-bet-on-sees-candies) — independent third-party, corroborates the Graham-to-quality shift narrative
-- [Alice Schroeder Talks Buffett, Berkshire, and The Snowball — Kingswell Q&A transcript](https://www.kingswell.io/p/alice-schroeder-talks-buffett-berkshire) — independent third-party (2008 interview with Buffett's authorized biographer, ~2,000 hours spent with him)
-- [Warren Buffett Avoided Tech Stocks for 60 Years — Yahoo Finance](https://finance.yahoo.com/news/warren-buffett-avoided-tech-stocks-160734515.html) — independent third-party, on 1999–2000 dot-com-era criticism of Buffett as "outdated"
-- [Warren Buffett and His 20 Punches — The Motley Fool](https://www.fool.com/investing/general/2004/05/05/warren-buffett-and-his-20-punches.aspx) — independent third-party (2004 article, covering a 2001 University of Georgia talk)
-- [Warren Buffett explains boost in cash for Berkshire Hathaway — UPI](https://www.upi.com/Top_News/US/2025/02/22/Warren-Buffett-Berkshire-Hathaway-cash-increases-annual-letter/2581740241466/) — independent third-party news coverage of the 2025 letter (self-published letter content relayed via wire service)
+- [S01] [1996 Berkshire Hathaway Chairman's Letter](https://www.berkshirehathaway.com/letters/1996.html) — Berkshire Hathaway shareholder letters archive (self-published — 1996, referenced via secondary summaries at Chian.io and AES International)
+- [S02] [1992 & 1997 Berkshire Hathaway Chairman's Letters, "margin of safety" passages](http://mastersinvest.com/marginofsafetyquotes) — compiled from self-published letters (self-published — 1992/1997, aggregated by Investment Masters Class)
+- [S03] [Warren Buffett: "The Worst Deal That I've Made" — The Acquirer's Multiple](https://acquirersmultiple.com/2018/07/warren-buffett-the-worst-deal-that-ive-made/) — independent third-party summary of 2007 letter (2018 article covering 2007 letter content)
+- [S04] [Warren Buffett's 'most gruesome' mistake was buying Dexter Shoe — Yahoo Finance](https://finance.yahoo.com/news/warren-buffetts-most-gruesome-mistake-105805818.html) — independent third-party financial journalism (undated, covering 1993–2007 events)
+- [S05] [Warren Buffett's $11 Billion Mistake — Kingswell](https://www.kingswell.io/p/warren-buffetts-11-billion-mistake) — independent third-party, corroborates Dexter Shoe cost figures
+- [S06] [A Dozen Things Warren Buffett and Charlie Munger Learned From See's Candies — 25iq](https://25iq.com/2016/11/25/a-dozen-things-warren-buffett-and-charlie-munger-learned-from-sees-candies/) — independent third-party analysis (2016, covering 1972 decision)
+- [S07] [Tasting Quality: Berkshire's Defining Bet on See's Candies — Quartr](https://quartr.com/insights/edge/tasting-quality-berkshires-defining-bet-on-sees-candies) — independent third-party, corroborates the Graham-to-quality shift narrative
+- [S08] [Alice Schroeder Talks Buffett, Berkshire, and The Snowball — Kingswell Q&A transcript](https://www.kingswell.io/p/alice-schroeder-talks-buffett-berkshire) — independent third-party (2008 interview with Buffett's authorized biographer, ~2,000 hours spent with him)
+- [S09] [Warren Buffett Avoided Tech Stocks for 60 Years — Yahoo Finance](https://finance.yahoo.com/news/warren-buffett-avoided-tech-stocks-160734515.html) — independent third-party, on 1999–2000 dot-com-era criticism of Buffett as "outdated"
+- [S10] [Warren Buffett and His 20 Punches — The Motley Fool](https://www.fool.com/investing/general/2004/05/05/warren-buffett-and-his-20-punches.aspx) — independent third-party (2004 article, covering a 2001 University of Georgia talk)
+- [S11] [Warren Buffett explains boost in cash for Berkshire Hathaway — UPI](https://www.upi.com/Top_News/US/2025/02/22/Warren-Buffett-Berkshire-Hathaway-cash-increases-annual-letter/2581740241466/) — independent third-party news coverage of the 2025 letter (self-published letter content relayed via wire service)
 ## Core stance
 Based on public material, Buffett's approach centers on treating a stock purchase as buying a fraction of a real business, not a trading ticket — a framing he attributes directly to his teacher Ben Graham and the "Mr. Market" metaphor (1992 letter). Rather than covering many industries, his stated method is to restrict himself to a small number of businesses he can evaluate with real confidence ("circle of competence," 1996 letter) and wait, sometimes for years, until one of those becomes available at a price with a cushion for being wrong (the "margin of safety," 1992/1997 letters). Biographer Alice Schroeder, after roughly 2,000 hours observing him, distilled this as: he's not a gambler, he's a handicapper — someone calculating odds, not taking flyers.
 
@@ -1622,6 +1631,15 @@ flowchart TD
 - **Principle**: Act rarely and only with high conviction, rather than trading frequently on marginal opportunities.
   - **Where it shows up**: In a 2001 talk at the University of Georgia, he described an imaginary "20-slot punch card" limiting an investor to 20 lifetime investment decisions, arguing that forcing that scarcity would make people act only on their best ideas rather than the marginal ones.
   - **Where it likely breaks down**: Buffett himself has made far more than 20 investment decisions across Berkshire's history, and Berkshire under him has at times held over $300 billion in cash (reported in the 2025 letter) rather than deploying it — so the "punch card" is best read as a discipline device he preaches more strictly than he's literally practiced, and holding a large cash pile for years is itself a decision with real opportunity cost that the metaphor doesn't fully account for.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Restrict decisions to a circle of competence | S01, S09 | primary + independent | high |
+| Prefer durable quality over mediocre cheapness | S06, S07, S03, S04, S05 | independent + primary admission | high |
+| Build in a margin of safety | S02, S03, S04, S05 | primary + independent | high |
+| Act rarely and only with high conviction | S10, S11 | independent + primary letter via coverage | medium |
 
 ## Default reasoning order
 Based on the documented cases above, the sequence appears to be: (1) first check whether the business is inside a domain he can genuinely evaluate — if not, decline regardless of how attractive the story sounds (the tech-stock pattern); (2) if it's inside that circle, assess the durability and quality of the underlying business and its competitive position, not just its current financial record (the See's Candies shift, and the standard Dexter Shoe should have failed on but didn't catch in time); (3) only then work out a price that leaves a margin of safety against being wrong about either of the first two steps; (4) if no opportunity clears all three bars, do nothing and hold cash rather than force a decision — reflected in his own words that "very infrequently we find ourselves knee-deep in opportunities" (2025 letter, via UPI coverage).

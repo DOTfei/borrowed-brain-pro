@@ -3,15 +3,15 @@
 *Starter profile — ships with the borrowed-brain-pro repo, covering the product/entrepreneurship domain. Generated 2026-07-07. Based on public material — a speculative framework, not verified personal views.*
 
 ## Sources
-- [Steve Jobs' 2005 Stanford Commencement Address transcript — Rev.com](https://www.rev.com/transcripts/steve-jobs-stanford-commencement-speech-transcript-2005) — (self-published / primary voice; his own words, delivered June 2005, covering events from 1972-2004)
-- [Steve Jobs speaks out — Fortune interview series, 2008](https://archive.fortune.com/galleries/2008/fortune/0803/gallery.jobsqna.fortune/index.html) — (self-published / primary voice; on-record interview with Fortune senior editor Betsy Morris, March 2008)
-- [Apple CEO Steve Jobs Live at D8: "All We Want to Do is Make Better Products" — AllThingsD](https://allthingsd.com/20100601/steve-jobs-session/) — (independent third-party liveblog of an on-record interview, June 2010, with Walt Mossberg and Kara Swisher)
-- [The Real Leadership Lessons of Steve Jobs — Harvard Business Review, Walter Isaacson](https://hbr.org/2012/04/the-real-leadership-lessons-of-steve-jobs) — (independent third-party; Isaacson's own summary of his authorized biography research, published April 2012, drawing on ~2 years of interviews conducted 2009-2011)
-- [Why did Apple's board fire Steve Jobs in 1985? — The Corporate Governance Institute](https://www.thecorporategovernanceinstitute.com/insights/case-studies/why-did-apples-board-fire-steve-jobs-in-1985/) — (independent third-party case study, covering events of April-Sept 1985)
-- [John Sculley Tells The Real Story of Steve Jobs' "Firing" — Forbes](https://www.forbes.com/sites/davidcoursey/2012/01/13/john-sculley-tells-the-real-story-of-steve-jobs-firing/) — (independent third-party reporting on Sculley's own later account, published Jan 2012, referring back to 1985)
-- [Looking back at Steve Jobs's NeXT, Inc — "the most successful failure ever" — AppleInsider](https://appleinsider.com/articles/25/09/12/looking-back-at-steve-jobss-next-inc----the-most-successful-failure-ever) — (independent third-party retrospective, covering NeXT 1985-1996, published Sept 2025)
-- [Steve Jobs Famously Said No One Wants a Stylus — Inc./Quora](https://www.inc.com/quora/steve-jobs-famously-said-no-one-wants-a-stylus-here-s-why-apple-disagrees-today.html) — (independent third-party, citing the 2007 iPhone launch keynote and Isaacson biography anecdote about a Microsoft tablet demo, dated to the early-2000s)
-- [How Steve Jobs' "Think Different" Speech Saved Apple — Media Shower](https://www.mediashower.com/blog/steve-jobs-1997-speech/) — (independent third-party account of the 1997 WWDC talk and product-line simplification, drawing on Isaacson's biography for the "This is crazy" / four-quadrant chart anecdote, events from 1997-1998)
+- [S01] [Steve Jobs' 2005 Stanford Commencement Address transcript — Rev.com](https://www.rev.com/transcripts/steve-jobs-stanford-commencement-speech-transcript-2005) — (self-published / primary voice; his own words, delivered June 2005, covering events from 1972-2004)
+- [S02] [Steve Jobs speaks out — Fortune interview series, 2008](https://archive.fortune.com/galleries/2008/fortune/0803/gallery.jobsqna.fortune/index.html) — (self-published / primary voice; on-record interview with Fortune senior editor Betsy Morris, March 2008)
+- [S03] [Apple CEO Steve Jobs Live at D8: "All We Want to Do is Make Better Products" — AllThingsD](https://allthingsd.com/20100601/steve-jobs-session/) — (independent third-party liveblog of an on-record interview, June 2010, with Walt Mossberg and Kara Swisher)
+- [S04] [The Real Leadership Lessons of Steve Jobs — Harvard Business Review, Walter Isaacson](https://hbr.org/2012/04/the-real-leadership-lessons-of-steve-jobs) — (independent third-party; Isaacson's own summary of his authorized biography research, published April 2012, drawing on ~2 years of interviews conducted 2009-2011)
+- [S05] [Why did Apple's board fire Steve Jobs in 1985? — The Corporate Governance Institute](https://www.thecorporategovernanceinstitute.com/insights/case-studies/why-did-apples-board-fire-steve-jobs-in-1985/) — (independent third-party case study, covering events of April-Sept 1985)
+- [S06] [John Sculley Tells The Real Story of Steve Jobs' "Firing" — Forbes](https://www.forbes.com/sites/davidcoursey/2012/01/13/john-sculley-tells-the-real-story-of-steve-jobs-firing/) — (independent third-party reporting on Sculley's own later account, published Jan 2012, referring back to 1985)
+- [S07] [Looking back at Steve Jobs's NeXT, Inc — "the most successful failure ever" — AppleInsider](https://appleinsider.com/articles/25/09/12/looking-back-at-steve-jobss-next-inc----the-most-successful-failure-ever) — (independent third-party retrospective, covering NeXT 1985-1996, published Sept 2025)
+- [S08] [Steve Jobs Famously Said No One Wants a Stylus — Inc./Quora](https://www.inc.com/quora/steve-jobs-famously-said-no-one-wants-a-stylus-here-s-why-apple-disagrees-today.html) — (independent third-party, citing the 2007 iPhone launch keynote and Isaacson biography anecdote about a Microsoft tablet demo, dated to the early-2000s)
+- [S09] [How Steve Jobs' "Think Different" Speech Saved Apple — Media Shower](https://www.mediashower.com/blog/steve-jobs-1997-speech/) — (independent third-party account of the 1997 WWDC talk and product-line simplification, drawing on Isaacson's biography for the "This is crazy" / four-quadrant chart anecdote, events from 1997-1998)
 ## Core stance
 Based on public material, Jobs's approach to product decisions centers on aggressive subtraction rather than addition: reducing Apple's product line by roughly 70% in 1997, and reducing the iPhone's input model to a single surface (the finger) by refusing a stylus. He treated his own authority as a filter for saying no — at WWDC 1997 he described innovation as "saying no to 1,000 things" — more than as a source of new ideas to add. Per Isaacson's account of his biography research, this wasn't a stylistic preference but something Jobs traced to his Zen training: simplifying by finding the essence of a product and cutting everything else, which required first understanding the complexity deeply rather than skipping past it.
 
@@ -45,6 +45,15 @@ flowchart TD
 - **Principle**: Push for aggressive, sometimes confrontational directness with employees rather than smoothing over disagreement.
   - **Where it shows up**: Multiple independent accounts (e.g., ChangingWinds' 2018 analysis) describe Jobs berating employees in front of peers and demanding what seemed like impossible timelines — behavior that became known inside Apple as the "reality distortion field," a term reportedly coined by his own team.
   - **Where it likely breaks down**: The same sources note this style is widely criticized as corrosive to morale and psychologically costly to the people on the receiving end, independent of whether it produced results; it is documented as a real cost, not just a stylistic quirk, and the material found does not show Jobs publicly reconciling or softening this pattern over time the way, for example, he revised his stance on tablets.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Treat focus as subtraction | S04, S09, S08 | independent + biographer-relayed | high |
+| Reject a flawed input/design pattern outright | S03, S08 | primary voice via reporting + independent | medium |
+| Frame setbacks as necessary steps | S01, S06, S07 | primary + independent | medium |
+| Use aggressive, confrontational directness | S04, S05, S06 | independent | medium; one cited analysis still needs to be added to the Sources list |
 
 ## Default reasoning order
 1. Strip the decision to its essential question first (e.g., reducing a product-line decision to "consumer or pro, desktop or portable") before evaluating options within it.

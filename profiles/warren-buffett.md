@@ -3,17 +3,17 @@
 *Starter profile — ships with the borrowed-brain-pro repo, covering the investing domain. Generated 2026-07-07. Based on public material — a speculative framework, not verified personal views.*
 
 ## Sources
-- [1996 Berkshire Hathaway Chairman's Letter](https://www.berkshirehathaway.com/letters/1996.html) — Berkshire Hathaway shareholder letters archive (self-published — 1996, referenced via secondary summaries at Chian.io and AES International)
-- [1992 & 1997 Berkshire Hathaway Chairman's Letters, "margin of safety" passages](http://mastersinvest.com/marginofsafetyquotes) — compiled from self-published letters (self-published — 1992/1997, aggregated by Investment Masters Class)
-- [Warren Buffett: "The Worst Deal That I've Made" — The Acquirer's Multiple](https://acquirersmultiple.com/2018/07/warren-buffett-the-worst-deal-that-ive-made/) — independent third-party summary of 2007 letter (2018 article covering 2007 letter content)
-- [Warren Buffett's 'most gruesome' mistake was buying Dexter Shoe — Yahoo Finance](https://finance.yahoo.com/news/warren-buffetts-most-gruesome-mistake-105805818.html) — independent third-party financial journalism (undated, covering 1993–2007 events)
-- [Warren Buffett's $11 Billion Mistake — Kingswell](https://www.kingswell.io/p/warren-buffetts-11-billion-mistake) — independent third-party, corroborates Dexter Shoe cost figures
-- [A Dozen Things Warren Buffett and Charlie Munger Learned From See's Candies — 25iq](https://25iq.com/2016/11/25/a-dozen-things-warren-buffett-and-charlie-munger-learned-from-sees-candies/) — independent third-party analysis (2016, covering 1972 decision)
-- [Tasting Quality: Berkshire's Defining Bet on See's Candies — Quartr](https://quartr.com/insights/edge/tasting-quality-berkshires-defining-bet-on-sees-candies) — independent third-party, corroborates the Graham-to-quality shift narrative
-- [Alice Schroeder Talks Buffett, Berkshire, and The Snowball — Kingswell Q&A transcript](https://www.kingswell.io/p/alice-schroeder-talks-buffett-berkshire) — independent third-party (2008 interview with Buffett's authorized biographer, ~2,000 hours spent with him)
-- [Warren Buffett Avoided Tech Stocks for 60 Years — Yahoo Finance](https://finance.yahoo.com/news/warren-buffett-avoided-tech-stocks-160734515.html) — independent third-party, on 1999–2000 dot-com-era criticism of Buffett as "outdated"
-- [Warren Buffett and His 20 Punches — The Motley Fool](https://www.fool.com/investing/general/2004/05/05/warren-buffett-and-his-20-punches.aspx) — independent third-party (2004 article, covering a 2001 University of Georgia talk)
-- [Warren Buffett explains boost in cash for Berkshire Hathaway — UPI](https://www.upi.com/Top_News/US/2025/02/22/Warren-Buffett-Berkshire-Hathaway-cash-increases-annual-letter/2581740241466/) — independent third-party news coverage of the 2025 letter (self-published letter content relayed via wire service)
+- [S01] [1996 Berkshire Hathaway Chairman's Letter](https://www.berkshirehathaway.com/letters/1996.html) — Berkshire Hathaway shareholder letters archive (self-published — 1996, referenced via secondary summaries at Chian.io and AES International)
+- [S02] [1992 & 1997 Berkshire Hathaway Chairman's Letters, "margin of safety" passages](http://mastersinvest.com/marginofsafetyquotes) — compiled from self-published letters (self-published — 1992/1997, aggregated by Investment Masters Class)
+- [S03] [Warren Buffett: "The Worst Deal That I've Made" — The Acquirer's Multiple](https://acquirersmultiple.com/2018/07/warren-buffett-the-worst-deal-that-ive-made/) — independent third-party summary of 2007 letter (2018 article covering 2007 letter content)
+- [S04] [Warren Buffett's 'most gruesome' mistake was buying Dexter Shoe — Yahoo Finance](https://finance.yahoo.com/news/warren-buffetts-most-gruesome-mistake-105805818.html) — independent third-party financial journalism (undated, covering 1993–2007 events)
+- [S05] [Warren Buffett's $11 Billion Mistake — Kingswell](https://www.kingswell.io/p/warren-buffetts-11-billion-mistake) — independent third-party, corroborates Dexter Shoe cost figures
+- [S06] [A Dozen Things Warren Buffett and Charlie Munger Learned From See's Candies — 25iq](https://25iq.com/2016/11/25/a-dozen-things-warren-buffett-and-charlie-munger-learned-from-sees-candies/) — independent third-party analysis (2016, covering 1972 decision)
+- [S07] [Tasting Quality: Berkshire's Defining Bet on See's Candies — Quartr](https://quartr.com/insights/edge/tasting-quality-berkshires-defining-bet-on-sees-candies) — independent third-party, corroborates the Graham-to-quality shift narrative
+- [S08] [Alice Schroeder Talks Buffett, Berkshire, and The Snowball — Kingswell Q&A transcript](https://www.kingswell.io/p/alice-schroeder-talks-buffett-berkshire) — independent third-party (2008 interview with Buffett's authorized biographer, ~2,000 hours spent with him)
+- [S09] [Warren Buffett Avoided Tech Stocks for 60 Years — Yahoo Finance](https://finance.yahoo.com/news/warren-buffett-avoided-tech-stocks-160734515.html) — independent third-party, on 1999–2000 dot-com-era criticism of Buffett as "outdated"
+- [S10] [Warren Buffett and His 20 Punches — The Motley Fool](https://www.fool.com/investing/general/2004/05/05/warren-buffett-and-his-20-punches.aspx) — independent third-party (2004 article, covering a 2001 University of Georgia talk)
+- [S11] [Warren Buffett explains boost in cash for Berkshire Hathaway — UPI](https://www.upi.com/Top_News/US/2025/02/22/Warren-Buffett-Berkshire-Hathaway-cash-increases-annual-letter/2581740241466/) — independent third-party news coverage of the 2025 letter (self-published letter content relayed via wire service)
 ## Core stance
 Based on public material, Buffett's approach centers on treating a stock purchase as buying a fraction of a real business, not a trading ticket — a framing he attributes directly to his teacher Ben Graham and the "Mr. Market" metaphor (1992 letter). Rather than covering many industries, his stated method is to restrict himself to a small number of businesses he can evaluate with real confidence ("circle of competence," 1996 letter) and wait, sometimes for years, until one of those becomes available at a price with a cushion for being wrong (the "margin of safety," 1992/1997 letters). Biographer Alice Schroeder, after roughly 2,000 hours observing him, distilled this as: he's not a gambler, he's a handicapper — someone calculating odds, not taking flyers.
 
@@ -50,6 +50,15 @@ flowchart TD
 - **Principle**: Act rarely and only with high conviction, rather than trading frequently on marginal opportunities.
   - **Where it shows up**: In a 2001 talk at the University of Georgia, he described an imaginary "20-slot punch card" limiting an investor to 20 lifetime investment decisions, arguing that forcing that scarcity would make people act only on their best ideas rather than the marginal ones.
   - **Where it likely breaks down**: Buffett himself has made far more than 20 investment decisions across Berkshire's history, and Berkshire under him has at times held over $300 billion in cash (reported in the 2025 letter) rather than deploying it — so the "punch card" is best read as a discipline device he preaches more strictly than he's literally practiced, and holding a large cash pile for years is itself a decision with real opportunity cost that the metaphor doesn't fully account for.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Restrict decisions to a circle of competence | S01, S09 | primary + independent | high |
+| Prefer durable quality over mediocre cheapness | S06, S07, S03, S04, S05 | independent + primary admission | high |
+| Build in a margin of safety | S02, S03, S04, S05 | primary + independent | high |
+| Act rarely and only with high conviction | S10, S11 | independent + primary letter via coverage | medium |
 
 ## Default reasoning order
 Based on the documented cases above, the sequence appears to be: (1) first check whether the business is inside a domain he can genuinely evaluate — if not, decline regardless of how attractive the story sounds (the tech-stock pattern); (2) if it's inside that circle, assess the durability and quality of the underlying business and its competitive position, not just its current financial record (the See's Candies shift, and the standard Dexter Shoe should have failed on but didn't catch in time); (3) only then work out a price that leaves a margin of safety against being wrong about either of the first two steps; (4) if no opportunity clears all three bars, do nothing and hold cash rather than force a decision — reflected in his own words that "very infrequently we find ourselves knee-deep in opportunities" (2025 letter, via UPI coverage).

@@ -175,7 +175,7 @@
       "principle_count": 4,
       "failure_boundary_count": 4,
       "depth": "solid",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "travis-kalanick",
@@ -197,7 +197,7 @@
       "principle_count": 4,
       "failure_boundary_count": 4,
       "depth": "deep",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     }
   ]
 }
