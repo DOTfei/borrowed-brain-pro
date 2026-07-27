@@ -15,4 +15,4 @@ Applying [Jensen Huang's Profile](../profiles/jensen-huang.md) (`Zero-Billion-Do
 
 ## 3. Ground Truth Historical Outcome
 - **Actual Action**: Huang held firm for nearly a decade. CUDA became the universal language for accelerated computing, enabling AlexNet in 2012 and powering the modern AI revolution, turning Nvidia into a $3 Trillion+ platform company.
-- **Evaluation Accuracy Score**: **96% Match** — Predicted unwavering platform conviction and refusal to retreat to gaming-only chips.
+- **Evaluation status**: Qualitative retrospective only. This case was not run as a blind, independently scored benchmark, so no numerical accuracy claim is made.

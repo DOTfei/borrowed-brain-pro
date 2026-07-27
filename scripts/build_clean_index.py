@@ -343,7 +343,7 @@ html_content = f'''<!DOCTYPE html>
         </div>
         <div class="install-row">
           <div class="install-platform">Cursor / Windsurf</div>
-          <div class="install-method">Copy <code>.cursorrules</code> into project root</div>
+          <div class="install-method">Use the bundle as project rules or a system prompt</div>
         </div>
         <div class="install-row">
           <div class="install-platform">Ollama / Local LLMs</div>

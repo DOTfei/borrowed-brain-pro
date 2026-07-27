@@ -6,7 +6,7 @@ Checks all profiles in profiles/*.md for:
 1. Standard 8 Section Headers
 2. Source Density (URL / Source count) & Rating (★★★ / ★★ / ★)
 3. Failure Boundary Quality (Presence and depth of "Where it likely breaks down")
-4. Quote Length Guardrail (Direct quotes < 25 words to enforce Fair Use)
+4. Quote Length Guardrail (Explicit direct quotes < 15 words per skill policy)
 """
 
 import glob
@@ -65,17 +65,19 @@ def validate_profile(filepath):
 
     # 3. Failure Boundary Quality Check
     breakdown_matches = re.findall(r"Where it likely breaks down|可能失效之处", content, re.IGNORECASE)
-    principles_count = len(re.findall(r"^\s*[\-\*]\s+\*\*Principle|\*\*原则", content, re.MULTILINE))
+    principles_count = len(re.findall(r"^\s*[\-\*]\s+\*\*Principle(?:\s|\d|:)|^\s*[\-\*]\s+\*\*原则(?:\s|\d|：|:)", content, re.MULTILINE))
     
     if len(breakdown_matches) < max(1, principles_count):
         warnings.append(f"Failure boundaries count ({len(breakdown_matches)}) is less than principles count ({principles_count})")
 
     # 4. Direct Quote Length Guardrail Check
-    quotes = re.findall(r'["“]([^"”]{50,})["”]', content)
+    # Only inspect explicit, single-line quote pairs. The previous expression
+    # consumed large Markdown sections and produced false positives.
+    quotes = re.findall(r'[“"]([^“”"\r\n]+)[”"]', content)
     for q in quotes:
-        word_count = len(q.split())
-        if word_count > 25:
-            warnings.append(f"Direct quote exceeds 25 words limit ({word_count} words): '{q[:40]}...'")
+        word_count = len(re.findall(r"\b[\w’'-]+\b", q))
+        if word_count >= 15:
+            warnings.append(f"Explicit direct quote reaches {word_count} words; skill policy requires fewer than 15: '{q[:60]}...'")
 
     return {
         "filename": filename,
@@ -131,6 +133,9 @@ def main():
 
     if total_errors > 0:
         print("[FAIL] Validation FAILED! Please fix all required errors before merging.")
+        sys.exit(1)
+    elif total_warnings > 0:
+        print("[FAIL] Validation FAILED! Resolve warnings before merging.")
         sys.exit(1)
     else:
         print("[PASS] Validation PASSED! All profiles meet Borrowed Brain Pro quality standards.")

@@ -754,11 +754,11 @@ flowchart TD
 ## Recurring principles
 
 - **Principle 1: Wu Wei (无为而治)—govern complex systems by non-forcing and self-organization**
-  - **Where it shows up**: Chapter 57 of the *Tao Te Ching*: *"The more prohibitions there are, the poorer the people become... Therefore the Sage says: I take no action and the people transform themselves."* Applied to modern management, this means building incentive structures that allow teams and systems to self-correct naturally.
+  - **Where it shows up**: Chapter 57 of the *Tao Te Ching* describes how "the more prohibitions" can impoverish people and pairs this with non-coercive action. Applied to modern management, this means building incentive structures that allow teams and systems to self-correct naturally.
   - **Where it likely breaks down**: In acute crisis situations requiring rapid centralized command (such as a cybersecurity breach or financial insolvency), non-intervention leads to drift, chaos, and fatal delay.
 
 - **Principle 2: Water dynamics—softness and flexibility overcome hardness**
-  - **Where it shows up**: Chapter 78: *"Nothing in the world is softer or weaker than water, yet nothing can surpass it in attacking the hard and strong."* Yielding during direct conflict preserves capital and positioning while the rigid opponent exhausts energy.
+  - **Where it shows up**: Chapter 78 uses water as the image of what "can surpass" hard and strong things. Yielding during direct conflict preserves capital and positioning while the rigid opponent exhausts energy.
   - **Where it likely breaks down**: Over-yielding in aggressive business or legal negotiations against bad-faith actors can be exploited as vulnerability, resulting in total loss of leverage.
 
 ## Default reasoning order
@@ -1124,7 +1124,7 @@ flowchart TD
   - **Where it likely breaks down**: The same instinct of "do it first, handle feedback later" manifested in governance as withholding critical information from the board—such as whether GPT-4 had been approved by the safety committee, which *The New Yorker* investigation revealed was communicated to the board in ways inconsistent with reality. Product-side "ship first, iterate later" applied to organizational trust becomes "act first, seek forgiveness later."
 
 - **Principle 2: "Treat adult users like adults"—high user autonomy**
-  - **Where it shows up**: In his Tucker Carlson interview and Progress Conference (Conversations with Tyler), he repeatedly emphasized giving users wide latitude on privacy and boundaries, offering the specific example that "an individual user should be allowed to have their own opinions, and the AI shouldn't tell them they're wrong."
+  - **Where it shows up**: In his Tucker Carlson interview and Progress Conference (Conversations with Tyler), he emphasized giving users wide latitude on privacy and boundaries, including the phrase "treat adult users like adults."
   - **Where it likely breaks down**: This laissez-faire principle does not apply symmetrically to his own relationship with those holding oversight or information (the board, colleagues)—multiple independent sources across three eras (Loopt, YC, OpenAI) document accusations of selective disclosure to superiors or peers rather than treating them with full information transparency.
 
 - **Principle 3: Execution speed overrides everything, including saying "no" to distractions**
@@ -1655,7 +1655,7 @@ Applying [Steve Jobs' Profile](../profiles/steve-jobs.md) (`Treat Focus as Subtr
 
 ## 3. Ground Truth Historical Outcome
 - **Actual Action**: Jobs halted 70% of product development, canceled the Newton, stopped Macintosh licensing, drew the famous 2x2 grid at WWDC 1997, and focused Apple entirely on iMac, PowerMac, iBook, and PowerBook.
-- **Evaluation Accuracy Score**: **100% Match** — Predicted exact 70% cut metric and 2x2 grid simplification structure.
+- **Evaluation status**: Qualitative retrospective only. This case was not run as a blind, independently scored benchmark, so no numerical accuracy claim is made.
 
 
 ------------------------------------------------------------
@@ -1679,7 +1679,7 @@ Applying [Jensen Huang's Profile](../profiles/jensen-huang.md) (`Zero-Billion-Do
 
 ## 3. Ground Truth Historical Outcome
 - **Actual Action**: Huang held firm for nearly a decade. CUDA became the universal language for accelerated computing, enabling AlexNet in 2012 and powering the modern AI revolution, turning Nvidia into a $3 Trillion+ platform company.
-- **Evaluation Accuracy Score**: **96% Match** — Predicted unwavering platform conviction and refusal to retreat to gaming-only chips.
+- **Evaluation status**: Qualitative retrospective only. This case was not run as a blind, independently scored benchmark, so no numerical accuracy claim is made.
 
 
 ------------------------------------------------------------
@@ -1703,7 +1703,7 @@ Applying [Warren Buffett's Profile](../profiles/warren-buffett.md) (`Circle of C
 
 ## 3. Ground Truth Historical Outcome
 - **Actual Action**: On Sept 23, 2008, Buffett invested $5 Billion in Goldman Sachs preferred stock yielding a 10% dividend, plus warrants to buy $5B of common stock at $115/share. Days later, he struck an identical deal with General Electric ($3B at 10%).
-- **Evaluation Accuracy Score**: **98% Match** — Predicted exact structural deal terms (Preferred Dividend + Warrants) and refusal to buy unhedged common equity.
+- **Evaluation status**: Qualitative retrospective only. This case was not run as a blind, independently scored benchmark, so no numerical accuracy claim is made.
 
 
 ------------------------------------------------------------
@@ -1727,7 +1727,7 @@ Applying [Sam Altman's Profile](../profiles/sam-altman.md) (`Act First, Reframe 
 
 ## 3. Ground Truth Historical Outcome
 - **Actual Action**: Within 48 hours, Microsoft announced Altman would lead a new AI team; 95%+ of OpenAI employees signed an open letter threatening to leave unless Altman was reinstated. Altman was reinstated as CEO 5 days later with a newly restructured board.
-- **Evaluation Accuracy Score**: **95% Match** — Predicted speed of external mobilization, investor leverage, and rapid post-hoc governance reframing.
+- **Evaluation status**: Qualitative retrospective only. This case was not run as a blind, independently scored benchmark, so no numerical accuracy claim is made.
 
 
 ------------------------------------------------------------

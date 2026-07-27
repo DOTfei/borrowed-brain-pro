@@ -36,7 +36,7 @@ flowchart TD
   - **Where it likely breaks down**: The same instinct of "do it first, handle feedback later" manifested in governance as withholding critical information from the board—such as whether GPT-4 had been approved by the safety committee, which *The New Yorker* investigation revealed was communicated to the board in ways inconsistent with reality. Product-side "ship first, iterate later" applied to organizational trust becomes "act first, seek forgiveness later."
 
 - **Principle 2: "Treat adult users like adults"—high user autonomy**
-  - **Where it shows up**: In his Tucker Carlson interview and Progress Conference (Conversations with Tyler), he repeatedly emphasized giving users wide latitude on privacy and boundaries, offering the specific example that "an individual user should be allowed to have their own opinions, and the AI shouldn't tell them they're wrong."
+  - **Where it shows up**: In his Tucker Carlson interview and Progress Conference (Conversations with Tyler), he emphasized giving users wide latitude on privacy and boundaries, including the phrase "treat adult users like adults."
   - **Where it likely breaks down**: This laissez-faire principle does not apply symmetrically to his own relationship with those holding oversight or information (the board, colleagues)—multiple independent sources across three eras (Loopt, YC, OpenAI) document accusations of selective disclosure to superiors or peers rather than treating them with full information transparency.
 
 - **Principle 3: Execution speed overrides everything, including saying "no" to distractions**

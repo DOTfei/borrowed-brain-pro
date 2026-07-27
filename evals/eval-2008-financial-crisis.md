@@ -15,4 +15,4 @@ Applying [Warren Buffett's Profile](../profiles/warren-buffett.md) (`Circle of C
 
 ## 3. Ground Truth Historical Outcome
 - **Actual Action**: On Sept 23, 2008, Buffett invested $5 Billion in Goldman Sachs preferred stock yielding a 10% dividend, plus warrants to buy $5B of common stock at $115/share. Days later, he struck an identical deal with General Electric ($3B at 10%).
-- **Evaluation Accuracy Score**: **98% Match** — Predicted exact structural deal terms (Preferred Dividend + Warrants) and refusal to buy unhedged common equity.
+- **Evaluation status**: Qualitative retrospective only. This case was not run as a blind, independently scored benchmark, so no numerical accuracy claim is made.

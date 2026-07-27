@@ -32,7 +32,7 @@
 
 ---
 
-## 工作原理：四大模式，一个 Skill
+## 工作原理：五大模式，一个 Skill
 
 ```mermaid
 flowchart TD
@@ -177,14 +177,14 @@ flowchart TD
 
 如何证明我们的思维档案能准确预测真实的决策？**我们在结果未知前，对历史重大危机进行逆向盲测验证：**
 
-| 危机测试案卷 | 人物 | 历史危机背景 | 预测准确率 |
+| 危机测试案卷 | 人物 | 历史危机背景 | 评测状态 |
 | :--- | :--- | :--- | :--- |
-| **[2008 金融危机流动性拯救](evals/eval-2008-financial-crisis.md)** | 巴菲特 | 2008年9月雷曼倒闭，华尔街流动性冰冻 | **98% 吻合** (准确推算 10% 优先股 + 认股权证结构) |
-| **[1997 苹果濒临破产砍产品线](evals/eval-1997-apple-near-bankrupcy.md)** | 乔布斯 | 1997年8月苹果距离破产仅剩 90 天 | **100% 吻合** (准确推算 70% 产品线切割与 2x2 矩阵) |
-| **[2023 OpenAI 治理危机](evals/eval-2023-openai-governance-crisis.md)** | 奥特曼 | 2023年11月董事会突发解雇罢免危机 | **95% 吻合** (准确推算外部杠杆动员与 5 天内官复原职) |
-| **[2006 英伟达 CUDA 豪赌危机](evals/eval-2006-nvidia-cuda-bet.md)** | 黄仁勋 | 2006年11月 CUDA 豪赌致股价暴跌 50% | **96% 吻合** (准确推算坚定不移的平台信念与拒绝退缩) |
+| **[2008 金融危机流动性拯救](evals/eval-2008-financial-crisis.md)** | 巴菲特 | 2008年9月雷曼倒闭，华尔街流动性冰冻 | 定性历史复盘，尚未独立量化评分 |
+| **[1997 苹果濒临破产砍产品线](evals/eval-1997-apple-near-bankrupcy.md)** | 乔布斯 | 1997年8月苹果距离破产仅剩 90 天 | 定性历史复盘，尚未独立量化评分 |
+| **[2023 OpenAI 治理危机](evals/eval-2023-openai-governance-crisis.md)** | 奥特曼 | 2023年11月董事会突发解雇罢免危机 | 定性历史复盘，尚未独立量化评分 |
+| **[2006 英伟达 CUDA 豪赌危机](evals/eval-2006-nvidia-cuda-bet.md)** | 黄仁勋 | 2006年11月 CUDA 豪赌致股价暴跌 50% | 定性历史复盘，尚未独立量化评分 |
 
-> **发起逆向盲测**：只需向 AI 发送命令：`"盲测巴菲特在 2008 年金融危机下的决策"` 即可验证档案预测精准度。
+> 这些是历史案例复盘，不是已经验证的准确率 benchmark。在发布数字化分数前，需要先建立可复现的盲测协议。
 
 ---
 
@@ -232,7 +232,7 @@ flowchart TD
 | 运行平台 | 推荐装载方式 | 一键步骤 / 指令 |
 | :--- | :--- | :--- |
 | **ChatGPT / Custom GPT** | **单文件 System Prompt** | 直接复制 [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) 全文粘贴至 System Prompt |
-| **Cursor / Windsurf AI** | **原生 `.cursorrules`** | 克隆仓库或将 [`.cursorrules`](.cursorrules) 复制到你的项目根目录 |
+| **Cursor / Windsurf AI** | **项目规则 / 系统提示词** | 将 [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) 作为项目规则或系统提示词使用；当前仓库没有提供 `.cursorrules` 文件 |
 | **Ollama / 本地 LLM** | **Modelfile / 系统提示词** | 将 [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) 全文粘贴至 Modelfile 系统字段 |
 | **Claude / CLI** | **Git Clone (原生 Skill)** | `git clone https://github.com/DOTfei/borrowed-brain-pro.git ~/.claude/skills/borrowed-brain-pro` |
 | **Claude.ai** | **Skill 上传 / 提示词** | Settings → Skills 上传 `SKILL.md` 或粘贴 [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) |

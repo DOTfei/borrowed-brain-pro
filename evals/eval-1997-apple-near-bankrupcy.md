@@ -15,4 +15,4 @@ Applying [Steve Jobs' Profile](../profiles/steve-jobs.md) (`Treat Focus as Subtr
 
 ## 3. Ground Truth Historical Outcome
 - **Actual Action**: Jobs halted 70% of product development, canceled the Newton, stopped Macintosh licensing, drew the famous 2x2 grid at WWDC 1997, and focused Apple entirely on iMac, PowerMac, iBook, and PowerBook.
-- **Evaluation Accuracy Score**: **100% Match** — Predicted exact 70% cut metric and 2x2 grid simplification structure.
+- **Evaluation status**: Qualitative retrospective only. This case was not run as a blind, independently scored benchmark, so no numerical accuracy claim is made.

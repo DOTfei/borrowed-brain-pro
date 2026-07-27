@@ -15,4 +15,4 @@ Applying [Sam Altman's Profile](../profiles/sam-altman.md) (`Act First, Reframe 
 
 ## 3. Ground Truth Historical Outcome
 - **Actual Action**: Within 48 hours, Microsoft announced Altman would lead a new AI team; 95%+ of OpenAI employees signed an open letter threatening to leave unless Altman was reinstated. Altman was reinstated as CEO 5 days later with a newly restructured board.
-- **Evaluation Accuracy Score**: **95% Match** — Predicted speed of external mobilization, investor leverage, and rapid post-hoc governance reframing.
+- **Evaluation status**: Qualitative retrospective only. This case was not run as a blind, independently scored benchmark, so no numerical accuracy claim is made.

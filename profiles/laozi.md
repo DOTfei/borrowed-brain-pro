@@ -26,11 +26,11 @@ flowchart TD
 ## Recurring principles
 
 - **Principle 1: Wu Wei (无为而治)—govern complex systems by non-forcing and self-organization**
-  - **Where it shows up**: Chapter 57 of the *Tao Te Ching*: *"The more prohibitions there are, the poorer the people become... Therefore the Sage says: I take no action and the people transform themselves."* Applied to modern management, this means building incentive structures that allow teams and systems to self-correct naturally.
+  - **Where it shows up**: Chapter 57 of the *Tao Te Ching* describes how "the more prohibitions" can impoverish people and pairs this with non-coercive action. Applied to modern management, this means building incentive structures that allow teams and systems to self-correct naturally.
   - **Where it likely breaks down**: In acute crisis situations requiring rapid centralized command (such as a cybersecurity breach or financial insolvency), non-intervention leads to drift, chaos, and fatal delay.
 
 - **Principle 2: Water dynamics—softness and flexibility overcome hardness**
-  - **Where it shows up**: Chapter 78: *"Nothing in the world is softer or weaker than water, yet nothing can surpass it in attacking the hard and strong."* Yielding during direct conflict preserves capital and positioning while the rigid opponent exhausts energy.
+  - **Where it shows up**: Chapter 78 uses water as the image of what "can surpass" hard and strong things. Yielding during direct conflict preserves capital and positioning while the rigid opponent exhausts energy.
   - **Where it likely breaks down**: Over-yielding in aggressive business or legal negotiations against bad-faith actors can be exploited as vulnerability, resulting in total loss of leverage.
 
 ## Default reasoning order

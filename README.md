@@ -32,7 +32,7 @@
 
 ---
 
-## How It Works: 4 Modes, 1 Skill
+## How It Works: 5 Modes, 1 Skill
 
 ```mermaid
 flowchart TD
@@ -46,6 +46,7 @@ flowchart TD
     Router -->|3. Compare Mode| Compare["Multi-Lens Contrast\nCompare 2+ Profiles → Map Conflicts & Gaps"]
 
     Router -->|4. Boardroom Mode| Boardroom["Virtual Board Debate\nConvene 3-4 Figures → Cross-Examine & Output Consensus"]
+    Router -->|5. Audit Mode| Audit["Failure Audit\nDissect a documented crisis → Extract protective rules"]
 
     Save --> Apply
     Save --> Compare
@@ -177,14 +178,14 @@ flowchart TD
 
 How do we prove our profiles accurately model real decision-making? **We run reverse blind-tests on historical crises before the outcome was known:**
 
-| Crisis Benchmark | Figure | Historical Context | Accuracy Score |
+| Crisis Benchmark | Figure | Historical Context | Evaluation status |
 | :--- | :--- | :--- | :--- |
-| **[2008 Financial Crisis](evals/eval-2008-financial-crisis.md)** | Warren Buffett | Sept 2008 Lehman collapse & Wall St liquidity freeze | **98% Match** (Predicted exact 10% preferred stock + warrant structure) |
-| **[1997 Apple Bankruptcy](evals/eval-1997-apple-near-bankrupcy.md)** | Steve Jobs | Aug 1997 Apple 90 days from insolvency | **100% Match** (Predicted exact 70% product cut & 2x2 grid) |
-| **[2023 OpenAI Governance Crisis](evals/eval-2023-openai-governance-crisis.md)** | Sam Altman | Nov 2023 Board firing & reinstatement | **95% Match** (Predicted rapid external leverage & 5-day return) |
-| **[2006 Nvidia CUDA Crisis](evals/eval-2006-nvidia-cuda-bet.md)** | Jensen Huang | Nov 2006 50% stock drop during CUDA multi-billion bet | **96% Match** (Predicted unwavering platform conviction over short-term margins) |
+| **[2008 Financial Crisis](evals/eval-2008-financial-crisis.md)** | Warren Buffett | Sept 2008 Lehman collapse & Wall St liquidity freeze | Qualitative retrospective; not independently scored |
+| **[1997 Apple Bankruptcy](evals/eval-1997-apple-near-bankrupcy.md)** | Steve Jobs | Aug 1997 Apple 90 days from insolvency | Qualitative retrospective; not independently scored |
+| **[2023 OpenAI Governance Crisis](evals/eval-2023-openai-governance-crisis.md)** | Sam Altman | Nov 2023 Board firing & reinstatement | Qualitative retrospective; not independently scored |
+| **[2006 Nvidia CUDA Crisis](evals/eval-2006-nvidia-cuda-bet.md)** | Jensen Huang | Nov 2006 50% stock drop during CUDA multi-billion bet | Qualitative retrospective; not independently scored |
 
-> **Run a Benchmark Eval**: Simply ask `"Run a Blind Eval on Buffett's 2008 liquidity decision"` to verify profile predictive accuracy.
+> These are historical case studies, not validated accuracy benchmarks. A reproducible blind-evaluation protocol is planned before numerical scores are published.
 
 ---
 
@@ -232,7 +233,7 @@ Where it likely breaks down: The principle was reactive, not proactive — insti
 | Platform | Recommended Installation Method | One-Click Setup Instructions |
 | :--- | :--- | :--- |
 | **ChatGPT / Custom GPT** | **Single-File System Prompt** | Copy & paste full text of [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) into System Prompt |
-| **Cursor / Windsurf AI** | **Native `.cursorrules`** | Clone repo or copy [`.cursorrules`](.cursorrules) into project root |
+| **Cursor / Windsurf AI** | **Project rules / system prompt** | Use [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) as the project or system instruction; this repository does not currently ship a `.cursorrules` file |
 | **Ollama / Local LLMs** | **Modelfile / System Prompt** | Copy & paste [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) into Modelfile system field |
 | **Claude / CLI** | **Git Clone (Skill)** | `git clone https://github.com/DOTfei/borrowed-brain-pro.git ~/.claude/skills/borrowed-brain-pro` |
 | **Claude.ai** | **Skill / System Prompt** | Upload `SKILL.md` via Settings → Skills, or paste [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) |
