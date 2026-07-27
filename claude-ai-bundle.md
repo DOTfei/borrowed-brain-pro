@@ -319,7 +319,7 @@ After running Distill mode on a new person, add one row to the table above:
       "principle_count": 5,
       "failure_boundary_count": 5,
       "depth": "thin",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "chris-voss",
@@ -330,7 +330,7 @@ After running Distill mode on a new person, add one row to the table above:
       "principle_count": 4,
       "failure_boundary_count": 4,
       "depth": "deep",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "elon-musk",
@@ -341,7 +341,7 @@ After running Distill mode on a new person, add one row to the table above:
       "principle_count": 2,
       "failure_boundary_count": 2,
       "depth": "solid",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "friedrich-nietzsche",
@@ -572,11 +572,11 @@ The bulk of the source material for the Core stance, Default reasoning order, an
 *Profile generated 2026-07-25. Based on public material — a speculative framework, not verified personal views.*
 
 ## Sources
-- *Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger*, edited by Peter D. Kaufman (self-published / speeches collection)
-- Daily Journal Corporation Annual Meeting Transcripts, 2014–2023 (self-published / company-controlled) — dailyjournal.com
-- Berkshire Hathaway Annual Shareholders Meeting Transcripts, 1994–2023 (company-controlled) — berkshirehathaway.com
-- USC Law School Commencement Speech "The Psychology of Human Misjudgment", 1995 (speech transcript, third-party published)
-- CNBC / Wall Street Journal interviews (independent third-party) — wsj.com
+- [S01] *Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger*, edited by Peter D. Kaufman (self-published / speeches collection)
+- [S02] Daily Journal Corporation Annual Meeting Transcripts, 2014–2023 (self-published / company-controlled) — dailyjournal.com
+- [S03] Berkshire Hathaway Annual Shareholders Meeting Transcripts, 1994–2023 (company-controlled) — berkshirehathaway.com
+- [S04] USC Law School Commencement Speech "The Psychology of Human Misjudgment", 1995 (speech transcript, third-party published)
+- [S05] CNBC / Wall Street Journal interviews (independent third-party) — wsj.com
 ## Core stance
 Munger's thinking rests on "invert, always invert" and multidisciplinary mental models: before trying to be smart, systematically avoid stupidity and psychological biases. He approaches decisions by mapping problems across multiple fundamental disciplines (physics, psychology, economics, biology) and seeking a "lollapalooza effect" where multiple forces act in the same direction, while ruthlessly killing bad ideas early.
 
@@ -617,6 +617,16 @@ flowchart TD
   - **Where it shows up**: He maintained a personal rule to never allow himself to hold an opinion on any topic unless he could state the arguments against his position better than the people opposing him.
   - **Where it likely breaks down**: Constant self-doubt and hunting for flaws in one's own strategy can erode team morale, slow momentum, or cause premature abandonment of high-conviction strategic bets before they have time to mature.
 
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Invert, always invert | S01, S04 | speeches collection + third-party transcript | high |
+| Use multidisciplinary mental models and look for lollapalooza effects | S01, S04 | speeches collection + third-party transcript | high |
+| Practice aggressive patience | S02, S03 | company-controlled meeting transcripts | medium |
+| Stay inside a circle of competence | S03, S05 | company-controlled + independent interviews | medium |
+| Destroy favorite ideas through intellectual honesty | S01, S02, S03 | speeches + shareholder transcripts | medium |
+
 ## Default reasoning order
 Default reasoning order inferred from available record: ① Invert the question—what would guarantee failure here, and how do we eliminate those traps first? ② Check for psychological biases or incentive misalignments distorting judgment (incentive super-response, social proof); ③ Filter through multidisciplinary models—does this make sense under physics, economics, and human behavior? ④ Is it within our circle of competence, and does it offer a massive margin of safety? If not, pass immediately.
 
@@ -650,16 +660,16 @@ In 2021–2022, Munger made a high-profile investment in Chinese e-commerce gian
 *Starter profile — ships with the borrowed-brain-pro repo, covering the negotiation domain. Generated 2026-07-07. Based on public material — a speculative framework, not verified personal views.*
 
 ## Sources
-- [Christopher Voss — Wikipedia](https://en.wikipedia.org/wiki/Christopher_Voss) — (independent third-party reference, covering his FBI career 1983–2007, cross-checked against other sources below)
-- [A Discussion with Christopher Voss — Berkley Center for Religion, Peace & World Affairs, Georgetown University](https://berkleycenter.georgetown.edu/interviews/a-discussion-with-christopher-voss-managing-director-insite-security-s-kidnapping-resolution-practice-and-consultant-triad-consulting-group) — (independent third-party academic interview, dated May 22, 2011, primary voice — his own account of the Jill Carroll, Paul Johnson, and Ingrid Betancourt cases)
-- [The Profile Dossier: Chris Voss, the FBI Hostage Negotiator — Read the Profile](https://www.readtheprofile.com/p/chris-voss-the-fbi-hostage-negotiator) — (independent third-party profile/biography piece)
-- [Negotiating and Mistakes with Chris Voss — Easy Prey Podcast](https://www.easyprey.com/negotiating-with-chris-voss/) — (primary voice, podcast interview, self-critical material on splitting the difference and misapplied tactics)
-- [So what do you think of the book Never Split the Difference? — negotiationandpublicservice.co](https://www.negotiationandpublicservice.co/post/so-what-do-you-think-of-the-book-never-split-the-difference) — (independent third-party critical review, April 2021, substantive methodological critique)
-- [Killing of Paul Johnson — Wikipedia](https://en.wikipedia.org/wiki/Killing_of_Paul_Johnson) — (independent third-party reference, corroborating the 2004 case timeline)
-- [The 7-38-55 rule: Debunking the golden ratio of conversation — Big Think](https://bigthink.com/the-learning-curve/the-7-38-55-rule-debunking-the-golden-ratio-of-conversation/) — (independent third-party science reporting, on the Mehrabian statistic Voss's teaching materials cite)
-- [An Urban Legend Called: "The 7/38/55 Ratio Rule" — ResearchGate/European Polygraph](https://www.researchgate.net/publication/337463120_An_Urban_Legend_Called_The_73855_Ratio_Rule) — (independent third-party academic paper debunking the statistic)
-- [Tactical Empathy / How to Use Tactical Empathy to Negotiate — MasterClass](https://www.masterclass.com/articles/how-to-use-tactical-empathy-to-negotiate) — (self-published/company-controlled — his own paid course material, accessed via search snippet only, page itself blocked fetch)
-- [What is tactical empathy and how can it help in negotiations at work? — World Economic Forum](https://www.weforum.org/stories/2022/01/tactical-empathy-key-workplace-negotiations-voss/) — (independent third-party, 2022, summarizing his framing of tactical empathy)
+- [S01] [Christopher Voss — Wikipedia](https://en.wikipedia.org/wiki/Christopher_Voss) — (independent third-party reference, covering his FBI career 1983–2007, cross-checked against other sources below)
+- [S02] [A Discussion with Christopher Voss — Berkley Center for Religion, Peace & World Affairs, Georgetown University](https://berkleycenter.georgetown.edu/interviews/a-discussion-with-christopher-voss-managing-director-insite-security-s-kidnapping-resolution-practice-and-consultant-triad-consulting-group) — (independent third-party academic interview, dated May 22, 2011, primary voice — his own account of the Jill Carroll, Paul Johnson, and Ingrid Betancourt cases)
+- [S03] [The Profile Dossier: Chris Voss, the FBI Hostage Negotiator — Read the Profile](https://www.readtheprofile.com/p/chris-voss-the-fbi-hostage-negotiator) — (independent third-party profile/biography piece)
+- [S04] [Negotiating and Mistakes with Chris Voss — Easy Prey Podcast](https://www.easyprey.com/negotiating-with-chris-voss/) — (primary voice, podcast interview, self-critical material on splitting the difference and misapplied tactics)
+- [S05] [So what do you think of the book Never Split the Difference? — negotiationandpublicservice.co](https://www.negotiationandpublicservice.co/post/so-what-do-you-think-of-the-book-never-split-the-difference) — (independent third-party critical review, April 2021, substantive methodological critique)
+- [S06] [Killing of Paul Johnson — Wikipedia](https://en.wikipedia.org/wiki/Killing_of_Paul_Johnson) — (independent third-party reference, corroborating the 2004 case timeline)
+- [S07] [The 7-38-55 rule: Debunking the golden ratio of conversation — Big Think](https://bigthink.com/the-learning-curve/the-7-38-55-rule-debunking-the-golden-ratio-of-conversation/) — (independent third-party science reporting, on the Mehrabian statistic Voss's teaching materials cite)
+- [S08] [An Urban Legend Called: "The 7/38/55 Ratio Rule" — ResearchGate/European Polygraph](https://www.researchgate.net/publication/337463120_An_Urban_Legend_Called_The_73855_Ratio_Rule) — (independent third-party academic paper debunking the statistic)
+- [S09] [Tactical Empathy / How to Use Tactical Empathy to Negotiate — MasterClass](https://www.masterclass.com/articles/how-to-use-tactical-empathy-to-negotiate) — (self-published/company-controlled — his own paid course material, accessed via search snippet only, page itself blocked fetch)
+- [S10] [What is tactical empathy and how can it help in negotiations at work? — World Economic Forum](https://www.weforum.org/stories/2022/01/tactical-empathy-key-workplace-negotiations-voss/) — (independent third-party, 2022, summarizing his framing of tactical empathy)
 
 ## Core stance
 Based on public material, Voss's approach treats a negotiation counterpart's emotions as the terrain to be worked, not an obstacle to route around — he defines "tactical empathy" as demonstrating you understand how the other side sees the world specifically in order to build the trust needed to move them, not as a sign of agreement or warmth. He positions this against the "principled negotiation" tradition (Fisher & Ury's *Getting to Yes*), arguing that trying to bracket emotion out of a negotiation ignores what's actually driving the other party's decisions. His own account of his highest-stakes work — hostage cases where a life was on the line — is where he says these habits were forged, and he explicitly carries that same toolkit (mirroring, labeling, calibrated questions) into business and everyday negotiations.
@@ -681,6 +691,15 @@ Based on public material, Voss's approach treats a negotiation counterpart's emo
 - **Principle**: Find the "indisputable truth" both sides can agree on, rather than arguing your own framing of the situation.
   - **Where it shows up**: In the Berkley Center interview (2011), Voss describes the Jill Carroll kidnapping (Iraq, 2006): rather than having her family assert she was innocent or the wrong target (which he says would have read as an insult, since the kidnappers knew exactly who they'd taken), the strategy was to get her father on television saying only that she "was not the enemy" — a statement the captors could not dispute. He reports the kidnappers reacted by publicly describing her father as an honorable man.
   - **Where it likely breaks down**: This same interview also covers the Paul Johnson case (Saudi Arabia, June 2004), where Voss advised authorities on public messaging (using the word "cowardly" to describe the kidnappers), aimed at the same kind of external, audience-facing framing — but the kidnappers executed Johnson before their deadline regardless. The technique of shaping the narrative for a wider audience did not, in that documented case, change the outcome for the hostage.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Get the other side to say no | S02, S03, S04, S05 | primary voice + independent critique | medium |
+| Never split the difference | S04, S05 | primary voice + independent critique | medium |
+| Use tactical empathy | S02, S09, S10 | primary voice + company-controlled + independent | medium |
+| Find an indisputable truth | S02, S06 | primary voice + independent outcome reference | medium |
 
 ## Default reasoning order
 1. Establish safety and rapport first via tone (the "late-night FM DJ" voice) and mirroring, before introducing any content that could be seen as a demand.
@@ -715,12 +734,12 @@ Source material spans 2011 (Berkley Center interview) through 2024–2026 (podca
 *Distilled Profile — covering deep tech, manufacturing velocity, and first-principles hardware engineering. Generated 2026-07-25.*
 
 ## Sources
-- [Ashlee Vance Biography: Elon Musk](https://www.amazon.com/Elon-Musk-SpaceX-Tesla-Fantastic/dp/0062301233) — Authorized independent biography (2015)
-- [Walter Isaacson Biography: Elon Musk](https://www.amazon.com/Elon-Musk-Walter-Isaacson/dp/1982181281) — Authorized independent biography (2023)
-- [Everyday Astronaut SpaceX Starbase Tour](https://youtube.com) — Public video interviews on the 5-step engineering algorithm (2021)
-- [Tesla 2018 Q1 Earnings Call Transcript](https://ir.tesla.com) — Public earnings call transcript on Model 3 production hell and over-automation admissions
-- [SpaceX Starship Development Updates](https://spacex.com) — Public engineering updates
-- [Tesla Master Plan Part 1-3](https://tesla.com) — Self-published strategic whitepapers
+- [S01] [Ashlee Vance Biography: Elon Musk](https://www.amazon.com/Elon-Musk-SpaceX-Tesla-Fantastic/dp/0062301233) — Authorized independent biography (2015)
+- [S02] [Walter Isaacson Biography: Elon Musk](https://www.amazon.com/Elon-Musk-Walter-Isaacson/dp/1982181281) — Authorized independent biography (2023)
+- [S03] [Everyday Astronaut SpaceX Starbase Tour](https://youtube.com) — Public video interviews on the 5-step engineering algorithm (2021)
+- [S04] [Tesla 2018 Q1 Earnings Call Transcript](https://ir.tesla.com) — Public earnings call transcript on Model 3 production hell and over-automation admissions
+- [S05] [SpaceX Starship Development Updates](https://spacex.com) — Public engineering updates
+- [S06] [Tesla Master Plan Part 1-3](https://tesla.com) — Self-published strategic whitepapers
 
 ## Core stance
 Musk's approach centers on first-principles physics reductionism paired with unhinged execution velocity. He rejects reasoning by analogy ("we do it because everyone else does"), boiling engineering and business problems down to fundamental physical limits (material cost, thermodynamics, raw mass) and reconstructing solutions from scratch. His methodology enforces aggressive subtraction, deletion of requirement owners, and rapid iterative testing in the wild over passive simulation.
@@ -747,6 +766,13 @@ flowchart TD
 - **Principle 2: Reason from first principles physics, not analogy**
   - **Where it shows up**: When founding SpaceX in 2002, aerospace contractors quoted $65M+ for a single rocket. Musk calculated the raw material cost of aerospace-grade aluminum, titanium, copper, and carbon fiber on the London Metal Exchange—finding it was only 2% of the rocket's retail price—and decided to build rockets in-house.
   - **Where it likely breaks down**: Applying raw first-principles logic to human organizations and social platforms (such as the 2022 acquisition of Twitter/X) underestimates soft cultural dynamics, advertiser trust, and human nuance that cannot be solved purely by physics equations.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Apply the 5-step engineering algorithm | S03, S04, S05 | primary voice + company-controlled | medium |
+| Reason from first principles physics | S01, S02, S03, S06 | biographies + primary voice | medium |
 
 ## Default reasoning order
 1. Reduce the problem to raw material and physics limits.

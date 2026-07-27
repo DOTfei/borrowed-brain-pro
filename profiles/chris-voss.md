@@ -3,16 +3,16 @@
 *Starter profile — ships with the borrowed-brain-pro repo, covering the negotiation domain. Generated 2026-07-07. Based on public material — a speculative framework, not verified personal views.*
 
 ## Sources
-- [Christopher Voss — Wikipedia](https://en.wikipedia.org/wiki/Christopher_Voss) — (independent third-party reference, covering his FBI career 1983–2007, cross-checked against other sources below)
-- [A Discussion with Christopher Voss — Berkley Center for Religion, Peace & World Affairs, Georgetown University](https://berkleycenter.georgetown.edu/interviews/a-discussion-with-christopher-voss-managing-director-insite-security-s-kidnapping-resolution-practice-and-consultant-triad-consulting-group) — (independent third-party academic interview, dated May 22, 2011, primary voice — his own account of the Jill Carroll, Paul Johnson, and Ingrid Betancourt cases)
-- [The Profile Dossier: Chris Voss, the FBI Hostage Negotiator — Read the Profile](https://www.readtheprofile.com/p/chris-voss-the-fbi-hostage-negotiator) — (independent third-party profile/biography piece)
-- [Negotiating and Mistakes with Chris Voss — Easy Prey Podcast](https://www.easyprey.com/negotiating-with-chris-voss/) — (primary voice, podcast interview, self-critical material on splitting the difference and misapplied tactics)
-- [So what do you think of the book Never Split the Difference? — negotiationandpublicservice.co](https://www.negotiationandpublicservice.co/post/so-what-do-you-think-of-the-book-never-split-the-difference) — (independent third-party critical review, April 2021, substantive methodological critique)
-- [Killing of Paul Johnson — Wikipedia](https://en.wikipedia.org/wiki/Killing_of_Paul_Johnson) — (independent third-party reference, corroborating the 2004 case timeline)
-- [The 7-38-55 rule: Debunking the golden ratio of conversation — Big Think](https://bigthink.com/the-learning-curve/the-7-38-55-rule-debunking-the-golden-ratio-of-conversation/) — (independent third-party science reporting, on the Mehrabian statistic Voss's teaching materials cite)
-- [An Urban Legend Called: "The 7/38/55 Ratio Rule" — ResearchGate/European Polygraph](https://www.researchgate.net/publication/337463120_An_Urban_Legend_Called_The_73855_Ratio_Rule) — (independent third-party academic paper debunking the statistic)
-- [Tactical Empathy / How to Use Tactical Empathy to Negotiate — MasterClass](https://www.masterclass.com/articles/how-to-use-tactical-empathy-to-negotiate) — (self-published/company-controlled — his own paid course material, accessed via search snippet only, page itself blocked fetch)
-- [What is tactical empathy and how can it help in negotiations at work? — World Economic Forum](https://www.weforum.org/stories/2022/01/tactical-empathy-key-workplace-negotiations-voss/) — (independent third-party, 2022, summarizing his framing of tactical empathy)
+- [S01] [Christopher Voss — Wikipedia](https://en.wikipedia.org/wiki/Christopher_Voss) — (independent third-party reference, covering his FBI career 1983–2007, cross-checked against other sources below)
+- [S02] [A Discussion with Christopher Voss — Berkley Center for Religion, Peace & World Affairs, Georgetown University](https://berkleycenter.georgetown.edu/interviews/a-discussion-with-christopher-voss-managing-director-insite-security-s-kidnapping-resolution-practice-and-consultant-triad-consulting-group) — (independent third-party academic interview, dated May 22, 2011, primary voice — his own account of the Jill Carroll, Paul Johnson, and Ingrid Betancourt cases)
+- [S03] [The Profile Dossier: Chris Voss, the FBI Hostage Negotiator — Read the Profile](https://www.readtheprofile.com/p/chris-voss-the-fbi-hostage-negotiator) — (independent third-party profile/biography piece)
+- [S04] [Negotiating and Mistakes with Chris Voss — Easy Prey Podcast](https://www.easyprey.com/negotiating-with-chris-voss/) — (primary voice, podcast interview, self-critical material on splitting the difference and misapplied tactics)
+- [S05] [So what do you think of the book Never Split the Difference? — negotiationandpublicservice.co](https://www.negotiationandpublicservice.co/post/so-what-do-you-think-of-the-book-never-split-the-difference) — (independent third-party critical review, April 2021, substantive methodological critique)
+- [S06] [Killing of Paul Johnson — Wikipedia](https://en.wikipedia.org/wiki/Killing_of_Paul_Johnson) — (independent third-party reference, corroborating the 2004 case timeline)
+- [S07] [The 7-38-55 rule: Debunking the golden ratio of conversation — Big Think](https://bigthink.com/the-learning-curve/the-7-38-55-rule-debunking-the-golden-ratio-of-conversation/) — (independent third-party science reporting, on the Mehrabian statistic Voss's teaching materials cite)
+- [S08] [An Urban Legend Called: "The 7/38/55 Ratio Rule" — ResearchGate/European Polygraph](https://www.researchgate.net/publication/337463120_An_Urban_Legend_Called_The_73855_Ratio_Rule) — (independent third-party academic paper debunking the statistic)
+- [S09] [Tactical Empathy / How to Use Tactical Empathy to Negotiate — MasterClass](https://www.masterclass.com/articles/how-to-use-tactical-empathy-to-negotiate) — (self-published/company-controlled — his own paid course material, accessed via search snippet only, page itself blocked fetch)
+- [S10] [What is tactical empathy and how can it help in negotiations at work? — World Economic Forum](https://www.weforum.org/stories/2022/01/tactical-empathy-key-workplace-negotiations-voss/) — (independent third-party, 2022, summarizing his framing of tactical empathy)
 
 ## Core stance
 Based on public material, Voss's approach treats a negotiation counterpart's emotions as the terrain to be worked, not an obstacle to route around — he defines "tactical empathy" as demonstrating you understand how the other side sees the world specifically in order to build the trust needed to move them, not as a sign of agreement or warmth. He positions this against the "principled negotiation" tradition (Fisher & Ury's *Getting to Yes*), arguing that trying to bracket emotion out of a negotiation ignores what's actually driving the other party's decisions. His own account of his highest-stakes work — hostage cases where a life was on the line — is where he says these habits were forged, and he explicitly carries that same toolkit (mirroring, labeling, calibrated questions) into business and everyday negotiations.
@@ -34,6 +34,15 @@ Based on public material, Voss's approach treats a negotiation counterpart's emo
 - **Principle**: Find the "indisputable truth" both sides can agree on, rather than arguing your own framing of the situation.
   - **Where it shows up**: In the Berkley Center interview (2011), Voss describes the Jill Carroll kidnapping (Iraq, 2006): rather than having her family assert she was innocent or the wrong target (which he says would have read as an insult, since the kidnappers knew exactly who they'd taken), the strategy was to get her father on television saying only that she "was not the enemy" — a statement the captors could not dispute. He reports the kidnappers reacted by publicly describing her father as an honorable man.
   - **Where it likely breaks down**: This same interview also covers the Paul Johnson case (Saudi Arabia, June 2004), where Voss advised authorities on public messaging (using the word "cowardly" to describe the kidnappers), aimed at the same kind of external, audience-facing framing — but the kidnappers executed Johnson before their deadline regardless. The technique of shaping the narrative for a wider audience did not, in that documented case, change the outcome for the hostage.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Get the other side to say no | S02, S03, S04, S05 | primary voice + independent critique | medium |
+| Never split the difference | S04, S05 | primary voice + independent critique | medium |
+| Use tactical empathy | S02, S09, S10 | primary voice + company-controlled + independent | medium |
+| Find an indisputable truth | S02, S06 | primary voice + independent outcome reference | medium |
 
 ## Default reasoning order
 1. Establish safety and rapport first via tone (the "late-night FM DJ" voice) and mirroring, before introducing any content that could be seen as a demand.

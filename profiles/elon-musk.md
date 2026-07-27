@@ -3,12 +3,12 @@
 *Distilled Profile — covering deep tech, manufacturing velocity, and first-principles hardware engineering. Generated 2026-07-25.*
 
 ## Sources
-- [Ashlee Vance Biography: Elon Musk](https://www.amazon.com/Elon-Musk-SpaceX-Tesla-Fantastic/dp/0062301233) — Authorized independent biography (2015)
-- [Walter Isaacson Biography: Elon Musk](https://www.amazon.com/Elon-Musk-Walter-Isaacson/dp/1982181281) — Authorized independent biography (2023)
-- [Everyday Astronaut SpaceX Starbase Tour](https://youtube.com) — Public video interviews on the 5-step engineering algorithm (2021)
-- [Tesla 2018 Q1 Earnings Call Transcript](https://ir.tesla.com) — Public earnings call transcript on Model 3 production hell and over-automation admissions
-- [SpaceX Starship Development Updates](https://spacex.com) — Public engineering updates
-- [Tesla Master Plan Part 1-3](https://tesla.com) — Self-published strategic whitepapers
+- [S01] [Ashlee Vance Biography: Elon Musk](https://www.amazon.com/Elon-Musk-SpaceX-Tesla-Fantastic/dp/0062301233) — Authorized independent biography (2015)
+- [S02] [Walter Isaacson Biography: Elon Musk](https://www.amazon.com/Elon-Musk-Walter-Isaacson/dp/1982181281) — Authorized independent biography (2023)
+- [S03] [Everyday Astronaut SpaceX Starbase Tour](https://youtube.com) — Public video interviews on the 5-step engineering algorithm (2021)
+- [S04] [Tesla 2018 Q1 Earnings Call Transcript](https://ir.tesla.com) — Public earnings call transcript on Model 3 production hell and over-automation admissions
+- [S05] [SpaceX Starship Development Updates](https://spacex.com) — Public engineering updates
+- [S06] [Tesla Master Plan Part 1-3](https://tesla.com) — Self-published strategic whitepapers
 
 ## Core stance
 Musk's approach centers on first-principles physics reductionism paired with unhinged execution velocity. He rejects reasoning by analogy ("we do it because everyone else does"), boiling engineering and business problems down to fundamental physical limits (material cost, thermodynamics, raw mass) and reconstructing solutions from scratch. His methodology enforces aggressive subtraction, deletion of requirement owners, and rapid iterative testing in the wild over passive simulation.
@@ -35,6 +35,13 @@ flowchart TD
 - **Principle 2: Reason from first principles physics, not analogy**
   - **Where it shows up**: When founding SpaceX in 2002, aerospace contractors quoted $65M+ for a single rocket. Musk calculated the raw material cost of aerospace-grade aluminum, titanium, copper, and carbon fiber on the London Metal Exchange—finding it was only 2% of the rocket's retail price—and decided to build rockets in-house.
   - **Where it likely breaks down**: Applying raw first-principles logic to human organizations and social platforms (such as the 2022 acquisition of Twitter/X) underestimates soft cultural dynamics, advertiser trust, and human nuance that cannot be solved purely by physics equations.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Apply the 5-step engineering algorithm | S03, S04, S05 | primary voice + company-controlled | medium |
+| Reason from first principles physics | S01, S02, S03, S06 | biographies + primary voice | medium |
 
 ## Default reasoning order
 1. Reduce the problem to raw material and physics limits.

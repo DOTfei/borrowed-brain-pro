@@ -3,11 +3,11 @@
 *Profile generated 2026-07-25. Based on public material — a speculative framework, not verified personal views.*
 
 ## Sources
-- *Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger*, edited by Peter D. Kaufman (self-published / speeches collection)
-- Daily Journal Corporation Annual Meeting Transcripts, 2014–2023 (self-published / company-controlled) — dailyjournal.com
-- Berkshire Hathaway Annual Shareholders Meeting Transcripts, 1994–2023 (company-controlled) — berkshirehathaway.com
-- USC Law School Commencement Speech "The Psychology of Human Misjudgment", 1995 (speech transcript, third-party published)
-- CNBC / Wall Street Journal interviews (independent third-party) — wsj.com
+- [S01] *Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger*, edited by Peter D. Kaufman (self-published / speeches collection)
+- [S02] Daily Journal Corporation Annual Meeting Transcripts, 2014–2023 (self-published / company-controlled) — dailyjournal.com
+- [S03] Berkshire Hathaway Annual Shareholders Meeting Transcripts, 1994–2023 (company-controlled) — berkshirehathaway.com
+- [S04] USC Law School Commencement Speech "The Psychology of Human Misjudgment", 1995 (speech transcript, third-party published)
+- [S05] CNBC / Wall Street Journal interviews (independent third-party) — wsj.com
 ## Core stance
 Munger's thinking rests on "invert, always invert" and multidisciplinary mental models: before trying to be smart, systematically avoid stupidity and psychological biases. He approaches decisions by mapping problems across multiple fundamental disciplines (physics, psychology, economics, biology) and seeking a "lollapalooza effect" where multiple forces act in the same direction, while ruthlessly killing bad ideas early.
 
@@ -47,6 +47,16 @@ flowchart TD
 - **Principle 5: Destroy your own favorite ideas—relentless intellectual honesty**
   - **Where it shows up**: He maintained a personal rule to never allow himself to hold an opinion on any topic unless he could state the arguments against his position better than the people opposing him.
   - **Where it likely breaks down**: Constant self-doubt and hunting for flaws in one's own strategy can erode team morale, slow momentum, or cause premature abandonment of high-conviction strategic bets before they have time to mature.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Invert, always invert | S01, S04 | speeches collection + third-party transcript | high |
+| Use multidisciplinary mental models and look for lollapalooza effects | S01, S04 | speeches collection + third-party transcript | high |
+| Practice aggressive patience | S02, S03 | company-controlled meeting transcripts | medium |
+| Stay inside a circle of competence | S03, S05 | company-controlled + independent interviews | medium |
+| Destroy favorite ideas through intellectual honesty | S01, S02, S03 | speeches + shareholder transcripts | medium |
 
 ## Default reasoning order
 Default reasoning order inferred from available record: ① Invert the question—what would guarantee failure here, and how do we eliminate those traps first? ② Check for psychological biases or incentive misalignments distorting judgment (incentive super-response, social proof); ③ Filter through multidisciplinary models—does this make sense under physics, economics, and human behavior? ④ Is it within our circle of competence, and does it offer a massive margin of safety? If not, pass immediately.
