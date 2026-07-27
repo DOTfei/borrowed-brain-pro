@@ -3,10 +3,11 @@
 validate_profiles.py — Automated Quality & Schema Rating Validator for borrowed-brain-pro
 
 Checks all profiles in profiles/*.md for:
-1. Standard 8 Section Headers
+1. Standard 9 Section Headers
 2. Source Density (URL / Source count) & Rating (★★★ / ★★ / ★)
 3. Failure Boundary Quality (Presence and depth of "Where it likely breaks down")
 4. Quote Length Guardrail (Explicit direct quotes < 15 words per skill policy)
+5. Evidence Map source-ID integrity (every mapped ID exists in the profile's Sources)
 """
 
 import glob
@@ -27,6 +28,7 @@ REQUIRED_SECTIONS = [
     "## One documented failure or criticism",
     "## Vocabulary / analogies they reach for",
     "## Confidence note",
+    "## Evidence Map",
 ]
 
 def validate_profile(filepath):
@@ -52,6 +54,28 @@ def validate_profile(filepath):
     urls = re.findall(r"https?://[^\s\)]+", sources_section)
     bullet_sources = re.findall(r"^\s*[\-\*]\s+", sources_section, re.MULTILINE)
     source_count = max(len(urls), len(bullet_sources))
+
+    # 2b. Evidence Map source-ID integrity check. Source IDs are deliberately
+    # local to each profile so an Evidence Map cannot silently point at another
+    # profile's bibliography.
+    source_ids = set(re.findall(r"^\s*[\-*]\s+\[(S\d+)\]", sources_section, re.MULTILINE | re.IGNORECASE))
+    evidence_section = ""
+    evidence_parts = re.split(r"^## Evidence Map\s*$", content, maxsplit=1, flags=re.MULTILINE | re.IGNORECASE)
+    if len(evidence_parts) > 1:
+        evidence_section = re.split(r"^##\s+", evidence_parts[1], maxsplit=1, flags=re.MULTILINE)[0]
+    evidence_ids = set(re.findall(r"\b(S\d+)\b", evidence_section, re.IGNORECASE))
+
+    if not evidence_ids:
+        errors.append("No source IDs found under '## Evidence Map'")
+    unknown_evidence_ids = sorted(
+        evidence_ids - source_ids,
+        key=lambda value: int(value[1:]),
+    )
+    if unknown_evidence_ids:
+        errors.append(
+            "Evidence Map references source IDs missing from '## Sources': "
+            + ", ".join(unknown_evidence_ids)
+        )
 
     if source_count >= 10:
         depth_rating = "3-Star (Gold Standard - 10+ Sources)"
@@ -82,6 +106,8 @@ def validate_profile(filepath):
     return {
         "filename": filename,
         "source_count": source_count,
+        "source_ids": len(source_ids),
+        "evidence_ids": len(evidence_ids),
         "rating": depth_rating,
         "errors": errors,
         "warnings": warnings,
@@ -120,6 +146,7 @@ def main():
 
         print(f"{status} {filename}")
         print(f"   - Source Density: {result['source_count']} sources -> Rating: {rating}")
+        print(f"   - Evidence Map: {result['evidence_ids']} mapped IDs / {result['source_ids']} source IDs")
         
         for err in errors:
             print(f"   - ERROR: {err}")
