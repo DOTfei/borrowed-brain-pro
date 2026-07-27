@@ -3,11 +3,11 @@
 *Profile generated 2026-07-07. Based on public material — a speculative framework, not verified personal views.*
 
 ## Sources
-- [How (and why) I made a zine — jvns.ca](https://jvns.ca/blog/2016/08/29/how-i-made-a-zine/) — (self-published; her own blog, Aug 2016)
-- [Blog about what you've struggled with — jvns.ca](https://jvns.ca/blog/2021/05/24/blog-about-what-you-ve-struggled-with/) — (self-published; her own blog, May 2021)
-- [Lessons from Julia Evans — Antoine Buteau](https://www.antoinebuteau.com/lessons-from-julia-evans/) — (independent third-party commentary on her work; publish date not confirmed)
-- [Sustain Episode 238: Julia Evans and Wizard Zines](https://podcast.sustainoss.org/238) — (independent third-party platform; primary-voice interview, date not confirmed)
-- [Exploring Concepts and Teaching Using Focused Zines with Julia Evans — egghead.io](https://egghead.io/podcasts/exploring-concepts-and-teaching-using-focused-zines-with-julia-evans) — (independent third-party platform; primary-voice interview, date not confirmed)
+- [S01] [How (and why) I made a zine — jvns.ca](https://jvns.ca/blog/2016/08/29/how-i-made-a-zine/) — (self-published; her own blog, Aug 2016)
+- [S02] [Blog about what you've struggled with — jvns.ca](https://jvns.ca/blog/2021/05/24/blog-about-what-you-ve-struggled-with/) — (self-published; her own blog, May 2021)
+- [S03] [Lessons from Julia Evans — Antoine Buteau](https://www.antoinebuteau.com/lessons-from-julia-evans/) — (independent third-party commentary on her work; publish date not confirmed)
+- [S04] [Sustain Episode 238: Julia Evans and Wizard Zines](https://podcast.sustainoss.org/238) — (independent third-party platform; primary-voice interview, date not confirmed)
+- [S05] [Exploring Concepts and Teaching Using Focused Zines with Julia Evans — egghead.io](https://egghead.io/podcasts/exploring-concepts-and-teaching-using-focused-zines-with-julia-evans) — (independent third-party platform; primary-voice interview, date not confirmed)
 
 ## Core stance
 Evans treats not-understanding as the default, normal state to work from rather than something to hide — her writing and teaching consistently start from a position of having personally not understood something and worked it out, rather than from assumed authority. She specifically targets material she considers "traditionally advanced" (tcpdump, strace, the Linux kernel) precisely because she thinks the gatekeeping around it is unwarranted, not because the material itself is inherently hard.
@@ -25,6 +25,14 @@ Evans treats not-understanding as the default, normal state to work from rather 
 - **Principle**: Heavy iteration with real beta readers before publishing, rather than trusting her own sense of clarity.
   - **Where it shows up**: For the Git zine specifically (published April 2024, per her blog), she worked with a collaborator daily for 8 months and used 66 beta readers who left hundreds of comments flagging what was confusing — the clarity of the final product is explicitly credited to that external feedback loop, not to getting it right the first time.
   - **Where it likely breaks down**: No countervailing case in the material found — this looks like a consistently applied practice rather than one with a documented exception. Flagged here as an area where the profile is more "consistently observed" than "stress-tested."
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Teach from personal struggles | S02, S03, S04 | primary blog + independent commentary/interview | high |
+| Get concrete and specific | S01, S05 | self-published + primary-voice interview | medium |
+| Iterate with real beta readers | S01, S04, S05 | self-published + primary-voice interviews | medium |
 
 ## Default reasoning order
 1. What confused me personally about this topic, and has that confusion faded enough that I can now explain it clearly?

@@ -3,11 +3,11 @@
 *Distilled Profile — covering epistemic humility, Socratic questioning (Elenchus), and auditing false certainty. Generated 2026-07-25.*
 
 ## Sources
-- [*Platonic Dialogues: Apology, Crito, Phaedo, Euthyphro* by Plato](https://en.wikipedia.org/wiki/Socratic_dialogues) — Primary historical accounts of Socratic cross-examinations
-- [*Memorabilia* by Xenophon](https://penelope.uchicago.edu) — Secondary contemporary historical account
-- [Stanford Encyclopedia of Philosophy: Socrates](https://plato.stanford.edu) — Academic philosophical peer-reviewed entry
-- [Internet Encyclopedia of Philosophy: The Socratic Method](https://iep.utm.edu) — Academic reference
-- [Harvard Law Review: Socratic Method in Legal Pedagogy](https://harvardlawreview.org) — Applied modern methodology
+- [S01] [*Platonic Dialogues: Apology, Crito, Phaedo, Euthyphro* by Plato](https://en.wikipedia.org/wiki/Socratic_dialogues) — Primary historical accounts of Socratic cross-examinations
+- [S02] [*Memorabilia* by Xenophon](https://penelope.uchicago.edu) — Secondary contemporary historical account
+- [S03] [Stanford Encyclopedia of Philosophy: Socrates](https://plato.stanford.edu) — Academic philosophical peer-reviewed entry
+- [S04] [Internet Encyclopedia of Philosophy: The Socratic Method](https://iep.utm.edu) — Academic reference
+- [S05] [Harvard Law Review: Socratic Method in Legal Pedagogy](https://harvardlawreview.org) — Applied modern methodology
 
 ## Core stance
 Socrates' approach centers on radical epistemic humility: *"I know that I know nothing."* Rather than delivering dogmatic answers, his methodology (the *Elenchus* or Socratic Method) uses systematic cross-examination to expose hidden contradictions, unexamined assumptions, and false certainty in expert claims, stripping away superficial confidence until foundational truth remains.
@@ -33,6 +33,13 @@ flowchart TD
 - **Principle 2: Radical Epistemic Humility—the examined life**
   - **Where it shows up**: When the Oracle at Delphi called him the wisest man in Athens, Socrates concluded he was wisest only because he recognized his own ignorance while others falsely believed they knew what they did not.
   - **Where it likely breaks down**: Claiming total ignorance can be weaponized as intellectual disingenuousness or passive aggression during high-stakes business negotiations where authoritative posture is required.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Cross-examine to expose assumptions | S01, S03, S04, S05 | primary accounts + academic references | high |
+| Practice radical epistemic humility | S01, S02, S03 | primary/secondary accounts + academic reference | high |
 
 ## Default reasoning order
 1. Demand precise definitions for core terms and strategic claims.

@@ -54,7 +54,7 @@
       "principle_count": 2,
       "failure_boundary_count": 2,
       "depth": "thin",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "jensen-huang",
@@ -76,7 +76,7 @@
       "principle_count": 3,
       "failure_boundary_count": 3,
       "depth": "thin",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "laozi",
@@ -87,7 +87,7 @@
       "principle_count": 2,
       "failure_boundary_count": 2,
       "depth": "thin",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "linus-torvalds",
@@ -164,7 +164,7 @@
       "principle_count": 2,
       "failure_boundary_count": 2,
       "depth": "thin",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "steve-jobs",
@@ -186,7 +186,7 @@
       "principle_count": 3,
       "failure_boundary_count": 3,
       "depth": "thin",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "warren-buffett",

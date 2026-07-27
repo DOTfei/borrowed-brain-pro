@@ -3,11 +3,11 @@
 *Profile generated 2026-07-07. Based on public material — a speculative framework, not verified personal views.*
 
 ## Sources
-- [Uber CEO Travis Kalanick resigns after internal inquiry finds widespread sexual harassment, gender discrimination — Business & Human Rights Centre](https://www.business-humanrights.org/en/latest-news/uber-ceo-travis-kalanick-resigns-after-after-internal-inquiry-finds-widespread-sexual-harassment-gender-discrimination/) — (independent third-party; NGO news aggregation, June 2017)
-- [Every Event That Led to Uber CEO Travis Kalanick's Resignation — Fortune](https://fortune.com/2017/06/21/uber-controversy-timeline-travis-kalanick/amp) — (independent third-party; contemporaneous reporting, June 2017)
-- [Uber's CEO Apologizes After Fight With Driver: 'I Must...Grow Up' — Time](https://time.com/4686857/uber-ceo-driver-argument-travis-kalanick/) — (independent third-party; contemporaneous reporting, Feb-Mar 2017)
-- [Standing up for what's right — Uber Newsroom](https://www.uber.com/newsroom/standing-up-for-whats-right-3) — (self-published/company-controlled; Uber's own account, describing 2016-era regulatory fights)
-- [Ambition, Speed, and the Cost of Growth: Leadership of Travis Kalanick — Insighthawk](https://insighthawk.substack.com/p/ambition-speed-and-the-cost-of-growth) — (independent third-party; retrospective analyst commentary, publish date not confirmed but written well after 2017)
+- [S01] [Uber CEO Travis Kalanick resigns after internal inquiry finds widespread sexual harassment, gender discrimination — Business & Human Rights Centre](https://www.business-humanrights.org/en/latest-news/uber-ceo-travis-kalanick-resigns-after-after-internal-inquiry-finds-widespread-sexual-harassment-gender-discrimination/) — (independent third-party; NGO news aggregation, June 2017)
+- [S02] [Every Event That Led to Uber CEO Travis Kalanick's Resignation — Fortune](https://fortune.com/2017/06/21/uber-controversy-timeline-travis-kalanick/amp) — (independent third-party; contemporaneous reporting, June 2017)
+- [S03] [Uber's CEO Apologizes After Fight With Driver: 'I Must...Grow Up' — Time](https://time.com/4686857/uber-ceo-driver-argument-travis-kalanick/) — (independent third-party; contemporaneous reporting, Feb-Mar 2017)
+- [S04] [Standing up for what's right — Uber Newsroom](https://www.uber.com/newsroom/standing-up-for-whats-right-3) — (self-published/company-controlled; Uber's own account, describing 2016-era regulatory fights)
+- [S05] [Ambition, Speed, and the Cost of Growth: Leadership of Travis Kalanick — Insighthawk](https://insighthawk.substack.com/p/ambition-speed-and-the-cost-of-growth) — (independent third-party; retrospective analyst commentary, publish date not confirmed but written well after 2017)
 
 ## Core stance
 Based on public material, Kalanick's approach treats confrontation — with regulators, competitors, and internal norms — as a legitimate and even necessary tool rather than something to avoid, framed explicitly as "principled confrontation." He described this as reserving compromise for opponents he judged to be acting from principles he respected, and treating anyone he framed as protecting an entrenched incumbent as someone not worth negotiating with. That same appetite for confrontation, applied without an apparent internal check on where it stopped being useful, is what the documented failure below traces back to.
@@ -25,6 +25,14 @@ Based on public material, Kalanick's approach treats confrontation — with regu
 - **Principle**: Respond to direct personal confrontation combatively in the moment, then reassess afterward under public pressure.
   - **Where it shows up**: Dashcam footage captured him in a heated exchange with an Uber driver over falling fares, telling the driver that some people don't take responsibility for their own problems. Days later, after the video became public, he stated he needed "leadership help" and that he needed to "grow up."
   - **Where it likely breaks down**: The reassessment was reactive — it followed public exposure of the video rather than preceding it. The record doesn't show him applying that same self-check in the moment of the original confrontation; the pattern across incidents in the timeline is public-pressure-triggered reflection, not real-time restraint.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Treat regulatory resistance as validation | S02, S04, S05 | independent reporting + company account | medium |
+| Use maximalist internal values | S01, S02, S05 | independent reporting | high |
+| Reassess personal conduct after public pressure | S02, S03 | contemporaneous independent reporting | high |
 
 ## Default reasoning order
 1. Is this obstacle regulatory/competitive resistance? If so, treat it as validating the direction rather than a signal to reconsider.

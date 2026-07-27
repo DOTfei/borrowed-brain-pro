@@ -352,7 +352,7 @@ After running Distill mode on a new person, add one row to the table above:
       "principle_count": 2,
       "failure_boundary_count": 2,
       "depth": "thin",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "jensen-huang",
@@ -374,7 +374,7 @@ After running Distill mode on a new person, add one row to the table above:
       "principle_count": 3,
       "failure_boundary_count": 3,
       "depth": "thin",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "laozi",
@@ -385,7 +385,7 @@ After running Distill mode on a new person, add one row to the table above:
       "principle_count": 2,
       "failure_boundary_count": 2,
       "depth": "thin",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "linus-torvalds",
@@ -462,7 +462,7 @@ After running Distill mode on a new person, add one row to the table above:
       "principle_count": 2,
       "failure_boundary_count": 2,
       "depth": "thin",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "steve-jobs",
@@ -484,7 +484,7 @@ After running Distill mode on a new person, add one row to the table above:
       "principle_count": 3,
       "failure_boundary_count": 3,
       "depth": "thin",
-      "evidence_map_status": "legacy-inline"
+      "evidence_map_status": "mapped"
     },
     {
       "slug": "warren-buffett",
@@ -814,10 +814,10 @@ High confidence in hardware manufacturing and engineering methodology. Moderate 
 *Distilled Profile — covering Amor Fati, self-overcoming, antifragility through suffering, and re-evaluation of values. Generated 2026-07-25.*
 
 ## Sources
-- [*Thus Spoke Zarathustra*, *Beyond Good and Evil*, *Twilight of the Idols* by Friedrich Nietzsche](https://en.wikipedia.org/wiki/Friedrich_Nietzsche_bibliography) — Primary philosophical texts
-- [Stanford Encyclopedia of Philosophy: Friedrich Nietzsche](https://plato.stanford.edu) — Academic peer-reviewed entry
-- [*Nietzsche: Philosopher, Psychologist, Antichrist* by Walter Kaufmann](https://www.amazon.com/Nietzsche-Philosopher-Psychologist-Walter-Kaufmann/dp/0691019835) — Definitive academic biography
-- [Nassim Nicholas Taleb's *Antifragile* Synthesis of Nietzsche](https://fooledbyrandomness.com) — Applied modern risk framework
+- [S01] [*Thus Spoke Zarathustra*, *Beyond Good and Evil*, *Twilight of the Idols* by Friedrich Nietzsche](https://en.wikipedia.org/wiki/Friedrich_Nietzsche_bibliography) — Primary philosophical texts
+- [S02] [Stanford Encyclopedia of Philosophy: Friedrich Nietzsche](https://plato.stanford.edu) — Academic peer-reviewed entry
+- [S03] [*Nietzsche: Philosopher, Psychologist, Antichrist* by Walter Kaufmann](https://www.amazon.com/Nietzsche-Philosopher-Psychologist-Walter-Kaufmann/dp/0691019835) — Definitive academic biography
+- [S04] [Nassim Nicholas Taleb's *Antifragile* Synthesis of Nietzsche](https://fooledbyrandomness.com) — Applied modern risk framework
 
 ## Core stance
 Nietzsche's framework centers on radical self-overcoming (*Selbstüberwindung*) and *Amor Fati* (love of one's fate). He rejects victimhood, moral comfort, and herd conformity, asserting that suffering, resistance, and hardship are not tragic accidents to be avoided, but the essential furnace fuel required for growth and greatness (*"What does not kill me makes me stronger"*).
@@ -843,6 +843,13 @@ flowchart TD
 - **Principle 2: Re-evaluation of values (Umwertung aller Werte)—reject herd conformity**
   - **Where it shows up**: In *Beyond Good and Evil*, he attacks inherited dogmas and "herd mentality", insisting that creators must establish their own first-principles value systems rather than uncritically adopting social consensus.
   - **Where it likely breaks down**: Total rejection of social consensus can alienate partners, foster toxic arrogance, and blind a leader to legitimate ethical boundaries.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Amor Fati and suffering as furnace fuel | S01, S02, S03, S04 | primary texts + academic and applied synthesis | high |
+| Re-evaluate inherited values and reject herd conformity | S01, S02, S03 | primary texts + academic biography | high |
 
 ## Default reasoning order
 1. Reframe acute setbacks from passive suffering into active fuel for growth.
@@ -944,11 +951,11 @@ High confidence based on 30-year public track record at Nvidia, Acquired intervi
 *Profile generated 2026-07-07. Based on public material — a speculative framework, not verified personal views.*
 
 ## Sources
-- [How (and why) I made a zine — jvns.ca](https://jvns.ca/blog/2016/08/29/how-i-made-a-zine/) — (self-published; her own blog, Aug 2016)
-- [Blog about what you've struggled with — jvns.ca](https://jvns.ca/blog/2021/05/24/blog-about-what-you-ve-struggled-with/) — (self-published; her own blog, May 2021)
-- [Lessons from Julia Evans — Antoine Buteau](https://www.antoinebuteau.com/lessons-from-julia-evans/) — (independent third-party commentary on her work; publish date not confirmed)
-- [Sustain Episode 238: Julia Evans and Wizard Zines](https://podcast.sustainoss.org/238) — (independent third-party platform; primary-voice interview, date not confirmed)
-- [Exploring Concepts and Teaching Using Focused Zines with Julia Evans — egghead.io](https://egghead.io/podcasts/exploring-concepts-and-teaching-using-focused-zines-with-julia-evans) — (independent third-party platform; primary-voice interview, date not confirmed)
+- [S01] [How (and why) I made a zine — jvns.ca](https://jvns.ca/blog/2016/08/29/how-i-made-a-zine/) — (self-published; her own blog, Aug 2016)
+- [S02] [Blog about what you've struggled with — jvns.ca](https://jvns.ca/blog/2021/05/24/blog-about-what-you-ve-struggled-with/) — (self-published; her own blog, May 2021)
+- [S03] [Lessons from Julia Evans — Antoine Buteau](https://www.antoinebuteau.com/lessons-from-julia-evans/) — (independent third-party commentary on her work; publish date not confirmed)
+- [S04] [Sustain Episode 238: Julia Evans and Wizard Zines](https://podcast.sustainoss.org/238) — (independent third-party platform; primary-voice interview, date not confirmed)
+- [S05] [Exploring Concepts and Teaching Using Focused Zines with Julia Evans — egghead.io](https://egghead.io/podcasts/exploring-concepts-and-teaching-using-focused-zines-with-julia-evans) — (independent third-party platform; primary-voice interview, date not confirmed)
 
 ## Core stance
 Evans treats not-understanding as the default, normal state to work from rather than something to hide — her writing and teaching consistently start from a position of having personally not understood something and worked it out, rather than from assumed authority. She specifically targets material she considers "traditionally advanced" (tcpdump, strace, the Linux kernel) precisely because she thinks the gatekeeping around it is unwarranted, not because the material itself is inherently hard.
@@ -966,6 +973,14 @@ Evans treats not-understanding as the default, normal state to work from rather 
 - **Principle**: Heavy iteration with real beta readers before publishing, rather than trusting her own sense of clarity.
   - **Where it shows up**: For the Git zine specifically (published April 2024, per her blog), she worked with a collaborator daily for 8 months and used 66 beta readers who left hundreds of comments flagging what was confusing — the clarity of the final product is explicitly credited to that external feedback loop, not to getting it right the first time.
   - **Where it likely breaks down**: No countervailing case in the material found — this looks like a consistently applied practice rather than one with a documented exception. Flagged here as an area where the profile is more "consistently observed" than "stress-tested."
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Teach from personal struggles | S02, S03, S04 | primary blog + independent commentary/interview | high |
+| Get concrete and specific | S01, S05 | self-published + primary-voice interview | medium |
+| Iterate with real beta readers | S01, S04, S05 | self-published + primary-voice interviews | medium |
 
 ## Default reasoning order
 1. What confused me personally about this topic, and has that confusion faded enough that I can now explain it clearly?
@@ -994,10 +1009,10 @@ This person has substantial primary-voice material (her own blog, multiple podca
 *Distilled Profile — covering Eastern philosophy, Wu Wei (effortless action / 无为而治), water dynamics, and organic emergence. Generated 2026-07-25.*
 
 ## Sources
-- [*Tao Te Ching* (道德经)](https://ctext.org/dao-de-jing) — Primary classic text (81 chapters)
-- [Stanford Encyclopedia of Philosophy: Daoism](https://plato.stanford.edu) — Academic peer-reviewed entry
-- [*Zhuangzi* (庄子) Supplementary Passages](https://ctext.org/zhuangzi) — Contemporary Daoist text
-- [Harvard East Asian Studies Analysis of Wu Wei](https://harvard.edu) — Applied organizational analysis
+- [S01] [*Tao Te Ching* (道德经)](https://ctext.org/dao-de-jing) — Primary classic text (81 chapters)
+- [S02] [Stanford Encyclopedia of Philosophy: Daoism](https://plato.stanford.edu) — Academic peer-reviewed entry
+- [S03] [*Zhuangzi* (庄子) Supplementary Passages](https://ctext.org/zhuangzi) — Contemporary Daoist text
+- [S04] [Harvard East Asian Studies Analysis of Wu Wei](https://harvard.edu) — Applied organizational analysis
 
 ## Core stance
 Laozi's approach centers on *Wu Wei* (无为而治 — effortless action / non-forcing) and the fluid dynamics of water (*"上善若水"*). He rejects rigid top-down micro-management, artificial posturing, and aggressive confrontation, asserting that complex organic systems govern best when allowed to self-organize naturally. True strength lies in flexibility, humility, and yielding to natural forces rather than forcing brittle resistance against them.
@@ -1023,6 +1038,13 @@ flowchart TD
 - **Principle 2: Water dynamics—softness and flexibility overcome hardness**
   - **Where it shows up**: Chapter 78 uses water as the image of what "can surpass" hard and strong things. Yielding during direct conflict preserves capital and positioning while the rigid opponent exhausts energy.
   - **Where it likely breaks down**: Over-yielding in aggressive business or legal negotiations against bad-faith actors can be exploited as vulnerability, resulting in total loss of leverage.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Wu Wei and self-organization | S01, S02, S04 | primary text + academic and applied analysis | high |
+| Softness and flexibility overcome hardness | S01, S03, S02 | primary texts + academic synthesis | high |
 
 ## Default reasoning order
 1. Identify where unnatural force or artificial friction is being applied.
@@ -1487,11 +1509,11 @@ In November 2023, the OpenAI board fired him citing that he was "not consistentl
 *Distilled Profile — covering epistemic humility, Socratic questioning (Elenchus), and auditing false certainty. Generated 2026-07-25.*
 
 ## Sources
-- [*Platonic Dialogues: Apology, Crito, Phaedo, Euthyphro* by Plato](https://en.wikipedia.org/wiki/Socratic_dialogues) — Primary historical accounts of Socratic cross-examinations
-- [*Memorabilia* by Xenophon](https://penelope.uchicago.edu) — Secondary contemporary historical account
-- [Stanford Encyclopedia of Philosophy: Socrates](https://plato.stanford.edu) — Academic philosophical peer-reviewed entry
-- [Internet Encyclopedia of Philosophy: The Socratic Method](https://iep.utm.edu) — Academic reference
-- [Harvard Law Review: Socratic Method in Legal Pedagogy](https://harvardlawreview.org) — Applied modern methodology
+- [S01] [*Platonic Dialogues: Apology, Crito, Phaedo, Euthyphro* by Plato](https://en.wikipedia.org/wiki/Socratic_dialogues) — Primary historical accounts of Socratic cross-examinations
+- [S02] [*Memorabilia* by Xenophon](https://penelope.uchicago.edu) — Secondary contemporary historical account
+- [S03] [Stanford Encyclopedia of Philosophy: Socrates](https://plato.stanford.edu) — Academic philosophical peer-reviewed entry
+- [S04] [Internet Encyclopedia of Philosophy: The Socratic Method](https://iep.utm.edu) — Academic reference
+- [S05] [Harvard Law Review: Socratic Method in Legal Pedagogy](https://harvardlawreview.org) — Applied modern methodology
 
 ## Core stance
 Socrates' approach centers on radical epistemic humility: *"I know that I know nothing."* Rather than delivering dogmatic answers, his methodology (the *Elenchus* or Socratic Method) uses systematic cross-examination to expose hidden contradictions, unexamined assumptions, and false certainty in expert claims, stripping away superficial confidence until foundational truth remains.
@@ -1517,6 +1539,13 @@ flowchart TD
 - **Principle 2: Radical Epistemic Humility—the examined life**
   - **Where it shows up**: When the Oracle at Delphi called him the wisest man in Athens, Socrates concluded he was wisest only because he recognized his own ignorance while others falsely believed they knew what they did not.
   - **Where it likely breaks down**: Claiming total ignorance can be weaponized as intellectual disingenuousness or passive aggression during high-stakes business negotiations where authoritative posture is required.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Cross-examine to expose assumptions | S01, S03, S04, S05 | primary accounts + academic references | high |
+| Practice radical epistemic humility | S01, S02, S03 | primary/secondary accounts + academic reference | high |
 
 ## Default reasoning order
 1. Demand precise definitions for core terms and strategic claims.
@@ -1628,11 +1657,11 @@ This profile draws on a well-documented public figure with a large volume of pri
 *Profile generated 2026-07-07. Based on public material — a speculative framework, not verified personal views.*
 
 ## Sources
-- [Uber CEO Travis Kalanick resigns after internal inquiry finds widespread sexual harassment, gender discrimination — Business & Human Rights Centre](https://www.business-humanrights.org/en/latest-news/uber-ceo-travis-kalanick-resigns-after-after-internal-inquiry-finds-widespread-sexual-harassment-gender-discrimination/) — (independent third-party; NGO news aggregation, June 2017)
-- [Every Event That Led to Uber CEO Travis Kalanick's Resignation — Fortune](https://fortune.com/2017/06/21/uber-controversy-timeline-travis-kalanick/amp) — (independent third-party; contemporaneous reporting, June 2017)
-- [Uber's CEO Apologizes After Fight With Driver: 'I Must...Grow Up' — Time](https://time.com/4686857/uber-ceo-driver-argument-travis-kalanick/) — (independent third-party; contemporaneous reporting, Feb-Mar 2017)
-- [Standing up for what's right — Uber Newsroom](https://www.uber.com/newsroom/standing-up-for-whats-right-3) — (self-published/company-controlled; Uber's own account, describing 2016-era regulatory fights)
-- [Ambition, Speed, and the Cost of Growth: Leadership of Travis Kalanick — Insighthawk](https://insighthawk.substack.com/p/ambition-speed-and-the-cost-of-growth) — (independent third-party; retrospective analyst commentary, publish date not confirmed but written well after 2017)
+- [S01] [Uber CEO Travis Kalanick resigns after internal inquiry finds widespread sexual harassment, gender discrimination — Business & Human Rights Centre](https://www.business-humanrights.org/en/latest-news/uber-ceo-travis-kalanick-resigns-after-after-internal-inquiry-finds-widespread-sexual-harassment-gender-discrimination/) — (independent third-party; NGO news aggregation, June 2017)
+- [S02] [Every Event That Led to Uber CEO Travis Kalanick's Resignation — Fortune](https://fortune.com/2017/06/21/uber-controversy-timeline-travis-kalanick/amp) — (independent third-party; contemporaneous reporting, June 2017)
+- [S03] [Uber's CEO Apologizes After Fight With Driver: 'I Must...Grow Up' — Time](https://time.com/4686857/uber-ceo-driver-argument-travis-kalanick/) — (independent third-party; contemporaneous reporting, Feb-Mar 2017)
+- [S04] [Standing up for what's right — Uber Newsroom](https://www.uber.com/newsroom/standing-up-for-whats-right-3) — (self-published/company-controlled; Uber's own account, describing 2016-era regulatory fights)
+- [S05] [Ambition, Speed, and the Cost of Growth: Leadership of Travis Kalanick — Insighthawk](https://insighthawk.substack.com/p/ambition-speed-and-the-cost-of-growth) — (independent third-party; retrospective analyst commentary, publish date not confirmed but written well after 2017)
 
 ## Core stance
 Based on public material, Kalanick's approach treats confrontation — with regulators, competitors, and internal norms — as a legitimate and even necessary tool rather than something to avoid, framed explicitly as "principled confrontation." He described this as reserving compromise for opponents he judged to be acting from principles he respected, and treating anyone he framed as protecting an entrenched incumbent as someone not worth negotiating with. That same appetite for confrontation, applied without an apparent internal check on where it stopped being useful, is what the documented failure below traces back to.
@@ -1650,6 +1679,14 @@ Based on public material, Kalanick's approach treats confrontation — with regu
 - **Principle**: Respond to direct personal confrontation combatively in the moment, then reassess afterward under public pressure.
   - **Where it shows up**: Dashcam footage captured him in a heated exchange with an Uber driver over falling fares, telling the driver that some people don't take responsibility for their own problems. Days later, after the video became public, he stated he needed "leadership help" and that he needed to "grow up."
   - **Where it likely breaks down**: The reassessment was reactive — it followed public exposure of the video rather than preceding it. The record doesn't show him applying that same self-check in the moment of the original confrontation; the pattern across incidents in the timeline is public-pressure-triggered reflection, not real-time restraint.
+
+## Evidence Map
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Treat regulatory resistance as validation | S02, S04, S05 | independent reporting + company account | medium |
+| Use maximalist internal values | S01, S02, S05 | independent reporting | high |
+| Reassess personal conduct after public pressure | S02, S03 | contemporaneous independent reporting | high |
 
 ## Default reasoning order
 1. Is this obstacle regulatory/competitive resistance? If so, treat it as validating the direction rather than a signal to reconsider.
