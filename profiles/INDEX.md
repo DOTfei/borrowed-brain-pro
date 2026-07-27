@@ -4,6 +4,8 @@
 
 *Quality key — **Depth**: ★★★ deep (10+ sources, strong independent coverage) · ★★ solid (6–9 sources) · ★ thin (≤5 sources or mostly self-published). **Freshness**: 🟢 current (< 1 year) · 🟡 review recommended (1–2 years) · 🔴 may be stale (2+ years or fast-moving subject).*
 
+Machine-readable inventory: [`manifest.json`](manifest.json). `evidence_map_status: legacy-inline` means the profile has sources and inline evidence, but its principle-to-source mapping has not yet been normalized into an Evidence Map.
+
 | Person | Domain | Depth | Freshness | Best for |
 |--------|--------|-------|-----------|----------|
 | [Warren Buffett](warren-buffett.md) | Investing | ★★★ | 🟢 | Should I bet on this opportunity? Long-term hold vs. sell. Valuation discipline. Saying no to a deal. |

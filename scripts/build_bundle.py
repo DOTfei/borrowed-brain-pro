@@ -27,6 +27,7 @@ def main():
     root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     skill_path = os.path.join(root_dir, "SKILL.md")
     index_path = os.path.join(root_dir, "profiles", "INDEX.md")
+    manifest_path = os.path.join(root_dir, "profiles", "manifest.json")
     profiles_dir = os.path.join(root_dir, "profiles")
     audits_dir = os.path.join(root_dir, "audits")
     packs_dir = os.path.join(root_dir, "packs")
@@ -53,6 +54,12 @@ def main():
         with open(index_path, "r", encoding="utf-8") as f:
             index_content = f.read()
         parts.append("# PROFILES INDEX\n\n" + index_content)
+        parts.append("\n\n" + "=" * 80 + "\n\n")
+
+    if os.path.exists(manifest_path):
+        with open(manifest_path, "r", encoding="utf-8") as f:
+            manifest_content = f.read()
+        parts.append("# PROFILE MANIFEST\n\n```json\n" + manifest_content + "```\n")
         parts.append("\n\n" + "=" * 80 + "\n\n")
 
     # 3. All Profiles

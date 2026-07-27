@@ -21,7 +21,7 @@ Whenever the user asks to *"create a profile"*, *"distill someone"*, or *"build 
 2. **Focus Domain** *(Optional)*: (e.g., "product decisions", "crisis management", or "general")
 3. **Anchor Materials** *(Optional)*: (e.g., a specific book, podcast link, or leave empty for auto web-research)
 
-If unsure which mode, check whether `profiles/<name>.md` already exists first.
+If unsure which mode, check `profiles/manifest.json` and `profiles/INDEX.md` before reading a profile. The manifest is the machine-readable inventory for freshness, source depth, and evidence-map status; then read the selected `profiles/<name>.md`.
 
 **If the user's request doesn't clearly fit any mode** — they've just installed this and said something like "what can you do," "how does borrowed-brain-pro work," or invoked it without naming a person or a question — don't guess and don't stay silent. Give a short, concrete answer instead of reciting this whole file back at them:
 
@@ -42,7 +42,7 @@ Keep this to a few lines — the point is to get them to a working first command
 
 If `profiles/INDEX.md` doesn't exist or nothing in it is a genuine match, say nothing.
 
-**When the user asks "which profile should I use?" or "what profiles do I have?"** — read `profiles/INDEX.md` and present the table clearly. Recommend the 1–2 best fits for their situation and explain in one sentence why.
+**When the user asks "which profile should I use?" or "what profiles do I have?"** — read `profiles/manifest.json` and `profiles/INDEX.md` and present the table clearly. Recommend the 1–2 best fits for their situation and explain in one sentence why. If a profile has `evidence_map_status: legacy-inline`, say that its sources are present but its principle-to-source mapping has not yet been normalized.
 
 ---
 
@@ -137,6 +137,13 @@ For each (aim for 3-5, only include ones with real support):
 - **Principle**: [stated plainly]
 - **Where it shows up**: [paraphrased case, 1-2 sentences, cite source]
 - **Where it likely breaks down**: [a specific, concrete scenario — not a vague hedge like "under pressure" — ideally anchored to an actual moment from Step 3 (a documented case where they bent or abandoned it, or a plausible near-neighbor of one). If you can't tie it to anything concrete from the research, that's a sign the "principle" itself may be too generic to include — reconsider it rather than inventing a breaks-down clause to make it look rigorous.]
+
+## Evidence Map
+For each principle, map the supporting source IDs from `## Sources`. Do not list a source unless it directly supports the claim.
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Principle 1 | S01, S02 | primary + independent | high / medium / low |
 
 ## Default reasoning order
 When facing a new problem, what does the evidence suggest they check first, second, third? (Not invented — inferred from the documented decisions in Step 3.)
@@ -249,6 +256,8 @@ Profiles get stale or thin. If the user asks to refresh one, or if you're in App
 
 *Quality key — **Depth**: ★★★ deep (10+ sources, strong independent coverage) · ★★ solid (6–9 sources) · ★ thin (≤5 sources or mostly self-published). **Freshness**: 🟢 current (< 1 year) · 🟡 review recommended (1–2 years) · 🔴 may be stale (2+ years or fast-moving subject).*
 
+Machine-readable inventory: [`manifest.json`](manifest.json). `evidence_map_status: legacy-inline` means the profile has sources and inline evidence, but its principle-to-source mapping has not yet been normalized into an Evidence Map.
+
 | Person | Domain | Depth | Freshness | Best for |
 |--------|--------|-------|-----------|----------|
 | [Warren Buffett](warren-buffett.md) | Investing | ★★★ | 🟢 | Should I bet on this opportunity? Long-term hold vs. sell. Valuation discipline. Saying no to a deal. |
@@ -280,6 +289,217 @@ After running Distill mode on a new person, add one row to the table above:
 - **Depth**: ★★★ if 10+ sources with strong independent coverage · ★★ if 6–9 sources · ★ if ≤5 or mostly self-published
 - **Freshness**: 🟢 if generated within the past year · 🟡 if 1–2 years old · 🔴 if 2+ years or the subject's situation changes fast
 - **Best for**: 2–4 specific question types (be concrete, not generic). If the profile is thin, say so here too.
+
+
+================================================================================
+
+# PROFILE MANIFEST
+
+```json
+{
+  "version": 1,
+  "profiles": [
+    {
+      "slug": "cal-newport",
+      "name": "Cal Newport",
+      "path": "profiles/cal-newport.md",
+      "generated": "2026-07-07",
+      "source_count": 8,
+      "principle_count": 5,
+      "failure_boundary_count": 5,
+      "depth": "solid",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "charlie-munger",
+      "name": "Charlie Munger",
+      "path": "profiles/charlie-munger.md",
+      "generated": "2026-07-25",
+      "source_count": 5,
+      "principle_count": 5,
+      "failure_boundary_count": 5,
+      "depth": "thin",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "chris-voss",
+      "name": "Chris Voss",
+      "path": "profiles/chris-voss.md",
+      "generated": "2026-07-07",
+      "source_count": 10,
+      "principle_count": 4,
+      "failure_boundary_count": 4,
+      "depth": "deep",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "elon-musk",
+      "name": "Elon Musk",
+      "path": "profiles/elon-musk.md",
+      "generated": "2026-07-25",
+      "source_count": 6,
+      "principle_count": 2,
+      "failure_boundary_count": 2,
+      "depth": "solid",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "friedrich-nietzsche",
+      "name": "Friedrich Nietzsche (尼采)",
+      "path": "profiles/friedrich-nietzsche.md",
+      "generated": "2026-07-25",
+      "source_count": 4,
+      "principle_count": 2,
+      "failure_boundary_count": 2,
+      "depth": "thin",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "jensen-huang",
+      "name": "Jensen Huang (黄仁勋)",
+      "path": "profiles/jensen-huang.md",
+      "generated": "2026-07-25",
+      "source_count": 6,
+      "principle_count": 2,
+      "failure_boundary_count": 2,
+      "depth": "solid",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "julia-evans",
+      "name": "Julia Evans",
+      "path": "profiles/julia-evans.md",
+      "generated": "2026-07-07",
+      "source_count": 5,
+      "principle_count": 3,
+      "failure_boundary_count": 3,
+      "depth": "thin",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "laozi",
+      "name": "Laozi (老子)",
+      "path": "profiles/laozi.md",
+      "generated": "2026-07-25",
+      "source_count": 4,
+      "principle_count": 2,
+      "failure_boundary_count": 2,
+      "depth": "thin",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "linus-torvalds",
+      "name": "Linus Torvalds",
+      "path": "profiles/linus-torvalds.md",
+      "generated": "2026-07-25",
+      "source_count": 6,
+      "principle_count": 2,
+      "failure_boundary_count": 2,
+      "depth": "solid",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "marcus-aurelius",
+      "name": "Marcus Aurelius (马可·奥勒留)",
+      "path": "profiles/marcus-aurelius.md",
+      "generated": "2026-07-25",
+      "source_count": 6,
+      "principle_count": 2,
+      "failure_boundary_count": 2,
+      "depth": "solid",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "paul-graham",
+      "name": "Paul Graham",
+      "path": "profiles/paul-graham.md",
+      "generated": "2026-07-25",
+      "source_count": 6,
+      "principle_count": 5,
+      "failure_boundary_count": 5,
+      "depth": "solid",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "reed-hastings",
+      "name": "Reed Hastings",
+      "path": "profiles/reed-hastings.md",
+      "generated": "2026-07-07",
+      "source_count": 5,
+      "principle_count": 3,
+      "failure_boundary_count": 3,
+      "depth": "thin",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "richard-feynman",
+      "name": "Richard Feynman",
+      "path": "profiles/richard-feynman.md",
+      "generated": "2026-07-07",
+      "source_count": 9,
+      "principle_count": 4,
+      "failure_boundary_count": 4,
+      "depth": "solid",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "sam-altman",
+      "name": "Sam Altman",
+      "path": "profiles/sam-altman.md",
+      "generated": "2026-07-07",
+      "source_count": 10,
+      "principle_count": 5,
+      "failure_boundary_count": 5,
+      "depth": "deep",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "socrates",
+      "name": "Socrates (苏格拉底)",
+      "path": "profiles/socrates.md",
+      "generated": "2026-07-25",
+      "source_count": 5,
+      "principle_count": 2,
+      "failure_boundary_count": 2,
+      "depth": "thin",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "steve-jobs",
+      "name": "Steve Jobs",
+      "path": "profiles/steve-jobs.md",
+      "generated": "2026-07-07",
+      "source_count": 9,
+      "principle_count": 4,
+      "failure_boundary_count": 4,
+      "depth": "solid",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "travis-kalanick",
+      "name": "Travis Kalanick",
+      "path": "profiles/travis-kalanick.md",
+      "generated": "2026-07-07",
+      "source_count": 5,
+      "principle_count": 3,
+      "failure_boundary_count": 3,
+      "depth": "thin",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "warren-buffett",
+      "name": "Warren Buffett",
+      "path": "profiles/warren-buffett.md",
+      "generated": "2026-07-07",
+      "source_count": 11,
+      "principle_count": 4,
+      "failure_boundary_count": 4,
+      "depth": "deep",
+      "evidence_map_status": "legacy-inline"
+    }
+  ]
+}
+```
 
 
 ================================================================================

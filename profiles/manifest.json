@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "profiles": [
+    {
+      "slug": "cal-newport",
+      "name": "Cal Newport",
+      "path": "profiles/cal-newport.md",
+      "generated": "2026-07-07",
+      "source_count": 8,
+      "principle_count": 5,
+      "failure_boundary_count": 5,
+      "depth": "solid",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "charlie-munger",
+      "name": "Charlie Munger",
+      "path": "profiles/charlie-munger.md",
+      "generated": "2026-07-25",
+      "source_count": 5,
+      "principle_count": 5,
+      "failure_boundary_count": 5,
+      "depth": "thin",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "chris-voss",
+      "name": "Chris Voss",
+      "path": "profiles/chris-voss.md",
+      "generated": "2026-07-07",
+      "source_count": 10,
+      "principle_count": 4,
+      "failure_boundary_count": 4,
+      "depth": "deep",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "elon-musk",
+      "name": "Elon Musk",
+      "path": "profiles/elon-musk.md",
+      "generated": "2026-07-25",
+      "source_count": 6,
+      "principle_count": 2,
+      "failure_boundary_count": 2,
+      "depth": "solid",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "friedrich-nietzsche",
+      "name": "Friedrich Nietzsche (尼采)",
+      "path": "profiles/friedrich-nietzsche.md",
+      "generated": "2026-07-25",
+      "source_count": 4,
+      "principle_count": 2,
+      "failure_boundary_count": 2,
+      "depth": "thin",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "jensen-huang",
+      "name": "Jensen Huang (黄仁勋)",
+      "path": "profiles/jensen-huang.md",
+      "generated": "2026-07-25",
+      "source_count": 6,
+      "principle_count": 2,
+      "failure_boundary_count": 2,
+      "depth": "solid",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "julia-evans",
+      "name": "Julia Evans",
+      "path": "profiles/julia-evans.md",
+      "generated": "2026-07-07",
+      "source_count": 5,
+      "principle_count": 3,
+      "failure_boundary_count": 3,
+      "depth": "thin",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "laozi",
+      "name": "Laozi (老子)",
+      "path": "profiles/laozi.md",
+      "generated": "2026-07-25",
+      "source_count": 4,
+      "principle_count": 2,
+      "failure_boundary_count": 2,
+      "depth": "thin",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "linus-torvalds",
+      "name": "Linus Torvalds",
+      "path": "profiles/linus-torvalds.md",
+      "generated": "2026-07-25",
+      "source_count": 6,
+      "principle_count": 2,
+      "failure_boundary_count": 2,
+      "depth": "solid",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "marcus-aurelius",
+      "name": "Marcus Aurelius (马可·奥勒留)",
+      "path": "profiles/marcus-aurelius.md",
+      "generated": "2026-07-25",
+      "source_count": 6,
+      "principle_count": 2,
+      "failure_boundary_count": 2,
+      "depth": "solid",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "paul-graham",
+      "name": "Paul Graham",
+      "path": "profiles/paul-graham.md",
+      "generated": "2026-07-25",
+      "source_count": 6,
+      "principle_count": 5,
+      "failure_boundary_count": 5,
+      "depth": "solid",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "reed-hastings",
+      "name": "Reed Hastings",
+      "path": "profiles/reed-hastings.md",
+      "generated": "2026-07-07",
+      "source_count": 5,
+      "principle_count": 3,
+      "failure_boundary_count": 3,
+      "depth": "thin",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "richard-feynman",
+      "name": "Richard Feynman",
+      "path": "profiles/richard-feynman.md",
+      "generated": "2026-07-07",
+      "source_count": 9,
+      "principle_count": 4,
+      "failure_boundary_count": 4,
+      "depth": "solid",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "sam-altman",
+      "name": "Sam Altman",
+      "path": "profiles/sam-altman.md",
+      "generated": "2026-07-07",
+      "source_count": 10,
+      "principle_count": 5,
+      "failure_boundary_count": 5,
+      "depth": "deep",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "socrates",
+      "name": "Socrates (苏格拉底)",
+      "path": "profiles/socrates.md",
+      "generated": "2026-07-25",
+      "source_count": 5,
+      "principle_count": 2,
+      "failure_boundary_count": 2,
+      "depth": "thin",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "steve-jobs",
+      "name": "Steve Jobs",
+      "path": "profiles/steve-jobs.md",
+      "generated": "2026-07-07",
+      "source_count": 9,
+      "principle_count": 4,
+      "failure_boundary_count": 4,
+      "depth": "solid",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "travis-kalanick",
+      "name": "Travis Kalanick",
+      "path": "profiles/travis-kalanick.md",
+      "generated": "2026-07-07",
+      "source_count": 5,
+      "principle_count": 3,
+      "failure_boundary_count": 3,
+      "depth": "thin",
+      "evidence_map_status": "legacy-inline"
+    },
+    {
+      "slug": "warren-buffett",
+      "name": "Warren Buffett",
+      "path": "profiles/warren-buffett.md",
+      "generated": "2026-07-07",
+      "source_count": 11,
+      "principle_count": 4,
+      "failure_boundary_count": 4,
+      "depth": "deep",
+      "evidence_map_status": "legacy-inline"
+    }
+  ]
+}

@@ -21,7 +21,7 @@ Whenever the user asks to *"create a profile"*, *"distill someone"*, or *"build 
 2. **Focus Domain** *(Optional)*: (e.g., "product decisions", "crisis management", or "general")
 3. **Anchor Materials** *(Optional)*: (e.g., a specific book, podcast link, or leave empty for auto web-research)
 
-If unsure which mode, check whether `profiles/<name>.md` already exists first.
+If unsure which mode, check `profiles/manifest.json` and `profiles/INDEX.md` before reading a profile. The manifest is the machine-readable inventory for freshness, source depth, and evidence-map status; then read the selected `profiles/<name>.md`.
 
 **If the user's request doesn't clearly fit any mode** — they've just installed this and said something like "what can you do," "how does borrowed-brain-pro work," or invoked it without naming a person or a question — don't guess and don't stay silent. Give a short, concrete answer instead of reciting this whole file back at them:
 
@@ -42,7 +42,7 @@ Keep this to a few lines — the point is to get them to a working first command
 
 If `profiles/INDEX.md` doesn't exist or nothing in it is a genuine match, say nothing.
 
-**When the user asks "which profile should I use?" or "what profiles do I have?"** — read `profiles/INDEX.md` and present the table clearly. Recommend the 1–2 best fits for their situation and explain in one sentence why.
+**When the user asks "which profile should I use?" or "what profiles do I have?"** — read `profiles/manifest.json` and `profiles/INDEX.md` and present the table clearly. Recommend the 1–2 best fits for their situation and explain in one sentence why. If a profile has `evidence_map_status: legacy-inline`, say that its sources are present but its principle-to-source mapping has not yet been normalized.
 
 ---
 
@@ -137,6 +137,13 @@ For each (aim for 3-5, only include ones with real support):
 - **Principle**: [stated plainly]
 - **Where it shows up**: [paraphrased case, 1-2 sentences, cite source]
 - **Where it likely breaks down**: [a specific, concrete scenario — not a vague hedge like "under pressure" — ideally anchored to an actual moment from Step 3 (a documented case where they bent or abandoned it, or a plausible near-neighbor of one). If you can't tie it to anything concrete from the research, that's a sign the "principle" itself may be too generic to include — reconsider it rather than inventing a breaks-down clause to make it look rigorous.]
+
+## Evidence Map
+For each principle, map the supporting source IDs from `## Sources`. Do not list a source unless it directly supports the claim.
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|---|---|---|---|
+| Principle 1 | S01, S02 | primary + independent | high / medium / low |
 
 ## Default reasoning order
 When facing a new problem, what does the evidence suggest they check first, second, third? (Not invented — inferred from the documented decisions in Step 3.)

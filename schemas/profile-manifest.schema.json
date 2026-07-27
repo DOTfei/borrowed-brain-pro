@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Borrowed Brain Pro profile manifest",
+  "type": "object",
+  "required": ["version", "profiles"],
+  "properties": {
+    "version": { "type": "integer", "const": 1 },
+    "profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["slug", "name", "path", "generated", "source_count", "principle_count", "failure_boundary_count", "evidence_map_status"],
+        "properties": {
+          "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "name": { "type": "string", "minLength": 1 },
+          "path": { "type": "string", "pattern": "^profiles/[a-z0-9-]+\\.md$" },
+          "generated": { "type": "string", "format": "date" },
+          "source_count": { "type": "integer", "minimum": 1 },
+          "principle_count": { "type": "integer", "minimum": 1 },
+          "failure_boundary_count": { "type": "integer", "minimum": 1 },
+          "depth": { "type": "string", "enum": ["thin", "solid", "deep"] },
+          "evidence_map_status": { "type": "string", "enum": ["legacy-inline", "mapped", "review-needed"] }
+        }
+      }
+    }
+  }
+}

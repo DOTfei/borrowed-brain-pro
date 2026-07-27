@@ -22,3 +22,7 @@ jobs:
       - name: Run Automated Profile Rating & Quality Validator
         run: |
           python scripts/validate_profiles.py
+      - name: Rebuild profile manifest
+        run: |
+          python scripts/build_profile_manifest.py
+          git diff --exit-code profiles/manifest.json

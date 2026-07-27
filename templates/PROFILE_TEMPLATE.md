@@ -3,7 +3,8 @@
 *Profile generated <YYYY-MM-DD>. Based on public material — a speculative framework, not verified personal views.*
 
 ## Sources
-- [Source Name / Title] (self-published / company-controlled OR independent third-party) — https://link-to-source.com
+- [S01] [Source Name / Title] (self-published / company-controlled OR independent third-party) — https://link-to-source.com
+- [S02] [Source Name / Title] (self-published / company-controlled OR independent third-party) — https://link-to-source.com
 
 ## Core stance
 [2-3 sentences: how this person tends to approach problems in their domain, grounded in documented atomic facts]
@@ -21,6 +22,16 @@
 - **Principle 3: [Short Principle Name]**
   - **Where it shows up**: [1-2 sentences paraphrasing a specific, documented decision or event]
   - **Where it likely breaks down**: [Specific, concrete scenario where this principle fails or was abandoned]
+
+## Evidence Map
+
+Map each principle to the source IDs that support it. Do not list a source unless it directly supports the claim.
+
+| Principle | Supporting source IDs | Evidence type | Confidence |
+|-----------|-----------------------|---------------|------------|
+| Principle 1 | S01, S02 | primary + independent | high / medium / low |
+| Principle 2 | S01 | primary | high / medium / low |
+| Principle 3 | S02 | independent | high / medium / low |
 
 ## Default reasoning order
 Default reasoning order inferred from available record: ① [First thing they check]; ② [Second thing they check]; ③ [Third thing they check].
