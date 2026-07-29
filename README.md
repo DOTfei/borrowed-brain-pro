@@ -264,3 +264,121 @@ python scripts/build_bundle.py
 <p center>
   <i>License: <a href="LICENSE">MIT</a> · Author & Maintainer: <a href="https://github.com/DOTfei">DOTfei</a></i>
 </p>
+# Borrowed Brain Pro — Decision Intelligence System
+
+> **Borrow the thinking, not the personality.**
+
+[![Skill License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Codex Skill](https://img.shields.io/badge/codex--skill-v1.0.0-green.svg)](SKILL.md)
+[![Language](https://img.shields.io/badge/language-English%20%7C%20%E4%B8%AD%E6%96%87-orange.svg)](README_CN.md)
+
+[中文说明](README_CN.md) | [Skill Spec](SKILL.md) | [Builder Pack](packs/builder-decision-pack.md)
+
+---
+
+## What Is Borrowed Brain Pro?
+
+Borrowed Brain Pro is a **Decision Intelligence System** that applies evidence-backed thinking lenses, historical failure boundaries, and multi-lens consensus panels to real-world user decisions.
+
+| Borrowed Brain Pro IS NOT ❌ | Borrowed Brain Pro IS ✅ |
+| :--- | :--- |
+| Celebrity roleplay or voice imitation | Evidence-backed thinking frameworks |
+| Generic quote generator | Multi-lens decision consensus panels |
+| AI character chatbots | Failure boundary & blindspot auditing |
+| Fictional prompt roleplay | Structured 48-hour actionable experiments |
+
+---
+
+## 🚀 1-Minute Quickstart
+
+Install directly into your preferred AI agent environment:
+
+```bash
+# Codex / Claude Code / Cursor / OpenClaw
+npx skills add DOTfei/borrowed-brain-pro
+```
+
+Or copy [SKILL.md](SKILL.md) into your local project `.codex/skills/` directory.
+
+---
+
+## 💡 How It Works: The Decision Hierarchy
+
+```text
+User Decision Dilemma
+        │
+        ▼
+Decision Analysis & Framing
+        │
+        ▼
+Thinking Lenses Selection
+        │
+        ▼
+Evidence & Documented Cases
+        │
+        ▼
+Failure Boundaries & Blindspots
+        │
+        ▼
+Actionable 48-Hour Experiment
+```
+
+---
+
+## 🛠️ Vertical Entry: Builder Decision Board
+
+Optimized for indie hackers, software developers, and product creators.
+
+```bash
+# Example Prompts
+"Should I build feature X or simplify core UX?"
+"Should I pivot or persevere on my SaaS product?"
+"Run a Boardroom audit on whether I should charge users today."
+```
+
+### Included Decision Lenses
+
+- 🍏 **[Steve Jobs Product Simplification Lens](lenses/steve-jobs-product-simplification.md):** Focus, ruthless elimination, saying no to 1,000 things.
+- 📐 **[Charlie Munger Inversion Lens](lenses/charlie-munger-inversion-and-mental-models.md):** Invert problem, cognitive risk auditing, sunk-cost check.
+- 🚀 **[Paul Graham MVP & User Validation Lens](lenses/paul-graham-mvp-and-user-validation.md):** Launch velocity, direct user feedback, doing things that don't scale.
+- 📈 **[Warren Buffett Capital Allocation Lens](lenses/warren-buffett-capital-allocation.md):** Economic moat protection, opportunity cost of engineering capacity.
+- ⚡ **[Reed Hastings Fast Feedback Lens](lenses/reed-hastings-culture-and-fast-feedback.md):** Self-cannibalization, context over control, operational velocity.
+- 🌌 **[Sam Altman Scale & Momentum Lens](lenses/sam-altman-scale-and-momentum.md):** Exponential curves, high leverage, compounding growth.
+
+---
+
+## 🔍 Meta Case Study: Deciding Borrowed Brain's Strategy
+
+We used Borrowed Brain Pro on itself to decide its own positioning:
+
+> **Dilemma:** Should Borrowed Brain Pro expand to 50+ celebrity profiles or focus on builder decision intelligence?
+
+- **Jobs Lens:** Having 50 profiles confuses core UX. Eliminate positioning noise. Focus on builder decisions.
+- **Graham Lens:** Builders are on GitHub right now facing real dilemmas. Do things that don't scale; ship a 1-command installer today.
+- **Munger Inversion Lens:** Competing on celebrity voice imitation guarantees failure against viral single-person repos. Build a moat on evidence-backed decision records.
+
+👉 *See full output:* **[Meta Case Study Report](examples/borrowed-brain-positioning-case.md)**
+
+---
+
+## ⚠️ Failure Audits & Boundary Auditing
+
+Every recommendation includes boundary conditions from real historical missteps:
+
+- 📉 **[Munger's Alibaba Misstep (2021)](failure-audits/munger-alibaba-investment-failure.md):** Over-estimating platform moats amidst distribution shifts.
+- 💻 **[Jobs' NeXT Over-Engineering (1988)](failure-audits/jobs-next-computer-overengineering.md):** Perfectionism disconnected from customer willingness-to-pay.
+- 🛑 **[Hastings' Qwikster Brand Split (2011)](failure-audits/hastings-qwikster-split-failure.md):** Imposing sudden operational friction on active users.
+
+---
+
+## 📋 Decision Records
+
+Borrowed Brain Pro exports standardized markdown **Decision Records** (`DECISION_YYYY-MM-DD.md`) directly into your repository, creating an audit log of your choices and 30-day outcome reviews.
+
+👉 *See template:* **[Decision Log Template](templates/decision-log-template.md)**
+
+---
+
+## 📜 License
+
+MIT License. See [LICENSE](LICENSE) for details.

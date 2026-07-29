@@ -1,0 +1,19 @@
+{
+  "name": "borrowed-brain-pro",
+  "version": "1.0.0",
+  "description": "Decision intelligence system applying evidence-backed thinking lenses to real-world decisions.",
+  "main": "SKILL.md",
+  "keywords": [
+    "codex-skill",
+    "decision-intelligence",
+    "thinking-lenses",
+    "builder-decision-board",
+    "mental-models"
+  ],
+  "author": "DOTfei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DOTfei/borrowed-brain-pro/issues"
+  },
+  "homepage": "https://github.com/DOTfei/borrowed-brain-pro#readme"
+}
