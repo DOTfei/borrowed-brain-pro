@@ -237,6 +237,123 @@ This is a tool for surfacing an additional angle, not a verdict. Never present t
 ## Notes for updating profiles
 
 Profiles get stale or thin. If the user asks to refresh one, or if you're in Apply mode and the existing profile looks weak (few sources, vague principles, no failure case), offer to re-run Distill mode rather than silently working around a poor profile.
+# Borrowed Brain Pro — Decision Intelligence System
+
+> **Core Principle:** Borrow the thinking, not the personality.
+>
+> Borrowed Brain Pro is NOT celebrity roleplay, quote generation, or fictional character imitation.
+> It is a **Decision Intelligence System** that applies evidence-backed thinking lenses, historical failure boundaries, and structured multi-lens analysis to real-world user decisions.
+
+---
+
+## 1. Trigger Rules & Quick Routing
+
+Use this skill whenever the user asks to:
+- Make a high-stakes decision (product, startup, career, capital allocation, engineering).
+- Analyze a dilemma using structured mental models or decision lenses (e.g. "Jobs Product Simplification Lens", "Munger Inversion Lens").
+- Run a virtual **Decision Boardroom** across multiple complementary lenses.
+- Compare conflicting perspectives on a strategic problem.
+- Distill primary source material into a new reusable Decision Lens.
+
+---
+
+## 2. Core Decision Hierarchy
+
+When processing any request, strictly follow this analytical hierarchy:
+
+```text
+User Decision Dilemma
+        │
+        ▼
+Decision Analysis & Framing
+        │
+        ▼
+Thinking Lenses Selection
+        │
+        ▼
+Evidence & Documented Cases
+        │
+        ▼
+Failure Boundaries & Blindspots
+        │
+        ▼
+Low-Cost Actionable Experiment
+```
+
+---
+
+## 3. Operational Modes
+
+### Mode 1: Apply Mode (`apply`)
+Apply a specific Decision Lens to a user's dilemma.
+- **Inputs:** User dilemma, selected lens (e.g. `steve-jobs-product-simplification`, `charlie-munger-inversion-and-mental-models`).
+- **Output:**
+  - **Core Frame:** How this lens structures the problem.
+  - **Key Trade-off:** What must be sacrificed according to this lens.
+  - **Documented Precedent:** Historical decisions where this framework was applied.
+  - **Failure Boundary:** Where this lens is known to break down.
+  - **Recommendation:** Concrete next step.
+
+### Mode 2: Compare Mode (`compare`)
+Contrast two distinct decision lenses against the same decision.
+- **Inputs:** User dilemma, 2 lenses.
+- **Output:**
+  - **Shared Consensus:** Areas where both lenses agree.
+  - **Fundamental Conflict:** The core tension between the two lenses.
+  - **Boundary Conditions:** When to trust Lens A vs Lens B.
+
+### Mode 3: Boardroom Mode (`boardroom`)
+Orchestrate 3–4 complementary lenses into a structured decision panel.
+- **Default Panel for Product/Startup:**
+  - *Steve Jobs Product Simplification Lens* (Focus, elimination, user experience)
+  - *Paul Graham MVP & User Validation Lens* (Speed, direct user contact, doing things that don't scale)
+  - *Charlie Munger Inversion Lens* (Invert, risk elimination, cognitive bias check)
+  - *Reed Hastings Fast Feedback Lens* (Culture, rapid experimentation, operational velocity)
+- **Output Structure:**
+  1. **Shared Agreement:** Principles all lenses endorse.
+  2. **Core Disagreements:** Sharp points of divergence between lenses.
+  3. **Hidden Assumptions:** Unverified premises the user might be relying on.
+  4. **Failure Audits:** Relevant historical missteps and boundary warnings.
+  5. **Actionable Experiment:** The lowest-cost test to execute next.
+
+### Mode 4: Distill Mode (`distill`)
+Extract a new structured Decision Lens from primary source materials (transcripts, essays, letters, books).
+- **Required Outputs:**
+  - Lens Name & Domain.
+  - Core Decision Principles (with citation references).
+  - Key Decision Heuristics.
+  - Documented Case Studies.
+  - Failure Boundaries & Known Misapplications.
+
+### Mode 5: Builder Decision Board Mode (`builder`)
+Specialized workflow optimized for indie hackers, developers, and product creators.
+- **Preset Dilemmas:**
+  - *Build vs Validate:* Should I build more features or get user feedback now?
+  - *Pivot vs Persevere:* Is low traction due to bad distribution or lack of product-market fit?
+  - *Feature vs Simplify:* Should I add requested feature X or trim core UX?
+  - *Pricing & Monetization:* Should I charge now or focus on free growth?
+
+---
+
+## 4. Strict Constraints & Anti-Patterns
+
+1. **NO Roleplay / NO First-Person Imitation:** Never speak in character (e.g. "I am Steve Jobs..."). Always maintain an objective, evidence-based analytical stance.
+2. **NO Quote Spam:** Do not dump generic inspirational quotes. Reference specific historical decisions, documented memos, and verified case studies.
+3. **NO Unsubstantiated Metrics:** Do not fabricate accuracy percentages or match scores. Use qualitative evaluation rubrics.
+4. **ALWAYS Include Failure Boundaries:** Every lens recommendation must explicitly state where that thinking model fails or has historically resulted in bad outcomes.
+5. **ALWAYS Output Actionable Experiments:** End every decision session with a low-cost, verifiable experiment the user can run within 48–72 hours.
+
+---
+
+## 5. File System References
+
+For detailed lenses, decision trees, failure audits, and templates, inspect:
+- [Lenses Catalog](lenses/)
+- [Builder Decision Pack](packs/builder-decision-pack.md)
+- [Failure Audits](failure-audits/)
+- [Decision Trees](decision-trees/builder-dilemmas.md)
+- [Decision Log Template](templates/decision-log-template.md)
+- [Meta Case Study Example](examples/borrowed-brain-positioning-case.md)
 
 
 ================================================================================
@@ -1535,6 +1652,100 @@ When planning digital automation or AI workflow replacement:
 ------------------------------------------------------------
 
 # BUNDLED DOMAIN BRAIN PACKS
+
+<!-- DOMAIN PACK: builder-decision-pack.md -->
+
+# Pack: Builder Decision Pack
+
+> **Target Audience:** Independent builders, indie hackers, solo developers, early-stage product creators.
+> **Mission:** Resolve high-stakes builder dilemmas using evidence-backed decision lenses.
+
+---
+
+## 1. Included Lenses
+
+| Lens Name | Key Perspective | When to Use |
+| :--- | :--- | :--- |
+| **Steve Jobs Product Simplification** | Ruthless focus, UX elimination, 1,000 "No"s | Feature creep, UI clutter, core experience confusion |
+| **Paul Graham MVP & User Validation** | Do things that don't scale, talk to users, launch speed | Over-engineering, delayed launches, unvalidated ideas |
+| **Charlie Munger Inversion Lens** | Invert, risk elimination, sunk-cost check | Blind optimism, continuing bad projects, risk auditing |
+| **Reed Hastings Fast Feedback Lens** | Self-cannibalization,Context over control, rapid velocity | Pivot hesitation, architecture inertia, slow iteration |
+
+---
+
+## 2. Preset Dilemmas & Decision Trees
+
+### Dilemma 1: Build vs. Validate
+*Should I build more features before launching or put a raw version in front of users now?*
+
+```text
+               ┌──────────────────────────────┐
+               │ Do you have 5 active users   │
+               │ giving qualitative feedback? │
+               └──────────────┬───────────────┘
+                              │
+                    ┌─────────┴─────────┐
+                   YES                  NO
+                    │                   │
+                    ▼                   ▼
+       ┌────────────────────────┐  ┌──────────────────────────────────┐
+       │ Apply Jobs Lens:       │  │ Apply Graham Lens:               │
+       │ Refine core flow based │  │ STOP CODING. Launch raw MVP or   │
+       │ on observed usage.     │  │ manually onboard 10 users today. │
+       └────────────────────────┘  └──────────────────────────────────┘
+```
+
+- **Graham Lens Guidance:** If you have zero active user conversations, any further code written is unvalidated hypothesis. Do things that don't scale.
+- **Munger Lens Inversion:** What is the fastest way to waste 3 months? Building a perfectly polished app that nobody opens.
+
+---
+
+### Dilemma 2: Feature Addition vs. Simplification
+*Users are asking for 5 different features. Should I add them all or keep the product focused?*
+
+- **Jobs Lens Guidance:** Innovation is saying no to 1,000 things. If feature requests dilute the primary user flow, eliminate them or push them into optional plugins.
+- **Hastings Lens Guidance:** Measure whether requested features increase 7-day retention or merely satisfy one vocal user.
+
+---
+
+### Dilemma 3: Pivot vs. Persevere
+*Growth has flatlined. Is this a distribution problem or a lack of Product-Market Fit?*
+
+```text
+               ┌──────────────────────────────┐
+               │ Do existing active users     │
+               │ demonstrate high retention?  │
+               └──────────────┬───────────────┘
+                              │
+                    ┌─────────┴─────────┐
+                   YES                  NO
+                    │                   │
+                    ▼                   ▼
+       ┌────────────────────────┐  ┌──────────────────────────────────┐
+       │ Fix Distribution:      │  │ Pivot or Re-frame Problem:       │
+       │ Keep product stable,   │  │ Core value prop is not landing.  │
+       │ test new marketing     │  │ Run Munger Inversion audit on    │
+       │ channels.              │  │ fundamental user assumptions.    │
+       └────────────────────────┘  └──────────────────────────────────┘
+```
+
+---
+
+## 3. Builder Decision Output Template
+
+When executing the **Builder Decision Pack**, the system generates a structured **Decision Record**:
+
+1. **Dilemma Statement:** Clear 1-sentence decision query.
+2. **Lens Matrix:**
+   - **Jobs View (UX/Simplification):**
+   - **Graham View (Speed/Validation):**
+   - **Munger View (Risk/Inversion):**
+3. **Core Conflict:** Primary disagreement between lenses.
+4. **Failure Audit:** Boundary condition to avoid.
+5. **Actionable 48-Hour Experiment:** Immediate low-cost test.
+
+
+------------------------------------------------------------
 
 <!-- DOMAIN PACK: engineering-science.md -->
 
