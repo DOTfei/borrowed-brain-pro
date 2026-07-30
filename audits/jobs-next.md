@@ -1,20 +1,57 @@
-# Failure Audit: Steve Jobs — The NeXT Computer Hardware Flop (1985–1993)
+# Failure Audit: Steve Jobs — NeXT Computer Over-Engineering (1988–1993)
 
-*Audited case file on Steve Jobs' $12,000 NeXT Workstation hardware failure after getting ousted from Apple.*
+> **Case Summary:** After leaving Apple in 1985, Steve Jobs founded NeXT Computer to build the ultimate workstation for higher education. Despite revolutionary software (NeXTSTEP), extreme hardware perfectionism resulted in a $6,500 workstation that the targeted higher-ed market could not afford.
 
-## 1. The Incident
-After being ousted from Apple in 1985, Steve Jobs founded NeXT Computer. He spent $7M+ of his own money and millions from investors (including Ross Perot and Canon) to build the ultimate workstation. The NeXT Cube featured a magnesium chassis, custom optical disk drive, and a $12,000 price tag. NeXT sold only ~50,000 hardware units over 8 years, lost tens of millions of dollars, and was forced to exit the hardware business entirely in 1993 to survive as a software-only company.
+---
 
-## 2. What Triggered the Failure
-- **Aesthetic Perfection Without Price Elasticity**: Jobs insisted on a perfect 1-foot cube made of die-cast magnesium with custom black paint, adding massive manufacturing cost for zero functional benefit to buyers.
-- **Ignoring Customer Needs in Higher Ed**: Designed for universities, but priced 3x higher than what university budgets could support ($12,000 vs. $3,000 target).
-- **Technology Choice Arrogance**: Shipped with a slow, expensive magneto-optical drive instead of a standard floppy drive, making software distribution painful.
+## 1. What Went Wrong
 
-## 3. Principles Extracted From the Disaster
-- **Rule 1: Aesthetic perfection cannot compensate for severe mispricing.** Hardware beauty doesn't create budget out of thin air.
-- **Rule 2: Don't let your ideal vision block basic market feedback.** Jobs ignored early warnings from university deans about price ceilings.
-- **Rule 3: Great software can survive hardware failure.** The NeXTSTEP OS survived and eventually became macOS/iOS when Apple acquired NeXT in 1996.
+- **Perfectionism Disconnected from Willingness-to-Pay:** Demanded custom magnesium cube casing, automated factory robotics, and built-in optical drives, driving unit costs out of reach for universities.
+- **Ignoring Price Sensitivity:** Focused exclusively on product aesthetics and technological elegance without validating customer budget limits.
 
-## 4. Decision Lens Application
-When designing an uncompromising premium product:
-> *"Ask: Am I over-indexing on luxury aesthetics that only I care about, while pricing myself completely out of my target user's willingness to pay?"*
+---
+
+## 2. Boundary Condition Extracted
+
+> **Rule:** Product elegance and technical superiority cannot overcome a fundamental misalignment with customer economic reality.
+
+---
+
+## 3. Self-Check Questions
+
+Before using the Product Simplification Lens, ask yourself:
+
+1. **Am I optimizing quality before proving demand?**
+   - If you're polishing features that no user has validated, you may be over-engineering.
+   
+2. **Is this complexity solving a real user problem?**
+   - Or is it solving your desire for "perfect" implementation?
+   
+3. **Would removing 50% of this make the product better?**
+   - If yes, you're likely adding complexity that dilutes core value.
+   
+4. **Have I validated willingness-to-pay at current pricing?**
+   - NeXT built a $6,500 machine without asking if universities could afford it.
+   
+5. **Am I building for users or for my own standards?**
+   - There's a difference between "good enough for users" and "perfect in my eyes."
+
+---
+
+## 4. Application to Product & Builder Strategy
+
+When building developer tools or software products:
+
+- Never polish secondary features before validating willingness-to-pay at current target pricing.
+- Keep infrastructure overhead minimal until volume demand justifies custom tooling.
+- Before adding complexity, ask: "Does this directly improve the core user outcome?"
+
+---
+
+## 5. Warning Signs You're Repeating This Failure
+
+- You've been building for months without user conversations
+- You're optimizing for "code quality" or "architecture elegance" without user feedback
+- You keep adding features "because they're cool" or "best practice"
+- You're reluctant to ship because "it's not ready yet"
+- Users keep asking for different features than you're building

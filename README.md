@@ -365,9 +365,9 @@ We used Borrowed Brain Pro on itself to decide its own positioning:
 
 Every recommendation includes boundary conditions from real historical missteps:
 
-- 📉 **[Munger's Alibaba Misstep (2021)](failure-audits/munger-alibaba-investment-failure.md):** Over-estimating platform moats amidst distribution shifts.
-- 💻 **[Jobs' NeXT Over-Engineering (1988)](failure-audits/jobs-next-computer-overengineering.md):** Perfectionism disconnected from customer willingness-to-pay.
-- 🛑 **[Hastings' Qwikster Brand Split (2011)](failure-audits/hastings-qwikster-split-failure.md):** Imposing sudden operational friction on active users.
+- 📉 **[Munger's Alibaba Misstep (2021)](audits/munger-alibaba.md):** Over-estimating platform moats amidst distribution shifts.
+- 💻 **[Jobs' NeXT Over-Engineering (1988)](audits/jobs-next.md):** Perfectionism disconnected from customer willingness-to-pay.
+- 🛑 **[Hastings' Qwikster Brand Split (2011)](audits/hastings-qwikster.md):** Imposing sudden operational friction on active users.
 
 ---
 

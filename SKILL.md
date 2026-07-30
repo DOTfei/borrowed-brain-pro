@@ -351,7 +351,7 @@ For detailed lenses, decision trees, failure audits, and templates, inspect:
 - [Lens Selection Guide](decision-trees/lens-selection-guide.md) — start here when unsure which lens to use
 - [Lenses Catalog](lenses/)
 - [Builder Decision Pack](packs/builder-decision-pack.md)
-- [Failure Audits](failure-audits/) — each audit now includes Self-Check Questions
+- [Failure Audits](audits/) — each audit includes Self-Check Questions
 - [Decision Trees](decision-trees/builder-dilemmas.md)
 - [Decision Log Template](templates/decision-log-template.md)
 - [Real Decision Case Studies](examples/real-decisions/) — validated examples with full lens output

@@ -351,7 +351,7 @@ For detailed lenses, decision trees, failure audits, and templates, inspect:
 - [Lens Selection Guide](decision-trees/lens-selection-guide.md) — start here when unsure which lens to use
 - [Lenses Catalog](lenses/)
 - [Builder Decision Pack](packs/builder-decision-pack.md)
-- [Failure Audits](failure-audits/) — each audit now includes Self-Check Questions
+- [Failure Audits](audits/) — each audit includes Self-Check Questions
 - [Decision Trees](decision-trees/builder-dilemmas.md)
 - [Decision Log Template](templates/decision-log-template.md)
 - [Real Decision Case Studies](examples/real-decisions/) — validated examples with full lens output
@@ -1551,78 +1551,194 @@ The circle-of-competence and margin-of-safety principles rely primarily on Buffe
 
 <!-- FAILURE AUDIT: hastings-qwikster.md -->
 
-# Failure Audit: Reed Hastings — The Qwikster Split Disaster (2011)
+# Failure Audit: Reed Hastings — Qwikster Split (2011)
 
-*Audited case file on Reed Hastings' 60% stock crash and 800,000 lost subscribers after attempting to split Netflix DVD and streaming.*
+> **Case Summary:** In September 2011, Netflix announced it would split its DVD-by-mail and streaming services into two separate businesses with separate logins and pricing. The result: 800,000 subscriber exodus, 77% stock collapse, and reversal after 23 days.
 
-## 1. The Incident
-In July 2011, Reed Hastings announced that Netflix would split its DVD-by-mail business and streaming business into two separate services. DVD was renamed "Qwikster" and required a separate website, login, and billing subscription. The result was immediate consumer uproar, 800,000 lost subscribers in one quarter, and a 77% drop in Netflix's stock price within months. Hastings was forced to reverse the move and issue a public apology.
+---
 
-## 2. What Triggered the Failure
-- **Executive Arrogance Born of Long Win Streak**: Hastings admitted that because Netflix had successfully beaten Blockbuster, he became overconfident that customers would follow whatever structural change he pushed.
-- **Speed Over Customer Friction**: He prioritized internal operational speed (preparing for streaming's future) while ignoring extreme customer friction (two credit card charges, two websites).
-- **Suppression of Internal Dissent**: Multiple Netflix VPs privately thought Qwikster was a bad idea, but the company culture at the time had not yet institutionalized "farming for dissent."
+## 1. What Went Wrong
 
-## 3. Principles Extracted From the Disaster
-- **Rule 1: Don't let operational convenience dictate customer UX.** Forcing users to manage two accounts to serve your internal org chart is self-sabotage.
-- **Rule 2: Long win streaks breed blind spots.** Past victories create an illusion that your intuition overrides user feedback.
-- **Rule 3: Farm for dissent before major pivots.** Instituted the formal "Keeper Test" and "Farming for Dissent" mechanisms as direct post-mortems of Qwikster.
+- **Ignoring Internal Dissent:** Multiple VPs privately doubted the split, but Hastings' intensity made them feel unsafe to push back.
+- **Prioritizing Logical Correctness Over User Experience:** The strategic logic (streaming is the future) was sound, but the execution ignored customer friction.
+- **Moving Too Fast Without Testing:** Launched a radical change without gradual rollout or user feedback.
 
-## 4. Decision Lens Application
-When planning a major pricing or product architecture shift:
-> *"Ask: Is this pivot making our product simpler for the user, or am I forcing friction onto customers to solve an internal strategic problem?"*
+---
+
+## 2. Boundary Condition Extracted
+
+> **Rule:** When you hold strong personal conviction, you are least likely to hear the dissent you most need to hear.
+
+---
+
+## 3. Self-Check Questions
+
+Before making a major strategic change, ask yourself:
+
+1. **Have I actively farmed for dissent?**
+   - "Does anyone disagree?" is not enough. You must create psychological safety for pushback.
+   
+2. **Am I moving faster than my team's ability to surface concerns?**
+   - Hastings' intensity suppressed internal warnings.
+   - Are people around you hesitating to speak up?
+   
+3. **Have I tested this with a small group first?**
+   - Qwikster launched to 25 million users overnight.
+   - Could you test with 100 users first?
+   
+4. **Am I optimizing for strategic logic or user experience?**
+   - Being "right" about the future doesn't mean users will follow.
+   
+5. **What's the worst-case scenario if I'm wrong?**
+   - Hastings lost 800,000 subscribers in weeks.
+   - What would failure look like for your decision?
+
+---
+
+## 4. Application to Product & Builder Strategy
+
+When making a major product or pricing change:
+
+- Always run a small-scale test before full rollout.
+- Explicitly ask 2-3 trusted colleagues: "What am I missing? What concerns do you have that you haven't shared?"
+- Design feedback mechanisms that surface problems early (Hastings reversed after 23 days, but the damage was done).
+
+---
+
+## 5. Warning Signs You're Repeating This Failure
+
+- You're convinced you're right and just need to "execute faster"
+- People around you are agreeing too quickly
+- You're making a major change without a small-scale test
+- You haven't asked "what if this goes wrong?"
+- You're prioritizing strategic elegance over user friction
 
 
 ------------------------------------------------------------
 
 <!-- FAILURE AUDIT: jobs-next.md -->
 
-# Failure Audit: Steve Jobs — The NeXT Computer Hardware Flop (1985–1993)
+# Failure Audit: Steve Jobs — NeXT Computer Over-Engineering (1988–1993)
 
-*Audited case file on Steve Jobs' $12,000 NeXT Workstation hardware failure after getting ousted from Apple.*
+> **Case Summary:** After leaving Apple in 1985, Steve Jobs founded NeXT Computer to build the ultimate workstation for higher education. Despite revolutionary software (NeXTSTEP), extreme hardware perfectionism resulted in a $6,500 workstation that the targeted higher-ed market could not afford.
 
-## 1. The Incident
-After being ousted from Apple in 1985, Steve Jobs founded NeXT Computer. He spent $7M+ of his own money and millions from investors (including Ross Perot and Canon) to build the ultimate workstation. The NeXT Cube featured a magnesium chassis, custom optical disk drive, and a $12,000 price tag. NeXT sold only ~50,000 hardware units over 8 years, lost tens of millions of dollars, and was forced to exit the hardware business entirely in 1993 to survive as a software-only company.
+---
 
-## 2. What Triggered the Failure
-- **Aesthetic Perfection Without Price Elasticity**: Jobs insisted on a perfect 1-foot cube made of die-cast magnesium with custom black paint, adding massive manufacturing cost for zero functional benefit to buyers.
-- **Ignoring Customer Needs in Higher Ed**: Designed for universities, but priced 3x higher than what university budgets could support ($12,000 vs. $3,000 target).
-- **Technology Choice Arrogance**: Shipped with a slow, expensive magneto-optical drive instead of a standard floppy drive, making software distribution painful.
+## 1. What Went Wrong
 
-## 3. Principles Extracted From the Disaster
-- **Rule 1: Aesthetic perfection cannot compensate for severe mispricing.** Hardware beauty doesn't create budget out of thin air.
-- **Rule 2: Don't let your ideal vision block basic market feedback.** Jobs ignored early warnings from university deans about price ceilings.
-- **Rule 3: Great software can survive hardware failure.** The NeXTSTEP OS survived and eventually became macOS/iOS when Apple acquired NeXT in 1996.
+- **Perfectionism Disconnected from Willingness-to-Pay:** Demanded custom magnesium cube casing, automated factory robotics, and built-in optical drives, driving unit costs out of reach for universities.
+- **Ignoring Price Sensitivity:** Focused exclusively on product aesthetics and technological elegance without validating customer budget limits.
 
-## 4. Decision Lens Application
-When designing an uncompromising premium product:
-> *"Ask: Am I over-indexing on luxury aesthetics that only I care about, while pricing myself completely out of my target user's willingness to pay?"*
+---
+
+## 2. Boundary Condition Extracted
+
+> **Rule:** Product elegance and technical superiority cannot overcome a fundamental misalignment with customer economic reality.
+
+---
+
+## 3. Self-Check Questions
+
+Before using the Product Simplification Lens, ask yourself:
+
+1. **Am I optimizing quality before proving demand?**
+   - If you're polishing features that no user has validated, you may be over-engineering.
+   
+2. **Is this complexity solving a real user problem?**
+   - Or is it solving your desire for "perfect" implementation?
+   
+3. **Would removing 50% of this make the product better?**
+   - If yes, you're likely adding complexity that dilutes core value.
+   
+4. **Have I validated willingness-to-pay at current pricing?**
+   - NeXT built a $6,500 machine without asking if universities could afford it.
+   
+5. **Am I building for users or for my own standards?**
+   - There's a difference between "good enough for users" and "perfect in my eyes."
+
+---
+
+## 4. Application to Product & Builder Strategy
+
+When building developer tools or software products:
+
+- Never polish secondary features before validating willingness-to-pay at current target pricing.
+- Keep infrastructure overhead minimal until volume demand justifies custom tooling.
+- Before adding complexity, ask: "Does this directly improve the core user outcome?"
+
+---
+
+## 5. Warning Signs You're Repeating This Failure
+
+- You've been building for months without user conversations
+- You're optimizing for "code quality" or "architecture elegance" without user feedback
+- You keep adding features "because they're cool" or "best practice"
+- You're reluctant to ship because "it's not ready yet"
+- Users keep asking for different features than you're building
 
 
 ------------------------------------------------------------
 
 <!-- FAILURE AUDIT: munger-alibaba.md -->
 
-# Failure Audit: Charlie Munger — The Alibaba Investment (2021–2023)
+# Failure Audit: Charlie Munger — Alibaba Investment Misstep (2021)
 
-*Audited case file on Charlie Munger's public admission of a major investing mistake in Alibaba (BABA).*
+> **Case Summary:** In 2021, Daily Journal (led by Charlie Munger) made a heavy investment in Alibaba stock, viewing it as a deeply discounted e-commerce giant with a dominant moat. Munger later admitted it was "one of the worst mistakes I ever made."
 
-## 1. The Incident
-Between 2021 and 2022, Daily Journal (chaired by Charlie Munger) acquired over 600,000 shares of Alibaba, spending roughly $100M+. Throughout 2022 and 2023, as China's tech regulation tightened and Jack Ma's Ant Group IPO was halted, Alibaba stock dropped over 70%. In 2023, Munger cut the position in half, publicly declaring: *"I regard Alibaba as one of the worst mistakes I ever made."*
+---
 
-## 2. What Triggered the Failure
-- **Overestimating Monopoly Moat in E-Commerce**: Munger viewed Alibaba purely through the lens of a traditional retailer (like Costco) with a dominant moat, underestimating the speed of competition from Pinduoduo and ByteDance/TikTok.
-- **Ignoring Regulatory & Geopolitical Tail Risk**: He admitted he focused on Alibaba's cheap valuation numbers while under-weighting geopolitical and regulatory shifts in China.
-- **Anchor Bias on "Cheap Price"**: Munger anchored on price-to-earnings metrics rather than auditing structural shifts in consumer behavior.
+## 1. What Went Wrong
 
-## 3. Principles Extracted From the Disaster
-- **Rule 1: Low valuation cannot fix an eroding competitive moat.** A cheap stock with increasing competition is a value trap.
-- **Rule 2: Retail moats in tech decay faster than physical retail moats.** E-commerce user loyalty is far lower than physical membership warehouses (Costco).
-- **Rule 3: Cut losses when the core thesis is proven wrong, even if it hurts pride.** Munger didn't hold out for breakeven; he halved the position and publicly audited his own bias.
+- **Overestimating Traditional Moats:** Munger treated Alibaba like a traditional retail monopoly, failing to anticipate how quickly Douyin (TikTok) and Pinduoduo would erode e-commerce market share via social commerce.
+- **Underestimating Macro/Regulatory Shift:** The investment ignored structural geopolitical and domestic regulatory intervention risks (e.g. Ant Group IPO cancellation, antitrust fines).
 
-## 4. Decision Lens Application
-When evaluating a cheap, high-yield or beaten-down deal:
-> *"Ask: Am I buying a durable moat, or am I anchoring on a low price tag while the competitive ground shifts under my feet?"*
+---
+
+## 2. Boundary Condition Extracted
+
+> **Rule:** Never assume an established platform's moat is permanent when underlying distribution models shift, or when regulatory environments change fundamental operating rules.
+
+---
+
+## 3. Self-Check Questions
+
+Before making a strategic bet or investment, ask yourself:
+
+1. **Am I relying on historical data in a changing environment?**
+   - Past performance doesn't predict future results when fundamentals shift.
+   
+2. **Has the underlying distribution model changed?**
+   - Munger missed social commerce disrupting traditional e-commerce.
+   - What's the equivalent shift in your industry?
+   
+3. **Am I underestimating regulatory or platform risk?**
+   - Are you dependent on a platform (App Store, AWS, Google) that could change rules?
+   
+4. **What would invalidate my core assumption?**
+   - If you can't answer this, you haven't stress-tested your thesis.
+   
+5. **Am I overconfident in my circle of competence?**
+   - Munger was an expert in traditional retail, but e-commerce dynamics were different.
+
+---
+
+## 4. Application to Product & Builder Strategy
+
+When evaluating a market incumbent or high-margin product:
+
+- Do not rely on historical retention numbers if a structural distribution shift is occurring.
+- Conduct a boundary check on regulatory or platform-dependency risks before making long-term resource commitments.
+- Ask: "What could make this moat obsolete in 2-3 years?" — not just "is the moat strong today?"
+
+---
+
+## 5. Warning Signs You're Repeating This Failure
+
+- You're assuming past success guarantees future results
+- You haven't identified what could break your core assumption
+- You're dismissing new competitors because "they're too small"
+- You're not tracking regulatory or platform policy changes
+- You're confident because "this has always worked before"
 
 
 ------------------------------------------------------------
@@ -1649,6 +1765,26 @@ In 2017–2018, Tesla attempted to build the "machine that builds the machine" f
 ## 4. Decision Lens Application
 When planning digital automation or AI workflow replacement:
 > *"Ask: Am I building complex automated pipelines for a step that should simply be deleted or done by a human in 5 seconds?"*
+
+## 5. Self-Check Questions
+
+Before automating any process or workflow, ask yourself:
+
+1. **Have I deleted or simplified this step first?**
+   - Musk violated his own 5-step algorithm by automating before simplifying.
+   - Is this step even necessary, or are you automating a process that should be removed?
+
+2. **Am I automating because it's genuinely faster, or because it feels impressive?**
+   - Complex robotic systems feel like progress. Manual processes feel embarrassing. Don't confuse aesthetics with efficiency.
+
+3. **Have I tested this manually with humans first?**
+   - Musk skipped manual validation. A human on the line would have caught the wire harness problem in day one.
+
+4. **What's the failure mode if this automation breaks?**
+   - Musk's answer was: the entire factory stops. What's yours?
+
+5. **Am I in my circle of competence for this automation decision?**
+   - Software automation and physical manufacturing automation have completely different failure modes.
 
 
 ------------------------------------------------------------
