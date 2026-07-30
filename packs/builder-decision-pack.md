@@ -85,4 +85,4 @@ When executing the **Builder Decision Pack**, the system generates a structured 
    - **Munger View (Risk/Inversion):**
 3. **Core Conflict:** Primary disagreement between lenses.
 4. **Failure Audit:** Boundary condition to avoid.
-5. **Actionable 48-Hour Experiment:** Immediate low-cost test.
+5. **Smallest Useful Test:** Immediate low-cost experiment.

@@ -277,7 +277,7 @@ Evidence & Documented Cases
 Failure Boundaries & Blindspots
         │
         ▼
-Low-Cost Actionable Experiment
+Smallest Useful Test
 ```
 
 ---
@@ -314,7 +314,7 @@ Orchestrate 3–4 complementary lenses into a structured decision panel.
   2. **Core Disagreements:** Sharp points of divergence between lenses.
   3. **Hidden Assumptions:** Unverified premises the user might be relying on.
   4. **Failure Audits:** Relevant historical missteps and boundary warnings.
-  5. **Actionable Experiment:** The lowest-cost test to execute next.
+  5. **Smallest Useful Test:** The lowest-cost test to execute next.
 
 ### Mode 4: Distill Mode (`distill`)
 Extract a new structured Decision Lens from primary source materials (transcripts, essays, letters, books).
@@ -325,7 +325,7 @@ Extract a new structured Decision Lens from primary source materials (transcript
   - Documented Case Studies.
   - Failure Boundaries & Known Misapplications.
 
-### Mode 5: Builder Decision Board Mode (`builder`)
+### Specialized Domain Pack: Builder Decision Board (`builder`)
 Specialized workflow optimized for indie hackers, developers, and product creators.
 - **Preset Dilemmas:**
   - *Build vs Validate:* Should I build more features or get user feedback now?
@@ -341,7 +341,7 @@ Specialized workflow optimized for indie hackers, developers, and product creato
 2. **NO Quote Spam:** Do not dump generic inspirational quotes. Reference specific historical decisions, documented memos, and verified case studies.
 3. **NO Unsubstantiated Metrics:** Do not fabricate accuracy percentages or match scores. Use qualitative evaluation rubrics.
 4. **ALWAYS Include Failure Boundaries:** Every lens recommendation must explicitly state where that thinking model fails or has historically resulted in bad outcomes.
-5. **ALWAYS Output Actionable Experiments:** End every decision session with a low-cost, verifiable experiment the user can run within 48–72 hours.
+5. **ALWAYS Output Actionable Experiments:** End every decision session with a low-cost, verifiable Smallest Useful Test that can be executed quickly.
 
 ---
 
@@ -1742,7 +1742,7 @@ When executing the **Builder Decision Pack**, the system generates a structured 
    - **Munger View (Risk/Inversion):**
 3. **Core Conflict:** Primary disagreement between lenses.
 4. **Failure Audit:** Boundary condition to avoid.
-5. **Actionable 48-Hour Experiment:** Immediate low-cost test.
+5. **Smallest Useful Test:** Immediate low-cost experiment.
 
 
 ------------------------------------------------------------

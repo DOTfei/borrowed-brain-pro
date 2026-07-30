@@ -44,11 +44,11 @@
 
 ---
 
-## 5. Final Decision & Actionable 48-Hour Experiment
+## 5. Final Decision & Smallest Useful Test
 
 - **Selected Option:** 
 - **Reason for Selection:** 
-- **Immediate Low-Cost Experiment:** 
+- **Smallest Useful Test:** 
 - **Review Date (e.g. 30 Days Out):** YYYY-MM-DD
 
 ---

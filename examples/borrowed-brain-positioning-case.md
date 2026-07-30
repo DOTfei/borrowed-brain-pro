@@ -28,7 +28,7 @@
 
 ---
 
-## 3. Actionable Experiment Executed
+## 3. Smallest Useful Test Executed
 
 - **Repositioning:** Re-frame README from "Think like Warren Buffett / Steve Jobs" to "Borrow the thinking, not the personality."
 - **Niche Task Skill:** Ship `packs/builder-decision-pack.md` as the primary vertical entry point.

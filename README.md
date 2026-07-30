@@ -285,7 +285,7 @@ Borrowed Brain Pro is a **Decision Intelligence System** that applies evidence-b
 | Celebrity roleplay or voice imitation | Evidence-backed thinking frameworks |
 | Generic quote generator | Multi-lens decision consensus panels |
 | AI character chatbots | Failure boundary & blindspot auditing |
-| Fictional prompt roleplay | Structured 48-hour actionable experiments |
+| Fictional prompt roleplay | Smallest Useful Tests (low-cost experiments) |
 
 ---
 
@@ -320,7 +320,7 @@ Evidence & Documented Cases
 Failure Boundaries & Blindspots
         │
         ▼
-Actionable 48-Hour Experiment
+Smallest Useful Test
 ```
 
 ---
