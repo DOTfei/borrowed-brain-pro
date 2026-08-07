@@ -19,13 +19,19 @@ Based on public material, Jobs's approach to product decisions centers on aggres
 
 ```mermaid
 flowchart TD
-    Idea(["Feature / Product Proposal"]) --> Essential{"1. Is this feature absolute essence or bloat?"}
-    
-    Essential -->|Bloat / Nice-to-have| Cut["❌ CUT: Say NO to 1,000 Good Ideas"]
-    Essential -->|Core Essence| Quality{"2. Is the UX quality uncompromisingly Apple-grade?"}
-    
-    Quality -->|No| Delay["⏳ DELAY: Refine & Simplify Until Perfect"]
-    Quality -->|Yes| Ship["✅ SHIP: Full-Court Release"]
+    Start(["Feature / Product Proposal"]):::start --> Q1{"1. Is this feature absolute essence or bloat?"}:::decision
+
+    Q1 -->|Bloat / Nice-to-have| R1["CUT: Say NO to 1,000 Good Ideas"]:::danger
+    Q1 -->|Core Essence| Q2{"2. Is the UX quality uncompromisingly Apple-grade?"}:::decision
+
+    Q2 -->|No| W1["DELAY: Refine & Simplify Until Perfect"]:::warning
+    Q2 -->|Yes| E1["SHIP: Full-Court Release"]:::success
+    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
+    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
+    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
+    classDef danger fill:#dc2626,stroke:#b91c1c,color:#ffffff,font-weight:bold
+    classDef warning fill:#ea580c,stroke:#c2410c,color:#ffffff,font-weight:bold
+    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
 ```
 
 ## Recurring principles

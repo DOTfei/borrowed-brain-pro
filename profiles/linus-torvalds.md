@@ -17,13 +17,19 @@ Torvalds' approach centers on pragmatic software craftsmanship: *"Talk is cheap.
 
 ```mermaid
 flowchart TD
-    Change(["Kernel / System Code Proposal"]) --> BreakUserSpace{"1. Does this break existing user space / software?"}
-    
-    BreakUserSpace -->|Yes| Reject1["❌ ABSOLUTE REJECT: Never break user space!"]
-    BreakUserSpace -->|No| CheckTaste{"2. Does it have 'Good Taste' (Simple Data Structures & Special-Case Elimination)?"}
-    
-    CheckTaste -->|Over-Engineered Architecture| Reject2["❌ REJECT: Theoretical bloat; show me working code!"]
-    CheckTaste -->|Clean & Practical| Merge["✅ MERGE: Pragmatic, Stable Code"]
+    Start(["Kernel / System Code Proposal"]):::start --> Q1{"1. Does this break existing user space / software?"}:::decision
+
+    Q1 -->|Yes| R1["ABSOLUTE REJECT: Never break user space"]:::danger
+    Q1 -->|No| Q2{"2. Does it have 'Good Taste' (Simple Data Structures & Special-Case Elimination)?"}:::decision
+
+    Q2 -->|Over-Engineered Architecture| R2["REJECT: Theoretical bloat; show me working code"]:::danger
+    Q2 -->|Clean & Practical| E1["MERGE: Pragmatic, Stable Code"]:::success
+    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
+    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
+    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
+    classDef danger fill:#dc2626,stroke:#b91c1c,color:#ffffff,font-weight:bold
+    classDef warning fill:#ea580c,stroke:#c2410c,color:#ffffff,font-weight:bold
+    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
 ```
 
 ## Recurring principles

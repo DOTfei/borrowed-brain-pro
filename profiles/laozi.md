@@ -15,12 +15,18 @@ Laozi's approach centers on *Wu Wei* (无为而治 — effortless action / non-f
 
 ```mermaid
 flowchart TD
-    Conflict(["System Conflict / Friction"]) --> AssessForce{"1. Are you trying to force an unnatural result by rigid control?"}
-    
-    AssessForce -->|Rigid Top-Down Force| BrittleFailure["❌ BRITTLE FAILURE: High rigidity snaps under pressure"]
-    AssessForce -->|Yield & Adapt| WaterDynamics{"2. Can you yield like water & flow around the obstacle?"}
-    
-    WaterDynamics -->|Self-Organizing Growth| WuWei["🌊 WU WEI: Achieve non-action where nothing is left undone"]
+    Start(["System Conflict / Friction"]):::start --> Q1{"1. Forcing an unnatural result by rigid control?"}:::decision
+
+    Q1 -->|Rigid Top-Down Force| R1["BRITTLE FAILURE: High rigidity snaps under pressure"]:::danger
+    Q1 -->|Yield & Adapt| Q2{"2. Can you yield like water & flow around the obstacle?"}:::decision
+
+    Q2 -->|Self-Organizing Growth| E1["WU WEI: Non-action where nothing is left undone"]:::success
+    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
+    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
+    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
+    classDef danger fill:#dc2626,stroke:#b91c1c,color:#ffffff,font-weight:bold
+    classDef warning fill:#ea580c,stroke:#c2410c,color:#ffffff,font-weight:bold
+    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
 ```
 
 ## Recurring principles

@@ -17,13 +17,19 @@ Musk's approach centers on first-principles physics reductionism paired with unh
 
 ```mermaid
 flowchart TD
-    Idea(["Engineering / Hardware Dilemma"]) --> CheckPhysics{"1. Is it limited by laws of physics, or just human convention?"}
-    
-    CheckPhysics -->|Human Convention| DeleteReq["⚡ DELETE REQUIREMENT: Challenge the owner"]
-    CheckPhysics -->|Physics Limit| Optimize{"2. Can we simplify, accelerate, or vertically integrate?"}
-    
-    Optimize -->|Over-Automating| Fail["⚠️ WARNING: Don't automate a step that should be deleted!"]
-    Optimize -->|First Principles| Execute["🚀 EXECUTE: Hardcore Iteration in the Field"]
+    Start(["Engineering / Hardware Dilemma"]):::start --> Q1{"1. Limited by physics or human convention?"}:::decision
+
+    Q1 -->|Human Convention| D1["DELETE REQUIREMENT: Challenge the owner"]:::danger
+    Q1 -->|Physics Limit| Q2{"2. Can we simplify, accelerate, or vertically integrate?"}:::decision
+
+    Q2 -->|Over-Automating| W1["WARNING: Don't automate a step that should be deleted"]:::warning
+    Q2 -->|First Principles| E1["EXECUTE: Hardcore Iteration in the Field"]:::success
+    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
+    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
+    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
+    classDef danger fill:#dc2626,stroke:#b91c1c,color:#ffffff,font-weight:bold
+    classDef warning fill:#ea580c,stroke:#c2410c,color:#ffffff,font-weight:bold
+    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
 ```
 
 ## Recurring principles

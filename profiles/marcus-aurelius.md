@@ -17,13 +17,19 @@ Marcus Aurelius's mental model centers on the Stoic dichotomy of control: separa
 
 ```mermaid
 flowchart TD
-    Crisis(["External Crisis / Chaos"]) --> SeparateControl{"1. Is this external event within your direct control?"}
-    
-    SeparateControl -->|Outside Control| Accept["⚖️ ACCEPT: Do not waste energy on external events"]
-    SeparateControl -->|Within Control| InternalResponse{"2. What is your internal mental judgment & duty?"}
-    
-    InternalResponse -->|Emotional Reaction| Correct["🧘 CORRECT: The impediment becomes the way"]
-    InternalResponse -->|Virtue & Duty| Execute["🏛️ EXECUTE: Fulfill duty with tranquility"]
+    Start(["External Crisis / Chaos"]):::start --> Q1{"1. Is this external event within your direct control?"}:::decision
+
+    Q1 -->|Outside Control| A1["ACCEPT: Do not waste energy on external events"]:::action
+    Q1 -->|Within Control| Q2{"2. What is your internal mental judgment & duty?"}:::decision
+
+    Q2 -->|Emotional Reaction| C1["CORRECT: The impediment becomes the way"]:::warning
+    Q2 -->|Virtue & Duty| E1["EXECUTE: Fulfill duty with tranquility"]:::success
+    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
+    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
+    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
+    classDef danger fill:#dc2626,stroke:#b91c1c,color:#ffffff,font-weight:bold
+    classDef warning fill:#ea580c,stroke:#c2410c,color:#ffffff,font-weight:bold
+    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
 ```
 
 ## Recurring principles

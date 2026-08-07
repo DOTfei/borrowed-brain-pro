@@ -21,16 +21,22 @@ Based on public material, Buffett's approach centers on treating a stock purchas
 
 ```mermaid
 flowchart TD
-    Deal(["Deal / Opportunity Proposal"]) --> CheckCompetence{"Within Circle of Competence?"}
-    
-    CheckCompetence -->|No| Reject1["❌ REJECT: Outside Circle of Competence"]
-    CheckCompetence -->|Yes| CheckMoat{"Durable Competitive Moat & Pricing Power?"}
-    
-    CheckMoat -->|No| Reject2["❌ REJECT: Erodible Moat / Commodity Business"]
-    CheckMoat -->|Yes| CheckMargin{"Margin of Safety (Price vs. Value)?"}
-    
-    CheckMargin -->|No| Wait["⏳ WAIT: Fair Business, Unfavorable Price"]
-    CheckMargin -->|Yes| Execute["✅ EXECUTE: High-Conviction Investment"]
+    Start(["Deal / Opportunity Proposal"]):::start --> Q1{"Within Circle of Competence?"}:::decision
+
+    Q1 -->|No| R1["REJECT: Outside Circle of Competence"]:::danger
+    Q1 -->|Yes| Q2{"Durable Competitive Moat & Pricing Power?"}:::decision
+
+    Q2 -->|No| R2["REJECT: Erodible Moat / Commodity"]:::danger
+    Q2 -->|Yes| Q3{"Margin of Safety (Price vs. Value)?"}:::decision
+
+    Q3 -->|No| W1["WAIT: Fair Business, Unfavorable Price"]:::warning
+    Q3 -->|Yes| E1["EXECUTE: High-Conviction Investment"]:::success
+    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
+    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
+    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
+    classDef danger fill:#dc2626,stroke:#b91c1c,color:#ffffff,font-weight:bold
+    classDef warning fill:#ea580c,stroke:#c2410c,color:#ffffff,font-weight:bold
+    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
 ```
 
 ## Recurring principles

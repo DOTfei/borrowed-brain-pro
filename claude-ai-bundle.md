@@ -483,15 +483,21 @@ Munger's thinking rests on "invert, always invert" and multidisciplinary mental 
 
 ```mermaid
 flowchart TD
-    Problem(["Complex Decision / Problem"]) --> Invert{"1. Invert: What guarantees failure or disaster here?"}
-    
-    Invert --> Eliminate["Eliminate Stupid & Biased Options"]
-    Eliminate --> CheckModels{"2. Apply Multidisciplinary Mental Models\n(Psychology, Economics, Physics)"}
-    
-    CheckModels --> CheckLollapalooza{"Are multiple forces aligning into a Lollapalooza effect?"}
-    
-    CheckLollapalooza -->|Negative Lollapalooza| Kill["❌ KILL: Catastrophic Bias / Trap"]
-    CheckLollapalooza -->|Positive Lollapalooza| HighConviction["✅ EXECUTE: High-Probability Bet"]
+    Start(["Complex Decision / Problem"]):::start --> Q1{"1. Invert: What guarantees failure here?"}:::decision
+
+    Q1 --> S1["Eliminate Stupid & Biased Options"]:::action
+    S1 --> Q2{"2. Apply Multidisciplinary Mental Models"}:::decision
+
+    Q2 --> Q3{"Are multiple forces aligning into a Lollapalooza?"}:::decision
+
+    Q3 -->|Negative Lollapalooza| R1["KILL: Catastrophic Bias / Trap"]:::danger
+    Q3 -->|Positive Lollapalooza| E1["EXECUTE: High-Probability Bet"]:::success
+    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
+    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
+    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
+    classDef danger fill:#dc2626,stroke:#b91c1c,color:#ffffff,font-weight:bold
+    classDef warning fill:#ea580c,stroke:#c2410c,color:#ffffff,font-weight:bold
+    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
 ```
 
 ## Recurring principles
@@ -628,13 +634,19 @@ Musk's approach centers on first-principles physics reductionism paired with unh
 
 ```mermaid
 flowchart TD
-    Idea(["Engineering / Hardware Dilemma"]) --> CheckPhysics{"1. Is it limited by laws of physics, or just human convention?"}
-    
-    CheckPhysics -->|Human Convention| DeleteReq["⚡ DELETE REQUIREMENT: Challenge the owner"]
-    CheckPhysics -->|Physics Limit| Optimize{"2. Can we simplify, accelerate, or vertically integrate?"}
-    
-    Optimize -->|Over-Automating| Fail["⚠️ WARNING: Don't automate a step that should be deleted!"]
-    Optimize -->|First Principles| Execute["🚀 EXECUTE: Hardcore Iteration in the Field"]
+    Start(["Engineering / Hardware Dilemma"]):::start --> Q1{"1. Limited by physics or human convention?"}:::decision
+
+    Q1 -->|Human Convention| D1["DELETE REQUIREMENT: Challenge the owner"]:::danger
+    Q1 -->|Physics Limit| Q2{"2. Can we simplify, accelerate, or vertically integrate?"}:::decision
+
+    Q2 -->|Over-Automating| W1["WARNING: Don't automate a step that should be deleted"]:::warning
+    Q2 -->|First Principles| E1["EXECUTE: Hardcore Iteration in the Field"]:::success
+    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
+    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
+    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
+    classDef danger fill:#dc2626,stroke:#b91c1c,color:#ffffff,font-weight:bold
+    classDef warning fill:#ea580c,stroke:#c2410c,color:#ffffff,font-weight:bold
+    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
 ```
 
 ## Recurring principles
@@ -689,12 +701,18 @@ Nietzsche's framework centers on radical self-overcoming (*Selbstüberwindung*) 
 
 ```mermaid
 flowchart TD
-    Hardship(["Crisis / Adversity / Setback"]) --> FrameReaction{"1. Do you view this as victimhood or furnace fuel?"}
-    
-    FrameReaction -->|Victimhood / Complaining| HerdMind["❌ REJECT: Herd mentality; weakness"]
-    FrameReaction -->|Furnace Fuel| AmorFati{"2. Can you embrace Amor Fati & use resistance to overcome?"}
-    
-    AmorFati -->|Antifragile Transformation| Overcome["🔥 AMOR FATI: What does not kill me makes me stronger!"]
+    Start(["Crisis / Adversity / Setback"]):::start --> Q1{"1. Victimhood or furnace fuel?"}:::decision
+
+    Q1 -->|Victimhood / Complaining| R1["REJECT: Herd mentality; weakness"]:::danger
+    Q1 -->|Furnace Fuel| Q2{"2. Can you embrace Amor Fati & use resistance to overcome?"}:::decision
+
+    Q2 -->|Antifragile Transformation| E1["AMOR FATI: What does not kill me makes me stronger"]:::success
+    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
+    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
+    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
+    classDef danger fill:#dc2626,stroke:#b91c1c,color:#ffffff,font-weight:bold
+    classDef warning fill:#ea580c,stroke:#c2410c,color:#ffffff,font-weight:bold
+    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
 ```
 
 ## Recurring principles
@@ -751,13 +769,19 @@ Huang's approach centers on "betting the company" on zero-billion-dollar markets
 
 ```mermaid
 flowchart TD
-    Market(["Platform / Market Opportunity"]) --> CheckSize{"1. Is it a Zero-Billion-Dollar Market?"}
-    
-    CheckSize -->|Existing Crowded Market| Reject["❌ REJECT: Don't compete for existing pie"]
-    CheckSize -->|Zero-Billion-Dollar| CheckFullStack{"2. Can we build the full hardware + software stack?"}
-    
-    CheckFullStack -->|Commodity Chip Only| MarginLoss["⚠️ WARNING: Vulnerable to commoditization"]
-    CheckFullStack -->|Full-Stack Moat (CUDA)| BetCompany["🔥 BET THE COMPANY: Persevere Through Wall St Backlash"]
+    Start(["Platform / Market Opportunity"]):::start --> Q1{"1. Is it a Zero-Billion-Dollar Market?"}:::decision
+
+    Q1 -->|Existing Crowded Market| R1["REJECT: Don't compete for existing pie"]:::danger
+    Q1 -->|Zero-Billion-Dollar| Q2{"2. Can we build the full hardware + software stack?"}:::decision
+
+    Q2 -->|Commodity Chip Only| W1["WARNING: Vulnerable to commoditization"]:::warning
+    Q2 -->|"Full-Stack Moat (CUDA)"| E1["BET THE COMPANY: Persevere Through Wall St Backlash"]:::success
+    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
+    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
+    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
+    classDef danger fill:#dc2626,stroke:#b91c1c,color:#ffffff,font-weight:bold
+    classDef warning fill:#ea580c,stroke:#c2410c,color:#ffffff,font-weight:bold
+    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
 ```
 
 ## Recurring principles
@@ -862,12 +886,18 @@ Laozi's approach centers on *Wu Wei* (无为而治 — effortless action / non-f
 
 ```mermaid
 flowchart TD
-    Conflict(["System Conflict / Friction"]) --> AssessForce{"1. Are you trying to force an unnatural result by rigid control?"}
-    
-    AssessForce -->|Rigid Top-Down Force| BrittleFailure["❌ BRITTLE FAILURE: High rigidity snaps under pressure"]
-    AssessForce -->|Yield & Adapt| WaterDynamics{"2. Can you yield like water & flow around the obstacle?"}
-    
-    WaterDynamics -->|Self-Organizing Growth| WuWei["🌊 WU WEI: Achieve non-action where nothing is left undone"]
+    Start(["System Conflict / Friction"]):::start --> Q1{"1. Forcing an unnatural result by rigid control?"}:::decision
+
+    Q1 -->|Rigid Top-Down Force| R1["BRITTLE FAILURE: High rigidity snaps under pressure"]:::danger
+    Q1 -->|Yield & Adapt| Q2{"2. Can you yield like water & flow around the obstacle?"}:::decision
+
+    Q2 -->|Self-Organizing Growth| E1["WU WEI: Non-action where nothing is left undone"]:::success
+    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
+    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
+    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
+    classDef danger fill:#dc2626,stroke:#b91c1c,color:#ffffff,font-weight:bold
+    classDef warning fill:#ea580c,stroke:#c2410c,color:#ffffff,font-weight:bold
+    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
 ```
 
 ## Recurring principles
@@ -924,13 +954,19 @@ Torvalds' approach centers on pragmatic software craftsmanship: *"Talk is cheap.
 
 ```mermaid
 flowchart TD
-    Change(["Kernel / System Code Proposal"]) --> BreakUserSpace{"1. Does this break existing user space / software?"}
-    
-    BreakUserSpace -->|Yes| Reject1["❌ ABSOLUTE REJECT: Never break user space!"]
-    BreakUserSpace -->|No| CheckTaste{"2. Does it have 'Good Taste' (Simple Data Structures & Special-Case Elimination)?"}
-    
-    CheckTaste -->|Over-Engineered Architecture| Reject2["❌ REJECT: Theoretical bloat; show me working code!"]
-    CheckTaste -->|Clean & Practical| Merge["✅ MERGE: Pragmatic, Stable Code"]
+    Start(["Kernel / System Code Proposal"]):::start --> Q1{"1. Does this break existing user space / software?"}:::decision
+
+    Q1 -->|Yes| R1["ABSOLUTE REJECT: Never break user space"]:::danger
+    Q1 -->|No| Q2{"2. Does it have 'Good Taste' (Simple Data Structures & Special-Case Elimination)?"}:::decision
+
+    Q2 -->|Over-Engineered Architecture| R2["REJECT: Theoretical bloat; show me working code"]:::danger
+    Q2 -->|Clean & Practical| E1["MERGE: Pragmatic, Stable Code"]:::success
+    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
+    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
+    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
+    classDef danger fill:#dc2626,stroke:#b91c1c,color:#ffffff,font-weight:bold
+    classDef warning fill:#ea580c,stroke:#c2410c,color:#ffffff,font-weight:bold
+    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
 ```
 
 ## Recurring principles
@@ -987,13 +1023,19 @@ Marcus Aurelius's mental model centers on the Stoic dichotomy of control: separa
 
 ```mermaid
 flowchart TD
-    Crisis(["External Crisis / Chaos"]) --> SeparateControl{"1. Is this external event within your direct control?"}
-    
-    SeparateControl -->|Outside Control| Accept["⚖️ ACCEPT: Do not waste energy on external events"]
-    SeparateControl -->|Within Control| InternalResponse{"2. What is your internal mental judgment & duty?"}
-    
-    InternalResponse -->|Emotional Reaction| Correct["🧘 CORRECT: The impediment becomes the way"]
-    InternalResponse -->|Virtue & Duty| Execute["🏛️ EXECUTE: Fulfill duty with tranquility"]
+    Start(["External Crisis / Chaos"]):::start --> Q1{"1. Is this external event within your direct control?"}:::decision
+
+    Q1 -->|Outside Control| A1["ACCEPT: Do not waste energy on external events"]:::action
+    Q1 -->|Within Control| Q2{"2. What is your internal mental judgment & duty?"}:::decision
+
+    Q2 -->|Emotional Reaction| C1["CORRECT: The impediment becomes the way"]:::warning
+    Q2 -->|Virtue & Duty| E1["EXECUTE: Fulfill duty with tranquility"]:::success
+    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
+    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
+    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
+    classDef danger fill:#dc2626,stroke:#b91c1c,color:#ffffff,font-weight:bold
+    classDef warning fill:#ea580c,stroke:#c2410c,color:#ffffff,font-weight:bold
+    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
 ```
 
 ## Recurring principles
@@ -1227,13 +1269,19 @@ Altman's decision-making style centers on "act first, explain later": he tends t
 
 ```mermaid
 flowchart TD
-    Launch(["Deployment / Feature Initiative"]) --> Readiness{"1. Is product 80% viable for real-world contact?"}
-    
-    Readiness -->|Wait for 100% Perfection| Delay["❌ DANGER: Risk Over-Engineering in Isolation"]
-    Readiness -->|Yes| Ship["⚡ SHIP: Iterative Deployment to Real Users"]
-    
-    Ship --> Feedback{"2. Collect Real World Backlash & Edge Cases"}
-    Feedback --> Reframe["🔄 REFRAME & ITERATE: Fix Safety & Architecture Live"]
+    Start(["Deployment / Feature Initiative"]):::start --> Q1{"1. Is product 80% viable for real-world contact?"}:::decision
+
+    Q1 -->|Wait for 100% Perfection| W1["DANGER: Risk Over-Engineering in Isolation"]:::warning
+    Q1 -->|Yes| S1["SHIP: Iterative Deployment to Real Users"]:::success
+
+    S1 --> Q2{"2. Collect Real World Backlash & Edge Cases"}:::decision
+    Q2 --> R1["REFRAME & ITERATE: Fix Safety & Architecture Live"]:::action
+    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
+    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
+    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
+    classDef danger fill:#dc2626,stroke:#b91c1c,color:#ffffff,font-weight:bold
+    classDef warning fill:#ea580c,stroke:#c2410c,color:#ffffff,font-weight:bold
+    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
 ```
 
 ## Recurring principles
@@ -1305,12 +1353,18 @@ Socrates' approach centers on radical epistemic humility: *"I know that I know n
 
 ```mermaid
 flowchart TD
-    Claim(["Expert Claim / Strategic Assumption"]) --> SocraticQuestion{"1. What do you mean by this? What is the baseline definition?"}
-    
-    SocraticQuestion --> TestCounter{"2. Is there a counter-example where this claim fails?"}
-    
-    TestCounter -->|Counter-Example Exists| Refute["❌ REFUTE: False Certainty Exposed; Refine Definition"]
-    TestCounter -->|Stands Up to Interrogation| Aporia["💡 APORIA / FOUNDATIONAL TRUTH: Epistemic Grounding"]
+    Start(["Expert Claim / Strategic Assumption"]):::start --> Q1{"1. What do you mean by this? Baseline definition?"}:::decision
+
+    Q1 --> Q2{"2. Is there a counter-example where this claim fails?"}:::decision
+
+    Q2 -->|Counter-Example Exists| R1["REFUTE: False Certainty Exposed; Refine Definition"]:::danger
+    Q2 -->|Stands Up to Interrogation| E1["APORIA / FOUNDATIONAL TRUTH: Epistemic Grounding"]:::success
+    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
+    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
+    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
+    classDef danger fill:#dc2626,stroke:#b91c1c,color:#ffffff,font-weight:bold
+    classDef warning fill:#ea580c,stroke:#c2410c,color:#ffffff,font-weight:bold
+    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
 ```
 
 ## Recurring principles
@@ -1369,13 +1423,19 @@ Based on public material, Jobs's approach to product decisions centers on aggres
 
 ```mermaid
 flowchart TD
-    Idea(["Feature / Product Proposal"]) --> Essential{"1. Is this feature absolute essence or bloat?"}
-    
-    Essential -->|Bloat / Nice-to-have| Cut["❌ CUT: Say NO to 1,000 Good Ideas"]
-    Essential -->|Core Essence| Quality{"2. Is the UX quality uncompromisingly Apple-grade?"}
-    
-    Quality -->|No| Delay["⏳ DELAY: Refine & Simplify Until Perfect"]
-    Quality -->|Yes| Ship["✅ SHIP: Full-Court Release"]
+    Start(["Feature / Product Proposal"]):::start --> Q1{"1. Is this feature absolute essence or bloat?"}:::decision
+
+    Q1 -->|Bloat / Nice-to-have| R1["CUT: Say NO to 1,000 Good Ideas"]:::danger
+    Q1 -->|Core Essence| Q2{"2. Is the UX quality uncompromisingly Apple-grade?"}:::decision
+
+    Q2 -->|No| W1["DELAY: Refine & Simplify Until Perfect"]:::warning
+    Q2 -->|Yes| E1["SHIP: Full-Court Release"]:::success
+    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
+    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
+    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
+    classDef danger fill:#dc2626,stroke:#b91c1c,color:#ffffff,font-weight:bold
+    classDef warning fill:#ea580c,stroke:#c2410c,color:#ffffff,font-weight:bold
+    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
 ```
 
 ## Recurring principles
@@ -1492,16 +1552,22 @@ Based on public material, Buffett's approach centers on treating a stock purchas
 
 ```mermaid
 flowchart TD
-    Deal(["Deal / Opportunity Proposal"]) --> CheckCompetence{"Within Circle of Competence?"}
-    
-    CheckCompetence -->|No| Reject1["❌ REJECT: Outside Circle of Competence"]
-    CheckCompetence -->|Yes| CheckMoat{"Durable Competitive Moat & Pricing Power?"}
-    
-    CheckMoat -->|No| Reject2["❌ REJECT: Erodible Moat / Commodity Business"]
-    CheckMoat -->|Yes| CheckMargin{"Margin of Safety (Price vs. Value)?"}
-    
-    CheckMargin -->|No| Wait["⏳ WAIT: Fair Business, Unfavorable Price"]
-    CheckMargin -->|Yes| Execute["✅ EXECUTE: High-Conviction Investment"]
+    Start(["Deal / Opportunity Proposal"]):::start --> Q1{"Within Circle of Competence?"}:::decision
+
+    Q1 -->|No| R1["REJECT: Outside Circle of Competence"]:::danger
+    Q1 -->|Yes| Q2{"Durable Competitive Moat & Pricing Power?"}:::decision
+
+    Q2 -->|No| R2["REJECT: Erodible Moat / Commodity"]:::danger
+    Q2 -->|Yes| Q3{"Margin of Safety (Price vs. Value)?"}:::decision
+
+    Q3 -->|No| W1["WAIT: Fair Business, Unfavorable Price"]:::warning
+    Q3 -->|Yes| E1["EXECUTE: High-Conviction Investment"]:::success
+    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
+    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
+    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
+    classDef danger fill:#dc2626,stroke:#b91c1c,color:#ffffff,font-weight:bold
+    classDef warning fill:#ea580c,stroke:#c2410c,color:#ffffff,font-weight:bold
+    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
 ```
 
 ## Recurring principles

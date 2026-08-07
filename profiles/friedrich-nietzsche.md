@@ -15,12 +15,18 @@ Nietzsche's framework centers on radical self-overcoming (*Selbstüberwindung*) 
 
 ```mermaid
 flowchart TD
-    Hardship(["Crisis / Adversity / Setback"]) --> FrameReaction{"1. Do you view this as victimhood or furnace fuel?"}
-    
-    FrameReaction -->|Victimhood / Complaining| HerdMind["❌ REJECT: Herd mentality; weakness"]
-    FrameReaction -->|Furnace Fuel| AmorFati{"2. Can you embrace Amor Fati & use resistance to overcome?"}
-    
-    AmorFati -->|Antifragile Transformation| Overcome["🔥 AMOR FATI: What does not kill me makes me stronger!"]
+    Start(["Crisis / Adversity / Setback"]):::start --> Q1{"1. Victimhood or furnace fuel?"}:::decision
+
+    Q1 -->|Victimhood / Complaining| R1["REJECT: Herd mentality; weakness"]:::danger
+    Q1 -->|Furnace Fuel| Q2{"2. Can you embrace Amor Fati & use resistance to overcome?"}:::decision
+
+    Q2 -->|Antifragile Transformation| E1["AMOR FATI: What does not kill me makes me stronger"]:::success
+    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
+    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
+    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
+    classDef danger fill:#dc2626,stroke:#b91c1c,color:#ffffff,font-weight:bold
+    classDef warning fill:#ea580c,stroke:#c2410c,color:#ffffff,font-weight:bold
+    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
 ```
 
 ## Recurring principles
