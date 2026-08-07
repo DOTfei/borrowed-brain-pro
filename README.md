@@ -39,6 +39,45 @@ git clone https://github.com/DOTfei/borrowed-brain-pro.git ~/.claude/skills/borr
 
 ## How It Works
 
+Four modes, one skill — every decision flows through the same structured pipeline:
+
+```mermaid
+flowchart TD
+    Start(["Your Real Decision / Question"]):::start --> Router{"Mode Router"}:::decision
+
+    Router -->|1. Distill| D1["Distill a new thinking profile\nresearch → profiles/name.md"]:::action
+    Router -->|2. Apply| A1["Apply one lens\nsurface hidden blind spots"]:::action
+    Router -->|3. Compare| C1["Compare 2+ lenses\nmap conflicts & gaps"]:::action
+    Router -->|4. Boardroom| B1["Virtual board debate\n3-4 lenses cross-examine"]:::action
+
+    D1 --> Output["Decision Lens Output\nexplicit limits + smallest useful test"]:::success
+    A1 --> Output
+    C1 --> Output
+    B1 --> Output
+
+    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
+    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
+    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
+    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
+```
+
+Every session follows the same hierarchy — decision first, lenses second, evidence third, and a test at the end:
+
+```mermaid
+flowchart TD
+    Start(["User Decision Dilemma"]):::start --> S1["Decision Analysis & Framing"]:::action
+    S1 --> S2["Thinking Lenses Selection"]:::decision
+    S2 --> S3["Evidence & Documented Cases"]:::action
+    S3 --> S4["Failure Boundaries & Blindspots"]:::warning
+    S4 --> End["Smallest Useful Test"]:::success
+
+    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
+    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
+    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
+    classDef warning fill:#ea580c,stroke:#c2410c,color:#ffffff,font-weight:bold
+    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
+```
+
 Four modes, one skill:
 
 ```
