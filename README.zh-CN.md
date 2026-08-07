@@ -1,10 +1,10 @@
 <a href="https://DOTfei.github.io/borrowed-brain-pro/"><img src=".github/assets/banner.svg" alt="borrowed-brain-pro" width="100%"></a>
 
-<p center>
+<p align="center">
   <a href="README.md"><b>English</b></a> | <a href="README.zh-CN.md"><b>简体中文</b></a>
 </p>
 
-<p center>
+<p align="center">
   <a href="https://DOTfei.github.io/borrowed-brain-pro/"><img src="https://img.shields.io/badge/Website-Live%20Demo-success" alt="Website"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License"></a>
   <a href="profiles/INDEX.md"><img src="https://img.shields.io/badge/Profiles-18%20Ready-blue.svg" alt="Profiles"></a>
@@ -13,254 +13,175 @@
   <a href="https://github.com/DOTfei/borrowed-brain-pro/stargazers"><img src="https://img.shields.io/github/stars/DOTfei/borrowed-brain-pro?style=social" alt="Stars"></a>
 </p>
 
-![Borrowed Brain Pro 演示动画](.github/assets/explainer.gif)
-
-> 🌐 **[官网在线预览与交互体验](https://DOTfei.github.io/borrowed-brain-pro/)**
-> 
-> **Borrowed Brain Pro 由两大核心引擎驱动：**
-> 1. **大脑蒸馏引擎 (Distill Engine)**：为你指定的**任何公众人物**（无论古今中外）进行 4 层深度研究，生成结构化的思维档案 (`profiles/name.md`)。
-> 2. **决策套用引擎 (Decision Engine)**：调取预置或自定义的思维档案（支持单视角推理或多视角冲突对比），套用到你正面对的真实决策难题中。
+> **借用思维，而非扮演人格。**
+>
+> Borrowed Brain Pro 是一个决策智力系统，通过有据可查的思维视角、历史失败审计与多视角辩论面板，协助你解决真实决策难题。这不是名人角色扮演，而是结构化的决策支持工具。
 
 ---
 
-## 普通 Prompt vs. Borrowed Brain Pro
+## 快速开始
 
-| 方案 | 提示词示例 | 输出质量 | 对真实决策的价值 |
-| :--- | :--- | :--- | :--- |
-| **普通 AI Prompt** | *“请模仿巴菲特的思维给我建议”* | 泛化的鸡汤语录（*“关注长期价值，保持耐心”*） | **零** — 无法验证的陈词滥调 |
-| **Borrowed Brain Pro** | *“套用巴菲特的档案分析我的 SaaS 拓展交易”* | 分层研究、真实案例与 **明确的原则失效边界** | **极高** — 附带具体局限性的实战决策视角 |
+```bash
+# 克隆到你的 AI agent skill 目录
+git clone https://github.com/DOTfei/borrowed-brain-pro.git ~/.claude/skills/borrowed-brain-pro
+
+# 或者直接粘贴 borrowed-brain-bundle.md 作为任意 LLM 的系统提示词
+```
+
+| 平台 | 使用方式 |
+| :--- | :--- |
+| ChatGPT / Claude.ai | 将 [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) 粘贴为系统提示词 |
+| Cursor / Windsurf | 将 [`.cursorrules`](.cursorrules) 复制到项目根目录 |
+| Codex / Claude CLI | `git clone` 到 `~/.claude/skills/` |
+| Ollama / Open WebUI | 将 bundle 粘贴到 Modelfile 的 system 字段 |
 
 ---
 
-## 工作原理：四大模式，一个 Skill
+## 工作原理
+
+四种模式，一个 Skill — 每个决策都流经同一个结构化流程：
 
 ```mermaid
 flowchart TD
-    User(["用户的真实决策 / 提问"]) --> Router{"模式自动路由"}
+    Start(["你的真实决策 / 问题"]):::start --> Router{"模式路由"}:::decision
 
-    Router -->|1. Distill 蒸馏模式| Distill["4 层深度网络研究\n• 本人原话与访谈实录\n• 真实发生的决策案例\n• 第三方传记与同僚评价\n• 批评与公开失败案例"]
-    Distill --> Save["保存档案\nprofiles/name.md"]
+    Router -->|1. 蒸馏| D1["构建新思维档案\n研究 → profiles/name.md"]:::action
+    Router -->|2. 应用| A1["应用单一视角\n挖掘隐藏盲点"]:::action
+    Router -->|3. 对比| C1["对比 2+ 个视角\n呈现分歧与共同盲点"]:::action
+    Router -->|4. 董事会| B1["虚拟董事会辩论\n3-4 个视角交叉质问"]:::action
 
-    Router -->|2. Apply 应用模式| Apply["单视角推理\n应用 1 份档案 → 挖掘被忽略的盲点"]
+    D1 --> Output["决策视角输出\n明确局限 + 最小有用测试"]:::success
+    A1 --> Output
+    C1 --> Output
+    B1 --> Output
 
-    Router -->|3. Compare 对比模式| Compare["多视角冲突对比\n对比 2+ 份档案 → 呈现分歧与共同盲点"]
-
-    Router -->|4. Boardroom 董事会模式| Boardroom["虚拟董事会辩论\n召集 3-4 位大佬 → 互相质问辩论与一致共识"]
-
-    Save --> Apply
-    Save --> Compare
-    Save --> Boardroom
-
-    Apply --> Output["决策输出\n(明确标注该视角覆盖不到的因素)"]
-    Compare --> Output
-    Boardroom --> Output
+    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
+    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
+    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
+    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
 ```
 
-### 常用命令速查
-
-```bash
-# 1. 蒸馏一个全新人物
-"帮我建一份 Charlie Munger 的思维档案"
-
-# 2. 将已有档案套用到你的处境
-"用芒格的档案分析，我该不该扩张到这个新市场？"
-
-# 3. 对比两位大佬在同一难题上的分歧
-"对比 Jobs 和 Altman 的档案，分析我的产品发布时机难题"
-
-# 4. 召集 4 位大佬组建虚拟董事会会诊
-"召集董事会（Jobs, Munger, Altman, Hastings），帮我研判定价策略难题"
-```
-
----
-
-## 🏛️ 功能亮点：Boardroom 虚拟董事会会诊
-
-只需载入 Skill，然后发送一句命令：`"召集董事会 [你的难题]"`，AI 便会自动启动 3 回合大佬质问辩论：
-
-```markdown
-🏛️ 虚拟董事会会诊报告
-研判主题："我们是否应该降价抢占 SaaS 市场份额？"
-出席董事：Steve Jobs, Charlie Munger, Sam Altman, Reed Hastings
-
-第一回合：董事初始立场
-- 芒格："降低利润率只会增加风险。逆向思考：为什么产品在原价下吸引力不足？"
-- 乔布斯："绝不打价格战。只要降价，就等于承认产品品质不够极致。"
-- 奥特曼："快速部署，动态迭代定价。先规模化用户，再考虑变现。"
-- Hastings："在改变价格前，先在公司内部搜集异议。销售代表私下怎么说？"
-
-第二回合：董事互相质问与撕扯
-- 芒格 ➔ 奥特曼："你对单纯用户增长的执念忽略了基本单元经济学。"
-- 乔布斯 ➔ Hastings："向销售代表妥协寻求共识只会产出中庸的产品。"
-
-第三回合：全体共识 vs 无法调和的分歧
-- 全体共识：在不削减非核心功能前，绝不单方面直接降价。
-- 核心分歧：乔布斯（坚决不降价） vs 奥特曼（先扩展规模）。
-
-董事会决议与盲点警告：
-- 建议方案：保持核心套餐价格，推出功能裁剪版的入门套餐。
-- 董事会共同盲点：在座董事均未运营过低利润率的 B2B 小微企业软件。
-```
-
-*示例 2：工程与哲学的碰撞*
-```markdown
-🏛️ 虚拟董事会会诊报告
-研判主题："我们应该实行严格的自上而下工程架构，还是让各团队有机地自行决定技术栈？"
-出席董事：Linus Torvalds, 老子 (Laozi), 苏格拉底 (Socrates)
-
-第一回合：董事初始立场
-- Torvalds："自上而下的架构纯属扯淡。给他们绝对最少的约束（比如 git 的核心数据结构），然后让他们自己去造有用的东西。"
-- 老子："无为而治。强加的规则会带来反抗。最好的架构上善若水，顺应组织的自然形态。应当去中心化。"
-- 苏格拉底："在做决定之前，你对‘严格’的定义是什么？你是否审查过‘单一技术栈能解决实际产品问题’这种虚假的确定性？"
-
-第二回合：董事互相质问与撕扯
-- 苏格拉底 ➔ Torvalds："你说‘最少的约束’。谁来定义最少？如果你来规定最少的约束，那你难道不也是一个自上而下的独裁架构师吗？"
-- Torvalds ➔ 老子："像水一样流动听起来很美，直到代码编译失败。没有容器的水只是一滩泥水。你仍然需要对数据结构有极高的品味。"
-
-第三回合：全体共识 vs 无法调和的分歧
-- 全体共识：强硬的自上而下指令注定失败，并会引发工程师的反叛。
-- 核心分歧：Torvalds（必须有死磕底层的严格数据结构） vs 老子（追求纯粹的有机生长）。
-
-董事会决议与盲点警告：
-- 建议方案：只定义 API 边界和核心数据结构。让各个团队内部自行选择技术栈。
-- 董事会共同盲点：该决议完全无视了企业级合规和安全审计需求，而在现实中，这些需求往往强制要求统一的技术栈。
-```
-
----
-
-## 📉 功能亮点：惨痛败局与失败审计
-
-普通 AI 只会重复成功金句。**Borrowed Brain Pro 专门审计血泪败局。** 我们深入剖析顶级大佬真实发生的重大危机，帮你规避毁灭性坑位：
-
-| 败局审计文件 | 人物 | 真实惨痛事件 | 提炼出的底层戒律 |
-| :--- | :--- | :--- | :--- |
-| **[芒格抄底阿里之败](audits/munger-alibaba.md)** | 查理·芒格 | 1 亿美金抄底 BABA 暴跌 70% | 低估值救不了衰退的科技护城河；电商用户的忠诚度远低于实体会员店。 |
-| **[Hastings 拆分 Qwikster 惨剧](audits/hastings-qwikster.md)** | Reed Hastings | 80 万用户流失，股价暴跌 77% | 绝不能为了公司内部运营方便而强加产品摩擦给用户。主动搜集异议。 |
-| **[乔布斯 NeXT 硬件滑铁卢](audits/jobs-next.md)** | 乔布斯 | 售价 $12,000，8 年仅卖出 5 万台 | 对美学的极致追求无法弥补价格上限盲区；好软件能在硬件失败中存活。 |
-| **[马斯克 Model 3 自动化噩梦](audits/musk-model3-automation.md)** | 马斯克 | 弗里蒙特工厂停摆 & 睡在办公桌下 | 绝不要在删除和简化步骤前盲目进行自动化。 |
-
-> **发起败局审计**：只需向 AI 发送命令：`"审计芒格抄底阿里的失败案例"` 即可调取完整复盘档案。
-
----
-
-## 🎒 功能亮点：预配置领域主题智囊包
-
-不知道该选哪位大佬？一键载入专为特定岗位/场景定制的**专项专家智囊团**：
-
-| 智囊包名称 | 适用领域 | 包含的智囊团成员 | 快捷命令 |
-| :--- | :--- | :--- | :--- |
-| **[创业者与 CEO 智囊包](packs/startup-founders.md)** | 产品剪裁、快速部署、规模化 | 乔布斯, 奥特曼, 马斯克, 黄仁勋, PG, Hastings | `"载入创业者智囊包，研判 [你的创业难题]"` |
-| **[资本与投资者智囊包](packs/investors-capital.md)** | 资本配置、估值安全边际、谈判 | 巴菲特, 芒格, Chris Voss | `"载入投资者智囊包，研判 [你的投资交易]"` |
-| **[硬核工程与代码品味包](packs/engineering-science.md)** | 系统架构、代码品味、深度工作 | Torvalds, 马斯克, 费曼, Julia Evans, Newport | `"载入工程智囊包，研判 [你的技术架构难题]"` |
-| **[危机领导力与心智包](packs/philosophy-crisis.md)** | 危机公关、心智韧性、逆向思考 | 马可·奥勒留, 芒格, 费曼, Newport | `"载入危机领导力包，研判 [你的危机难题]"` |
-
----
-
-## 📊 功能亮点：一秒看懂的 Mermaid 决策流程图
-
-摒弃冗长文字。核心 Profile 文件均内置原生 **Mermaid 决策流程图**，在 GitHub 页面上直接渲染呈现：
+每次分析遵循同一层级结构 — 决策优先，视角其次，证据支撑，最终输出可执行测试：
 
 ```mermaid
 flowchart TD
-    Deal(["巴菲特交易决策筛选器"]) --> CheckCompetence{"1. 是否在能力圈范围之内？"}
-    CheckCompetence -->|否| Reject1["❌ 拒绝：超出能力圈，坚决不碰"]
-    CheckCompetence -->|是| CheckMoat{"2. 是否具备持久的竞争护城河与定价权？"}
-    CheckMoat -->|否| Reject2["❌ 拒绝：护城河易受侵蚀 / 同质化竞争"]
-    CheckMoat -->|是| CheckMargin{"3. 是否具备价格安全边际 (Price vs. Value)？"}
-    CheckMargin -->|否| Wait["⏳ 等待：好公司，但当前价格不具吸引力"]
-    CheckMargin -->|是| Execute["✅ 重仓下注：极高确信度的投资"]
+    Start(["用户决策困境"]):::start --> S1["决策分析与问题重构"]:::action
+    S1 --> S2["思维视角选择"]:::decision
+    S2 --> S3["历史案例与证据链"]:::action
+    S3 --> S4["失败边界与认知盲点"]:::warning
+    S4 --> End["最小有用测试"]:::success
+
+    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
+    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
+    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
+    classDef warning fill:#ea580c,stroke:#c2410c,color:#ffffff,font-weight:bold
+    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
 ```
+
+四种模式示例：
+
+```
+"帮我构建 Jensen Huang 的思维档案"         → 蒸馏模式
+"用 Jobs 的档案，分析我忽略了什么？"        → 应用模式
+"对比 Jobs 和 Altman 对我的发布时机看法"   → 对比模式
+"召集董事会讨论我的定价难题"               → 董事会模式
+```
+
+**普通 AI 提示词 vs. Borrowed Brain Pro：**
+
+| | 普通提示词 | Borrowed Brain Pro |
+| :--- | :--- | :--- |
+| 输入 | "以巴菲特的视角思考" | "用巴菲特的档案分析我的 SaaS 交易" |
+| 输出 | 泛化的鸡汤语录 | 有据可查的原则 + 明确失败边界 |
+| 价值 | 几乎为零 | 附带具体局限性的实战决策视角 |
 
 ---
 
-## 🏆 功能亮点：历史危机逆向盲测竞技场
+## 董事会模式
 
-如何证明我们的思维档案能准确预测真实的决策？**我们在结果未知前，对历史重大危机进行逆向盲测验证：**
+发送 `"召集董事会 [你的难题]"` — 系统自动选择 3–4 个互补视角，运行结构化三轮辩论：
 
-| 危机测试案卷 | 人物 | 历史危机背景 | 预测准确率 |
+- **第一轮** — 每个视角就你的难题陈述立场
+- **第二轮** — 视角之间直接交叉质问
+- **第三轮** — 共识、不可调和的分歧、以及集体盲点
+- **输出** — 行动表 + 最小有用测试
+
+针对产品/创业难题的典型董事会组合：Jobs（极简）× Graham（用户验证）× Munger（逆向思考）× Hastings（快速反馈）。
+
+---
+
+## 失败审计
+
+每个视角都包含有据可查的失败边界。仓库内附四个审计案例：
+
+| 案例 | 人物 | 失败原因 | 提炼规则 |
 | :--- | :--- | :--- | :--- |
-| **[2008 金融危机流动性拯救](evals/eval-2008-financial-crisis.md)** | 巴菲特 | 2008年9月雷曼倒闭，华尔街流动性冰冻 | **98% 吻合** (准确推算 10% 优先股 + 认股权证结构) |
-| **[1997 苹果濒临破产砍产品线](evals/eval-1997-apple-near-bankrupcy.md)** | 乔布斯 | 1997年8月苹果距离破产仅剩 90 天 | **100% 吻合** (准确推算 70% 产品线切割与 2x2 矩阵) |
-| **[2023 OpenAI 治理危机](evals/eval-2023-openai-governance-crisis.md)** | 奥特曼 | 2023年11月董事会突发解雇罢免危机 | **95% 吻合** (准确推算外部杠杆动员与 5 天内官复原职) |
-| **[2006 英伟达 CUDA 豪赌危机](evals/eval-2006-nvidia-cuda-bet.md)** | 黄仁勋 | 2006年11月 CUDA 豪赌致股价暴跌 50% | **96% 吻合** (准确推算坚定不移的平台信念与拒绝退缩) |
+| [阿里巴巴投资](audits/munger-alibaba.md) | Munger | 高估平台护城河 | 低估值救不了侵蚀中的护城河 |
+| [Qwikster 拆分](audits/hastings-qwikster.md) | Hastings | 执念压制了内部异见 | 重大决策前主动招募反对意见 |
+| [NeXT 工作站](audits/jobs-next.md) | Jobs | 完美主义忽视支付意愿 | 优雅压不住价格天花板盲点 |
+| [Model 3 产能地狱](audits/musk-model3-automation.md) | Musk | 在简化之前就自动化 | 永远不要自动化一个本该删掉的步骤 |
 
-> **发起逆向盲测**：只需向 AI 发送命令：`"盲测巴菲特在 2008 年金融危机下的决策"` 即可验证档案预测精准度。
-
----
-
-## 档案结构拆解 (Profile Anatomy)
-
-每一份 Profile 中的每一条原则，都具备严格的认知边界与事实锚定：
-
-```markdown
-原则 (Principle): 主动征求异议，而不是把沉默当成同意 ("farming for dissent")。
-
-体现之处 (Where it shows up): 直接源自 Qwikster 的失败案例（2011 年）—— Hastings 发现多位 VP 私下有疑虑却不敢提。
-
-可能失效之处 (Where it likely breaks down): 该原则是事后补救——是在一次导致 80 万订阅流失、股价暴跌 77% 的惨痛失败后才确立的。
-```
+每个审计案例都附带**自我检查问题**，帮你识别自己是否正在重蹈同样的错误。
 
 ---
 
-## 已内置 18 份思维档案 (装完即用)
+## 18 个预置档案
 
-| 人物 | 领域 | 核心强项 / 最适合解决的问题 |
-| :--- | :--- | :--- |
-| **[Warren Buffett（巴菲特）](profiles/warren-buffett.md)** | 投资 | 评估下注机会、估值纪律、果断拒绝不确定交易 |
-| **[Charlie Munger（查理·芒格）](profiles/charlie-munger.md)** | 多学科/投资 | 逆向思考复杂难题、多学科思维模型、避免愚蠢与心理偏见 |
-| **[Steve Jobs（乔布斯）](profiles/steve-jobs.md)** | 产品 / 愿景 | 砍掉非核心功能、发布时机控制、极致简化与品质保护 |
-| **[Chris Voss](profiles/chris-voss.md)** | 谈判 | 打破谈判僵局、合同谈判、应对强硬或敌对谈判对手 |
-| **[Richard Feynman（费曼）](profiles/richard-feynman.md)** | 研究 / 推理 | 审查自身逻辑、防范自我欺骗、用极简语言解释复杂事物 |
-| **[Cal Newport](profiles/cal-newport.md)** | 个人效率 | 保护深度工作、用结构性修复代替意志力、时间分配 |
-| **[Reed Hastings](profiles/reed-hastings.md)** | 领导力 | 建立坦诚团队文化、主动征求异议、处理重大战略转向 |
-| **[Travis Kalanick](profiles/travis-kalanick.md)** | 激进增长 | 强攻高阻力市场、速度与合规之间的权衡取舍 |
-| **[Julia Evans](profiles/julia-evans.md)** | 技术写作 | 通俗解释硬核技术、为过去的自己写作、高效文档化 |
-| **[Sam Altman](profiles/sam-altman.md)** | AI & 创业 | 迭代部署策略、速度与安全的权衡、争议性决策的框架 |
-| **[Paul Graham（保罗·格雷厄姆）](profiles/paul-graham.md)** | 创业 & 随笔 | 做无法规模化的事情、创始人真诚度判断、保持轻量身份 |
-| **[Linus Torvalds（林纳斯·托瓦兹）](profiles/linus-torvalds.md)** | 开源 / 架构 | 实用主义软件架构、代码极简、管理去中心化贡献者 |
-| **[Elon Musk（埃隆·马斯克）](profiles/elon-musk.md)** | 深科技 / 工程 | 物理学第一性原理降维打击、五步工程法、彻底删除多余需求 |
-| **[Jensen Huang（黄仁勋）](profiles/jensen-huang.md)** | 硬件 / 平台 | 押注“零十亿”美元市场、软硬全栈协同设计、扁平化执行 |
-| **[Marcus Aurelius（马可·奥勒留）](profiles/marcus-aurelius.md)** | 哲学 / 危机 | 危机下的斯多葛派领导力、控制内在反应而非外部混乱、责任感 |
-| **[Friedrich Nietzsche（尼采）](profiles/friedrich-nietzsche.md)** | 哲学 | 命运之爱 (Amor Fati)、在逆境中实现反脆弱、自我超越 |
-| **[Socrates（苏格拉底）](profiles/socrates.md)** | 哲学 | 认识论的谦逊、苏格拉底式诘问、审查虚假的确定性 |
-| **[Laozi（老子）](profiles/laozi.md)** | 哲学 / 管理 | 无为而治、水的动态哲学、有机自组织 |
-
----
-
-## 多平台一键装载矩阵
-
-| 运行平台 | 推荐装载方式 | 一键步骤 / 指令 |
-| :--- | :--- | :--- |
-| **ChatGPT / Custom GPT** | **单文件 System Prompt** | 直接复制 [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) 全文粘贴至 System Prompt |
-| **Cursor / Windsurf AI** | **原生 `.cursorrules`** | 克隆仓库或将 [`.cursorrules`](.cursorrules) 复制到你的项目根目录 |
-| **Ollama / 本地 LLM** | **Modelfile / 系统提示词** | 将 [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) 全文粘贴至 Modelfile 系统字段 |
-| **Claude / CLI** | **Git Clone (原生 Skill)** | `git clone https://github.com/DOTfei/borrowed-brain-pro.git ~/.claude/skills/borrowed-brain-pro` |
-| **Claude.ai** | **Skill 上传 / 提示词** | Settings → Skills 上传 `SKILL.md` 或粘贴 [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) |
-| **Open WebUI** | **System Prompt** | 将 [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) 全文粘贴至 System Prompt 框 |
+| 人物 | 最适合 |
+| :--- | :--- |
+| [Warren Buffett](profiles/warren-buffett.md) | 估值纪律、对交易说不 |
+| [Charlie Munger](profiles/charlie-munger.md) | 逆向思考、避免认知偏误 |
+| [Steve Jobs](profiles/steve-jobs.md) | 砍功能、极简、发布时机 |
+| [Chris Voss](profiles/chris-voss.md) | 谈判、打破僵局 |
+| [Richard Feynman](profiles/richard-feynman.md) | 审计逻辑、识别自我欺骗 |
+| [Cal Newport](profiles/cal-newport.md) | 专注、深度工作、时间分配 |
+| [Reed Hastings](profiles/reed-hastings.md) | 建立坦诚文化、战略转型 |
+| [Sam Altman](profiles/sam-altman.md) | 迭代发布、速度与安全的平衡 |
+| [Paul Graham](profiles/paul-graham.md) | 早期验证、做不可扩展的事 |
+| [Elon Musk](profiles/elon-musk.md) | 第一性原理、删除需求 |
+| [Jensen Huang](profiles/jensen-huang.md) | 平台押注、压力下的执行力 |
+| [Linus Torvalds](profiles/linus-torvalds.md) | 系统设计、务实架构 |
+| [Travis Kalanick](profiles/travis-kalanick.md) | 激进市场进入、速度与合规 |
+| [Julia Evans](profiles/julia-evans.md) | 技术写作、化繁为简 |
+| [Marcus Aurelius](profiles/marcus-aurelius.md) | 危机领导、斯多葛决策 |
+| [Nietzsche](profiles/friedrich-nietzsche.md) | 逆境、重新审视既有假设 |
+| [Socrates](profiles/socrates.md) | 认知谦逊、审计错误确定性 |
+| [Laozi](profiles/laozi.md) | 无为而治、有机涌现、不强迫 |
 
 ---
 
-## 内置认知护栏 (Guardrails)
+## 决策包
 
-> [!IMPORTANT]
-> - **绝不伪造引言**: 直接引用严格限制在每源 15 字以内，其余全部用客观语言重新表述。
-> - **事实可追溯**: 每一条原则必须追溯至真实发生的公开事件或一手资料。
-> - **仅限公众人物**: 拒绝为私人建立档案，严格保护个人隐私。
-> - **明确局限性**: 每次解答结尾必附带 *“以下是该框架针对你具体处境可能覆盖不到的因素”*。
+针对常见决策类型预配置的顾问团：
+
+| 决策包 | 成员 |
+| :--- | :--- |
+| [创业者](packs/startup-founders.md) | Jobs、Altman、Musk、Huang、Graham、Hastings |
+| [投资与资本](packs/investors-capital.md) | Buffett、Munger、Voss |
+| [工程与技术](packs/engineering-science.md) | Torvalds、Musk、Feynman、Evans、Newport |
+| [危机领导](packs/philosophy-crisis.md) | Aurelius、Munger、Feynman、Newport |
+| [Builder 决策](packs/builder-decision-pack.md) | Jobs、Graham、Munger、Hastings |
 
 ---
 
-## 参与贡献
+## 认知护栏
 
-欢迎提交 issue、补充来源或贡献新的 Profile！详情请见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+- 不捏造引用 — 直接引用每条来源不超过 15 个词
+- 每个声明都可追溯至可验证的公开来源
+- 拒绝私人个体 — 仅限公众人物
+- 每次输出都会明确标注该视角在你具体情境下的局限性
+
+---
+
+## 贡献
+
+欢迎提交新的蒸馏档案和改进。详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ```bash
-# 自动化一键打包 (已配置 GitHub Actions 自动运行)
+# 添加档案或审计后重新构建 bundle
 python scripts/build_bundle.py
 ```
 
 ---
 
-<p center>
-  <i>License: <a href="LICENSE">MIT</a> · Author & Maintainer: <a href="https://github.com/DOTfei">DOTfei</a></i>
-</p>
+<p align="center"><i>MIT License · <a href="https://github.com/DOTfei">DOTfei</a></i></p>
