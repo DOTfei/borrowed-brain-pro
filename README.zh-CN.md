@@ -7,69 +7,87 @@
 <p align="center">
   <a href="https://DOTfei.github.io/borrowed-brain-pro/"><img src="https://img.shields.io/badge/Website-Live%20Demo-success" alt="Website"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License"></a>
-  <a href="profiles/INDEX.md"><img src="https://img.shields.io/badge/Profiles-18%20Ready-blue.svg" alt="Profiles"></a>
-  <a href="SKILL.md"><img src="https://img.shields.io/badge/Skill-v0.3.0-6b4fbb" alt="Skill Version"></a>
+  <a href="audits/INDEX.md"><img src="https://img.shields.io/badge/Failure%20Audits-Empirical-red.svg" alt="Audits"></a>
+  <a href="SKILL.md"><img src="https://img.shields.io/badge/Skill-v1.0.0-6b4fbb" alt="Skill Version"></a>
   <a href="https://github.com/DOTfei/borrowed-brain-pro/actions"><img src="https://img.shields.io/github/actions/workflow/status/DOTfei/borrowed-brain-pro/build-bundle.yml?branch=main&label=CI" alt="Build Status"></a>
   <a href="https://github.com/DOTfei/borrowed-brain-pro/stargazers"><img src="https://img.shields.io/github/stars/DOTfei/borrowed-brain-pro?style=social" alt="Stars"></a>
 </p>
 
-> **借用思维，而非扮演人格。**
+> **在你做决定前，照出你看不见的盲区。**
 >
-> Borrowed Brain Pro 是一个决策智力系统，通过有据可查的思维视角、历史失败审计与多视角辩论面板，协助你解决真实决策难题。这不是名人角色扮演，而是结构化的决策支持工具。
+> Borrowed Brain Pro 是专为开发者、创业者和决策者打造的**认知盲点探测器**。它不搞名人角色扮演，不输出毫无用处的励志鸡汤。它通过对标历史上顶尖决策者的真实翻车案例，解剖你正准备盲目下注的隐性假设，帮你避开极其昂贵的试错学费。
 
 ---
 
-## 快速开始
+## 核心区别
+
+| 普通 AI 提示词（“模仿乔布斯思考”） | Borrowed Brain Pro（认知盲点探测器） |
+| :--- | :--- |
+| **输出：** 迎合你的名人名言（*“要追求极致，保持热爱！”*） | **输出：** 2 项致命隐性假设 + 1 个历史同款败局镜像 + 1 个验证测试 |
+| **缺陷：** 顺从你的认知偏见，助长盲目乐观 | **价值：** 揭露完全相同的逻辑在历史上为什么会彻底惨败 |
+| **后果：** 凭感觉再闷头开发 3 个月 | **行动：** 48 小时内即可验证关键假设的最小有用测试（SUT） |
+
+---
+
+## ⚡ 真实实战对比示例
+
+### 📥 你的决策困境输入
+> *“我已经花了 2 个月做我的 AI 应用。我应该再花 1 个月把精美 UI 和全自动 Agent 流水线做完，还是应该直接全部免费开放 3 个月来吸引 10,000 名用户？”*
+
+### 📤 盲点探测器扫描输出
+
+```text
+1. 🔍 未验证的隐性假设
+• 假设 A：你默认用户流失是因为 UI 不够精致，但实际上你从未验证过核心留存价值。
+• 假设 B：你默认免费用户以后会自然转化为付费用户，但历史 SaaS 免费转化率通常低于 2%。
+
+2. ⚠️ 核心认知盲区
+• 过度工程化 + 过早规模化陷阱（在证实真实支付意愿前，过早打磨次要外观与复杂链路）。
+
+3. 🏛️ 历史翻车案例镜像
+• 对标案例：史蒂夫·乔布斯 & NeXT 计算机 (1988) — audits/jobs-next.md
+  当年乔布斯在没调研大学真实预算的情况下，斥巨资研发镁合金外壳与定制光驱，导致定价 6,500 美元无人问津。
+  核心规则：产品工艺的优雅与技术的精妙，压不住与客户真实支付能力的脱节。
+
+4. 🧪 残酷自查问题与 48 小时最小有用测试
+• 必答自查：如果现在 5 个真实目标用户都不愿意为简陋版付 10 美元，凭什么 10,000 个免费用户以后会付钱？
+• 最小有用测试（SUT）：在再写一行 UI 代码之前，今天直接做个 Stripe/收钱链接发给 5 个意向用户测试预付意愿。
+```
+
+---
+
+## 🚀 极简快速开始
 
 ```bash
-# 克隆到你的 AI agent skill 目录
+# 克隆到本地 AI Agent Skill 目录
 git clone https://github.com/DOTfei/borrowed-brain-pro.git ~/.claude/skills/borrowed-brain-pro
 
-# 或者直接粘贴 borrowed-brain-bundle.md 作为任意 LLM 的系统提示词
+# 或者直接将 borrowed-brain-bundle.md 复制到 ChatGPT / Claude 中作为系统提示词
 ```
 
-| 平台 | 使用方式 |
+| 平台 | 接入方式 |
 | :--- | :--- |
-| ChatGPT / Claude.ai | 将 [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) 粘贴为系统提示词 |
-| Cursor / Windsurf | 将 [`.cursorrules`](.cursorrules) 复制到项目根目录 |
-| Codex / Claude CLI | `git clone` 到 `~/.claude/skills/` |
-| Ollama / Open WebUI | 将 bundle 粘贴到 Modelfile 的 system 字段 |
+| **ChatGPT / Claude.ai** | 将 [`borrowed-brain-bundle.md`](borrowed-brain-bundle.md) 粘贴到自定义说明中 |
+| **Cursor / Windsurf** | 放入项目根目录规则或 agent skills |
+| **Codex / Claude CLI** | `git clone` 至 `~/.claude/skills/` |
+| **本地大模型 / Ollama** | 在 Modelfile 系统提示词中引入 bundle |
 
 ---
 
-## 工作原理
-
-四种模式，一个 Skill — 每个决策都流经同一个结构化流程：
+## 🔬 盲点检测引擎工作流
 
 ```mermaid
 flowchart TD
-    Start(["你的真实决策 / 问题"]):::start --> Router{"模式路由"}:::decision
+    Dilemma(["你的真实决策困境"]):::start --> Scan{"盲点扫描引擎"}:::decision
 
-    Router -->|1. 蒸馏| D1["构建新思维档案\n研究 → profiles/name.md"]:::action
-    Router -->|2. 应用| A1["应用单一视角\n挖掘隐藏盲点"]:::action
-    Router -->|3. 对比| C1["对比 2+ 个视角\n呈现分歧与共同盲点"]:::action
-    Router -->|4. 董事会| B1["虚拟董事会辩论\n3-4 个视角交叉质问"]:::action
-
-    D1 --> Output["决策视角输出\n明确局限 + 最小有用测试"]:::success
-    A1 --> Output
-    C1 --> Output
-    B1 --> Output
-
-    classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
-    classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
-    classDef action fill:#64748b,stroke:#475569,color:#ffffff,font-weight:bold
-    classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
-```
-
-每次分析遵循同一层级结构 — 决策优先，视角其次，证据支撑，最终输出可执行测试：
-
-```mermaid
-flowchart TD
-    Start(["用户决策困境"]):::start --> S1["决策分析与问题重构"]:::action
-    S1 --> S2["思维视角选择"]:::decision
-    S2 --> S3["历史案例与证据链"]:::action
-    S3 --> S4["失败边界与认知盲点"]:::warning
-    S4 --> End["最小有用测试"]:::success
+    Scan --> S1["1. 挖掘隐性假设
+提取未经证实就默认为真的前提"]:::action
+    Scan --> S2["2. 认知盲区归类
+过度设计 / 虚假护城河 / 执念盲从"]:::action
+    Scan --> S3["3. 历史败局镜像
+精准匹配 audits/ 库中的真实惨败案例"]:::warning
+    Scan --> S4["4. 诊断测试
+3 个残酷自查问题 + 48 小时可落地测试"]:::success
 
     classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
     classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
@@ -78,110 +96,29 @@ flowchart TD
     classDef success fill:#16a34a,stroke:#15803d,color:#ffffff,font-weight:bold
 ```
 
-四种模式示例：
+---
 
-```
-"帮我构建 Jensen Huang 的思维档案"         → 蒸馏模式
-"用 Jobs 的档案，分析我忽略了什么？"        → 应用模式
-"对比 Jobs 和 Altman 对我的发布时机看法"   → 对比模式
-"召集董事会讨论我的定价难题"               → 董事会模式
-```
+## 📚 真实历史败局案例库 (`audits/`)
 
-**普通 AI 提示词 vs. Borrowed Brain Pro：**
+系统每次分析都会精准索引底层真实研究档案：
 
-| | 普通提示词 | Borrowed Brain Pro |
-| :--- | :--- | :--- |
-| 输入 | "以巴菲特的视角思考" | "用巴菲特的档案分析我的 SaaS 交易" |
-| 输出 | 泛化的鸡汤语录 | 有据可查的原则 + 明确失败边界 |
-| 价值 | 几乎为零 | 附带具体局限性的实战决策视角 |
+- **[乔布斯 & NeXT 计算机](audits/jobs-next.md)**：未验证付费意愿前的过度工程化。
+- **[芒格 & 阿里巴巴](audits/munger-alibaba.md)**：平台渠道变迁下的护城河错觉与廉价陷阱。
+- **[哈斯廷斯 & Qwikster 拆分](audits/hastings-qwikster.md)**：执念压制内部异见带来的灾难级摩擦。
+- **[马斯克 & Model 3 产能地狱](audits/musk-model3-automation.md)**：自动化了一个本该直接删除的流程。
+
+查看完整分类索引：[历史失败审计索引](audits/INDEX.md)。
 
 ---
 
-## 董事会模式
+## 参与贡献
 
-发送 `"召集董事会 [你的难题]"` — 系统自动选择 3–4 个互补视角，运行结构化三轮辩论：
-
-- **第一轮** — 每个视角就你的难题陈述立场
-- **第二轮** — 视角之间直接交叉质问
-- **第三轮** — 共识、不可调和的分歧、以及集体盲点
-- **输出** — 行动表 + 最小有用测试
-
-针对产品/创业难题的典型董事会组合：Jobs（极简）× Graham（用户验证）× Munger（逆向思考）× Hastings（快速反馈）。
-
----
-
-## 失败审计
-
-每个视角都包含有据可查的失败边界。仓库内附四个审计案例：
-
-| 案例 | 人物 | 失败原因 | 提炼规则 |
-| :--- | :--- | :--- | :--- |
-| [阿里巴巴投资](audits/munger-alibaba.md) | Munger | 高估平台护城河 | 低估值救不了侵蚀中的护城河 |
-| [Qwikster 拆分](audits/hastings-qwikster.md) | Hastings | 执念压制了内部异见 | 重大决策前主动招募反对意见 |
-| [NeXT 工作站](audits/jobs-next.md) | Jobs | 完美主义忽视支付意愿 | 优雅压不住价格天花板盲点 |
-| [Model 3 产能地狱](audits/musk-model3-automation.md) | Musk | 在简化之前就自动化 | 永远不要自动化一个本该删掉的步骤 |
-
-每个审计案例都附带**自我检查问题**，帮你识别自己是否正在重蹈同样的错误。
-
----
-
-## 18 个预置档案
-
-| 人物 | 最适合 |
-| :--- | :--- |
-| [Warren Buffett](profiles/warren-buffett.md) | 估值纪律、对交易说不 |
-| [Charlie Munger](profiles/charlie-munger.md) | 逆向思考、避免认知偏误 |
-| [Steve Jobs](profiles/steve-jobs.md) | 砍功能、极简、发布时机 |
-| [Chris Voss](profiles/chris-voss.md) | 谈判、打破僵局 |
-| [Richard Feynman](profiles/richard-feynman.md) | 审计逻辑、识别自我欺骗 |
-| [Cal Newport](profiles/cal-newport.md) | 专注、深度工作、时间分配 |
-| [Reed Hastings](profiles/reed-hastings.md) | 建立坦诚文化、战略转型 |
-| [Sam Altman](profiles/sam-altman.md) | 迭代发布、速度与安全的平衡 |
-| [Paul Graham](profiles/paul-graham.md) | 早期验证、做不可扩展的事 |
-| [Elon Musk](profiles/elon-musk.md) | 第一性原理、删除需求 |
-| [Jensen Huang](profiles/jensen-huang.md) | 平台押注、压力下的执行力 |
-| [Linus Torvalds](profiles/linus-torvalds.md) | 系统设计、务实架构 |
-| [Travis Kalanick](profiles/travis-kalanick.md) | 激进市场进入、速度与合规 |
-| [Julia Evans](profiles/julia-evans.md) | 技术写作、化繁为简 |
-| [Marcus Aurelius](profiles/marcus-aurelius.md) | 危机领导、斯多葛决策 |
-| [Nietzsche](profiles/friedrich-nietzsche.md) | 逆境、重新审视既有假设 |
-| [Socrates](profiles/socrates.md) | 认知谦逊、审计错误确定性 |
-| [Laozi](profiles/laozi.md) | 无为而治、有机涌现、不强迫 |
-
----
-
-## 决策包
-
-针对常见决策类型预配置的顾问团：
-
-| 决策包 | 成员 |
-| :--- | :--- |
-| [创业者](packs/startup-founders.md) | Jobs、Altman、Musk、Huang、Graham、Hastings |
-| [投资与资本](packs/investors-capital.md) | Buffett、Munger、Voss |
-| [工程与技术](packs/engineering-science.md) | Torvalds、Musk、Feynman、Evans、Newport |
-| [危机领导](packs/philosophy-crisis.md) | Aurelius、Munger、Feynman、Newport |
-| [Builder 决策](packs/builder-decision-pack.md) | Jobs、Graham、Munger、Hastings |
-
----
-
-## 认知护栏
-
-- 不捏造引用 — 直接引用每条来源不超过 15 个词
-- 每个声明都可追溯至可验证的公开来源
-- 拒绝私人个体 — 仅限公众人物
-- 每次输出都会明确标注该视角在你具体情境下的局限性
-
----
-
-## 贡献
-
-欢迎提交新的蒸馏档案和改进。详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
-
-```bash
-# 添加档案或审计后重新构建 bundle
-python scripts/build_bundle.py
-```
+欢迎补充新的真实商业/工程失败案例与思维视角：
+1. 参考 [案例审计指南](audits/INDEX.md)。
+2. 运行打包编译器：`python scripts/build_bundle.py`。
+3. 提交 Pull Request。
 
 ---
 
 <p align="center"><i>MIT License · <a href="https://github.com/DOTfei">DOTfei</a></i></p>
+

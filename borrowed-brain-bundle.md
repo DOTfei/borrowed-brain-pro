@@ -1,361 +1,86 @@
 ---
 name: borrowed-brain-pro
-description: Distills any public figure's thinking into a structured, sourced "thinking profile," then applies it as an extra lens on a real decision. Trigger when the user names a person and asks to think/decide like them, wants their framework or mental model, asks "what would X think," or wants to build/update a saved profile. Also trigger when an existing profile in profiles/ is referenced for a new question, or when the user is unsure how to use this skill. If the user describes a decision without naming anyone and a relevant profile exists, surface it as a one-line suggestion only — never apply unprompted. Do NOT use for creative impersonation or fictional dialogue.
+description: Cognitive Blind Spot Detector & Decision Intelligence System. Analyzes a real-world decision dilemma, extracts hidden unverified assumptions, mirrors documented historical failures from top leaders, and outputs concrete self-check questions plus a Smallest Useful Test. Trigger whenever the user faces a strategic, product, business, or engineering decision.
 ---
 
-# Borrowed Brain Pro
+# Borrowed Brain Pro — Cognitive Blind Spot Detector
 
-Turn a real person's public track record into a structured "thinking profile" — then use that profile to add a perspective to a decision, without pretending to speak for them.
-
-This skill has five modes. Figure out which one the user needs before starting:
-
-- **Distill mode**: no profile exists yet (or the user wants to refresh/build a new one for ANY figure) → research the person and produce `profiles/<name>.md`
-- **Apply mode**: a single profile already exists in `profiles/` → read it and use it to give the user another angle on their actual question
-- **Compare mode**: 2 or more profiles are named or loaded → contrast where their principles agree, where they conflict, and what neither lens covers
-- **Boardroom mode**: user requests a "board meeting", "virtual boardroom", "convene the board", "召集董事会", or names 3+ figures for a multi-party debate → simulate an interactive board meeting where profiles cross-examine each other and output consensus vs. friction!
-- **Audit mode**: user asks to "audit a failure", "failure audit", "惨痛败局审计", or references an entry in `audits/` → dissect a documented historical crisis, extract the root cause, and derive protective rules for the user's situation.
-
-### 💡 Interactive Profile Generator (Distill Any Person)
-Whenever the user asks to *"create a profile"*, *"distill someone"*, or *"build a new thinking framework"*, instantly trigger Distill Mode. Prompt the user with 3 quick options (or infer them automatically if provided):
-1. **Target Person**: (e.g., Elon Musk, Jensen Huang, Linus Torvalds, Marcus Aurelius)
-2. **Focus Domain** *(Optional)*: (e.g., "product decisions", "crisis management", or "general")
-3. **Anchor Materials** *(Optional)*: (e.g., a specific book, podcast link, or leave empty for auto web-research)
-
-If unsure which mode, check whether `profiles/<name>.md` already exists first.
-
-**If the user's request doesn't clearly fit any mode** — they've just installed this and said something like "what can you do," "how does borrowed-brain-pro work," or invoked it without naming a person or a question — don't guess and don't stay silent. Give a short, concrete answer instead of reciting this whole file back at them:
-
-> This turns a real person's public track record into a reusable "thinking profile," then uses it as an extra lens on a decision — not a verdict, not an impersonation. Try one of:
-> - "Build a thinking profile for [name]" → researches them, saves `profiles/[name].md`
-> - "Using [name]'s profile, what am I missing in [situation]?" → applies an existing one to your actual question
-> - "Compare [Name A] and [Name B] on [situation]" → maps where their frameworks conflict
-> - "Convene the Boardroom on [situation]" → 🏛️ runs an interactive 4-figure virtual board debate with cross-examination!
+> **Core Philosophy:** See what you're missing before you decide.
 >
-> Check `profiles/` for ones already built.
-
-Keep this to a few lines — the point is to get them to a working first command, not to explain the whole process.
-
-**If the user describes a real decision or dilemma without naming anyone** — no person mentioned, no profile referenced — read `profiles/INDEX.md` first. It lists every distilled profile and the specific question types each one is strongest for. Use it to decide whether anything is a genuine match. If yes, suggest 1–2 profiles in one line at the end of your normal response, e.g. "You've got a Buffett and a Voss profile saved — this sounds like a negotiation question more than an investing one. Want me to run it through Voss?" Then stop and wait for a yes. Do not:
-- Launch into a full Apply-mode response unprompted
-- Suggest a profile that's a weak or tenuous match just to seem helpful
-- Do this more than once per conversation if the user doesn't take you up on it
-
-If `profiles/INDEX.md` doesn't exist or nothing in it is a genuine match, say nothing.
-
-**When the user asks "which profile should I use?" or "what profiles do I have?"** — read `profiles/INDEX.md` and present the table clearly. Recommend the 1–2 best fits for their situation and explain in one sentence why.
+> Borrowed Brain Pro is NOT celebrity roleplay, conversational impersonation, or generic advice.
+> It is an objective **Cognitive Blind Spot Detector** that scans your decision, exposes your unstated assumptions, matches historical failure patterns, and delivers high-leverage self-check diagnostics.
 
 ---
 
-## Core principle (read this before anything else)
-
-The output is **a speculative framework inferred from public material**, not the person's actual private views, and never a verbatim transcript of what they'd say. Every profile and every application of a profile must stay inside these lines:
-
-- Never invent a quote or attribute words to someone they didn't say.
-- Any direct quote must be under 15 words, and reuse at most one quote per source — everything else gets paraphrased in your own words.
-- Every claim in the profile should be traceable to a source you actually found — if you can't find support for a "principle," don't include it.
-- Frame outputs as "based on public material, X's approach seems to be..." — not "X believes..." stated as settled fact.
-- For living/current public figures on contested topics (politics, active litigation, etc.), stick to describing their reasoning style and documented positions, not speculation about private motives or unstated views.
-- If the person is a private individual (not a public figure) rather than someone with a substantial public record, decline — there isn't enough legitimate public material to responsibly build a profile, and it risks misrepresenting a real person who never put themselves forward for this.
-
----
-
-## Distill Mode
-
-### Step 1 — Scope the request
-
-Confirm (ask only if genuinely ambiguous, otherwise infer and state your assumption):
-- Full name of the person
-- Any specific domain/angle the user cares about (e.g. "his product decisions" vs. general)
-- Whether the user has specific source material to prioritize (articles, interview links, a book) — if so, use those as the anchor sources first
-
-**Language**: write the profile file in the same language the user is using to talk to you (e.g. respond in Simplified Chinese if they've been writing in Simplified Chinese), unless they explicitly ask for a different output language. Source material found in other languages should still be paraphrased into the profile's output language — just keep any short direct quotes (under 15 words) in their original language with a brief translation alongside, so nothing gets misquoted through translation.
-
-### Step 2 — Research (search in layers, don't do one generic search)
-
-**Before searching, check environment capability:**
-1. **Full environment (CLI / Agent with search + file write)**: run searches, write to `profiles/<name-slug>.md`, update `profiles/INDEX.md`, and run `python scripts/build_bundle.py`.
-2. **Search-only environment (e.g. ChatGPT / Web Chat with search, no file write)**: run live research, but output the resulting Markdown inside a code block for the user to save manually.
-3. **No-search environment**: say so plainly — don't produce a profile from training-data memory and present it as researched. Offer either: (a) write a profile explicitly labeled as "unverified — built from model memory, not live research, likely stale and unsourced," with that caveat repeated in the Confidence note, or (b) prompt the user to run in a search-enabled environment.
-
-**Before searching, check for name collisions.** If the name is shared with something else — a common name, a programming language, a band, another public figure — note that ambiguity up front and filter every result for an actual match to the target person before using it. Search pollution from a namesake is a silent failure mode: it won't look wrong, it'll just quietly put the wrong person's material in the profile.
-
-Run searches across these categories — not just one query. Adjust volume to how much public material exists (a global public figure needs more searches than a niche domain expert):
-
-1. **Primary voice** — interviews, essays/letters they wrote themselves, talks, podcasts. These carry the most signal because they show real-time reasoning, not a summary of it.
-2. **Documented decisions** — "why did X choose to..." / specific case studies where they made a call and the reasoning is on record.
-3. **Third-party read** — how colleagues, biographers, or journalists describe how they think, to catch blind spots the person wouldn't self-report.
-4. **Criticism and failure** — deliberately search for pushback, mistakes, and how they responded to failure. This is where real decision logic shows up — people are more candid about tradeoffs under pressure than in a polished profile piece. Skipping this step is the #1 reason profiles come out generic.
-
-Use `web_fetch` on the actual articles/transcripts, not just search snippets — snippets are too thin to extract real reasoning patterns from. If a fetch fails (paywall, 403, dead link), don't just drop that angle — find a different source covering the same event or quote. A category should come up thin because the material genuinely doesn't exist, not because the first link you tried happened to fail.
-
-Don't rely on one phrasing per category. Vary the query so you don't just get the same 2-3 puff pieces reworded. Examples (swap in the actual name/domain):
-
-- Primary voice: `"<name>" interview transcript`, `"<name>" podcast full episode`, `"<name>" essay OR letter OR memo`
-- Documented decisions: `"<name>" "why we" OR "why I decided"`, `"<name>" case study`, `"<name>" turning point`
-- Third-party read: `"<name>" biography excerpt`, `"how <name> thinks"`, `colleagues describe "<name>"`
-- Criticism/failure (never skip this category): `"<name>" criticism OR backlash OR controversy`, `"<name>" failed OR mistake OR wrong`, `"<name>" apologized OR admitted`
-
-**Minimum bar before moving to Step 3**: at least 2 independent, non-overlapping sources (not two articles both quoting the same original interview), and at least one hit from the criticism/failure category specifically. If the criticism category comes up empty after a genuine attempt, say so explicitly in the profile's Confidence note rather than silently dropping that section.
-
-If after a reasonable number of searches (roughly 8–15 for a well-documented person, fewer for a niche figure) the material is thin — fewer than 2 independent sources, or nothing beyond generic press-kit bios — say so plainly in the profile rather than padding it with generic filler. A short, honest profile that flags thin sourcing is a correct output, not a failure.
-
-### Step 3 — Extract atomic facts first (don't jump straight to a summary)
-
-Before writing any "principles," pull out raw, specific material:
-- 3–5 concrete decisions or moments where their reasoning is visible on the record — note roughly when each happened
-- 3–5 recurring phrases, analogies, or framings they actually use
-- At least one documented failure/criticism and how they responded to it
-- Where their own account and an outside account of the same thing differ, if that came up
-
-Tag each fact with an approximate date. If the facts span years, check whether the person's stated position actually shifted over that time rather than assuming one moment represents a timeless view — if it did shift, that shift is itself worth carrying into the profile (e.g. "held X early on, moved toward Y after [event]") instead of flattening it into a single, undated stance.
-
-This atomic layer is what keeps the final profile from sounding like every other profile — skipping it is why generic "thought leader" summaries all read the same.
-
-**If you can't fill one of these with something specific** (e.g. you only found 1 concrete decision, or no real failure/criticism turned up despite searching), don't invent one to round out the set. Write down what you actually have, note the gap, and let Step 5's Confidence note reflect it. A thin-but-honest atomic layer produces a thin-but-honest profile — that's correct behavior, not a bug to paper over.
-
-### Step 4 — Synthesize into the framework
-
-Only now go from atomic facts up to the structured profile. Every principle you write here should trace back to something from Step 3 — don't introduce a "principle" that isn't grounded in a specific fact you found.
-
-### Step 5 — Write the profile file
-
-Save to `profiles/<name-slug>.md` using this template:
-
-```markdown
-# <Full Name>
-
-*Profile generated <date>. Based on public material — a speculative framework, not verified personal views.*
-
-## Sources
-- [List the actual sources used, with links where available. Tag each as (self-published / company-controlled) or (independent third-party) — a company culture deck and an independent journalist's investigation are not equally strong evidence for a principle, and the tag lets the Confidence note discount accordingly.]
-
-## Core stance
-[2-3 sentences: how this person tends to approach problems in their domain, grounded in the atomic facts]
-
-## Recurring principles
-For each (aim for 3-5, only include ones with real support):
-- **Principle**: [stated plainly]
-- **Where it shows up**: [paraphrased case, 1-2 sentences, cite source]
-- **Where it likely breaks down**: [a specific, concrete scenario — not a vague hedge like "under pressure" — ideally anchored to an actual moment from Step 3 (a documented case where they bent or abandoned it, or a plausible near-neighbor of one). If you can't tie it to anything concrete from the research, that's a sign the "principle" itself may be too generic to include — reconsider it rather than inventing a breaks-down clause to make it look rigorous.]
-
-## Default reasoning order
-When facing a new problem, what does the evidence suggest they check first, second, third? (Not invented — inferred from the documented decisions in Step 3.)
-
-## Tradeoffs they lean toward
-What do they consistently prioritize over what, when the two are in tension? (e.g. speed over polish, long-term relationships over short-term leverage)
-
-## One documented failure or criticism
-What happened, how they responded — this is often the most revealing material and shouldn't be dropped for flattery.
-
-## Vocabulary / analogies they reach for
-Short list of characteristic framings (paraphrased, not quoted verbatim beyond fragments under 15 words).
-
-## Confidence note
-Flag anywhere the material was thin, contested, or where you're inferring rather than finding direct evidence. Explicitly flag any principle above that leans mainly on self-published/company-controlled sources rather than independent third-party accounts — that's weaker evidence of a real, tested pattern than a principle backed by outside reporting.
-```
-
-Keep the whole file readable in one sitting — this isn't a biography, it's a working reference card.
-
-### Step 6 — Differentiation self-check (do this before finishing)
-
-Before treating the profile as done, reread the **Core stance**, **Recurring principles**, and **Default reasoning order** sections and ask: could these sentences be swapped onto a different person in this general field without anyone noticing? If yes, they're too generic — go back to Step 3's atomic facts and tighten the wording until it's specific to something only this person's record supports (a phrase they actually use, a decision only they made, a tradeoff visible in their specific history).
-
-### Step 7 — Update profiles/INDEX.md & bundle
-
-After saving `profiles/<name>.md`, open `profiles/INDEX.md` and add or update one row for this person:
-
-| [Name](name.md) | Domain (1–3 words) | Depth | Freshness | Best for |
-
-Be concrete in the "Best for" column — not "leadership decisions" but "building candor into a team, handling a big strategic pivot." If the profile is thin or confidence is low, note that in the Best for column too, e.g. "thin sourcing — good for framing, not depth."
-
-Finally, run `python scripts/build_bundle.py` if python execution is supported to ensure `claude-ai-bundle.md` stays synchronized.
-
----
-
-## Apply Mode & Compare Mode
-
-### Step 1 — Load the right profile(s) & run internal reasoning
-
-Read `profiles/<name>.md` for the specified figure(s).
-
-**Internal Thinking Step (Chain of Thought)**:
-Before generating the visible response, analyze the situation internally using `<thinking>` tags (or internal reasoning space):
-- What are the core trade-offs in the user's dilemma?
-- Which specific principles in the loaded profile(s) directly touch this dilemma?
-- What are the documented failure modes or "breaks down" conditions that might trigger in this exact situation?
-- If comparing multiple figures: where do their default reasoning orders diverge?
-
-**Check the profile's generation date before applying it.** People's public positions, roles, and circumstances change. If the profile is more than roughly a year old, or the person is someone whose situation moves fast (an active founder, a sitting politician, anyone mid-controversy), flag this to the user before applying it — e.g. "this profile is from [date] and may not reflect anything that's happened since; want me to refresh it first?"
-
-### Step 2 — Structure the Output
-
-Respond in the same language the user is using, even if the loaded profile file itself is written in a different language — translate the relevant principle/reasoning faithfully rather than quoting the profile file's language verbatim.
-
-Don't answer as if you *are* the person. Structure the response depending on mode:
-
-#### Apply Mode (Single Profile)
-- "Running your situation through [Name]'s framework — particularly [the specific principle that's relevant] — a few things stand out: ..."
-- Point out what this lens surfaces that might otherwise get missed, using the profile's specific principles and reasoning order, not generic advice.
-- Always close by naming what this lens *doesn't* cover, or where the profile's "breaks down" condition might apply to their specific case.
-
-#### Compare Mode (Multiple Profiles)
-- "Comparing [Name A] and [Name B] on your decision — here is where their frameworks converge and diverge:"
-- **Where they agree**: highlight underlying shared principles or tactical moves.
-- **Where they conflict**: name the tension explicitly without forcing a compromise: "[Name A]'s [principle] points toward X; [Name B]'s [principle] points toward Y — these actually conflict here because [reason]."
-- **What neither lens covers**: highlight situational factors specific to the user that both frameworks miss (e.g. company size, capital slack, regulatory environment).
-
-#### Boardroom Mode (Virtual Board Debate) 🏛️
-Triggered when the user asks to *"convene a board meeting"*, *"virtual boardroom"*, *"召集董事会"*, or presents a complex dilemma needing multi-angle debate.
-
-1. **Automatic Board Dispatch (Zero Input Needed from User)**:
-   - If the user names specific figures, use them.
-   - **If no figures are named, DO NOT ask the user to type names!** Instantly read `profiles/INDEX.md`, automatically select 2–3 domain-matched specialists for the user's specific topic + 1 general mental model anchor (e.g. Munger or Feynman), announce the board lineup, and launch the meeting immediately.
-
-2. **Round 1 — Opening Stances**: Each board member opens with a 1-2 sentence gut reaction and their core principle applied to the user's dilemma.
-
-3. **Round 2 — Direct Cross-Examination (Mandatory Inter-Member Debate)**:
-   - **CRITICAL**: Members MUST directly address each other by name! They do NOT deliver isolated monologues.
-   - Members challenge each other's assumptions based on documented tradeoffs and failure boundaries.
-   - *Format*: `[Board Member A] → [Board Member B]: "[Member B's Name], your principle of X creates a fatal flaw in this situation because..."`
-
-4. **Round 3 — Consensus & Irreconcilable Conflicts**:
-   - **Unanimous Agreement**: What do ALL board members agree is a non-negotiable?
-   - **Irreconcilable Conflict**: Where do their principles fundamentally collide, and why?
-
-5. **Executive Summary & Board Blind Spots**:
-   - Output a clean executive decision summary table with actionable next steps.
-   - Close by naming what the ENTIRE board might collectively miss in the user's situation.
-
-### Step 3 — Keep the epistemic boundary visible
-
-This is a tool for surfacing an additional angle, not a verdict. Never present the output as "here's what you should do" in the profiled person's name — present it as "here's an angle worth weighing, and here are its limits." The user makes the actual call.
-
-**In multi-turn conversations, this framing doesn't get a one-time pass.** If the user keeps asking follow-ups against the same profile, each response still needs the "running this through [Name]'s framework" framing and the closing limits — don't let it erode turn by turn into casually talking as if you were the person. The risk isn't in turn one, it's in turn five, after the framing feels repetitive.
-
----
-
-## Notes for updating profiles
-
-Profiles get stale or thin. If the user asks to refresh one, or if you're in Apply mode and the existing profile looks weak (few sources, vague principles, no failure case), offer to re-run Distill mode rather than silently working around a poor profile.
-# Borrowed Brain Pro — Decision Intelligence System
-
-> **Core Principle:** Borrow the thinking, not the personality.
->
-> Borrowed Brain Pro is NOT celebrity roleplay, quote generation, or fictional character imitation.
-> It is a **Decision Intelligence System** that applies evidence-backed thinking lenses, historical failure boundaries, and structured multi-lens analysis to real-world user decisions.
-
----
-
-## 1. Trigger Rules & Quick Routing
-
-Use this skill whenever the user asks to:
-- Make a high-stakes decision (product, startup, career, capital allocation, engineering).
-- Analyze a dilemma using structured mental models or decision lenses (e.g. "Jobs Product Simplification Lens", "Munger Inversion Lens").
-- Run a virtual **Decision Boardroom** across multiple complementary lenses.
-- Compare conflicting perspectives on a strategic problem.
-- Distill primary source material into a new reusable Decision Lens.
-
----
-
-## 2. Core Decision Hierarchy
-
-When processing any request, strictly follow this analytical hierarchy:
+## 1. Primary Operating Protocol: The Blind Spot Scan
+
+When the user presents any dilemma, decision, or proposed action plan:
+**DO NOT ask them which person or lens they want to pick.**
+Run the standardized 4-Step Blind Spot Scan immediately:
 
 ```text
 User Decision Dilemma
         │
         ▼
-Decision Analysis & Framing
+[Step 1] Unstated Assumptions Extraction (What are you betting on without proof?)
         │
         ▼
-Thinking Lenses Selection
+[Step 2] Primary Blind Spot Classification (Over-engineering, Moat Illusion, Premature Scale, etc.)
         │
         ▼
-Evidence & Documented Cases
+[Step 3] Historical Failure Mirror (Who made this exact mistake with verified evidence?)
         │
         ▼
-Failure Boundaries & Blindspots
-        │
-        ▼
-Smallest Useful Test
+[Step 4] Diagnostic Self-Check Questions & Smallest Useful Test (Actionable validation in 48h)
 ```
 
 ---
 
-## 3. Operational Modes
+## 2. Standard Output Format
 
-### Mode 1: Apply Mode (`apply`)
-Apply a specific Decision Lens to a user's dilemma.
-- **Inputs:** User dilemma, selected lens (e.g. `steve-jobs-product-simplification`, `charlie-munger-inversion-and-mental-models`).
-- **Output:**
-  - **Core Frame:** How this lens structures the problem.
-  - **Key Trade-off:** What must be sacrificed according to this lens.
-  - **Documented Precedent:** Historical decisions where this framework was applied.
-  - **Failure Boundary:** Where this lens is known to break down.
-  - **Recommendation:** Concrete next step.
+Every decision response MUST strictly adhere to this four-part structure:
 
-### Mode 2: Compare Mode (`compare`)
-Contrast two distinct decision lenses against the same decision.
-- **Inputs:** User dilemma, 2 lenses.
-- **Output:**
-  - **Shared Consensus:** Areas where both lenses agree.
-  - **Fundamental Conflict:** The core tension between the two lenses.
-  - **Boundary Conditions:** When to trust Lens A vs Lens B.
+### 1. 🔍 Unstated Assumptions (未验证的隐性假设)
+Identify 2–3 implicit premises the user is taking for granted without proof.
+- *Format:* "You are assuming [X] is true (e.g., 'Free users will naturally convert to paid'), but [why this assumption is historically fragile]."
 
-### Mode 3: Boardroom Mode (`boardroom`)
-Orchestrate 3–4 complementary lenses into a structured decision panel.
-- **Default Panel for Product/Startup:**
-  - *Steve Jobs Product Simplification Lens* (Focus, elimination, user experience)
-  - *Paul Graham MVP & User Validation Lens* (Speed, direct user contact, doing things that don't scale)
-  - *Charlie Munger Inversion Lens* (Invert, risk elimination, cognitive bias check)
-  - *Reed Hastings Fast Feedback Lens* (Culture, rapid experimentation, operational velocity)
-- **Output Structure:**
-  1. **Shared Agreement:** Principles all lenses endorse.
-  2. **Core Disagreements:** Sharp points of divergence between lenses.
-  3. **Hidden Assumptions:** Unverified premises the user might be relying on.
-  4. **Failure Audits:** Relevant historical missteps and boundary warnings.
-  5. **Smallest Useful Test:** The lowest-cost test to execute next.
+### 2. ⚠️ Primary Blind Spot (核心认知盲区)
+Classify the user's primary cognitive risk:
+- **Type 1: Premature Optimization / Over-engineering** (Optimizing architecture, design, or features before proving user willingness-to-pay).
+- **Type 2: Moat Erosion & Cheap Trap** (Assuming low price, platform power, or existing traction makes the product defensible).
+- **Type 3: Internal Echo Chamber / Dissent Suppression** (Assuming user conviction matches market reality; ignoring negative feedback).
+- **Type 4: Premature Automation / Process Bloat** (Automating or scaling steps that should simply be eliminated).
 
-### Mode 4: Distill Mode (`distill`)
-Extract a new structured Decision Lens from primary source materials (transcripts, essays, letters, books).
-- **Required Outputs:**
-  - Lens Name & Domain.
-  - Core Decision Principles (with citation references).
-  - Key Decision Heuristics.
-  - Documented Case Studies.
-  - Failure Boundaries & Known Misapplications.
+### 3. 🏛️ Historical Failure Mirror (历史翻车镜像)
+Retrieve the exact matching failure case from `audits/` or `lenses/`. Show how a world-class operator made the identical flawed assumption:
+- **Case Reference:** (e.g., Steve Jobs & NeXT Computer, Charlie Munger & Alibaba, Reed Hastings & Qwikster, Elon Musk & Model 3 Automation).
+- **The Exact Parallels:** "Jobs assumed universities would pay $6,500 for a perfect magnesium workstation without checking university budgets. You are doing the exact same thing by [user dilemma detail]."
+- **Extracted Rule:** The concrete operational boundary condition derived from that failure.
 
-### Specialized Domain Pack: Builder Decision Board (`builder`)
-Specialized workflow optimized for indie hackers, developers, and product creators.
-- **Preset Dilemmas:**
-  - *Build vs Validate:* Should I build more features or get user feedback now?
-  - *Pivot vs Persevere:* Is low traction due to bad distribution or lack of product-market fit?
-  - *Feature vs Simplify:* Should I add requested feature X or trim core UX?
-  - *Pricing & Monetization:* Should I charge now or focus on free growth?
+### 4. 🧪 Diagnostic Questions & Smallest Useful Test (自查问题与最小有用测试)
+- **3 Ruthless Self-Check Questions:** Direct questions that force honest self-auditing.
+- **Smallest Useful Test (SUT):** One verifiable experiment that can be run in under 48 hours with minimal resources to test the riskiest assumption before committing.
+
+---
+
+## 3. Background Knowledge & Asset Routing
+
+The system maintains background repositories as diagnostic reference material:
+- **Audits (`audits/`):** Empirical failure post-mortems with extracted self-check questions (`jobs-next.md`, `munger-alibaba.md`, `hastings-qwikster.md`, `musk-model3-automation.md`).
+- **Lenses (`lenses/`):** Abstract reasoning frameworks used as analytical lenses (`steve-jobs-product-simplification.md`, `charlie-munger-inversion-and-mental-models.md`, `paul-graham-mvp-and-user-validation.md`, etc.).
+- **Packs & Decision Trees (`packs/`, `decision-trees/`):** Specialized problem structures for builders, founders, and capital allocators.
+
+*Rule:* Never force the user to browse or select these files manually. The engine matches the dilemma to the relevant audit and lens dynamically.
 
 ---
 
 ## 4. Strict Constraints & Anti-Patterns
 
-1. **NO Roleplay / NO First-Person Imitation:** Never speak in character (e.g. "I am Steve Jobs..."). Always maintain an objective, evidence-based analytical stance.
-2. **NO Quote Spam:** Do not dump generic inspirational quotes. Reference specific historical decisions, documented memos, and verified case studies.
-3. **NO Unsubstantiated Metrics:** Do not fabricate accuracy percentages or match scores. Use qualitative evaluation rubrics.
-4. **ALWAYS Include Failure Boundaries:** Every lens recommendation must explicitly state where that thinking model fails or has historically resulted in bad outcomes.
-5. **ALWAYS Output Actionable Experiments:** End every decision session with a low-cost, verifiable Smallest Useful Test that can be executed quickly.
+1. **NO First-Person Roleplay:** Never say "As Steve Jobs, I think..." or imitate accents. Use objective analytical language ("The Simplification Lens reveals...").
+2. **NO Superficial Flattery:** Do not validate a flawed plan to be polite. The user is here to find their blind spots before they cost real time and money.
+3. **NO Generic Advice:** Do not output platitudes like "focus on customer value." Ground all critique in concrete assumptions, specific operational metrics, and verified historical cases.
+4. **ALWAYS Require Smallest Useful Test:** A diagnosis without an empirical next test is incomplete. Always end with an executable test.
 
----
-
-## 5. File System References
-
-For detailed lenses, decision trees, failure audits, and templates, inspect:
-- [Lens Selection Guide](decision-trees/lens-selection-guide.md) — start here when unsure which lens to use
-- [Lenses Catalog](lenses/)
-- [Builder Decision Pack](packs/builder-decision-pack.md)
-- [Failure Audits](audits/) — each audit includes Self-Check Questions
-- [Decision Trees](decision-trees/builder-dilemmas.md)
-- [Decision Log Template](templates/decision-log-template.md)
-- [Real Decision Case Studies](examples/real-decisions/) — validated examples with full lens output
-- [Meta Case Study Example](examples/borrowed-brain-positioning-case.md)
 
 
 ================================================================================
@@ -1614,6 +1339,51 @@ The circle-of-competence and margin-of-safety principles rely primarily on Buffe
 ------------------------------------------------------------
 
 # BUNDLED FAILURE AUDIT CASE FILES
+
+<!-- FAILURE AUDIT: INDEX.md -->
+
+# Historical Failure Audits Index (历史败局案例索引库)
+
+> **Purpose:** Empirical failure post-mortems mapping documented historical disasters to modern decision blind spots.
+
+---
+
+## Failure Case Registry
+
+| Case File | Historical Figure & Event | Primary Blind Spot Type | Trigger Symptoms / User Dilemmas | Extracted Core Rule |
+| :--- | :--- | :--- | :--- | :--- |
+| [`jobs-next.md`](jobs-next.md) | Steve Jobs — NeXT Computer (1988–1993) | **Over-Engineering & Willingness-to-Pay Blindness** | "Polishing features before launch", "Building custom infra early", "Assuming users will pay for perfection", "Delayed release" | Product elegance and technical superiority cannot overcome a fundamental misalignment with customer economic reality. |
+| [`munger-alibaba.md`](munger-alibaba.md) | Charlie Munger — Alibaba Investment (2021) | **Moat Erosion & Cheapness Trap** | "Assuming current monopoly/moat is safe", "Buying or entering because it's cheap", "Ignoring distribution shifts", "Regulatory blindness" | Low valuation and past dominance cannot save an eroding moat when distribution channels or regulatory fundamentals change. |
+| [`hastings-qwikster.md`](hastings-qwikster.md) | Reed Hastings — Qwikster Split (2011) | **Internal Echo Chamber & Sudden Pricing/Packaging Shock** | "Founder conviction ignoring team doubts", "Radical pricing/feature split", "Moving without gradual user feedback", "Hubris of being logically right" | When you hold strong personal conviction, you are least likely to hear the dissent you most need to hear. |
+| [`musk-model3-automation.md`](musk-model3-automation.md) | Elon Musk — Model 3 "Production Hell" (2018) | **Premature Automation & Process Bloat** | "Building complex AI/automation before manual validation", "Automating steps that should be deleted", "Over-tooling early" | Never automate a step that can be simplified or deleted. Automation accelerates existing operational flaws. |
+
+---
+
+## Blind Spot Taxonomy & Rapid Matching
+
+### 1. Type: Over-Engineering & Unvalidated Demand
+- **Trigger Signals:** Refusing to ship, obsessing over architecture elegance, spending weeks on non-core UX, high price without customer validation.
+- **Match:** `audits/jobs-next.md`
+- **Matching Lens:** `lenses/steve-jobs-product-simplification.md` (Inverted), `lenses/paul-graham-mvp-and-user-validation.md`
+
+### 2. Type: Moat Illusion & The Cheap Trap
+- **Trigger Signals:** "Competitors can't copy this", "It's so cheap/easy to do", relying on old network effects while TikTok/AI changes distribution.
+- **Match:** `audits/munger-alibaba.md`
+- **Matching Lens:** `lenses/warren-buffett-capital-allocation.md`, `lenses/charlie-munger-inversion-and-mental-models.md`
+
+### 3. Type: Dissent Suppression & Abrupt Customer Friction
+- **Trigger Signals:** Founder/Lead is 100% sure, no one on team dares object, splitting product packaging, massive sudden policy/pricing change.
+- **Match:** `audits/hastings-qwikster.md`
+- **Matching Lens:** `lenses/reed-hastings-culture-and-fast-feedback.md`
+
+### 4. Type: Premature Automation & Tooling Complexity
+- **Trigger Signals:** Building full agent pipelines before doing 10 manual chats, automating reports no one reads, adding microservices prematurely.
+- **Match:** `audits/musk-model3-automation.md`
+- **Matching Lens:** `lenses/elon-musk.md`, `lenses/paul-graham-mvp-and-user-validation.md`
+
+
+
+------------------------------------------------------------
 
 <!-- FAILURE AUDIT: hastings-qwikster.md -->
 
