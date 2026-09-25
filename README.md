@@ -13,41 +13,43 @@
   <a href="https://github.com/DOTfei/borrowed-brain-pro/stargazers"><img src="https://img.shields.io/github/stars/DOTfei/borrowed-brain-pro?style=social" alt="Stars"></a>
 </p>
 
-> **See what you're missing before you decide.**
+> **Borrow the thinking, not the personality.**
 >
-> Borrowed Brain Pro is a Cognitive Blind Spot Detector for builders, founders, and decision-makers. It does not roleplay famous people or output generic motivational quotes. It stress-tests your real decisions against documented historical failures to expose the costly assumptions you didn't know you were making.
+> Borrowed Brain Pro is a **Decision Intelligence System** that applies evidence-backed thinking lenses, empirical failure audits, and cognitive blind spot detection to your real-world decisions.
+>
+> It is **NOT** celebrity roleplay, conversational impersonation, or motivational quote spam. The person is only the source of a verified mental model — **the decision is the product**.
 
 ---
 
-## The Core Difference
+## ⚡ The Core Difference
 
-| Generic AI Prompt ("Think like Steve Jobs") | Borrowed Brain Pro (Blind Spot Detector) |
+| Generic AI Prompt ("Think like Steve Jobs") | Borrowed Brain Pro (Decision Intelligence System) |
 | :--- | :--- |
-| **Output:** Flattering quotes (*"Focus on simplicity and have passion!"*) | **Output:** 2 unstated assumptions + 1 historical failure mirror + 1 test |
-| **Flaw:** Conforms to your biases and encourages blind optimism | **Value:** Uncovers why your exact logic historically failed |
-| **Next Step:** You build for 3 more months unvalidated | **Next Step:** 1 Smallest Useful Test executable within 48 hours |
+| **Output:** Flattering quotes (*"Focus on simplicity and passion!"*) | **Output:** Unstated assumptions + Historical failure mirror + Smallest Useful Test |
+| **Flaw:** Conforms to your biases and encourages blind optimism | **Value:** Pinpoints cognitive blind spots where that exact logic historically failed |
+| **Next Step:** You build for 3 more months unvalidated | **Next Step:** 1 concrete validation test executable within 48 hours |
 
 ---
 
-## ⚡ Live Comparison Example
+## 🔬 Live Decision Scan Example
 
-### 📥 User Input
+### 📥 Real Dilemma Input
 > *"I've spent 2 months building my AI app. Should I spend another month perfecting the custom UI and automated agent workflows, or make it completely free for 3 months to attract 10,000 users?"*
 
-### 📤 Borrowed Brain Pro Scan Output
+### 📤 Borrowed Brain Pro Decision Debrief
 
 ```text
 1. 🔍 Unstated Assumptions
-• Assumption A: You assume users are bouncing because UI lacks polish, but you haven't proven core retention.
-• Assumption B: You assume free users convert to paid users, but historical SaaS conversion for free tiers is <2%.
+• Assumption A: You assume users bounce because UI lacks polish, but you haven't validated core retention value.
+• Assumption B: You assume free users convert to paid users, but historical SaaS free tier conversion is <2%.
 
 2. ⚠️ Primary Blind Spot
 • Over-Engineering + Premature Scale Trap (Optimizing secondary aesthetics before proving willingness-to-pay).
 
 3. 🏛️ Historical Failure Mirror
 • Case: Steve Jobs & NeXT Computer (1988) — audits/jobs-next.md
-  Jobs engineered custom magnesium cubes and robotic assembly lines before checking university budgets.
-  Rule: Technical perfection cannot overcome a fundamental misalignment with customer economic reality.
+  Jobs engineered custom magnesium cubes and automated robotic factories before checking university budgets.
+  Rule: Technical elegance cannot overcome a fundamental misalignment with customer economic reality.
 
 4. 🧪 Diagnostic Questions & 48h Smallest Useful Test
 • Question 1: If 5 users won't pay $10 today for the raw version, why would 10,000 free users pay later?
@@ -58,7 +60,7 @@
 
 ## 🚀 Quickstart
 
-Install as an AI Skill in your agent environment:
+Install into your AI agent environment in seconds:
 
 ```bash
 # Clone into your local Claude / Codex / OpenClaw skills folder
@@ -76,19 +78,19 @@ git clone https://github.com/DOTfei/borrowed-brain-pro.git ~/.claude/skills/borr
 
 ---
 
-## 🔬 How the Blind Spot Engine Works
+## 🛠️ How the Decision Engine Works
 
 ```mermaid
 flowchart TD
-    Dilemma(["Your Decision Dilemma"]):::start --> Scan{"Blind Spot Scanner"}:::decision
+    Dilemma(["Your Real Decision / Dilemma"]):::start --> Engine{"Decision Engine"}:::decision
 
-    Scan --> S1["1. Unstated Assumptions
+    Engine --> S1["1. Unstated Assumptions
 Extract premises accepted without proof"]:::action
-    Scan --> S2["2. Risk Classification
-Over-engineering / Moat Trap / Echo Chamber"]:::action
-    Scan --> S3["3. Historical Failure Mirror
+    Engine --> S2["2. Thinking Lenses & Blind Spots
+Jobs Simplification · Munger Inversion · Graham MVP"]:::action
+    Engine --> S3["3. Historical Failure Mirror
 Match documented post-mortems in audits/"]:::warning
-    Scan --> S4["4. Diagnostic SUT
+    Engine --> S4["4. Actionable SUT
 3 self-check questions + 48h verifiable test"]:::success
 
     classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
@@ -110,6 +112,17 @@ Every diagnostic maps directly to documented historical post-mortems:
 - **[Musk & Model 3 Hell](audits/musk-model3-automation.md)**: Automating steps that should have been deleted.
 
 Explore the complete index: [Failure Audits Index](audits/INDEX.md).
+
+---
+
+## 🏛️ Decision Lenses Catalog (`lenses/`)
+
+- **Steve Jobs**: [Product Simplification Lens](lenses/steve-jobs-product-simplification.md) (Subtraction, UX focus, saying No)
+- **Charlie Munger**: [Inversion & Cognitive Risk Lens](lenses/charlie-munger-inversion-and-mental-models.md) (Invert, eliminate failure modes)
+- **Paul Graham**: [MVP & User Validation Lens](lenses/paul-graham-mvp-and-user-validation.md) (Do things that don't scale, talk to users)
+- **Warren Buffett**: [Capital Allocation Lens](lenses/warren-buffett-capital-allocation.md) (Moat durability, margin of safety)
+- **Reed Hastings**: [Fast Feedback & Candor Lens](lenses/reed-hastings-culture-and-fast-feedback.md) (Farming dissent, rapid iteration)
+- **Sam Altman**: [Scale & Momentum Lens](lenses/sam-altman-scale-and-momentum.md) (Compound growth, execution velocity)
 
 ---
 

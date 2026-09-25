@@ -13,15 +13,17 @@
   <a href="https://github.com/DOTfei/borrowed-brain-pro/stargazers"><img src="https://img.shields.io/github/stars/DOTfei/borrowed-brain-pro?style=social" alt="Stars"></a>
 </p>
 
-> **在你做决定前，照出你看不见的盲区。**
+> **借用思维，而非扮演人格。**
 >
-> Borrowed Brain Pro 是专为开发者、创业者和决策者打造的**认知盲点探测器**。它不搞名人角色扮演，不输出毫无用处的励志鸡汤。它通过对标历史上顶尖决策者的真实翻车案例，解剖你正准备盲目下注的隐性假设，帮你避开极其昂贵的试错学费。
+> Borrowed Brain Pro 是专为开发者、创业者和决策者打造的**决策智力系统（Decision Intelligence System）**。
+>
+> 它通过有据可查的思维视角、历史失败审计与认知盲点扫描，协助你解决真实的商业、产品与开发难题。它**不是**名人角色扮演，**不是**金句生成器，**不搞**虚假对话游戏。**人物只是思维模型的来源，决策本身才是产品。**
 
 ---
 
-## 核心区别
+## ⚡ 核心区别
 
-| 普通 AI 提示词（“模仿乔布斯思考”） | Borrowed Brain Pro（认知盲点探测器） |
+| 普通 AI 提示词（“模仿乔布斯思考”） | Borrowed Brain Pro（决策智力系统） |
 | :--- | :--- |
 | **输出：** 迎合你的名人名言（*“要追求极致，保持热爱！”*） | **输出：** 2 项致命隐性假设 + 1 个历史同款败局镜像 + 1 个验证测试 |
 | **缺陷：** 顺从你的认知偏见，助长盲目乐观 | **价值：** 揭露完全相同的逻辑在历史上为什么会彻底惨败 |
@@ -29,12 +31,12 @@
 
 ---
 
-## ⚡ 真实实战对比示例
+## 🔬 真实决策研判示例
 
-### 📥 你的决策困境输入
+### 📥 你的真实决策输入
 > *“我已经花了 2 个月做我的 AI 应用。我应该再花 1 个月把精美 UI 和全自动 Agent 流水线做完，还是应该直接全部免费开放 3 个月来吸引 10,000 名用户？”*
 
-### 📤 盲点探测器扫描输出
+### 📤 Borrowed Brain Pro 决策研判输出
 
 ```text
 1. 🔍 未验证的隐性假设
@@ -74,20 +76,20 @@ git clone https://github.com/DOTfei/borrowed-brain-pro.git ~/.claude/skills/borr
 
 ---
 
-## 🔬 盲点检测引擎工作流
+## 🛠️ 决策引擎工作流
 
 ```mermaid
 flowchart TD
-    Dilemma(["你的真实决策困境"]):::start --> Scan{"盲点扫描引擎"}:::decision
+    Dilemma(["你的真实决策困境"]):::start --> Engine{"决策引擎"}:::decision
 
-    Scan --> S1["1. 挖掘隐性假设
+    Engine --> S1["1. 挖掘隐性假设
 提取未经证实就默认为真的前提"]:::action
-    Scan --> S2["2. 认知盲区归类
-过度设计 / 虚假护城河 / 执念盲从"]:::action
-    Scan --> S3["3. 历史败局镜像
+    Engine --> S2["2. 视角审查与盲区归类
+乔布斯极简 · 芒格逆向 · 格雷厄姆验证"]:::action
+    Engine --> S3["3. 历史败局镜像
 精准匹配 audits/ 库中的真实惨败案例"]:::warning
-    Scan --> S4["4. 诊断测试
-3 个残酷自查问题 + 48 小时可落地测试"]:::success
+    Engine --> S4["4. 落地测试
+3 个残酷自查问题 + 48 小时最小有用测试"]:::success
 
     classDef start fill:#2563eb,stroke:#1d4ed8,color:#ffffff,font-weight:bold
     classDef decision fill:#f59e0b,stroke:#b45309,color:#ffffff,font-weight:bold
@@ -108,6 +110,17 @@ flowchart TD
 - **[马斯克 & Model 3 产能地狱](audits/musk-model3-automation.md)**：自动化了一个本该直接删除的流程。
 
 查看完整分类索引：[历史失败审计索引](audits/INDEX.md)。
+
+---
+
+## 🏛️ 决策思考视角库 (`lenses/`)
+
+- **史蒂夫·乔布斯**：[产品极简视角](lenses/steve-jobs-product-simplification.md)（做减法、拒绝杂音、聚焦核心体验）
+- **查理·芒格**：[逆向思考与认知风险视角](lenses/charlie-munger-inversion-and-mental-models.md)（反向思考、排除愚蠢、避开认知偏误）
+- **保罗·格雷厄姆**：[MVP 与用户验证视角](lenses/paul-graham-mvp-and-user-validation.md)（做不可扩展的事、快速接触真实用户）
+- **沃伦·巴菲特**：[资本分配与护城河视角](lenses/warren-buffett-capital-allocation.md)（安全边际、机会成本、能力圈）
+- **里德·哈斯廷斯**：[快速反馈与坦诚视角](lenses/reed-hastings-culture-and-fast-feedback.md)（主动招募异见、颠覆自我、高速迭代）
+- **山姆·奥特曼**：[规模效应与动能视角](lenses/sam-altman-scale-and-momentum.md)（复利增长、动能优先、杠杆效应）
 
 ---
 
