@@ -65,14 +65,15 @@ def validate_profile(filepath):
 
     # 3. Failure Boundary Quality Check
     breakdown_matches = re.findall(r"Where it likely breaks down|可能失效之处", content, re.IGNORECASE)
-    principles_count = len(re.findall(r"^\s*[\-\*]\s+\*\*Principle|\*\*原则", content, re.MULTILINE))
+    principles_count = len(re.findall(r"^\s*[\-\*]\s+\*\*(?:Principle|原则)\s*\d+", content, re.MULTILINE))
     
     if len(breakdown_matches) < max(1, principles_count):
         warnings.append(f"Failure boundaries count ({len(breakdown_matches)}) is less than principles count ({principles_count})")
 
     # 4. Direct Quote Length Guardrail Check
-    quotes = re.findall(r'["“]([^"”]{50,})["”]', content)
-    for q in quotes:
+    quotes = re.findall(r'"([^"\n]+)"|“([^”\n]+)”', content)
+    for quote_pair in quotes:
+        q = next(part for part in quote_pair if part)
         word_count = len(q.split())
         if word_count > 25:
             warnings.append(f"Direct quote exceeds 25 words limit ({word_count} words): '{q[:40]}...'")

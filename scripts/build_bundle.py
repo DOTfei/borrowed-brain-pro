@@ -70,6 +70,7 @@ def main():
     if os.path.exists(audits_dir):
         parts.append("# BUNDLED FAILURE AUDIT CASE FILES\n\n")
         audit_files = sorted(glob.glob(os.path.join(audits_dir, "*.md")))
+        audit_files = [p for p in audit_files if not p.endswith("INDEX.md")]
         for a_path in audit_files:
             a_name = os.path.basename(a_path)
             with open(a_path, "r", encoding="utf-8") as f:
@@ -108,7 +109,7 @@ def main():
 
     line_count = len(full_bundle.splitlines())
     profile_count = len(profile_files)
-    audit_count = len(glob.glob(os.path.join(audits_dir, "*.md"))) if os.path.exists(audits_dir) else 0
+    audit_count = len(audit_files) if os.path.exists(audits_dir) else 0
     pack_count = len(glob.glob(os.path.join(packs_dir, "*.md"))) if os.path.exists(packs_dir) else 0
     eval_count = len(glob.glob(os.path.join(evals_dir, "*.md"))) if os.path.exists(evals_dir) else 0
     print(f"[SUCCESS] Generated borrowed-brain-bundle.md with {profile_count} profiles, {audit_count} audits, {pack_count} packs, and {eval_count} evals ({line_count} lines).")

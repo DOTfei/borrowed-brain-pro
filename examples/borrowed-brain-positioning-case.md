@@ -1,5 +1,9 @@
 # Meta Case Study: Deciding Borrowed Brain Pro's Strategy
 
+> **Case status:** Process demonstration, not outcome proof.
+>
+> This document records the reasoning behind the repositioning. It does not contain independent user counts, retention data, or a completed outcome review.
+
 > **Dilemma Statement:** Should Borrowed Brain Pro expand to 50+ celebrity profiles to compete on breadth with roleplay skills, or reposition as a decision intelligence system focused on builder decision packs?
 
 ---
@@ -28,7 +32,14 @@
 
 ---
 
-## 3. Smallest Useful Test Executed
+## 3. Smallest Useful Test Proposed
 
 - **Repositioning:** Re-frame README from "Think like Warren Buffett / Steve Jobs" to "Borrow the thinking, not the personality."
 - **Niche Task Skill:** Ship `packs/builder-decision-pack.md` as the primary vertical entry point.
+- **Evidence required next:** Have 5–10 builders create a Decision Contract, run the Smallest Useful Test, and return with a review record.
+
+## 4. What this document proves
+
+- **Demonstrates:** the product positioning decision and the files used to implement it.
+- **Does not demonstrate:** that builders prefer this positioning, return for reviews, or make better decisions.
+- **Next proof artifact:** an anonymized case with a baseline, an executed test, a measured result, and a completed review.

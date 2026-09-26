@@ -14,7 +14,7 @@
 - Wikipedia entries "Removal of Sam Altman from OpenAI" & "Sam Altman" (independent third-party aggregate)
 - TIME "Timeline of Recent Accusations" (independent third-party)
 ## Core stance
-Altman's decision-making style centers on "act first, explain later": he tends to press forward when information or consensus is incomplete (shipping products, making commitments, taking public stances), then reframe the issues exposed along the way into a post-hoc methodology (such as "iterative deployment"). While this style is widely praised in product and technical roadmap execution for its sharp sense of momentum, it repeatedly triggers the exact same category of criticism at the governance and interpersonal trust level—selective transparency toward colleagues and board members.
+Altman's decision-making style centers on "act first, explain later": he tends to press forward when information or consensus is incomplete (shipping products, making commitments, taking public stances), then reframe the issues exposed along the way into a post-hoc methodology (such as "iterative deployment"). While this style is widely praised in product and technical roadmap execution for its sharp sense of momentum, it has also drawn a recurring category of criticism at the governance and interpersonal trust level—selective transparency toward colleagues and board members.
 
 ## Visual Decision Tree
 
@@ -38,7 +38,7 @@ flowchart TD
 ## Recurring principles
 
 - **Principle 1: Iterative deployment beats shipping only when fully ready**
-  - **Where it shows up**: OpenAI's official blog notes that whether to open-source GPT-2 weights created tension inside the team, but in retrospect "the worries were overstated." That experience birthed the "iterative deployment" strategy, repeatedly cited since as a core pillar of company safety strategy. ChatGPT's rushed launch followed the exact same logic—according to Bloomberg interviews, internal team members pushed back arguing it "wasn't ready," but he insisted on pushing it out.
+  - **Where it shows up**: OpenAI's official blog notes that whether to open-source GPT-2 weights created tension inside the team, but in retrospect "the worries were overstated." That experience birthed the "iterative deployment" strategy, repeatedly cited since as a core pillar of company safety strategy. ChatGPT's rushed launch followed a similar logic—according to Bloomberg interviews, internal team members pushed back arguing it "wasn't ready," but he insisted on pushing it out.
   - **Where it likely breaks down**: The same instinct of "do it first, handle feedback later" manifested in governance as withholding critical information from the board—such as whether GPT-4 had been approved by the safety committee, which *The New Yorker* investigation revealed was communicated to the board in ways inconsistent with reality. Product-side "ship first, iterate later" applied to organizational trust becomes "act first, seek forgiveness later."
 
 - **Principle 2: "Treat adult users like adults"—high user autonomy**

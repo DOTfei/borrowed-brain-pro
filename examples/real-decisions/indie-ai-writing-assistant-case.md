@@ -1,10 +1,14 @@
 # Case Study: Should an AI Writing Assistant Add Collaboration Features?
 
+> **Case status:** Illustrative.
+>
+> This is a worked scenario showing the Decision Contract workflow. The numbers and user claims below are example inputs, not Borrowed Brain Pro telemetry or independently verified product data.
+
 > **Decision Date:** 2026-07-30
 > 
 > **Decision Type:** Feature Addition vs. Simplification
 > 
-> **Outcome:** Do NOT build collaboration features yet. Validate core value first.
+> **Recommendation:** Do NOT build collaboration features yet. Validate core value first.
 
 ---
 
@@ -19,6 +23,16 @@ An indie hacker has spent 3 months building an AI writing assistant.
 
 **Decision:**
 Should they add collaboration features or simplify the product?
+
+## Evidence Boundary
+
+| Statement | Evidence type | Limitation |
+| --- | --- | --- |
+| The product has more than 50 features. | Reported claim | Not independently checked in this repository. |
+| The product has three paying users. | Reported claim | Payment records are not included. |
+| Collaboration has been requested. | Reported claim | Request frequency, context, and willingness to pay are unknown. |
+| Feature breadth may be hiding the core value. | AI inference | Must be tested with user behavior. |
+| Which features drive payment and retention? | Unknown | This is the highest-value missing evidence. |
 
 ---
 
@@ -174,12 +188,18 @@ The key shift:
 
 ---
 
-## Validation Status
+## Review Status
 
-- [x] Apply Mode tested
-- [x] Compare Mode tested  
-- [x] Boardroom Mode tested
-- [x] Failure Audit applied
+- [x] Apply Mode demonstrated
+- [x] Compare Mode demonstrated
+- [x] Boardroom Mode demonstrated
+- [x] Failure Audit referenced
 - [x] Smallest Useful Test defined
+- [ ] Smallest Useful Test executed
+- [ ] Outcome reviewed
 
-**Next step:** Execute the Smallest Useful Test and record results in a Decision Log.
+**What this case demonstrates:** the protocol can separate reported claims from inferences, compare lenses, state analogy limits, and produce a falsifiable test.
+
+**What this case does not demonstrate:** higher retention, revenue, product-market fit, or that the recommendation was correct. Those claims require a completed review with a baseline, observed action, measured outcome, and limitations.
+
+**Next step:** Execute the Smallest Useful Test and record results with templates/decision-review-template.md.

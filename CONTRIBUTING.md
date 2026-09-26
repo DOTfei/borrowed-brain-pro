@@ -1,10 +1,10 @@
 # Contributing to borrowed-brain-pro
 
-This is a single instruction file (`SKILL.md`) plus a folder of example output (`profiles/`). There's no build step, no tests to run, no dependencies to install — contributing means editing Markdown thoughtfully.
+This project combines the core instructions in `SKILL.md` with thinking profiles, decision lenses, failure audits, decision packs, and generated portable bundles.
 
 ## Ways to contribute
 
-**Add a test profile.** The most valuable contribution right now is a new profile in `profiles/` built by actually running Distill mode on a real person — ideally someone in a domain not yet covered (science, writing, sports, politics, etc.). Follow `SKILL.md`'s process for real: do the research, don't fabricate sources, and be honest in the Confidence note if material was thin.
+**Improve a decision lens or audit.** The most valuable contribution is evidence that makes a real decision analysis more accurate, more falsifiable, or easier to act on. Keep profiles as research material; do not turn them into personality imitation.
 
 **Improve the research/extraction process.** If you run Distill mode and notice the output is generic, under-sourced, or the guardrails leaked (an invented-sounding quote, a claim with no traceable source), open an issue or PR describing exactly what went wrong and where in `SKILL.md` the instruction should be tightened.
 
@@ -26,7 +26,7 @@ These come directly from `SKILL.md`'s Core principle and won't be relaxed for an
 1. Fork, branch, make your change.
 2. If you're adding a profile, include the actual sources you used (real URLs, not placeholders).
 3. Add a row to `profiles/INDEX.md` following the key and format specified in that file.
-4. Run `python scripts/build_bundle.py` to update `claude-ai-bundle.md` automatically.
+4. Run `python3 scripts/validate_profiles.py` and `python3 scripts/build_bundle.py`. Commit both generated bundles when their source material changes.
 5. Open a PR describing what you tested and what you found — "I ran Distill mode on X and here's the output" is more useful than "improved profile quality."
 
 ## Questions

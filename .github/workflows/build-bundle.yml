@@ -24,4 +24,4 @@ jobs:
 
       - name: Check for Uncommitted Bundle Changes
         run: |
-          git diff --exit-code claude-ai-bundle.md || (echo "Error: claude-ai-bundle.md is out of sync with profiles or SKILL.md. Run 'python scripts/build_bundle.py' and commit." && exit 1)
+          git diff --exit-code borrowed-brain-bundle.md claude-ai-bundle.md || (echo "Error: generated bundles are out of sync. Run 'python scripts/build_bundle.py' and commit both files." && exit 1)

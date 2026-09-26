@@ -445,7 +445,7 @@ body {
   letter-spacing: 0.06em;
 }
 
-.synthesis-blindspot {
+.synthesis-status {
   font-family: 'Geist Mono', monospace;
   font-size: 0.65rem;
   color: var(--orange);

@@ -131,14 +131,14 @@ export const Explainer: React.FC = () => {
         </div>
       )}
 
-      {/* ================= SCENE 2: VIRTUAL BOARDROOM — LIVE INTERPOLATED DEBATE ================= */}
+      {/* ================= SCENE 2: MULTI-LENS DECISION ANALYSIS ================= */}
       {frame >= 90 && frame < 180 && (
         <div style={{ opacity: opacity2, display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', transform: 'scale(1.1)' }}>
           <div style={{ fontSize: '28px', fontWeight: 900, color: '#f43f5e', letterSpacing: '3px', marginBottom: '8px', textTransform: 'uppercase' }}>
-            2. VIRTUAL BOARDROOM: LIVE INTERACTIVE DEBATE
+            2. MULTI-LENS DECISION ANALYSIS
           </div>
           <div style={{ fontSize: '15px', color: '#cbd5e1', fontWeight: 700, marginBottom: '20px' }}>
-            Board members directly talk to each other & challenge each other's blind spots!
+            Frameworks expose different assumptions, tradeoffs, and failure boundaries.
           </div>
 
           <div
@@ -155,7 +155,7 @@ export const Explainer: React.FC = () => {
               gap: '14px',
             }}
           >
-            {/* Chat Bubble 1: Munger -> Altman */}
+            {/* Inversion lens */}
             {frame >= 100 && (
               <div
                 style={{
@@ -167,15 +167,15 @@ export const Explainer: React.FC = () => {
                 }}
               >
                 <div style={{ fontSize: '14px', color: '#f59e0b', fontWeight: 900 }}>
-                  💬 Charlie Munger ➔ Sam Altman:
+                  INVERSION & RISK LENS
                 </div>
                 <div style={{ fontSize: '16px', color: '#ffffff', fontWeight: 700, marginTop: '4px' }}>
-                  "Sam, your obsession with rapid growth ignores unit economics. Moving too fast here is a value trap."
+                  Which failure modes make rapid growth destroy unit economics?
                 </div>
               </div>
             )}
 
-            {/* Chat Bubble 2: Altman -> Jobs */}
+            {/* Momentum lens */}
             {frame >= 120 && (
               <div
                 style={{
@@ -188,15 +188,15 @@ export const Explainer: React.FC = () => {
                 }}
               >
                 <div style={{ fontSize: '14px', color: '#a78bfa', fontWeight: 900 }}>
-                  💬 Sam Altman ➔ Steve Jobs:
+                  MOMENTUM & ITERATION LENS
                 </div>
                 <div style={{ fontSize: '16px', color: '#ffffff', fontWeight: 700, marginTop: '4px' }}>
-                  "Steve, if we wait for 100% perfection like NeXT, we miss the AI market window. Iterative deployment is safety."
+                  What can ship safely now so real feedback arrives before the market window closes?
                 </div>
               </div>
             )}
 
-            {/* Chat Bubble 3: Jobs -> Munger & Altman */}
+            {/* Simplification lens */}
             {frame >= 140 && (
               <div
                 style={{
@@ -209,10 +209,10 @@ export const Explainer: React.FC = () => {
                 }}
               >
                 <div style={{ fontSize: '14px', color: '#38bdf8', fontWeight: 900 }}>
-                  💬 Steve Jobs ➔ Charlie & Sam:
+                  PRODUCT SIMPLIFICATION LENS
                 </div>
                 <div style={{ fontSize: '16px', color: '#ffffff', fontWeight: 700, marginTop: '4px' }}>
-                  "Never compete on price. Discounting is admitting lack of quality. Focus on core essence, say NO to bloat."
+                  Which features can be removed without weakening the user's core outcome?
                 </div>
               </div>
             )}
@@ -220,11 +220,11 @@ export const Explainer: React.FC = () => {
         </div>
       )}
 
-      {/* ================= SCENE 3: VERIFIED FAILURE AUDIT ================= */}
+      {/* ================= SCENE 3: DOCUMENTED FAILURE BOUNDARIES ================= */}
       {frame >= 180 && frame < 270 && (
         <div style={{ opacity: opacity3, display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', transform: 'scale(1.1)' }}>
           <div style={{ fontSize: '30px', fontWeight: 900, color: '#f59e0b', letterSpacing: '4px', marginBottom: '20px', textTransform: 'uppercase' }}>
-            3. VERIFIED FAILURE AUDITS
+            3. DOCUMENTED FAILURE BOUNDARIES
           </div>
 
           <div style={{ display: 'flex', gap: '24px' }}>
@@ -243,11 +243,11 @@ export const Explainer: React.FC = () => {
         </div>
       )}
 
-      {/* ================= SCENE 4: DOMAIN PACKS & ACCURACY EVALS ================= */}
+      {/* ================= SCENE 4: DOMAIN PACKS & HISTORICAL EVALS ================= */}
       {frame >= 270 && frame < 360 && (
         <div style={{ opacity: opacity4, display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', transform: 'scale(1.1)' }}>
           <div style={{ fontSize: '30px', fontWeight: 900, color: '#10b981', letterSpacing: '4px', marginBottom: '20px', textTransform: 'uppercase' }}>
-            4. DOMAIN PACKS & ACCURACY EVALS
+            4. DOMAIN PACKS & HISTORICAL EVALS
           </div>
 
           <div style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
@@ -263,7 +263,7 @@ export const Explainer: React.FC = () => {
           </div>
 
           <div style={{ backgroundColor: '#0f172a', border: '2px solid #10b981', padding: '16px 36px', borderRadius: '30px', color: '#10b981', fontWeight: 900, fontSize: '20px' }}>
-            98% ACCURACY MATCH ON HISTORICAL BLIND-TESTS
+            INCLUDES 4 DOCUMENTED HISTORICAL CASES
           </div>
         </div>
       )}
@@ -285,7 +285,7 @@ export const Explainer: React.FC = () => {
             BORROWED BRAIN PRO
           </div>
           <div style={{ fontSize: '22px', color: '#cbd5e1', fontWeight: 700, marginBottom: '28px' }}>
-            Distill Any Mind. Decide With Conviction.
+            Borrow the thinking, not the personality.
           </div>
           <div style={{ backgroundColor: '#6366f1', color: '#ffffff', padding: '14px 36px', borderRadius: '30px', fontWeight: 900, fontSize: '20px', boxShadow: '0 0 35px rgba(99, 102, 241, 0.6)' }}>
             github.com/DOTfei/borrowed-brain-pro

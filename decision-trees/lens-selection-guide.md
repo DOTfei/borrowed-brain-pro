@@ -171,6 +171,6 @@ After selecting a lens:
 
 1. Read the full lens file in `lenses/`
 2. Check the profile in `profiles/` for historical context
-3. Review relevant failure audits in `failure-audits/`
+3. Review relevant failure audits in `audits/`
 4. Apply the lens to your decision
 5. Output a Smallest Useful Test

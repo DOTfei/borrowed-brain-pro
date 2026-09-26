@@ -1,7 +1,7 @@
 {
   "name": "borrowed-brain-pro",
-  "version": "0.2.0",
-  "description": "Distill public figures' thinking into structured profiles and apply them as lenses to real decisions.",
+  "version": "1.0.0",
+  "description": "Apply evidence-backed thinking lenses, failure audits, and blind spot detection to real-world decisions.",
   "author": "DOTfei",
   "license": "MIT",
   "skills": ["SKILL.md"]
